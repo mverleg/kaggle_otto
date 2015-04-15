@@ -4,7 +4,7 @@ from numpy.random import uniform
 
 def normalize_data(data):
 	"""
-		Scale each COLUMN such that the training DATA is in the range [0-1]. No guarantees for testing data, since all should use the same scaling factors.
+		Scale each COLUMN such that the training and test DATA is in the range [0-1].
 	"""
 	#todo
 
@@ -24,3 +24,5 @@ def rows_normalized(predictions, epsilon = 1e-8):
 
 
 predictions = uniform(size = (21, 9))
+
+

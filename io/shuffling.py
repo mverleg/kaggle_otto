@@ -17,7 +17,7 @@ def shuffle(data, classes = None, seed = 4242):
     data = data[key, :]
     if classes is not None:
 		classes = classes[key]
-    return data, key
+    return data, classes, key
 
 
 def get_inverse_key(key):
@@ -42,7 +42,7 @@ def unshuffle(data, classes = None, key = None):
     data = data[invkey, :]
 	if classes is not None:
 		classes = classes[invkey]
-    return data
+    return data, classes
 
 
 if __name__ == '__main__':
