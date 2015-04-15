@@ -2,25 +2,63 @@
 
 import numpy as np
 
-#Reads the test data (the data without class label), and converts it to a numpy matrix
-#Removes the first column with the id's.
-def readTest(testpath):
-    test = np.genfromtxt(testpath, dtype = 'int16', delimiter = ',', skip_header = 1)
-    return test[:,1:] #remove the id column
 
-#Reads the train data (With class label), and converts it to numpy feature matrix, and a numpy vector containing the class labels
-def readTrain(trainpath):
-    train = np.genfromtxt(trainpath, dtype = '|S7', delimiter = ',', skip_header = 1)
-    labels = train[:,-1]
-    labels = [int(l[-1]) for l in labels] #This assumes the labels are one digit (which they are, 1-9)
-    train = train[:,1:-1].astype('int16')
-    return train, labels
+global TRAINSIZE, TESTSIZE, NFEATS
 
-#Utility, reads all the data given train and test paths
-def readData(testpath, trainpath):
-    test = readTest(testpath)
-    train, labels = readTrain(trainpath)
+TRAINSIZE=61878
+TESTSIZE=144368
+NFEATS=93
+
+
+def _read_data(test='../test', train='../train'):
+    """
+    read_data('train.csv', 'test.csv')
+    
+    Parse the training and test data at the given paths.
+    
+    Parameters
+    ----------
+    test :  str
+            the file containing the test data
+            Defaults to '../test' (hard link to data/test.csv)
+    train : str
+            the file containing the training data.
+            Defaults to '../train' (hard link to data/train.csv)
+    
+    Returns
+    -------
+    A 3-tuple (ndarray, ndarray, tuple) with the test and training data
+    with its labels.
+    """
+    testfile, trainfile = open(test), open(train)
+    def feats(dat):
+        return np.asarray(dat[:NFEATS], dtype=np.int16)
+
+    def reader(inf):
+        inf.readline()
+        for i, line in enumerate(inf.readlines()):
+            dat = line[:-1].split(',')[1:]
+            yield i, dat
+        inf.close()
+    
+    test = np.zeros((TESTSIZE, NFEATS), dtype=np.int16)
+    train = np.zeros((TRAINSIZE, NFEATS), dtype=np.int16)
+    labels = np.zeros(TRAINSIZE, dtype=np.int8)
+
+    for i,dat in reader(testfile):
+        test[i] = feats(dat)
+        
+    for i,dat in reader(trainfile):
+        train[i] = feats(dat)
+        labels[i] = np.int8(dat[NFEATS][6])
+    
     return test, train, labels
+
+
+global TEST, TRAIN, LABELS
+
+TEST, TRAIN, LABELS = _read_data()
+
 
 submissionheader = 'id,Class_1,Class_2,Class_3,Class_4,Class_5,Class_6,Class_7,Class_8,Class_9'
     
