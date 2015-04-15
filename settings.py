@@ -9,7 +9,7 @@ from os.path import dirname, realpath, join
 BASE_DIR = dirname(realpath(__file__))
 TRAIN_DATA_PATH = join(BASE_DIR, 'data/train.csv')
 TEST_DATA_PATH = join(BASE_DIR, 'data/test.csv')
-
+COLUMN_MAX_PATH = join(BASE_DIR, 'data/max.npy')
 
 
 """
