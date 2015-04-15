@@ -27,28 +27,29 @@ def logloss(predictions, true_classes, epsilon = 1.e-15):
 	return ll
 
 
-def accuracy():
+def accuracy(predictions, true_classes):
 	"""
-		The accuracy of the predictions.
+		The accuracy of the predictions (how many of the most probable classes were correct).
 
 		Arguments are the same as those for logloss.
 		:return: The accuracy as a fraction [0-1].
 	"""
-	#todo
+	return (predictions.argmax(1) + 1 == true_classes).mean()
 
 
 if __name__ == '__main__':
 	S, C = 21, 9
 	true_classes = array([((2 * k) % C) + 1 for k in range(S)])
 	predictions = normalize_probabilities(uniform(size = (S, C)))
-	print 'random: ', logloss(predictions, true_classes)
+	print '          loss    accuracy'
+	print 'random:  {0:6.3f}   {1:.3f}'.format(logloss(predictions, true_classes), accuracy(predictions, true_classes))
 	predictions = normalize_probabilities(ones((S, C)))
-	print 'uniform:', logloss(predictions, true_classes)
+	print 'uniform: {0:6.3f}   {1:.3f}'.format(logloss(predictions, true_classes), accuracy(predictions, true_classes))
 	predictions = zeros((S, C))
 	predictions[:, 0] = 1
-	print 'certain:', logloss(predictions, true_classes)
+	print 'certain: {0:6.3f}   {1:.3f}'.format(logloss(predictions, true_classes), accuracy(predictions, true_classes))
 	predictions = zeros((S, C))
 	predictions[range(predictions.shape[0]), true_classes - 1] = 1
-	print 'correct:', logloss(predictions, true_classes)
+	print 'correct: {0:6.3f}   {1:.3f}'.format(logloss(predictions, true_classes), accuracy(predictions, true_classes))
 
 
