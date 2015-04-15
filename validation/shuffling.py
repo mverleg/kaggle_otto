@@ -15,6 +15,8 @@ def shuffle(data, classes = None, seed = 4242):
     key = array(range(data.shape[0]))
     pyshuffle(key, random = lambda: (seed / 10000.) % 10000)
     data = data[key, :]
+    if classes is not None:
+		classes = classes[key]
     return data, key
 
 
@@ -38,6 +40,8 @@ def unshuffle(data, classes = None, key = None):
     assert key is not None, 'Argument "key" should be provided (it\'s the third argument, or use keyword)'
     invkey = get_inverse_key(key)
     data = data[invkey, :]
+	if classes is not None:
+		classes = classes[invkey]
     return data
 
 
