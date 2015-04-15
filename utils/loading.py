@@ -102,7 +102,7 @@ def get_testing_data(filepath = TEST_DATA_PATH):
 
 
 if __name__ == '__main__':
-	data, classes, features = get_training_data()
-	data, features = get_testing_data()
+	train_data, classes, features = get_training_data()
+	test_data, features = get_testing_data()
 
 

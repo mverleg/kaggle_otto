@@ -6,8 +6,7 @@
 from numpy import array, ones, zeros
 from numpy.random import uniform
 from scipy import clip, log
-
-from utils.normalize import rows_normalized, normalize_probabilities
+from utils.normalize import check_rows_normalized, normalize_probabilities
 
 
 def logloss(predictions, true_classes, epsilon = 1.e-15):
@@ -21,7 +20,7 @@ def logloss(predictions, true_classes, epsilon = 1.e-15):
 		Information: https://www.kaggle.com/c/otto-group-product-classification-challenge/details/evaluation
 		Based on: https://www.kaggle.com/wiki/LogarithmicLoss   but actually changed completely
 	"""
-	assert rows_normalized(predictions), 'The predictions you submitted aren\'t normalized! You can use normalize_probabilities(..).'
+	assert check_rows_normalized(predictions), 'The predictions you submitted aren\'t normalized! You can use normalize_probabilities(..).'
 	pred = clip(predictions, epsilon, 1 - epsilon)
 	predictions_for_true = pred[range(predictions.shape[0]), true_classes - 1]
 	ll = - log(predictions_for_true).sum() / len(true_classes)
