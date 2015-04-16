@@ -18,14 +18,12 @@ def gradientBoosting(train, labels, test, n_estimators = 50, max_depth = 5, verb
    
 
 if __name__ == '__main__':
-    #Dirty hack to use relative path in main file
-    import sys
-    sys.path.insert(0, '..')
     import utils.loading as load
     test, ft = load.get_testing_data()
     train, c, f = load.get_training_data()
     
     import numpy as np
+    #convert ordereddict to array
     labels = np.array([c[x] for x in c])    
 
     probs = gradientBoosting(train, labels, test, n_estimators = 10, verbose = 1)    
