@@ -6,7 +6,7 @@
 
 from numpy import zeros, array
 from random import shuffle as pyshuffle
-from numpy.random.mtrand import random_integers
+from numpy.random.mtrand import RandomState
 
 
 def get_sample_key(N, k, seed):
@@ -18,8 +18,8 @@ def get_sample_key(N, k, seed):
 		:param seed: The seed for shuffling (best leave unchanged to compare results).
 		:return: Key for sampling.
 	"""
-	#todo: use seed!
-	return random_integers(low = 0, high = N, size = k)
+	random = RandomState(seed)
+	return random.random_integers(low = 0, high = N, size = k)
 
 
 def get_permutation_key(N, seed):
