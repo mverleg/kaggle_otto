@@ -18,6 +18,7 @@ def get_sample_key(N, k, seed):
 		:param seed: The seed for shuffling (best leave unchanged to compare results).
 		:return: Key for sampling.
 	"""
+	#todo: use seed!
 	return random_integers(low = 0, high = N, size = k)
 
 
@@ -28,6 +29,9 @@ def get_permutation_key(N, seed):
 		:param N: Number of items in population.
 		:param seed: The seed for shuffling (best leave unchanged to compare results).
 		:return: Key for permutatoin.
+
+		Note that random.shuffle (pyshuffle) takes a 'random' argument which works as a seed. The documentation is unclear on this, but it works. For more info have a look at:
+		http://stackoverflow.com/questions/19306976/python-shuffling-with-a-parameter-to-get-the-same-result
 	"""
 	key = array(range(N))
 	pyshuffle(key, random = lambda: seed)
@@ -46,7 +50,7 @@ def shuffle(data, classes = None, seed = 4242):
 	key = get_permutation_key(N = data.shape[0], seed = (seed / 10000.) % 10000)
 	data = data[key, :]
 	if classes is not None:
-		classes = classes[key, :]
+		classes = classes[key]
 	return data, classes, key
 
 
@@ -73,7 +77,7 @@ def unshuffle(data, classes = None, key = None):
 	invkey = get_inverse_key(key)
 	data = data[invkey, :]
 	if classes is not None:
-		classes = classes[invkey, :]
+		classes = classes[invkey]
 	return data, classes
 
 
