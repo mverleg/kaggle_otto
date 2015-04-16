@@ -14,15 +14,21 @@ def gradientBoosting(train, labels, test, n_estimators = 50, max_depth = 5, verb
     output is 9 probabilities, one for each class
     """
     model = ske.GradientBoostingClassifier(n_estimators=n_estimators, max_depth = max_depth, verbose = verbose).fit(train, labels) 
-    return model.predict_proba(train)
+    return model.predict_proba(test)
    
 
 if __name__ == '__main__':
     #Dirty hack to use relative path in main file
     import sys
-    sys.path.insert(0, '../io')
-    import ioutil
-    test = ioutil.readTest('../data/test.csv')
-    train, labels = ioutil.readTrain('../data/train.csv')
+    sys.path.insert(0, '..')
+    import utils.loading as load
+    test, ft = load.get_testing_data()
+    train, c, f = load.get_training_data()
+    
+    import numpy as np
+    labels = np.array([c[x] for x in c])    
+
     probs = gradientBoosting(train, labels, test, n_estimators = 10, verbose = 1)    
-    ioutil.makeSubmission(probs, '../result.csv')
+
+    from utils.ioutil import makeSubmission    
+    makeSubmission(probs, '../result.csv')
