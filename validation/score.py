@@ -3,13 +3,13 @@
 	Functions for assessing the performance of different classifiers.
 """
 
-from numpy import array, ones, zeros
-from numpy.random import uniform
+from numpy import array, zeros
 from scipy import clip, log
-from utils.normalize import check_rows_normalized, normalize_probabilities
+from tests.fake_testing_probabilities import get_random_probabilities, get_uniform_probabilities, get_binary_probabilities
+from utils.normalize import check_rows_normalized
 
 
-def logloss(predictions, true_classes, epsilon = 1.e-15):
+def calc_logloss(predictions, true_classes, epsilon = 1.e-15):
 	"""
 		The multiclass logarithmic loss function used in the competition, including the truncation.
 
@@ -23,11 +23,10 @@ def logloss(predictions, true_classes, epsilon = 1.e-15):
 	assert check_rows_normalized(predictions), 'The predictions you submitted aren\'t normalized! You can use normalize_probabilities(..).'
 	pred = clip(predictions, epsilon, 1 - epsilon)
 	predictions_for_true = pred[range(predictions.shape[0]), true_classes - 1]
-	ll = - log(predictions_for_true).sum() / len(true_classes)
-	return ll
+	return - log(predictions_for_true).sum() / len(true_classes)
 
 
-def accuracy(predictions, true_classes):
+def calc_accuracy(predictions, true_classes):
 	"""
 		The accuracy of the predictions (how many of the most probable classes were correct).
 
@@ -40,16 +39,15 @@ def accuracy(predictions, true_classes):
 if __name__ == '__main__':
 	S, C = 21, 9
 	true_classes = array([((2 * k) % C) + 1 for k in range(S)])
-	predictions = normalize_probabilities(uniform(size = (S, C)))
+	predictions = get_random_probabilities(S, C)
 	print '          loss    accuracy'
-	print 'random:  {0:6.3f}   {1:.3f}'.format(logloss(predictions, true_classes), accuracy(predictions, true_classes))
-	predictions = normalize_probabilities(ones((S, C)))
-	print 'uniform: {0:6.3f}   {1:.3f}'.format(logloss(predictions, true_classes), accuracy(predictions, true_classes))
-	predictions = zeros((S, C))
-	predictions[:, 0] = 1
-	print 'certain: {0:6.3f}   {1:.3f}'.format(logloss(predictions, true_classes), accuracy(predictions, true_classes))
+	print 'random:  {0:6.3f}   {1:.3f}'.format(calc_logloss(predictions, true_classes), calc_accuracy(predictions, true_classes))
+	predictions = get_uniform_probabilities(S, C)
+	print 'uniform: {0:6.3f}   {1:.3f}'.format(calc_logloss(predictions, true_classes), calc_accuracy(predictions, true_classes))
+	predictions = get_binary_probabilities(S, C)
+	print 'certain: {0:6.3f}   {1:.3f}'.format(calc_logloss(predictions, true_classes), calc_accuracy(predictions, true_classes))
 	predictions = zeros((S, C))
 	predictions[range(predictions.shape[0]), true_classes - 1] = 1
-	print 'correct: {0:6.3f}   {1:.3f}'.format(logloss(predictions, true_classes), accuracy(predictions, true_classes))
+	print 'correct: {0:6.3f}   {1:.3f}'.format(calc_logloss(predictions, true_classes), calc_accuracy(predictions, true_classes))
 
 
