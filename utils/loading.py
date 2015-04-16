@@ -11,14 +11,8 @@
 
 from tempfile import gettempdir
 from numpy import array, uint16, load, save, empty
-from collections import OrderedDict
 from os.path import join
-from settings import VERBOSITY, TRAIN_DATA_PATH, TEST_DATA_PATH
-
-
-TRAINSIZE = 61878
-TESTSIZE = 144368
-NFEATS = 93
+from settings import VERBOSITY, TRAIN_DATA_PATH, TEST_DATA_PATH, TRAINSIZE, TESTSIZE, NFEATS
 
 
 def load_training_data(filepath = TRAIN_DATA_PATH):

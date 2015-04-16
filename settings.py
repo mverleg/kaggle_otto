@@ -6,6 +6,18 @@ from os.path import dirname, realpath, join
 
 # You can add settings here rather than hard-coding them.
 
+"""
+	Data information.
+"""
+TRAINSIZE = 61878
+TESTSIZE = 144368
+NFEATS = 93
+NCLASSES = 9
+
+
+"""
+	Special files.
+"""
 BASE_DIR = dirname(realpath(__file__))
 TRAIN_DATA_PATH = join(BASE_DIR, 'data/train.csv')
 TEST_DATA_PATH = join(BASE_DIR, 'data/test.csv')
