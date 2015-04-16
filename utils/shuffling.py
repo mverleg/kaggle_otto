@@ -5,9 +5,8 @@
 """
 
 from numpy import zeros, array
-from random import shuffle as pyshuffle
 from random import Random
-from numpy.random.mtrand import RandomState
+from numpy.random import RandomState
 
 
 def get_sample_key(N, k, seed):
@@ -34,9 +33,9 @@ def get_permutation_key(N, seed):
 		Note that random.shuffle (pyshuffle) takes a 'random' argument which works as a seed. The documentation is unclear on this, but it works. For more info have a look at:
 		http://stackoverflow.com/questions/19306976/python-shuffling-with-a-parameter-to-get-the-same-result
 	"""
-	randomshuffler = Random(seed)
+	random = Random(seed)
 	key = array(range(N))
-	pyshuffle(key, random = randomshuffler.random)
+	random.shuffle(key)
 	return key
 
 
