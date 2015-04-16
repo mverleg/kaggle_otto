@@ -46,8 +46,8 @@ def shuffle(data, classes = None, seed = 4242):
 	key = get_permutation_key(N = data.shape[0], seed = (seed / 10000.) % 10000)
 	data = data[key, :]
 	if classes is not None:
-		classes = classes[key]
-	return data, classes, key
+		sclasses = [classes[q + 1] for q in key]
+	return data, sclasses, key
 
 
 def get_inverse_key(key):
@@ -73,8 +73,8 @@ def unshuffle(data, classes = None, key = None):
 	invkey = get_inverse_key(key)
 	data = data[invkey, :]
 	if classes is not None:
-		classes = classes[invkey]
-	return data, classes
+		sclasses = [classes[q + 1] for q in invkey]
+	return data, sclasses
 
 
 if __name__ == '__main__':
