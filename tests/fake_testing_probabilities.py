@@ -22,3 +22,5 @@ def get_binary_probabilities(sample_count = TRAINSIZE, class_count = NCLASSES):
 	predictions = zeros((sample_count, class_count))
 	predictions[:, 0] = 1
 	return predictions
+
+

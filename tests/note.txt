@@ -1,0 +1,4 @@
+
+These are not automated unit tests, just manual tests to see if code works (and for other people: how to use it).
+
+
