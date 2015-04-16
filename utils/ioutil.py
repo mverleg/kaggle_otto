@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
-from utils.loading import get_training_data, get_testing_data
+from loading import get_training_data, get_testing_data
 
 
 global TRAINSIZE, TESTSIZE, NFEATS
