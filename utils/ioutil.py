@@ -58,8 +58,7 @@ NFEATS=93
 #
 global TEST, TRAIN, LABELS
 
-TRAIN, _classes, _features = get_training_data()
-LABELS = _classes.values()
+TRAIN, LABELS, _features = get_training_data()
 TEST, _features = get_testing_data()
 
 

@@ -14,7 +14,7 @@ def logloss(predictions, true_classes, epsilon = 1.e-15):
 		The multiclass logarithmic loss function used in the competition, including the truncation.
 
 		:param predictions: An Nx9 ndarray with prediction probabilities. Rows are samples in the same order as true_classes, and columns correspond to classes (from 1 to 9).
-		:param true_classes: A 9 element vector with the correct class labels (integers from 1 to 9).
+		:param true_classes: A N-element vector with the correct class labels (integers from 1 to 9).
 		:return: The logloss (float).
 
 		Information: https://www.kaggle.com/c/otto-group-product-classification-challenge/details/evaluation

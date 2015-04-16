@@ -39,15 +39,15 @@ def shuffle(data, classes = None, seed = 4242):
 		Shuffle the rows of data. For training data, which is ordered. Key can be used to unshuffle it before cross-validation or submission.
 
 		:param data: A data ndarray.
-		:param classes: Optionally, the true classes.
+		:param classes: Optionally, the true classes [ndarray of ints].
 		:param seed: The seed for shuffling (best leave unchanged to compare results).
 		:return: shuffled_data, unshuffle_key
 	"""
 	key = get_permutation_key(N = data.shape[0], seed = (seed / 10000.) % 10000)
 	data = data[key, :]
 	if classes is not None:
-		sclasses = [classes[q + 1] for q in key]
-	return data, sclasses, key
+		classes = classes[key, :]
+	return data, classes, key
 
 
 def get_inverse_key(key):
@@ -73,8 +73,8 @@ def unshuffle(data, classes = None, key = None):
 	invkey = get_inverse_key(key)
 	data = data[invkey, :]
 	if classes is not None:
-		sclasses = [classes[q + 1] for q in invkey]
-	return data, sclasses
+		classes = classes[invkey, :]
+	return data, classes
 
 
 if __name__ == '__main__':

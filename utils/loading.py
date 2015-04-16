@@ -25,7 +25,7 @@ def load_training_data(filepath = TRAIN_DATA_PATH):
 	"""
 		Load training data.
 
-		:return: data[ndarray], samples:classes[OrderedDict], features[list]
+		:return: data[ndarray], classes[array], features[list]
 
 		Notes:
 		* I tried using Pandas to have a dataframe with labels, but it seems I can't skip class label column. -Mark
@@ -34,10 +34,10 @@ def load_training_data(filepath = TRAIN_DATA_PATH):
 	with open(filepath, 'r') as fh:
 		cells = [line.split(',') for line in fh.read().splitlines()]
 	features = cells[0][1:-1]
-	classes = array()
+	classes = array((TRAINSIZE,), dtype = uint16)
 	data = empty((TRAINSIZE, NFEATS), dtype = uint16)
 	for k, row in enumerate(cells[1:]):
-		classes[int(row[0])] = uint16(row[-1].split('_')[-1])
+		classes[k] = row[-1].split('_')[-1]
 		data[k, :] = row[1:-1]
 	return data, classes, features
 
@@ -64,15 +64,14 @@ def get_training_data(filepath = TRAIN_DATA_PATH):
 	try:
 		data = load(join(gettempdir(), 'cache_train_data.npy'))
 		features = load(join(gettempdir(), 'cache_train_features.npy'))
-		classvals = load(join(gettempdir(), 'cache_train_classes.npy'))
-		classes = OrderedDict((k + 1, val) for k, val in enumerate(classvals))
+		classes = load(join(gettempdir(), 'cache_train_classes.npy'))
 		if VERBOSITY >= 1:
 			print 'loaded train data from cache in "{0:s}"'.format(gettempdir())
 	except:
 		data, classes, features = load_training_data(filepath = filepath)
 		save(join(gettempdir(), 'cache_train_data.npy'), data)
 		save(join(gettempdir(), 'cache_train_features.npy'), features)
-		save(join(gettempdir(), 'cache_train_classes.npy'), array(classes.values()))
+		save(join(gettempdir(), 'cache_train_classes.npy'), classes)
 		if VERBOSITY >= 1:
 			print 'loaded train data directly'
 	return data, classes, features
