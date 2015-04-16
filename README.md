@@ -8,13 +8,22 @@ The classification code depends on utils and settings modules as well as data di
 - Add the main folder to your PYTHONPATH
 - (Doing something else with symlinks or something, but don't add them to the repository.)
 
-The general steps (of which you can skip any unnecessary ones):
-1. Load train or test data using functions in utils/loading.py (or utils/ioutils.py).
-2. If needed, normalize the data using utils/normalize.py.
-3. If needed, shuffle the data using utils/shuffling.py (can be unshuffled at the end).
-4. Run your analysis, generating a prediction matrix. (You can normalize with validation/normalize.py).
-5. Check the loss, and possibly accuracy, using validation/score.py.
-6. If you want, create a submission file using utils/ioutils.py and upload it to Kaggle.
+The general steps are now:
+
+    from utils.loading import get_training_data
+    from validation.crossvalidate import SampleCrossValidator
+    
+    train_data, true_classes, features = get_training_data()
+    validator = SampleCrossValidator(train_data, true_classes, test_frac = 0.3, use_data_frac = 0.7)
+    for train, classes, test in validator.yield_cross_validation_sets(rounds = 13):
+        # your training code
+        prediction = # your classification code
+        validator.add_prediction(prediction)
+    validator.print_results()
+
+Furthermore it is worth noting:
+* If needed, normalize the data using utils/normalize.py.
+* If you want, create a submission file using utils/ioutils.py and upload it to Kaggle.
 These steps will change as code gets added.
 
 
