@@ -34,7 +34,7 @@ def load_training_data(filepath = TRAIN_DATA_PATH):
 	with open(filepath, 'r') as fh:
 		cells = [line.split(',') for line in fh.read().splitlines()]
 	features = cells[0][1:-1]
-	classes = OrderedDict()
+	classes = array()
 	data = empty((TRAINSIZE, NFEATS), dtype = uint16)
 	for k, row in enumerate(cells[1:]):
 		classes[int(row[0])] = uint16(row[-1].split('_')[-1])
