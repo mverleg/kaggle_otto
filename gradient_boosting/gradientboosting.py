@@ -18,15 +18,14 @@ def gradientBoosting(train, labels, test, n_estimators = 50, max_depth = 5, verb
    
 
 if __name__ == '__main__':
-    import utils.loading as load
-    test, ft = load.get_testing_data()
-    train, c, f = load.get_training_data()
     
-    import numpy as np
-    #convert ordereddict to array
-    labels = np.array([c[x] for x in c])    
+    from utils.loading import get_training_data
+    from validation.crossvalidate import SampleCrossValidator
+    
+    train_data, true_classes, features = get_training_data()
+    validator = SampleCrossValidator(train_data, true_classes, test_frac = 0.3, use_data_frac = 0.7)
+    for train, classes, test in validator.yield_cross_validation_sets(rounds = 2):
+        prediction = gradientBoosting(train, classes, test, 5, verbose = 0)
+        validator.add_prediction(prediction)
+    validator.print_results()
 
-    probs = gradientBoosting(train, labels, test, n_estimators = 10, verbose = 1)    
-
-    from utils.ioutil import makeSubmission    
-    makeSubmission(probs, '../result.csv')
