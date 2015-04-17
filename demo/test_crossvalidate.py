@@ -1,5 +1,5 @@
 
-from tests.fake_testing_probabilities import get_random_probabilities
+from demo.fake_testing_probabilities import get_random_probabilities
 from utils.loading import get_training_data
 from validation.crossvalidate import SampleCrossValidator
 

@@ -8,15 +8,27 @@
 from random import Random
 from sys import stdout
 from time import time
-from numpy import array, setdiff1d, copy
+from numpy import array, setdiff1d
 from subprocess import check_output
-from settings import NCLASSES
 from validation.score import calc_logloss, calc_accuracy
 
 
 class SampleCrossValidator():
+	"""
+		Facilitates cross validation by providing series of train and test data on which to run your own code. The results can be returned to this class to get performance metrics. Brief example in demo/test_crossvalidate.py .
+	"""
 
 	def __init__(self, data, true_classes, test_frac = 0.3, use_data_frac = None, show = True, seed = 4242):
+		"""
+			Construct a validator instance, binding data and parameters.
+
+			:param data: Array with all the training data (no need to shuffle) with sample rows and feature columns.
+			:param true_classes: Array with the true class label integers.
+			:param test_frac: Optionally, the fraction of the used data to assign for testing (the rest being training).
+			:param use_data_frac: Optionally, the fraction of the total data to include in test and training.
+			:param show: Whether to print output each time a probability is added; defaults to True.
+			:param seed: A fixed seed for sampling, so that the same data yields the same results consistently. Should probably not be changed.
+		"""
 		assert data.shape[0] == true_classes.shape[0], 'There should be a true class for each sample ({0:d} vs {1:d}).'.format(data.shape[1], true_classes.shape[0])
 		assert 0 < test_frac < 1
 		assert 0 < use_data_frac < 1 + 1e-6
@@ -35,7 +47,7 @@ class SampleCrossValidator():
 
 	def get_cross_validation_set(self):
 		"""
-			Get one pair of shuffled train and test data.
+			Get one pair of shuffled train and test data. Intended for internal use.
 
 			:return: train_data, train_classes, test_data, test_classes
 		"""
@@ -56,11 +68,10 @@ class SampleCrossValidator():
 		"""
 			Yields each of the sets of cross validation data.
 
-			:yield: A (train_data, train_classes, test_data) tuple on each iteration.
+			:param rounds: How many rounds of cross validation to perform.
+			:return: An iterator with (train_data, train_classes, test_data) tuple on each iteration.
 		"""
 		assert len(self.samples) == 0, 'This {0:s} already has samples; create a new one if you want to cross-validate again.'.format(self.__class__.__name__)
-		if self.show:
-			stdout.write('  #   loss   accuracy  time\n')
 		for round in range(rounds):
 			""" Store the test indices for validation later (I hope train won't be needed). """
 			train_data, train_classes, test_data, test_classes = self.get_cross_validation_set()
@@ -76,11 +87,13 @@ class SampleCrossValidator():
 			:return: (logloss, accuracy) tuple of floats
 		"""
 		duration = time() - self.yield_time
-		assert prediction.shape[1] == NCLASSES, 'There should be a probability for each class.'
+		#assert prediction.shape[1] == NCLASSES, 'There should be a probability for each class.'
 		assert len(self.results) < len(self.samples), 'There is already a prediction for each sample generated.'
 		test_classes = self.samples[len(self.results)]
 		logloss = calc_logloss(prediction, test_classes)
 		accuracy = calc_accuracy(prediction, test_classes)
+		if self.show and not len(self.results):
+			stdout.write('  #   loss   accuracy  time\n')
 		self.results.append((logloss, accuracy, duration,))
 		if self.show:
 			stdout.write('{0:-3d}  {1:6.3f}  {2:5.2f}%  {3:6.3f}s\n'.format(len(self.results), logloss, 100 * accuracy, duration))
@@ -88,7 +101,7 @@ class SampleCrossValidator():
 
 	def get_results(self):
 		"""
-			:return: (logloss, accuracy, duration) where each
+			:return: List of arrays [logloss, accuracy, duration] with a value for each iteration.
 		"""
 		return [array(li) for li in zip(*self.results)]
 
@@ -119,7 +132,7 @@ class SampleCrossValidator():
 		elif logloss.mean() < 0.55:
 			output_handle.write('not that bad\n')
 		elif logloss.mean() < 1:
-					output_handle.write('room for improvement\n')
+			output_handle.write('room for improvement\n')
 		elif logloss.mean() < 2.19722:
 			output_handle.write('meh...\n')
 		else:

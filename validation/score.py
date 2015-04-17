@@ -5,7 +5,7 @@
 
 from numpy import array, zeros
 from scipy import clip, log
-from tests.fake_testing_probabilities import get_random_probabilities, get_uniform_probabilities, get_binary_probabilities
+from demo.fake_testing_probabilities import get_random_probabilities, get_uniform_probabilities, get_binary_probabilities
 from utils.normalize import check_rows_normalized
 
 
