@@ -25,6 +25,12 @@ ax2.set_ylabel('$log_2(1 + \#)$')
 ax3 = fig2.add_subplot(2, 2, 2)
 ax3.pie(x = [(vec_data == 0).sum(), (vec_data != 0).sum()], explode = [0.15, 0], labels = ['0', '>0'], colors = ['blue', 'red'])
 
+fig3, ax3 = subplots(figsize = (5, 4))
+nonzero_per_sample = (train_data != 0).sum(1)
+ax3.hist(nonzero_per_sample, bins = range(70))
+ax3.set_xlabel('Nonzero features per sample')
+ax3.set_ylabel('#occurences')
+
 
 if __name__ == '__main__':
 	show()
