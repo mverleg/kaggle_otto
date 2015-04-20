@@ -10,7 +10,7 @@
 """
 
 from tempfile import gettempdir
-from numpy import array, uint16, load, save, empty
+from numpy import uint16, load, save, empty
 from os.path import join
 from settings import VERBOSITY, TRAIN_DATA_PATH, TEST_DATA_PATH, TRAINSIZE, TESTSIZE, NFEATS
 
@@ -28,7 +28,7 @@ def load_training_data(filepath = TRAIN_DATA_PATH):
 	with open(filepath, 'r') as fh:
 		cells = [line.split(',') for line in fh.read().splitlines()]
 	features = cells[0][1:-1]
-	classes = array((TRAINSIZE,), dtype = uint16)
+	classes = empty((TRAINSIZE,), dtype = uint16)
 	data = empty((TRAINSIZE, NFEATS), dtype = uint16)
 	for k, row in enumerate(cells[1:]):
 		classes[k] = row[-1].split('_')[-1]
