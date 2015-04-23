@@ -8,8 +8,9 @@
 from random import Random
 from sys import stdout
 from time import time
-from numpy import array, setdiff1d
+from numpy import array, setdiff1d, float64
 from subprocess import check_output
+from validation.metrics import confusion_matrix, average_size_mismatch
 from validation.score import calc_logloss, calc_accuracy
 
 
@@ -94,14 +95,16 @@ class SampleCrossValidator():
 		accuracy = calc_accuracy(prediction, test_classes)
 		if self.show and not len(self.results):
 			stdout.write('  #   loss   accuracy  time\n')
-		self.results.append((logloss, accuracy, duration,))
+		confusion = confusion_matrix(prediction, test_classes)
+		size_mismatch = average_size_mismatch(prediction, test_classes)
+		self.results.append((logloss, accuracy, duration, confusion, size_mismatch))
 		if self.show:
 			stdout.write('{0:-3d}  {1:6.3f}  {2:5.2f}%  {3:6.3f}s\n'.format(len(self.results), logloss, 100 * accuracy, duration))
 		return logloss, accuracy
 
 	def get_results(self):
 		"""
-			:return: List of arrays [logloss, accuracy, duration] with a value for each iteration.
+			:return: List of arrays [logloss, accuracy, duration, confusion_matrix, size_mismatch] with a value for each iteration.
 		"""
 		return [array(li) for li in zip(*self.results)]
 
@@ -111,12 +114,18 @@ class SampleCrossValidator():
 
 			The current git hash is included so that the result can hopefully be reproduced by going back to that commit.
 		"""
-		logloss, accuracy, duration = self.get_results()
+		logloss, accuracy, duration, confusions, size_mismatches = self.get_results()
+		confusion = 1000. * confusions.sum(0) / confusions.sum()
+		size_mismatch = size_mismatches.mean(0)
 		output_handle.write('*cross validation results*\n')
 		output_handle.write('code version  {0:s}\n'.format(check_output(['git', 'rev-parse','HEAD']).rstrip()))
 		output_handle.write('repetitions   {0:d}\n'.format(len(self.results)))
 		output_handle.write('training #    {0:d}\n'.format(self.use_data_count - self.test_count))
 		output_handle.write('testing #     {0:d}\n'.format(self.test_count))
+		output_handle.write('cls +          confusion matrix (per mille)         + excess %\n')
+		for k, row in enumerate(confusion):
+			conftxt =' '.join('{0:4d}'.format(int(round(val))) for val in row)
+			output_handle.write('{0:3d} | {1:s}  |  {2:+4.0f}\n'.format(k + 1, conftxt, 100 * size_mismatch[k] - 100))
 		output_handle.write('                  mean       min       max\n'.format(self.test_count))
 		output_handle.write('logloss       {0:8.4f}  {1:8.4f}  {2:8.4f}\n'.format(logloss.mean(), logloss.min(), logloss.max()))
 		output_handle.write('accuracy      {0:7.3f}%  {1:7.3f}%  {2:7.3f}%\n'.format(100 * accuracy.mean(), 100 * accuracy.min(), 100 * accuracy.max()))

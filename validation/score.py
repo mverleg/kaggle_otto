@@ -9,6 +9,10 @@ from demo.fake_testing_probabilities import get_random_probabilities, get_unifor
 from utils.normalize import check_rows_normalized
 
 
+def prob_to_cls(probabilities):
+	return probabilities.argmax(1) + 1
+
+
 def calc_logloss(predictions, true_classes, epsilon = 1.e-15):
 	"""
 		The multiclass logarithmic loss function used in the competition, including the truncation.
@@ -33,7 +37,7 @@ def calc_accuracy(predictions, true_classes):
 		Arguments are the same as those for logloss.
 		:return: The accuracy as a fraction [0-1].
 	"""
-	return (predictions.argmax(1) + 1 == true_classes).mean()
+	return (prob_to_cls(predictions) == true_classes).mean()
 
 
 if __name__ == '__main__':
