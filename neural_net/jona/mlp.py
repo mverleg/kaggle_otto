@@ -20,18 +20,15 @@ References:
 """
 __docformat__ = 'restructedtext en'
 
-
 import os
 import sys
 import time
 
 import numpy
-
 import theano
 import theano.tensor as T
+from neural_net.jona.logistic_sgd import LogisticRegression, load_data
 
-
-from logistic_sgd import LogisticRegression, load_data
 
 
 # start-snippet-1
