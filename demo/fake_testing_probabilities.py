@@ -25,10 +25,10 @@ def get_binary_probabilities(sample_count = TRAINSIZE, class_count = NCLASSES):
 
 def get_from_data(data, class_count = NCLASSES):
 	"""
-		Create probabilities that depend deterministrically on the data (but aren't actual predictions).
+		Create probabilities that depend deterministically on the data (but aren't actual predictions).
 	"""
 	predictions = ones((data.shape[0], class_count))
-	chosen_classes = (mod(predictions.sum(1), class_count) + 1).astype(uint16)
+	chosen_classes = (mod(data.sum(1), class_count) + 1).astype(uint16)
 	predictions[range(predictions.shape[0]), chosen_classes - 1] = 10
 	return normalize_probabilities(predictions)
 
