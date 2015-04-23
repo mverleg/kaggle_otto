@@ -1,7 +1,8 @@
 
 The git branch 'main' is where the functional code lives. Develop features on other branches and merge them into 'main' once they are sort of usable by others. If you think others should use them, please describe briefly how to (for example here).
 
-Git instruction:
+Git instruction
+-------------------------------
 
 * git clone [path] - download a git directory you don't have yet
 * git pull -u origin [branch] - get the changes from other people for branch
@@ -12,14 +13,31 @@ Git instruction:
 * git push -u origin [branch] - send your commits (the opposite of push)
 * git merge [branch] - add everything from the named branch to the current branch
 
+Installation
+-------------------------------
+
 To install the Python packages that you need, you can do:
 
     install -r dev/freeze.pip
+
+After that you need Lasagne. In an unrelated directory (not the project and not site-packages), type:
+
+    git clone https://github.com/Lasagne/Lasagne.git
+    cd Lasagne
+    python setup.py install
+
+Check carefully for errors in the middle. If there are none, you are done!
+
+How to run
+-------------------------------
 
 The classification code depends on utils and settings modules as well as data directory. That means you can choose between:
 - Run everything from the main folder, e.g. "python random_forest/gogogadgettree.py"
 - Add the main folder to your PYTHONPATH
 - (Doing something else with symlinks or something, but don't add them to the repository.)
+
+Implementing classifiers
+-------------------------------
 
 The general steps are now:
 
