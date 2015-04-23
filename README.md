@@ -1,7 +1,9 @@
 
-Please add commands that are useful to group members here.
-
 The git branch 'main' is where the functional code lives. Develop features on other branches and merge them into 'main' once they are sort of usable by others. If you think others should use them, please describe briefly how to (for example here).
+
+To install the Python packages that you need, you can do:
+
+    install -r dev/freeze.pip
 
 The classification code depends on utils and settings modules as well as data directory. That means you can choose between:
 - Run everything from the main folder, e.g. "python random_forest/gogogadgettree.py"
