@@ -31,7 +31,7 @@ class SampleCrossValidator():
 		"""
 		assert data.shape[0] == true_classes.shape[0], 'There should be a true class for each sample ({0:d} vs {1:d}).'.format(data.shape[1], true_classes.shape[0])
 		assert 0 < test_frac < 1
-		assert 0 < use_data_frac < 1 + 1e-6
+		assert 0 < use_data_frac < 1 + 1e-6 or use_data_frac is None
 		self.data = data
 		self.true_classes = true_classes
 		self.test_frac = test_frac
