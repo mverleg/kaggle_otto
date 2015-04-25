@@ -9,15 +9,17 @@ from lasagne.updates import sgd
 from theano import function, config
 import theano.tensor as T
 import numpy as np
-from sklearn.datasets import make_classification
 from matplotlib.pyplot import subplots, show, cm
 from utils.loading import get_training_data
 from validation.crossvalidate import SampleCrossValidator
 
 
+#todo: normalize
+
+
 train_data, true_classes, features = get_training_data()
-validator = SampleCrossValidator(train_data, true_classes, test_frac = 0.3)
-for train, classes, test in validator.yield_cross_validation_sets(rounds = 13):
+validator = SampleCrossValidator(train_data, true_classes, rounds=5, test_frac=0.3)
+for train, classes, test in validator.yield_cross_validation_sets():
 	# create tensor objects
 	trainT = train.astype(config.floatX)
 	testT = train.astype(config.floatX)

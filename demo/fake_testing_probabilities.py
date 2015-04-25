@@ -3,7 +3,6 @@
 	Code to generate random probabiltities for testing purposes.
 """
 
-
 from numpy import ones, zeros, mod, uint16
 from numpy.random import uniform
 from settings import TRAINSIZE, NCLASSES
@@ -22,6 +21,7 @@ def get_binary_probabilities(sample_count = TRAINSIZE, class_count = NCLASSES):
 	predictions = zeros((sample_count, class_count))
 	predictions[:, 0] = 1
 	return predictions
+
 
 def get_from_data(data, class_count = NCLASSES):
 	"""
