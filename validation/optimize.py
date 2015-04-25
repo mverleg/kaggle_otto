@@ -6,11 +6,13 @@
 from collections import Iterable, OrderedDict
 from json import dumps, loads
 from os import makedirs
-from os.path import isdir, join
+from os.path import join
+from matplotlib.pyplot import show
 from numpy import zeros, prod, float64
-from grid import to_coordinate
+from utils.grid import to_coordinate
 from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY
 from validation.crossvalidate import Validator
+from validation.views import compare_bars, compare_plot, compare_surface
 
 
 def is_nonstr_iterable(obj):
@@ -27,11 +29,12 @@ class GridOptimizer(object):
 			Create a grid optimizer to do a grid search for optimal parameter vaues.
 
 			:param validator: A validator to use for getting the score for each parameter.
+			:param use_cahcing: Store the results to make comparison faster next time.
+			:param prefix: Prefix for cache files (can be left empty).
 			:param params: The parameters you want to compare, with a list of the values to try:
 
 				GridOptimizer(validator, learning_rate = [1, 0.1, 0.01], hidden_layer_size = [30, 50], momentum = 0.9)
 
-			:param prefix: Prefix for cache files (can be left empty).
 			Results are cached in the directory set by settings.OPTIMIZE_RESULTS_DIR
 		"""
 		assert isinstance(validator, Validator), 'Argument "validator" should be an instantiated Validator (not "{0:s}").'.format(type(validator))
@@ -41,8 +44,9 @@ class GridOptimizer(object):
 		self.prefix = prefix or ''
 		self.fixed_params = {key: val for key, val in params.items() if not is_nonstr_iterable(val)}
 		self.iter_params = OrderedDict((key, val) for key, val in params.items() if is_nonstr_iterable(val))
-		self.labels, self.indices = zip(*[(key, val) for key, val in params.items() if is_nonstr_iterable(val)])
-		self.dims = tuple(len(li) for li in self.indices)
+		#todo: sort all values
+		self.labels, self.values = zip(*[(key, val) for key, val in params.items() if is_nonstr_iterable(val)])
+		self.dims = tuple(len(li) for li in self.values)
 		self.results = zeros(self.dims + (self.rounds, 3,), dtype = float64)
 		self.results_added = 0
 		print 'grid optimize: {0:s} comparisons x {1:d} rounds = {2:d} iterations'.format(' x '.join(str(d) for d in self.dims), self.rounds, prod(self.dims) * self.rounds)
@@ -88,7 +92,7 @@ class GridOptimizer(object):
 		for p in range(prod(self.dims)):
 			""" Every combination of parameters. """
 			coord = to_coordinate(p, self.dims)
-			params = {self.labels[d]: self.indices[d][k] for d, k in enumerate(coord)}
+			params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
 			params.update(self.fixed_params)
 			self.validator.reset()
 			filename, dispname = self.params_name(params)
@@ -97,13 +101,13 @@ class GridOptimizer(object):
 				if self.use_caching:
 					try:
 						""" Try to load cache. """
-						results = self.load_results(join(OPTIMIZE_RESULTS_DIR, filename))
-					except IOError:
+						res = self.load_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)))
+					except IOError as err:
 						""" No cache; yield the data (storage happens elsewhere). """
 						yield self.get_single_batch(params, round, dispname)
 					else:
 						""" Cache loaded; handle. """
-						self.add_results(*results)
+						self.add_results(*res)
 						if VERBOSITY >= 2:
 							print 'cache: %s, round #%d/%d' % (dispname, round + 1, self.rounds)
 				else:
@@ -127,28 +131,37 @@ class GridOptimizer(object):
 		"""
 		assert self.results_added < prod(self.dims) * self.rounds, 'There are already {0:d} results for {1:d} slots.'.format(self.results_added + 1, prod(self.dims) * self.rounds)
 		coord = to_coordinate(self.results_added // self.rounds, self.dims)
-		params = {self.labels[d]: self.indices[d][k] for d, k in enumerate(coord)}
+		round = self.results_added % self.rounds
+		params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
+		params.update(self.fixed_params)
 		filename, dispname = self.params_name(params)
-		results = self.validator.add_prediction(prediction)
-		self.add_results(*results)
-		self.store_results(join(OPTIMIZE_RESULTS_DIR, filename), *results)
-		return results
+		res = self.validator.add_prediction(prediction)
+		self.add_results(*res)
+		self.store_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)), *res)
+		return res
 
 	def print_plot_results(self):
 		"""
 			Once all results are calculated, print statistics and plot graphs to see the performance.
 		"""
-		#coord = to_coordinate(p, self.dims)
-		#params = {self.labels[d]: self.indices[d][k] for d, k in enumerate(coord)}
-		#params.update(self.fixed_params)
 		if len(self.dims) == 0:
 			print 'There are no parameters that have different values; nothing to compare.'
 		elif len(self.dims) == 1:
 			print 'Showing results for "{0:s}"'.format(self.labels[0])
+			if all(is_number(param) for param in sum(self.values, [])):
+				compare_plot(self.results, self.labels, self.values)
+			compare_bars(self.results, self.labels, self.values)
 		elif len(self.dims) == 2:
 			print 'Showing results for "{0:s}" and "{1:s}"'.format(self.labels[0], self.labels[1])
+			compare_surface(self.results, self.labels, self.values)
 		else:
 			print 'There are more than two parameters to compare; no visualization options.'
-		print 'The minimum ...'
+		print 'The minimum ...'  # todo
+		show()
+		return self.results
+
+
+def is_number(obj):
+	return isinstance(obj, float) or isinstance(obj, int)
 
 
