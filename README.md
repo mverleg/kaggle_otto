@@ -45,8 +45,8 @@ The general steps are now:
     from validation.crossvalidate import SampleCrossValidator
     
     train_data, true_classes, features = get_training_data()
-    validator = SampleCrossValidator(train_data, true_classes, test_frac = 0.3)
-    for train, classes, test in validator.yield_cross_validation_sets(rounds = 13):
+    validator = SampleCrossValidator(train_data, true_classes, rounds = 5, test_frac = 0.3)
+    for train, classes, test in validator.yield_cross_validation_sets():
         # your training code
         prediction = # your classification code
         validator.add_prediction(prediction)
@@ -55,6 +55,26 @@ The general steps are now:
 Furthermore it is worth noting:
 * If needed, normalize the data using utils/normalize.py.
 * If you want, create a submission file using utils/ioutils.py and upload it to Kaggle.
-These steps will change as code gets added.
+* You should run the script with `-v` parameter to show more output:
+
+    python demo/test_crossvalidate.py -v
+
+Optimizing
+-------------------------------
+
+The general steps for parameter optimization are very similar to those for cross validation (including using `-v` for the command):
+
+    from utils.loading import get_training_data
+    from validation.crossvalidate import SampleCrossValidator
+    from validation.optimize import GridOptimizer
+    
+    train_data, true_classes, features = get_training_data()
+    validator = SampleCrossValidator(train_data, true_classes, rounds = 5, test_frac = 0.2, use_data_frac = 0.2)
+    # note that in the below line, you can replace learning_rate, hidden_layer_size and/or momentum with any parameters
+    optimizer = GridOptimizer(validator = validator, learning_rate = [1, 0.1, 0.01], hidden_layer_size = [30, 50], momentum = 0.9)
+    for parameters, train, classes, test in optimizer.yield_batches():
+        prediction = # your classification code
+        optimizer.register_results(prediction)
+    optimizer.print_plot_results()
 
 
