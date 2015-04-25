@@ -15,7 +15,10 @@ from validation.metrics import confusion_matrix, average_size_mismatch
 from validation.score import calc_logloss, calc_accuracy
 
 
-class SampleCrossValidator(object):
+class Validator(object): pass
+
+
+class SampleCrossValidator(Validator):
 	"""
 		Facilitates cross validation by providing series of train and test data on which to run your own code. The results can be returned to this class to get performance metrics. Brief example in demo/test_crossvalidate.py .
 	"""
