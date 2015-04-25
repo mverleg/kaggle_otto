@@ -35,7 +35,9 @@ class GridOptimizer(object):
 
 				GridOptimizer(validator, learning_rate = [1, 0.1, 0.01], hidden_layer_size = [30, 50], momentum = 0.9)
 
-			Results are cached in the directory set by settings.OPTIMIZE_RESULTS_DIR
+			Results are cached in the directory set by settings.OPTIMIZE_RESULTS_DIR.
+
+			The code was not designed for iterable parameters. You can try to put them in another iterable, but a simple mapping may be easier (e.g. m = {1: [...], 2: [...]} , pass [1, 2] to GridOptimizer and let the code use m[param]).
 		"""
 		assert isinstance(validator, Validator), 'Argument "validator" should be an instantiated Validator (not "{0:s}").'.format(type(validator))
 		self.validator = validator

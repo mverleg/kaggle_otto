@@ -23,8 +23,8 @@ def extract_1D_data(results, labels, values):
 
 def compare_1D_3axis(plot_func, labels):
 
-	fig = figure()
-	ax1 = host_subplot(111, axes_class = AA.Axes, figsize = (8, 8))
+	fig = figure(figsize = (8, 8))
+	ax1 = host_subplot(111, axes_class = AA.Axes)
 	fig.subplots_adjust(right = 0.75)
 
 	ax2 = ax1.twinx()
