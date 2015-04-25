@@ -8,26 +8,27 @@
 from random import Random
 from sys import stdout
 from time import time
-from numpy import array, setdiff1d, float64
+from numpy import array, setdiff1d
 from subprocess import check_output
+from settings import VERBOSITY
 from validation.metrics import confusion_matrix, average_size_mismatch
 from validation.score import calc_logloss, calc_accuracy
 
 
-class SampleCrossValidator():
+class SampleCrossValidator(object):
 	"""
 		Facilitates cross validation by providing series of train and test data on which to run your own code. The results can be returned to this class to get performance metrics. Brief example in demo/test_crossvalidate.py .
 	"""
 
-	def __init__(self, data, true_classes, test_frac = 0.3, use_data_frac = None, show = True, seed = 4242):
+	def __init__(self, data, true_classes, rounds, test_frac = 0.3, use_data_frac = None, seed = 4242):
 		"""
 			Construct a validator instance, binding data and parameters.
 
 			:param data: Array with all the training data (no need to shuffle) with sample rows and feature columns.
 			:param true_classes: Array with the true class label integers.
+			:param rounds: How many rounds of cross validation to use.
 			:param test_frac: Optionally, the fraction of the used data to assign for testing (the rest being training).
 			:param use_data_frac: Optionally, the fraction of the total data to include in test and training.
-			:param show: Whether to print output each time a probability is added; defaults to True.
 			:param seed: A fixed seed for sampling, so that the same data yields the same results consistently. Should probably not be changed.
 		"""
 		assert data.shape[0] == true_classes.shape[0], 'There should be a true class for each sample ({0:d} vs {1:d}).'.format(data.shape[1], true_classes.shape[0])
@@ -35,23 +36,31 @@ class SampleCrossValidator():
 		assert 0 < use_data_frac < 1 + 1e-6 or use_data_frac is None
 		self.data = data
 		self.true_classes = true_classes
+		self.rounds = rounds
 		self.test_frac = test_frac
 		self.use_data_frac = use_data_frac
-		self.show = bool(show)
-		self.random = Random(seed)
-		self.samples = []
-		self.results = []
-		self.yield_time = None
+		self.seed = seed
 		self.total_data_count = self.data.shape[0]
 		self.use_data_count = int(self.total_data_count * use_data_frac) if use_data_frac else self.total_data_count
 		self.test_count = int(test_frac * self.use_data_count)
+		self.reset()
 
-	def get_cross_validation_set(self):
+	def reset(self):
+		"""
+			Set or return the validator to it's initial state, purging all results. Used by GridOptimizer.
+		"""
+		self.samples = []
+		self.results = []
+		self.yield_time = None
+
+	def get_cross_validation_set(self, round):
 		"""
 			Get one pair of shuffled train and test data. Intended for internal use.
 
 			:return: train_data, train_classes, test_data, test_classes
 		"""
+		""" Seed depends on round, so that results can be added without regenerating the first ones. """
+		self.random = Random(self.seed + round)
 		""" Get the indices of the data being used (sampled randomly). """
 		if self.use_data_frac:
 			use_indices = array(self.random.sample(range(self.total_data_count), self.use_data_count))
@@ -65,27 +74,33 @@ class SampleCrossValidator():
 		""" Return the information for predicting the test data. """
 		return self.data[train_indices, :], self.true_classes[train_indices], self.data[test_indices, :], self.true_classes[test_indices]
 
-	def yield_cross_validation_sets(self, rounds = 3):
+	def start_round(self, round):
+		""" Store the test indices for validation later (I hope train won't be needed). """
+		train_data, train_classes, test_data, test_classes = self.get_cross_validation_set(round)
+		self.samples.append(test_classes)
+		self.yield_time = time()
+		return train_data, train_classes, test_data
+
+	def yield_cross_validation_sets(self):
 		"""
 			Yields each of the sets of cross validation data.
 
-			:param rounds: How many rounds of cross validation to perform.
 			:return: An iterator with (train_data, train_classes, test_data) tuple on each iteration.
 		"""
 		assert len(self.samples) == 0, 'This {0:s} already has samples; create a new one if you want to cross-validate again.'.format(self.__class__.__name__)
-		for round in range(rounds):
-			""" Store the test indices for validation later (I hope train won't be needed). """
-			train_data, train_classes, test_data, test_classes = self.get_cross_validation_set()
-			self.samples.append(test_classes)
-			self.yield_time = time()
+		# note to developer: if you change this method, you should probably also change GridOptimizer.yield_batches()
+		for round in range(self.rounds):
+			train_data, train_classes, test_data = self.start_round(round)
 			yield train_data, train_classes, test_data
 
-	def add_prediction(self, prediction):
+	def add_prediction(self, prediction, _force_round = None):
 		"""
 			Register a classification result for scoring.
 
 			:param prediction: SxC array with predicted probabilities, with each row corresponding to a test data sample and each column corresponding to a class.
-			:return: (logloss, accuracy) tuple of floats
+			:return: (logloss, accuracy, duration) tuple of floats
+
+			You should never need the _force_round parameter.
 		"""
 		duration = time() - self.yield_time
 		#assert prediction.shape[1] == NCLASSES, 'There should be a probability for each class.'
@@ -93,14 +108,14 @@ class SampleCrossValidator():
 		test_classes = self.samples[len(self.results)]
 		logloss = calc_logloss(prediction, test_classes)
 		accuracy = calc_accuracy(prediction, test_classes)
-		if self.show and not len(self.results):
+		if VERBOSITY >= 1 and not len(self.results):
 			stdout.write('  #   loss   accuracy  time\n')
 		confusion = confusion_matrix(prediction, test_classes)
 		size_mismatch = average_size_mismatch(prediction, test_classes)
 		self.results.append((logloss, accuracy, duration, confusion, size_mismatch))
-		if self.show:
-			stdout.write('{0:-3d}  {1:6.3f}  {2:5.2f}%  {3:6.3f}s\n'.format(len(self.results), logloss, 100 * accuracy, duration))
-		return logloss, accuracy
+		if VERBOSITY >= 1:
+			stdout.write('{0:-3d}  {1:6.3f}  {2:5.2f}%  {3:6.3f}s\n'.format(_force_round or len(self.results), logloss, 100 * accuracy, duration))
+		return logloss, accuracy, duration
 
 	def get_results(self):
 		"""
