@@ -43,8 +43,8 @@ def compare_1D_3axis(plot_func, labels):
 	ax1.legend(loc = 'lower right')
 
 	ax1.axis['left'].label.set_color('blue')
-	ax2.axis['right'].label.set_color('red')
-	ax3.axis['right'].label.set_color('green')
+	ax2.axis['right'].label.set_color('green')
+	ax3.axis['right'].label.set_color('red')
 
 
 def compare_plot(results, labels, values):
@@ -74,10 +74,11 @@ def compare_bars(results, labels, values):
 	def bars_handler(ax1, ax2, ax3):
 		logloss_mean, logloss_std, accuracy_mean, accuracy_std, time_mean, time_std = extract_1D_data(results, labels, values)
 		x = arange(len(logloss_mean))
-		ax1.bar(x - 0.3, list(logloss_mean), width = 0.25, color = 'blue', label = 'logloss')
-		ax2.bar(x + 0.0, accuracy_mean, width = 0.25, color = 'green', label = 'accuracy')
-		ax3.bar(x + 0.3, time_mean, width = 0.25, color = 'red', label = 'time')
+		ax1.bar(x - 0.43, list(logloss_mean), width = 0.26, color = 'blue', label = 'logloss')
+		ax2.bar(x - 0.13, accuracy_mean, width = 0.26, color = 'green', label = 'accuracy')
+		ax3.bar(x + 0.17, time_mean, width = 0.26, color = 'red', label = 'time')
 		ax1.set_xticks(x)
+		ax1.set_xlim([-0.55, len(logloss_mean) - 0.45])
 		ax1.xaxis.set_ticklabels([str(v) for v in values[0]])
 
 	compare_1D_3axis(plot_func = bars_handler, labels = labels)
