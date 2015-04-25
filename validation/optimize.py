@@ -43,9 +43,8 @@ class GridOptimizer(object):
 		self.use_caching = bool(use_caching)
 		self.prefix = prefix or ''
 		self.fixed_params = {key: val for key, val in params.items() if not is_nonstr_iterable(val)}
-		self.iter_params = OrderedDict((key, val) for key, val in params.items() if is_nonstr_iterable(val))
-		#todo: sort all values
-		self.labels, self.values = zip(*[(key, val) for key, val in params.items() if is_nonstr_iterable(val)])
+		iter_params = OrderedDict((key, sorted(val)) for key, val in params.items() if is_nonstr_iterable(val))
+		self.labels, self.values = zip(*[(key, val) for key, val in iter_params.items() if is_nonstr_iterable(val)])
 		self.dims = tuple(len(li) for li in self.values)
 		self.results = zeros(self.dims + (self.rounds, 3,), dtype = float64)
 		self.results_added = 0

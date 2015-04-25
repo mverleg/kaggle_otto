@@ -1,5 +1,6 @@
 
 from __future__ import division
+from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.gridspec import GridSpec
 from matplotlib.pyplot import figure, subplot, subplot2grid
 from mpl_toolkits.axes_grid1 import host_subplot
@@ -99,11 +100,33 @@ def compare_surface(results, labels, values):
 
 	fig.tight_layout()
 
-	ax1.imshow(logloss_mean)
+	cdict = {
+		'red':   ((0.0, 1.0, 1.0), (1.0, 0.0, 0.0)),
+		'green': ((0.0, 0.0, 0.0), (1.0, 1.0, 1.0)),
+		'blue':  ((0.0, 0.0, 0.0), (1.0, 0.0, 0.0))
+	}
+	redgreen = LinearSegmentedColormap('redgreen', cdict)
+	invcdict = {
+		'red':   ((0.0, 1.0, 1.0), (1.0, 0.0, 0.0)),
+		'green': ((0.0, 0.0, 0.0), (1.0, 1.0, 1.0)),
+		'blue':  ((0.0, 0.0, 0.0), (1.0, 0.0, 0.0))
+	}
+	invredgreen = LinearSegmentedColormap('redgreen', invcdict)
 
-	ax2.imshow(accuracy_mean)
+	im1 = ax1.imshow(logloss_mean, cmap = redgreen, interpolation = 'none')
 
-	ax2.imshow(time_mean)
+	ax2.imshow(accuracy_mean, cmap = invredgreen, interpolation = 'none')
+
+	ax3.imshow(time_mean, cmap = invredgreen, interpolation = 'none')
+
+	fig.colorbar(ax = ax1, mappable = im1, orientation = 'horizontal', label = 'values are for logloss, green is better everywhere')
+
+	ax1.set_xlabel(labels[1].replace('_', ' '))
+	ax1.set_ylabel(labels[0].replace('_', ' '))
+	ax1.set_xticks(range(len(values[1])))
+	ax1.set_yticks(range(len(values[0])))
+	ax1.xaxis.set_ticklabels([str(v) for v in values[1]])
+	ax1.yaxis.set_ticklabels([str(v) for v in values[0]])
 
 	ax2.set_xticks([])
 	ax2.set_yticks([])
