@@ -2,11 +2,10 @@
 from __future__ import division
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.gridspec import GridSpec
-from matplotlib.pyplot import figure, subplot, subplot2grid
+from matplotlib.pyplot import figure
 from mpl_toolkits.axes_grid1 import host_subplot
 import mpl_toolkits.axisartist as AA
 from numpy import arange
-from matplotlib import gridspec
 
 
 def extract_1D_data(results, labels, values):
@@ -58,6 +57,8 @@ def compare_plot(results, labels, values):
 		logloss_mean, logloss_std, accuracy_mean, accuracy_std, time_mean, time_std = extract_1D_data(results, labels, values)
 		if min(values[0]) / max(values[0]) <= 0.01:
 			ax1.set_xscale('log')
+			ax2.set_xscale('log')
+			ax3.set_xscale('log')
 		ax1.grid()
 		ax1.errorbar(x = values[0], y = list(logloss_mean), yerr = logloss_std, c = 'blue', label = 'logloss')
 		ax2.errorbar(x = values[0], y = accuracy_mean, yerr = accuracy_std, c = 'green', label = 'accuracy')
