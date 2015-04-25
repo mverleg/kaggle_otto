@@ -5,8 +5,10 @@
 
 from collections import Iterable, OrderedDict
 from json import dumps, loads
+from os import makedirs
 from os.path import isdir, join
-from numpy import zeros, prod
+from numpy import zeros, prod, float64
+from grid import to_coordinate
 from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY
 from validation.crossvalidate import Validator
 
@@ -20,7 +22,7 @@ def is_nonstr_iterable(obj):
 
 class GridOptimizer(object):
 
-	def __init__(self, validator, use_caching = True, **params):
+	def __init__(self, validator, use_caching = True, prefix = None, **params):
 		"""
 			Create a grid optimizer to do a grid search for optimal parameter vaues.
 
@@ -29,34 +31,38 @@ class GridOptimizer(object):
 
 				GridOptimizer(validator, learning_rate = [1, 0.1, 0.01], hidden_layer_size = [30, 50], momentum = 0.9)
 
+			:param prefix: Prefix for cache files (can be left empty).
 			Results are cached in the directory set by settings.OPTIMIZE_RESULTS_DIR
 		"""
-		assert isdir(OPTIMIZE_RESULTS_DIR), 'Make sure that "{0:s}" exists, it change it\'s value in settings'.format(OPTIMIZE_RESULTS_DIR)
 		assert isinstance(validator, Validator), 'Argument "validator" should be an instantiated Validator (not "{0:s}").'.format(type(validator))
 		self.validator = validator
 		self.rounds = self.validator.rounds
 		self.use_caching = bool(use_caching)
+		self.prefix = prefix or ''
 		self.fixed_params = {key: val for key, val in params.items() if not is_nonstr_iterable(val)}
 		self.iter_params = OrderedDict((key, val) for key, val in params.items() if is_nonstr_iterable(val))
 		self.labels, self.indices = zip(*[(key, val) for key, val in params.items() if is_nonstr_iterable(val)])
 		self.dims = tuple(len(li) for li in self.indices)
-		self.results = zeros(self.dims + (self.rounds,), dtype = object)
+		self.results = zeros(self.dims + (self.rounds, 3,), dtype = float64)
+		self.results_added = 0
 		print 'grid optimize: {0:s} comparisons x {1:d} rounds = {2:d} iterations'.format(' x '.join(str(d) for d in self.dims), self.rounds, prod(self.dims) * self.rounds)
-		#for k in range(prod(self.dims)):
-		#	print k, to_coordinate(k, self.dims), from_coordinate(to_coordinate(k, self.dims), self.dims)
+		try:
+			makedirs(OPTIMIZE_RESULTS_DIR)
+		except OSError:
+			""" Probably already exists; ignore it. """
 
 	def params_name(self, params):
 		params = OrderedDict(sorted(params.items()))
 		return (
-			'_'.join('{0:s}-{1:}'.format(key, val) for key, val in params.items()),
+			self.prefix + '_'.join('{0:s}-{1:}'.format(key, val) for key, val in params.items()),
 			', '.join('{0:s} = {1:}'.format(key, val) for key, val in params.items()),
 		)
 
-	def _store_results(self, filepath, logloss, accuracy, duration):
+	def store_results(self, filepath, logloss, accuracy, duration):
 		with open(filepath, 'w+') as fh:
 			fh.write(dumps({'logloss': logloss, 'accuracy': accuracy, 'duration': duration}, indent = 4, sort_keys = True))
 
-	def _load_results(self, filepath):
+	def load_results(self, filepath):
 		"""
 			:return: (logloss, accuracy, duration) tuple
 		"""
@@ -83,6 +89,7 @@ class GridOptimizer(object):
 			""" Every combination of parameters. """
 			coord = to_coordinate(p, self.dims)
 			params = {self.labels[d]: self.indices[d][k] for d, k in enumerate(coord)}
+			params.update(self.fixed_params)
 			self.validator.reset()
 			filename, dispname = self.params_name(params)
 			print 'calculating {0:d} rounds for parameters {1:s}'.format(self.rounds, dispname)
@@ -90,52 +97,58 @@ class GridOptimizer(object):
 				if self.use_caching:
 					try:
 						""" Try to load cache. """
-						results = self._load_results(join(OPTIMIZE_RESULTS_DIR, filename))
+						results = self.load_results(join(OPTIMIZE_RESULTS_DIR, filename))
 					except IOError:
 						""" No cache; yield the data (storage happens elsewhere). """
 						yield self.get_single_batch(params, round, dispname)
 					else:
 						""" Cache loaded; handle. """
-						self._store_results(join(OPTIMIZE_RESULTS_DIR, filename), *results)
+						self.add_results(*results)
 						if VERBOSITY >= 2:
 							print 'cache: %s, round #%d/%d' % (dispname, round + 1, self.rounds)
 				else:
 					yield self.get_single_batch(params, round, dispname)
 
+	def add_results(self, logloss, accuracy, duration):
+		param_index = self.results_added // self.rounds
+		round_index = self.results_added % self.rounds
+		coord = to_coordinate(param_index, self.dims)
+		arr = self.results
+		for k in coord:
+			arr = arr[k]
+		arr[round_index][:] = logloss, accuracy, duration
+		self.results_added += 1
+
 	def register_results(self, prediction):
-		#assert self.current is not None, 'You should start iterating using .yield_batches() before registering any results.'
-		params = self.euclidean_params[self.current]
+		"""
+			Register results of an optimization round.
+
+			:param prediction: SxC array with predicted probabilities, with each row corresponding to a test data sample and each column corresponding to a class.
+		"""
+		assert self.results_added < prod(self.dims) * self.rounds, 'There are already {0:d} results for {1:d} slots.'.format(self.results_added + 1, prod(self.dims) * self.rounds)
+		coord = to_coordinate(self.results_added // self.rounds, self.dims)
+		params = {self.labels[d]: self.indices[d][k] for d, k in enumerate(coord)}
 		filename, dispname = self.params_name(params)
 		results = self.validator.add_prediction(prediction)
-		self._store_results(join(OPTIMIZE_RESULTS_DIR, filename), *results)
+		self.add_results(*results)
+		self.store_results(join(OPTIMIZE_RESULTS_DIR, filename), *results)
+		return results
 
 	def print_plot_results(self):
-		pass
-
-
-"""
-	Functions from bardeen.grid:
-"""
-def to_coordinate(index, dims):
-	"""
-		Convert from 'element N' to 'result matrix coordinate [x, y, z]'.
-	"""
-	assert 0 <= index < remaining_dims(dims)[0], 'The index {0:d} is out of bounds (the grid has {1:d} elements)'.format(index, remaining_dims(dims)[0])
-	return tuple(index // remaining_dims(dims)[k + 1] % dim for k, dim in enumerate(dims))
-
-
-def from_coordinate(coordinate, dims):
-	"""
-		Convert from 'result matrix coordinate [x, y, z]' to 'element N'.
-	"""
-	for coord, dim in zip(coordinate, dims):
-		assert 0 <= coord <  dim
-	return sum(tuple(coordinate[k] * remaining_dims(dims)[k + 1] for k in range(len(dims))))
-
-
-def remaining_dims(dims):
-	remaining_dims.CACHE = getattr(remaining_dims, 'CACHE', {})
-	remaining_dims.CACHE[dims] = remaining_dims.CACHE.get(dims, tuple(prod(dims[k:], dtype = int) for k in range(len(dims) + 1)))
-	return remaining_dims.CACHE[dims]
+		"""
+			Once all results are calculated, print statistics and plot graphs to see the performance.
+		"""
+		#coord = to_coordinate(p, self.dims)
+		#params = {self.labels[d]: self.indices[d][k] for d, k in enumerate(coord)}
+		#params.update(self.fixed_params)
+		if len(self.dims) == 0:
+			print 'There are no parameters that have different values; nothing to compare.'
+		elif len(self.dims) == 1:
+			print 'Showing results for "{0:s}"'.format(self.labels[0])
+		elif len(self.dims) == 2:
+			print 'Showing results for "{0:s}" and "{1:s}"'.format(self.labels[0], self.labels[1])
+		else:
+			print 'There are more than two parameters to compare; no visualization options.'
+		print 'The minimum ...'
 
 

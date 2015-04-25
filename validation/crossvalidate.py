@@ -15,7 +15,31 @@ from validation.metrics import confusion_matrix, average_size_mismatch
 from validation.score import calc_logloss, calc_accuracy
 
 
-class Validator(object): pass
+class Validator(object):
+	"""
+		Base class. Don't instantiate directly.
+	"""
+
+	def __init__(self, data, true_classes, rounds):
+		assert data.shape[0] == true_classes.shape[0], 'There should be a true class for each sample ({0:d} vs {1:d}).'.format(data.shape[1], true_classes.shape[0])
+		self.data = data
+		self.true_classes = true_classes
+		self.rounds = rounds
+
+	def reset(self):
+		raise NotImplementedError()
+
+	def start_round(self, round):
+		raise NotImplementedError()
+
+	def yield_cross_validation_sets(self):
+		raise NotImplementedError()
+
+	def add_prediction(self, prediction, _force_round = None):
+		raise NotImplementedError()
+
+	def get_results(self):
+		raise NotImplementedError()
 
 
 class SampleCrossValidator(Validator):
@@ -34,18 +58,15 @@ class SampleCrossValidator(Validator):
 			:param use_data_frac: Optionally, the fraction of the total data to include in test and training.
 			:param seed: A fixed seed for sampling, so that the same data yields the same results consistently. Should probably not be changed.
 		"""
-		assert data.shape[0] == true_classes.shape[0], 'There should be a true class for each sample ({0:d} vs {1:d}).'.format(data.shape[1], true_classes.shape[0])
 		assert 0 < test_frac < 1
 		assert 0 < use_data_frac < 1 + 1e-6 or use_data_frac is None
-		self.data = data
-		self.true_classes = true_classes
-		self.rounds = rounds
-		self.test_frac = test_frac
-		self.use_data_frac = use_data_frac
-		self.seed = seed
+		super(SampleCrossValidator, self).__init__(data, true_classes, rounds)
 		self.total_data_count = self.data.shape[0]
 		self.use_data_count = int(self.total_data_count * use_data_frac) if use_data_frac else self.total_data_count
 		self.test_count = int(test_frac * self.use_data_count)
+		self.test_frac = test_frac
+		self.use_data_frac = use_data_frac
+		self.seed = seed
 		self.reset()
 
 	def reset(self):
