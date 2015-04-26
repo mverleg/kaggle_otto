@@ -85,7 +85,7 @@ class GridOptimizer(object):
 			print 'calculate: %s, round #%d/%d' % (name, round + 1, self.rounds)
 		return params, train_data, train_classes, test_data
 
-	def yield_batches(self):
+	def yield_batches(self, print_current_parameters = True):
 		"""
 			Iterator that goes over the different training parameters and the different cross validation rounds for each of them.
 
@@ -98,7 +98,8 @@ class GridOptimizer(object):
 			params.update(self.fixed_params)
 			self.validator.reset()
 			filename, dispname = self.params_name(params)
-			print 'calculating {0:d} rounds for parameters {1:s}'.format(self.rounds, dispname)
+			if print_current_parameters:
+				print 'calculating {0:d} rounds for parameters {1:s}'.format(self.rounds, dispname)
 			for round in range(self.rounds):
 				if self.use_caching:
 					try:
