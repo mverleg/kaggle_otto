@@ -7,9 +7,12 @@ from validation.score import prob_to_cls
 
 def confusion_matrix(predictions, classes_true):
 	"""
-		Generate the confusion matrix.
+		Generate the normalized confusion matrix.
+
+		http://stackoverflow.com/questions/20927368/python-how-to-normalize-a-confusion-matrix
 	"""
-	return calc_confusion_matrix(classes_true, prob_to_cls(predictions), labels = range(1, 10))
+	RCM = calc_confusion_matrix(classes_true, prob_to_cls(predictions), labels = range(1, 10))
+	return (RCM.T / float64(RCM.sum(1).clip(min = 1))).T
 
 
 def average_size_mismatch(predictions, classes_true):

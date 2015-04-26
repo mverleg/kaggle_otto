@@ -154,7 +154,7 @@ class SampleCrossValidator(Validator):
 			The current git hash is included so that the result can hopefully be reproduced by going back to that commit.
 		"""
 		logloss, accuracy, duration, confusions, size_mismatches = self.get_results()
-		confusion = 1000. * confusions.sum(0) / confusions.sum()
+		confusion = 1000. * confusions.sum(0) / len(confusions)
 		size_mismatch = size_mismatches.mean(0)
 		output_handle.write('*cross validation results*\n')
 		output_handle.write('code version  {0:s}\n'.format(check_output(['git', 'rev-parse','HEAD']).rstrip()))
