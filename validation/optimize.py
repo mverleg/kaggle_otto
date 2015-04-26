@@ -143,14 +143,14 @@ class GridOptimizer(object):
 		self.store_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)), *res)
 		return res
 
-	def print_top(self):
+	def print_top(self, topprint):
 		"""
 			Print the lowest logloss results.
 		"""
 		logloss_slice = [slice(None)] * len(self.dims) + [slice(None), 0]
 		logloss_all = self.results[logloss_slice]
 		logloss_mean = logloss_all.mean(len(self.dims))
-		logloss_cutoff = sorted(logloss_mean.flat, reverse = False)[min(12, len(logloss_mean) - 1)]
+		logloss_cutoff = sorted(logloss_mean.flat, reverse = False)[min(topprint, len(logloss_mean) - 1)]
 		min_coords = zip(*where(logloss_mean < logloss_cutoff))
 		min_coords = sorted(min_coords, key = lambda pos: logloss_mean.flat[ravel_multi_index(pos, self.dims)])
 		stdout.write('pos     loss      {0:s}\n'.format('  '.join('{0:16s}'.format(label.replace('_', ' '))[-16:] for label in self.labels)))
@@ -162,7 +162,7 @@ class GridOptimizer(object):
 				stdout.write('  {0:16s}'.format(unicode(self.values[k][j])))
 			stdout.write('\n')
 
-	def print_plot_results(self):
+	def print_plot_results(self, topprint = 12):
 		"""
 			Once all results are calculated, print statistics and plot graphs to see the performance.
 		"""
@@ -178,7 +178,7 @@ class GridOptimizer(object):
 			compare_surface(self.results, self.labels, self.values)
 		else:
 			print 'There are more than two parameters to compare; no visualization options.'
-		self.print_top()
+		self.print_top(topprint)
 		show()
 		return self.results
 
