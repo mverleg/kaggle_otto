@@ -20,11 +20,9 @@ To install the Python packages that you need, you can do:
 
     install -r dev/freeze.pip
 
-After that you need Lasagne. In an unrelated directory (not the project and not site-packages), type:
+After that, if you want to do any neural network stuff, you need Lasagne. Just type:
 
-    git clone https://github.com/Lasagne/Lasagne.git
-    cd Lasagne
-    python setup.py install
+    pip install -r https://raw.githubusercontent.com/dnouri/kfkd-tutorial/master/requirements.txt
 
 Check carefully for errors in the middle. If there are none, you are done!
 
