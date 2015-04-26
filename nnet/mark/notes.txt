@@ -2,6 +2,9 @@
 read until April 26th: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/12882/guess-this-is-really-the-time-to-try-out-neural-nets?page=5
 long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
 
+#todo: train vs test output
+#todo: dynamic learning rate
+
 #todo: after other useful functionality
 #todo: especially dropout
 #todo: extract good weights and use for next training
