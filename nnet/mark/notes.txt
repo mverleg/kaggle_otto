@@ -1,0 +1,19 @@
+
+read until April 26th: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/12882/guess-this-is-really-the-time-to-try-out-neural-nets?page=5
+long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
+
+#todo: after other useful functionality
+#todo: especially dropout
+#todo: extract good weights and use for next training
+#todo: save / load models
+#todo: weight decay
+I used that exact script to achieve a LB Score of 0.5078. (Single layer, 128 hidden nodes. You'll have to play around with alpha so you don't over fit.)
+really hard time to distinguish classes 2, 3 and 4
+1) transform by taking log(X+1)
+2) Scale everything with sckit's StandardScaler (or equivalent)
+#todo: Nolearn/Lasagne has a built-in automatic choice of CV
+That's a single network with dropout. CV is 0.445 and LB is 0.448. I'll be happy to post the code afterwards, but currently its nothing special, just parameter tuning so far.
+Learning rate 0.00x - 0.000x
+One heuristic metric I've found useful is that lasagne/nolearn outputs the ratio of the training loss to the test loss as a function of time. When that ratio gets below 0.8 or so, the network seems to mostly overfit from there on if you keep on training.
+
+
