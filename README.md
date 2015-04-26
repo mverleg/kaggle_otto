@@ -77,4 +77,7 @@ The general steps for parameter optimization are very similar to those for cross
 
 Note that results are cached in `settings.OPTIMIZE_RESULTS_DIR`. You can turn this off with the `use_cache` parameter, or remove the directory to clear chance.
 
+As suggested by Jona, you can also use hyperopt (http://jaberg.github.io/hyperopt/) to find an optimum automatically. I don't know about performance; the interface is different but understandable and it is more automatic but without the figure.
+
+
 
