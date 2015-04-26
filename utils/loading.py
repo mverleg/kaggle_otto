@@ -15,7 +15,7 @@ from os.path import join
 from settings import VERBOSITY, TRAIN_DATA_PATH, TEST_DATA_PATH, TRAINSIZE, TESTSIZE, NFEATS
 
 
-def load_training_data(filepath = TRAIN_DATA_PATH):
+def load_training_data(filepath):
 	"""
 		Load training data.
 
@@ -36,7 +36,7 @@ def load_training_data(filepath = TRAIN_DATA_PATH):
 	return data, classes, features
 
 
-def load_testing_data(filepath = TEST_DATA_PATH):
+def load_testing_data(filepath):
 	"""
 		Load testing data.
 

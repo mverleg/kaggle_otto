@@ -23,5 +23,5 @@ One heuristic metric I've found useful is that lasagne/nolearn outputs the ratio
 optimize parameters one by one, by doing an line optimization and changing the winning parameter
 is oversampling the classes which cause most problems a good idea? Or any other ideas to focus on specific classes?
 It's important to remember to get your net to train nicely and overfit first, then regularize.
-
-
+dealing with class imbalance: undersampling, class weight, and rescaling probabilities
+is log scaling working well?
