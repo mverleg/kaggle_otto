@@ -5,9 +5,6 @@
     Using this model, you can use the ensemble classifier to classify future samples, given predictions from models.
 """
 
-import sys
-sys.path.append('..')
-
 import numpy as np
 import sklearn.linear_model as skl
 from arrayutils import stack_predictions, unstack_predictions
@@ -73,10 +70,45 @@ def grid_ensemble(predictionmatrix, trueclasses, numinterval = None, printWeight
         prediction = mean_ensemble(stackedPredict, weights = weightDict[weights['weights']])
         optimizer.register_results(prediction)
     optimizer.print_plot_results(20)
+    return weightDict
     
-#def linear_reg_ensemble(predictionmatrix, trueclasses, testmatrix)
-
-
+def linear_reg_ensemble(predictionmatrix, trueclasses, testmatrix):
+    """
+    Creates predicts every individual class using a seperate linear regression classifier.
+    The inputs are the predictions for every class from every model
+    """
+    unstackPrediction = unstack_predictions(predictionmatrix)
+    unstackTest = unstack_predictions(testmatrix)
+    Q, N, C = np.shape(testmatrix)
+    result = np.empty((C,N))
+    for i in range(C):
+        model = skl.LinearRegression()
+        model.fit(unstackPrediction, trueclasses == i)
+        result = np.vstack((result, model.predict(unstackTest)))
+    return result.T
+    
+def combineFeatures(a, b):
+    #Given NxA matrix and NxB matrix, we want NxAB matrix by pairwise multiplication of columns
+    N, A = np.shape(a)
+    M, B = np.shape(b)
+    assert N == M
+    return np.array([np.hstack(np.dot(a[i,:][:,None], b[i,:][None,:])) for i in range(N)])    
+    
+def fwls_ensemble(predictionmatrix, predictfeatures, trueclasses, testmatrix, testfeatures):
+    """
+    Given N training samples, T testing samples, Q models, C classes, F features:
+    predictionmatrix: QxNxC matrix
+    predictfeatures: NxF matrix
+    trueclasses: N array
+    testmatrix: QxTxC matrix
+    testfeatures: TxF matrix
+    Classifies the test samples using FWLS ensemble
+    for reference, see: http://arxiv.org/pdf/0911.0460v2.pdf
+    """ 
+    trainMatrixFull = combineFeatures(unstack_predictions(predictionmatrix), predictfeatures)
+    testMatrixFull = combineFeatures(unstack_predictions(testmatrix, testfeatures))
+    return linear_reg_ensemble(trainMatrixFull, trueclasses, testMatrixFull)
+    
 if __name__ == '__main__':
     from demo.fake_testing_probabilities import get_random_probabilities
     N = 100
