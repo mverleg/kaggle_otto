@@ -55,7 +55,7 @@ def compare_plot(results, labels, values):
 	"""
 	def plot_handler(ax1, ax2, ax3):
 		logloss_mean, logloss_std, accuracy_mean, accuracy_std, time_mean, time_std = extract_1D_data(results, labels, values)
-		if min(abs(values[0])) / max(abs(values[0])) <= 0.01 and min(abs(values[0])) > 1e-6:
+		if min(abs(values[0])) / max(abs(values[0])) <= 0.01 and min(abs(values[0])) > 1e-6 and all([v > 0 for v in values[0]]):
 			ax1.set_xscale('log')
 			ax2.set_xscale('log')
 			ax3.set_xscale('log')
