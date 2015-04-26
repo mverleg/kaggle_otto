@@ -74,10 +74,6 @@ ax21.scatter(X[:, 0], X[:, 1], c=(y != y_predicted), cmap=cm.gray_r)
 ax21.set_title("Accuracy: {0:.2f}%".format(100*np.mean(y == y_predicted)))
 
 
-#todo: after Other useful functionality
-#todo: especially dropout
-#todo: extract good weights and use for next training
-
 
 if __name__ == '__main__':
 	show()

@@ -4,6 +4,7 @@
 
 	http://nbviewer.ipython.org/github/craffel/Lasagne-tutorial/blob/master/examples/tutorial.ipynb
 """
+from sys import stdout
 
 from warnings import filterwarnings
 from lasagne.init import Orthogonal
@@ -21,9 +22,6 @@ filterwarnings('ignore', '.*topo.*')
 
 
 train_data, true_classes, features = get_training_data()
-print train_data.shape
-print true_classes.shape
-print features
 
 # Generate synthetic data
 N_CLASSES = 4
@@ -34,7 +32,7 @@ X = X.astype(config.floatX)
 y = y.astype('int32')
 
 
-
+s
 # First, construct an input layer.
 # The shape parameter defines the expected input shape, which is just the shape of our data matrix X.
 l_in = InputLayer(shape = X.shape)
@@ -57,7 +55,6 @@ l_output = DenseLayer(
 net_input = T.matrix('net_input')
 net_output = l_output.get_output(net_input)
 
-
 # As a loss function, we'll use Theano's categorical_crossentropy function.
 # This allows for the network output to be class probabilities,
 # but the target output to be class labels.
@@ -75,8 +72,9 @@ predicting = function([net_input], net_output)
 
 # Train for 100 epochs
 for k, n in enumerate(xrange(100)):
-	print training(X, y) # this is logloss
-
+	train_loss = training(X, y) # this is logloss
+	stdout.write('{0:.3f}  '.format(float(train_loss)))
+print 'ready!'
 
 # Compute the predicted label of the training data.
 # The argmax converts the class probability output to class label
@@ -85,13 +83,5 @@ prediction = np.argmax(probabilities, axis = 1)
 print (prediction == y).mean()
 
 
-
-#todo: after other useful functionality
-#todo: especially dropout
-#todo: extract good weights and use for next training
-#todo: save / load models
-#todo: weight decay
-#I used that exact script to achieve a LB Score of 0.5078. (Single layer, 128 hidden nodes. You'll have to play around with alpha so you don't over fit.)
-#really hard time to distinguish classes 2, 3 and 4
 
 
