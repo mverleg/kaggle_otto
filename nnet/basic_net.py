@@ -16,8 +16,9 @@ from utils.loading import get_training_data
 from validation.crossvalidate import SampleCrossValidator
 
 filterwarnings('ignore', '.*topo.*')
+config.optimizer = 'None'  # todo: turn off, it's very slow
 
-#todo: normalize
+#todo: normalize data
 
 
 train_data, true_classes, features = get_training_data()
