@@ -5,12 +5,13 @@
 
 from matplotlib.pyplot import subplots, show
 from numpy import log10
+from theano.scalar import float32
 from utils.loading import get_training_data
 
 
 def prepare_data():
 	train_data, classes, features = get_training_data()
-	train_data = log10(1 + train_data)
+	train_data = log10(1 + train_data.astype(float32))
 	return train_data, classes, features
 
 

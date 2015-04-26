@@ -7,17 +7,21 @@
 
 from lasagne.init import Orthogonal
 from matplotlib.pyplot import subplots, show
-from numpy import array
+from numpy import array, float32
 from lasagne.nonlinearities import softmax, tanh
 from lasagne import layers
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet
+from theano import shared
+from gradient_boosting.nnio import SnapshotSaver
+from nnet.dynamic import LogarithmicVariable
 from nnet.prepare import prepare_data
 from settings import NCLASSES, VERBOSITY
 from utils.shuffling import shuffle
 
 
 X, y, features = prepare_data()
+
 
 net = NeuralNet(
 	layers = [
@@ -26,9 +30,9 @@ net = NeuralNet(
 		('output', layers.DenseLayer),
 	],
 
-	input_shape = (128, 93),
+	input_shape = (128, 93),  # batch size
 
-	hidden_nonlinearity = tanh,  # rectify
+	hidden_nonlinearity = tanh,  # ,rectify,
 	hidden_num_units = 40,
 	hidden_W = Orthogonal(),
 
@@ -37,8 +41,14 @@ net = NeuralNet(
 	output_W = Orthogonal(),
 
 	update = nesterov_momentum,
-	update_learning_rate = 0.0005,
-	update_momentum = 0.9,
+	update_learning_rate = shared(float32(0.0)),
+	update_momentum = shared(float32(0.0)),
+
+	on_epoch_finished=[
+		LogarithmicVariable('update_learning_rate', start = 0.001, stop = 0.00001),
+		LogarithmicVariable('update_momentum', start = 0.9, stop = 0.999),
+		SnapshotSaver(every = 100, base_name = 'run_net'),
+	],
 
 	regression = False,
 	max_epochs = 1000,
