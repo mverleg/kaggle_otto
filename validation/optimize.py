@@ -149,7 +149,7 @@ class GridOptimizer(object):
 		logloss_slice = [slice(None)] * len(self.dims) + [slice(None), 0]
 		logloss_all = self.results[logloss_slice]
 		logloss_mean = logloss_all.mean(len(self.dims))
-		logloss_cutoff = sorted(logloss_mean.flat, reverse = False)[12]
+		logloss_cutoff = sorted(logloss_mean.flat, reverse = False)[:12]
 		min_coords = zip(*where(logloss_mean < logloss_cutoff))
 		min_coords = sorted(min_coords, key = lambda pos: logloss_mean.flat[ravel_multi_index(pos, self.dims)])
 		stdout.write('pos     loss      {0:s}\n'.format('  '.join('{0:16s}'.format(label.replace('_', ' '))[-16:] for label in self.labels)))

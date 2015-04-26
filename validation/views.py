@@ -5,7 +5,7 @@ from matplotlib.gridspec import GridSpec
 from matplotlib.pyplot import figure
 from mpl_toolkits.axes_grid1 import host_subplot
 import mpl_toolkits.axisartist as AA
-from numpy import arange
+from numpy import arange, abs
 
 
 def extract_1D_data(results, labels, values):
@@ -55,7 +55,7 @@ def compare_plot(results, labels, values):
 	"""
 	def plot_handler(ax1, ax2, ax3):
 		logloss_mean, logloss_std, accuracy_mean, accuracy_std, time_mean, time_std = extract_1D_data(results, labels, values)
-		if min(values[0].abs()) / max(values[0].abs()) <= 0.01 and min(values[0].abs()) > 1e-6:
+		if min(abs(values[0])) / max(abs(values[0])) <= 0.01 and min(abs(values[0])) > 1e-6:
 			ax1.set_xscale('log')
 			ax2.set_xscale('log')
 			ax3.set_xscale('log')
