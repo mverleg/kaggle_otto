@@ -10,7 +10,7 @@ from sys import stdout
 from time import clock
 from numpy import array, setdiff1d
 from subprocess import check_output
-from settings import VERBOSITY, NCLASSES
+from settings import VERBOSITY, NCLASSES, SEED
 from validation.metrics import confusion_matrix, average_size_mismatch
 from validation.score import calc_logloss, calc_accuracy
 
@@ -47,7 +47,7 @@ class SampleCrossValidator(Validator):
 		Facilitates cross validation by providing series of train and test data on which to run your own code. The results can be returned to this class to get performance metrics. Brief example in demo/test_crossvalidate.py .
 	"""
 
-	def __init__(self, data, true_classes, rounds, test_frac = 0.3, use_data_frac = None, seed = 4242):
+	def __init__(self, data, true_classes, rounds, test_frac = 0.3, use_data_frac = None, seed = SEED):
 		"""
 			Construct a validator instance, binding data and parameters.
 
