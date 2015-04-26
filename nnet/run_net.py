@@ -13,7 +13,7 @@ from lasagne import layers
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet
 from theano import shared
-from gradient_boosting.nnio import SnapshotSaver
+from nnet.nnio import SnapshotSaver
 from nnet.dynamic import LogarithmicVariable
 from nnet.prepare import prepare_data
 from settings import NCLASSES, VERBOSITY
@@ -26,15 +26,22 @@ X, y, features = prepare_data()
 net = NeuralNet(
 	layers = [
 		('input', layers.InputLayer),
-		('hidden', layers.DenseLayer),
+		('dense1', layers.DenseLayer),
+		#('dense2', layers.DenseLayer),
 		('output', layers.DenseLayer),
 	],
 
 	input_shape = (128, 93),  # batch size
 
-	hidden_nonlinearity = tanh,  # ,rectify,
-	hidden_num_units = 40,
-	hidden_W = Orthogonal(),
+	dense1_nonlinearity = tanh,  # ,rectify,
+	dense1_num_units = 60,
+	dense1_W = Orthogonal(),
+
+	# dropout here
+
+	#dense2_nonlinearity = tanh,  # ,rectify,
+	#dense2_num_units = 40,
+	#dense2_W = Orthogonal(),
 
 	output_nonlinearity = softmax,
 	output_num_units = NCLASSES,
@@ -47,11 +54,11 @@ net = NeuralNet(
 	on_epoch_finished=[
 		LogarithmicVariable('update_learning_rate', start = 0.001, stop = 0.00001),
 		LogarithmicVariable('update_momentum', start = 0.9, stop = 0.999),
-		SnapshotSaver(every = 100, base_name = 'run_net'),
+		SnapshotSaver(every = 10, base_name = 'run_net'),
 	],
 
 	regression = False,
-	max_epochs = 1000,
+	max_epochs = 50,
 	verbose = bool(VERBOSITY),
 )
 
