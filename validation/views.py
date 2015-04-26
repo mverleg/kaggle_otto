@@ -79,7 +79,7 @@ def compare_bars(results, labels, values):
 		ax3.bar(x + 0.17, time_mean, width = 0.26, color = 'red', label = 'time')
 		ax1.set_xticks(x)
 		ax1.set_xlim([-0.55, len(logloss_mean) - 0.45])
-		ax1.xaxis.set_ticklabels([str(v) for v in values[0]])
+		ax1.xaxis.set_ticklabels([unicode(v) for v in values[0]])
 
 	compare_1D_3axis(plot_func = bars_handler, labels = labels)
 
@@ -127,8 +127,8 @@ def compare_surface(results, labels, values):
 	ax1.set_ylabel(labels[0].replace('_', ' '))
 	ax1.set_xticks(range(len(values[1])))
 	ax1.set_yticks(range(len(values[0])))
-	ax1.xaxis.set_ticklabels([str(v) for v in values[1]])
-	ax1.yaxis.set_ticklabels([str(v) for v in values[0]])
+	ax1.xaxis.set_ticklabels([unicode(v) for v in values[1]])
+	ax1.yaxis.set_ticklabels([unicode(v) for v in values[0]])
 
 	ax2.set_xticks([])
 	ax2.set_yticks([])

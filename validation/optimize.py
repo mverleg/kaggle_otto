@@ -7,8 +7,9 @@ from collections import Iterable, OrderedDict
 from json import dumps, loads
 from os import makedirs
 from os.path import join
+from sys import stdout
 from matplotlib.pyplot import show
-from numpy import zeros, prod, float64
+from numpy import zeros, prod, float64, unravel_index, ravel_multi_index, where
 from utils.grid import to_coordinate
 from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY
 from validation.crossvalidate import Validator
@@ -50,7 +51,7 @@ class GridOptimizer(object):
 		self.dims = tuple(len(li) for li in self.values)
 		self.results = zeros(self.dims + (self.rounds, 3,), dtype = float64)
 		self.results_added = 0
-		print 'grid optimize: {0:s} comparisons x {1:d} rounds = {2:d} iterations'.format(' x '.join(str(d) for d in self.dims), self.rounds, prod(self.dims) * self.rounds)
+		print 'grid optimize: {0:s} comparisons x {1:d} rounds = {2:d} iterations'.format(' x '.join(unicode(d) for d in self.dims), self.rounds, prod(self.dims) * self.rounds)
 		try:
 			makedirs(OPTIMIZE_RESULTS_DIR)
 		except OSError:
@@ -141,6 +142,25 @@ class GridOptimizer(object):
 		self.store_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)), *res)
 		return res
 
+	def print_top(self):
+		"""
+			Print the lowest logloss results.
+		"""
+		logloss_slice = [slice(None)] * len(self.dims) + [slice(None), 0]
+		logloss_all = self.results[logloss_slice]
+		logloss_mean = logloss_all.mean(len(self.dims))
+		logloss_cutoff = sorted(logloss_mean.flat, reverse = False)[12]
+		min_coords = zip(*where(logloss_mean < logloss_cutoff))
+		min_coords = sorted(min_coords, key = lambda pos: logloss_mean.flat[ravel_multi_index(pos, self.dims)])
+		stdout.write('pos     loss      {0:s}\n'.format('  '.join('{0:16s}'.format(label.replace('_', ' '))[-16:] for label in self.labels)))
+		for pos, min_coord in enumerate(min_coords):
+			stdout.write('{0:2d}  {1:8.4f}     '.format(pos + 1,
+				logloss_mean.flat[ravel_multi_index(min_coord, self.dims)],
+			))
+			for k, j in enumerate(min_coord):
+				stdout.write('  {0:16s}'.format(unicode(self.values[k][j])))
+			stdout.write('\n')
+
 	def print_plot_results(self):
 		"""
 			Once all results are calculated, print statistics and plot graphs to see the performance.
@@ -157,7 +177,7 @@ class GridOptimizer(object):
 			compare_surface(self.results, self.labels, self.values)
 		else:
 			print 'There are more than two parameters to compare; no visualization options.'
-		print 'The minimum ...'  # todo
+		self.print_top()
 		show()
 		return self.results
 
