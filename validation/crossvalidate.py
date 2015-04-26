@@ -7,7 +7,7 @@
 
 from random import Random
 from sys import stdout
-from time import time
+from time import clock
 from numpy import array, setdiff1d
 from subprocess import check_output
 from settings import VERBOSITY, NCLASSES
@@ -102,7 +102,7 @@ class SampleCrossValidator(Validator):
 		""" Store the test indices for validation later (I hope train won't be needed). """
 		train_data, train_classes, test_data, test_classes = self.get_cross_validation_set(round)
 		self.samples.append(test_classes)
-		self.yield_time = time()
+		self.yield_time = clock()
 		return train_data, train_classes, test_data
 
 	def yield_cross_validation_sets(self):
@@ -126,7 +126,7 @@ class SampleCrossValidator(Validator):
 
 			You should never need the _force_round parameter.
 		"""
-		duration = time() - self.yield_time
+		duration = clock() - self.yield_time
 		#assert prediction.shape[1] == NCLASSES, 'There should be a probability for each class.'
 		assert len(self.results) < len(self.samples), 'There is already a prediction for each sample generated.'
 		test_classes = self.samples[len(self.results)]

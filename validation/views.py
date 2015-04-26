@@ -55,7 +55,7 @@ def compare_plot(results, labels, values):
 	"""
 	def plot_handler(ax1, ax2, ax3):
 		logloss_mean, logloss_std, accuracy_mean, accuracy_std, time_mean, time_std = extract_1D_data(results, labels, values)
-		if min(values[0]) / max(values[0]) <= 0.01:
+		if min(values[0].abs()) / max(values[0].abs()) <= 0.01 and min(values[0].abs()) > 1e-6:
 			ax1.set_xscale('log')
 			ax2.set_xscale('log')
 			ax3.set_xscale('log')
@@ -109,17 +109,17 @@ def compare_surface(results, labels, values):
 	}
 	redgreen = LinearSegmentedColormap('redgreen', cdict)
 	invcdict = {
-		'red':   ((0.0, 1.0, 1.0), (1.0, 0.0, 0.0)),
-		'green': ((0.0, 0.0, 0.0), (1.0, 1.0, 1.0)),
+		'red':   ((0.0, 0.0, 0.0), (1.0, 1.0, 1.0)),
+		'green': ((0.0, 1.0, 1.0), (1.0, 0.0, 0.0)),
 		'blue':  ((0.0, 0.0, 0.0), (1.0, 0.0, 0.0))
 	}
-	invredgreen = LinearSegmentedColormap('redgreen', invcdict)
+	greenred = LinearSegmentedColormap('redgreen', invcdict)
 
-	im1 = ax1.imshow(logloss_mean, cmap = redgreen, interpolation = 'none')
+	im1 = ax1.imshow(logloss_mean, cmap = greenred, interpolation = 'none')
 
-	ax2.imshow(accuracy_mean, cmap = invredgreen, interpolation = 'none')
+	ax2.imshow(accuracy_mean, cmap = redgreen, interpolation = 'none')
 
-	ax3.imshow(time_mean, cmap = invredgreen, interpolation = 'none')
+	ax3.imshow(time_mean, cmap = greenred, interpolation = 'none')
 
 	fig.colorbar(ax = ax1, mappable = im1, orientation = 'horizontal', label = 'values are for logloss, green is better everywhere')
 
