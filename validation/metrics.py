@@ -1,6 +1,7 @@
 
-from numpy import bincount, float64
+from numpy import bincount, float64, clip
 from sklearn.metrics import confusion_matrix as calc_confusion_matrix
+from settings import NCLASSES
 from validation.score import prob_to_cls
 
 
@@ -15,6 +16,7 @@ def average_size_mismatch(predictions, classes_true):
 	"""
 		Calculate how big each calculated class is as a fraction of the true data size.
 	"""
-	return bincount(prob_to_cls(predictions))[1:] / float64(bincount(classes_true)[1:])
+	return bincount(prob_to_cls(predictions), minlength = NCLASSES + 1)[1:] / \
+		float64(bincount(classes_true, minlength = NCLASSES + 1)[1:].clip(min = 1))
 
 

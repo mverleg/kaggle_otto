@@ -10,7 +10,7 @@ from sys import stdout
 from time import time
 from numpy import array, setdiff1d
 from subprocess import check_output
-from settings import VERBOSITY
+from settings import VERBOSITY, NCLASSES
 from validation.metrics import confusion_matrix, average_size_mismatch
 from validation.score import calc_logloss, calc_accuracy
 
@@ -62,8 +62,8 @@ class SampleCrossValidator(Validator):
 		assert 0 < use_data_frac < 1 + 1e-6 or use_data_frac is None
 		super(SampleCrossValidator, self).__init__(data, true_classes, rounds)
 		self.total_data_count = self.data.shape[0]
-		self.use_data_count = int(self.total_data_count * use_data_frac) if use_data_frac else self.total_data_count
-		self.test_count = int(test_frac * self.use_data_count)
+		self.use_data_count = max(int(self.total_data_count * use_data_frac) if use_data_frac else self.total_data_count, 10)
+		self.test_count = max(int(test_frac * self.use_data_count), 3)
 		self.test_frac = test_frac
 		self.use_data_frac = use_data_frac
 		self.seed = seed
@@ -159,8 +159,8 @@ class SampleCrossValidator(Validator):
 		output_handle.write('*cross validation results*\n')
 		output_handle.write('code version  {0:s}\n'.format(check_output(['git', 'rev-parse','HEAD']).rstrip()))
 		output_handle.write('repetitions   {0:d}\n'.format(len(self.results)))
-		output_handle.write('training #    {0:d}\n'.format(self.use_data_count - self.test_count))
-		output_handle.write('testing #     {0:d}\n'.format(self.test_count))
+		output_handle.write('training #    {0:d}  {1:s}\n'.format(self.use_data_count - self.test_count, 'This is very low, results may be wrong!' if self.use_data_count < 10 * NCLASSES else ''))
+		output_handle.write('testing #     {0:d}  {1:s}\n'.format(self.test_count, 'This is very low, results may be wrong!' if self.test_count < 5 * NCLASSES else ''))
 		output_handle.write('cls +          confusion matrix (per mille)         + excess %\n')
 		for k, row in enumerate(confusion):
 			conftxt =' '.join('{0:4d}'.format(int(round(val))) for val in row)
