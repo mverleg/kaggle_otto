@@ -8,7 +8,7 @@
 from lasagne.init import Orthogonal
 from matplotlib.pyplot import subplots, show
 from numpy import array
-from lasagne.nonlinearities import softmax
+from lasagne.nonlinearities import softmax, tanh
 from lasagne import layers
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet
@@ -28,6 +28,7 @@ net = NeuralNet(
 
 	input_shape = (128, 93),
 
+	hidden_nonlinearity = tanh,  # rectify
 	hidden_num_units = 40,
 	hidden_W = Orthogonal(),
 
