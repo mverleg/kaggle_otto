@@ -5,16 +5,40 @@ Created on Wed Apr 15 18:58:22 2015
 @author: Fenno
 """
 
-import sklearn.ensemble as ske
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.calibration import CalibratedClassifierCV
+from math import floor
 
-def gradientBoosting(train, labels, test, n_estimators = 50, max_depth = 5, verbose = 0):
+def gradientBoosting(train, labels, test, n_estimators = 50, max_depth = 5, calibration = None, calibrationmethod = 'sigmoid', verbose = 0):
     """
     Trains a model by giving it a feature matrix, as well as the labels (the ground truth)
     then using that model, predicts the given test samples
     output is 9 probabilities, one for each class
+    :param train: The training data, to train the model
+    :param labels: The labels of the training data, an array
+    :param test: the data to predict
+    :param n_estimators: See sklearn documentation
+    :param max_depth: See sklearn documentation
+    :param calibration: How much data to use for calibration. If calibration is False (including 0.0), no calibration is done.
+        The data is simply split, no shuffling is done, so if the data is ordered, shuffle it first!
+        If calibration is n > 1, then crossvalidation will be done, using n folds.
+    :param verbose: See sklearn documentation
     """
-    model = ske.GradientBoostingClassifier(n_estimators=n_estimators, max_depth = max_depth, verbose = verbose).fit(train, labels)
-    return model.predict_proba(test)
+    if not calibration: #no calibration is done
+        model = GradientBoostingClassifier(n_estimators=n_estimators, max_depth = max_depth, verbose = verbose).fit(train, labels)
+        return model.predict_proba(test)
+        
+    N = len(labels)
+    trainrows = floor((1.0 - calibration) * N)
+    model = GradientBoostingClassifier(n_estimators=n_estimators, max_depth = max_depth, verbose = verbose)
+    
+    if calibration > 1:
+        calibratedmodel = CalibratedClassifierCV(model, calibrationmethod, calibration)
+    else:      
+        model.fit(train[:trainrows, :], labels[:trainrows])
+        calibratedmodel = CalibratedClassifierCV(model, calibrationmethod, "prefit")
+        calibratedmodel.fit(train[trainrows:,:], labels[trainrows,:])
+    return calibratedmodel.predict_proba(test)    
 
 
 if __name__ == '__main__':
