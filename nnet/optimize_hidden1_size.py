@@ -23,12 +23,11 @@ optimizer = GridOptimizer(validator = validator, use_caching = True,
 	learning_rate_end = 0.00001,
 	momentum_start = 0.9,
 	momentum_end = 0.999,
-	max_epochs = 3000,
 	dropout_rate = None,
 )
 for parameters, train, classes, test in optimizer.yield_batches():
 	train, classes = filter_data(train, classes, cut_outlier_frac = 0.06, method = 'EE')
-	net = make_net(**parameters)
+	net = make_net(max_epochs = 200 + 15 * parameters['hidden1_size'], **parameters)
 	out = net.fit(train, classes - 1)
 	prediction = net.predict_proba(test)
 	optimizer.register_results(prediction)
