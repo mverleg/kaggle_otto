@@ -8,8 +8,9 @@ from settings import NCLASSES
 from utils.outliers import get_filtered_data
 
 
-train_data, true_classes, features = get_filtered_data(cut_outlier_frac = 0.10)
+train_data, true_classes, features = get_filtered_data(cut_outlier_frac = 0.08)
 train_data = log2(1 + train_data)
+exit()
 
 """ Data subset """
 filter = array(sample(range(train_data.shape[0]), 500))

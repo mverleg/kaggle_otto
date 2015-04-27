@@ -1,14 +1,16 @@
 
 from os.path import join
-from nnet.prepare import prepare_data
 from nnet.make_net import make_net
 from nnet.visualize import show_train_progress
 from settings import AUTO_IMAGES_DIR
+from utils.outliers import get_filtered_data
 from validation.crossvalidate import SampleCrossValidator
 from validation.optimize import GridOptimizer
 
 
-train_data, true_classes, features = prepare_data()
+# try with and without logscale
+# try with EE and OCSVM
+train_data, true_classes, features = get_filtered_data(cut_outlier_frac = 0.05, filepath = TRAIN_DATA_PATH, method = 'EE', logscale = False)
 validator = SampleCrossValidator(train_data, true_classes, rounds = 1, test_frac = 0.2, use_data_frac = 1)
 optimizer = GridOptimizer(validator = validator, use_caching = True,
 	name = 'hidden1_size',
