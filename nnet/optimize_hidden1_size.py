@@ -3,14 +3,16 @@ from os.path import join
 from nnet.make_net import make_net
 from nnet.visualize import show_train_progress
 from settings import AUTO_IMAGES_DIR
-from utils.outliers import get_filtered_data
+from utils.loading import get_training_data
+from utils.outliers import filter_data
 from validation.crossvalidate import SampleCrossValidator
 from validation.optimize import GridOptimizer
 
 
 # try with and without logscale
 # try with EE and OCSVM
-train_data, true_classes, features = get_filtered_data(cut_outlier_frac = 0.05, filepath = TRAIN_DATA_PATH, method = 'EE', logscale = False)
+#train_data, true_classes, features = get_filtered_data(cut_outlier_frac = 0.05, filepath = TRAIN_DATA_PATH, method = 'EE', logscale = False)
+train_data, true_classes, features = get_training_data()
 validator = SampleCrossValidator(train_data, true_classes, rounds = 1, test_frac = 0.2, use_data_frac = 1)
 optimizer = GridOptimizer(validator = validator, use_caching = True,
 	name = 'hidden1_size',
@@ -25,6 +27,7 @@ optimizer = GridOptimizer(validator = validator, use_caching = True,
 	dropout_rate = None,
 )
 for parameters, train, classes, test in optimizer.yield_batches():
+	train, classes = filter_data(train, classes, cut_outlier_frac = 0.06, method = 'EE')
 	net = make_net(**parameters)
 	out = net.fit(train, classes - 1)
 	prediction = net.predict_proba(test)

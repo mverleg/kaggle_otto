@@ -63,6 +63,7 @@ def make_filtered_data(train_data, true_classes, cut_outlier_frac, detector):
 
 def filter_data_cache(data, classes, hash, method, cut_outlier_frac):
 	""" Not intended for direct use. """
+	print join(gettempdir(), 'cache_data_nooutliers_{0:s}.npy'.format(hash))
 	try:
 		data = load(join(gettempdir(), 'cache_data_nooutliers_{0:s}.npy'.format(hash)))
 		classes = load(join(gettempdir(), 'cache_classes_nooutliers_{0:s}.npy'.format(hash)))
@@ -76,8 +77,8 @@ def filter_data_cache(data, classes, hash, method, cut_outlier_frac):
 		else:
 			raise AssertionError('Only methods "EE" (Eliptical Envelope) and "OCSVM" (One Class Support Vector Machine) are available at this time.')
 		data, classes = make_filtered_data(data, classes, cut_outlier_frac = cut_outlier_frac, detector = detector)
-		save(join(gettempdir(), 'cache_data_nooutliers_{0:s}.npy'.format(hash)))
-		save(join(gettempdir(), 'cache_classes_nooutliers_{0:s}.npy'.format(hash)))
+		save(join(gettempdir(), 'cache_data_nooutliers_{0:s}.npy'.format(hash)), data)
+		save(join(gettempdir(), 'cache_classes_nooutliers_{0:s}.npy'.format(hash)), classes)
 		if VERBOSITY >= 1:
 			print 'loaded filtered train data directly with outlying {0:.1f}% of data removed.'.format(100 * cut_outlier_frac)
 	return data, classes

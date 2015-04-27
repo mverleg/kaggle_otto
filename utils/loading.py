@@ -61,7 +61,7 @@ def get_training_data(filepath = TRAIN_DATA_PATH):
 		classes = load(join(gettempdir(), 'cache_train_classes.npy'))
 		if VERBOSITY >= 1:
 			print 'loaded train data from cache in "{0:s}"'.format(gettempdir())
-	except:
+	except IOError:
 		data, classes, features = load_training_data(filepath = filepath)
 		save(join(gettempdir(), 'cache_train_data.npy'), data)
 		save(join(gettempdir(), 'cache_train_features.npy'), features)
@@ -80,7 +80,7 @@ def get_testing_data(filepath = TEST_DATA_PATH):
 		features = load(join(gettempdir(), 'cache_test_features.npy'))
 		if VERBOSITY >= 1:
 			print 'loaded test data from cache in "{0:s}"'.format(gettempdir())
-	except:
+	except IOError:
 		data, features = load_testing_data(filepath = filepath)
 		save(join(gettempdir(), 'cache_test_data.npy'), data)
 		save(join(gettempdir(), 'cache_test_features.npy'), features)
