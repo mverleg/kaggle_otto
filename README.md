@@ -76,13 +76,13 @@ The general steps for parameter optimization are very similar to those for cross
     
     train_data, true_classes, features = get_training_data()
     validator = SampleCrossValidator(train_data, true_classes, rounds = 5, test_frac = 0.1, use_data_frac = 0.2)
-    optimizer = GridOptimizer(validator = validator, learning_rate = [10, 1, 0.1, 0.01, 0.001], hidden_layer_size = [60, 30, 50, 40, 20], momentum = 0.9, use_cache = True)
+    optimizer = GridOptimizer(validator = validator, learning_rate = [10, 1, 0.1, 0.01, 0.001], hidden_layer_size = [60, 30, 50, 40, 20], momentum = 0.9, use_caching = True)
     for parameters, train, classes, test in optimizer.yield_batches():
         prediction = # your code here, which should use the specified parameters
         optimizer.register_results(prediction)
     optimizer.print_plot_results()
 
-Note that results are cached in `settings.OPTIMIZE_RESULTS_DIR`. You can turn this off with the `use_cache` parameter, or remove the directory to clear chance.
+Note that results are cached in `settings.OPTIMIZE_RESULTS_DIR`. You can turn this off with the `use_caching` parameter, or remove the directory to clear chance.
 
 As suggested by Jona, you can also use hyperopt (http://jaberg.github.io/hyperopt/) to find an optimum automatically. I don't know about performance; the interface is different but understandable and it is more automatic but without the figure.
 

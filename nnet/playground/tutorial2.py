@@ -39,6 +39,7 @@ net = NeuralNet(
 
 B, j, key = shuffle(data = X, classes = y)
 j -= 1
+print B.shape
 out = net.fit(B, j)
 
 prediction = net.predict(B)

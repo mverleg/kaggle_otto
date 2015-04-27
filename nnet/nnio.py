@@ -2,7 +2,7 @@
 from cPickle import dump, load
 from os import makedirs
 from os.path import dirname, join
-from settings import NNET_STATE_DIR
+from settings import NNET_STATE_DIR, VERBOSITY
 
 
 def save_net(net, filepath):
@@ -42,6 +42,7 @@ class SnapshotSaver(object):
 		if epoch % self.every == 0 or epoch == nn.max_epochs:
 			filepath = '{0:s}_{1:d}.net'.format(self.base_path, epoch)
 			save_net(nn, filepath)
-			print 'saved network to "{0:s}" at iteration {1:d}'.format(filepath, epoch)
+			if VERBOSITY >= 1:
+				print 'saved network to "{0:s}" at iteration {1:d}'.format(filepath, epoch)
 
 
