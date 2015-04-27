@@ -25,3 +25,7 @@ is oversampling the classes which cause most problems a good idea? Or any other 
 It's important to remember to get your net to train nicely and overfit first, then regularize.
 dealing with class imbalance: undersampling, class weight, and rescaling probabilities
 is log scaling working well?
+maybe try calibration being implemented for RF; probably no need but already being made anyway
+
+
+

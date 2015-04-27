@@ -18,7 +18,7 @@ Installation
 
 To install the Python packages that you need, you can do:
 
-    install -r dev/freeze.pip
+    pip install -r dev/freeze.pip
 
 After that, if you want to do any neural network stuff, you need Lasagne. Just type:
 

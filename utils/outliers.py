@@ -1,4 +1,8 @@
 
+"""
+	http://scikit-learn.org/stable/modules/outlier_detection.html
+"""
+
 from sklearn.covariance import EllipticEnvelope
 from sklearn.decomposition import PCA
 from settings import TRAIN_DATA_PATH, NCLASSES, SEED
