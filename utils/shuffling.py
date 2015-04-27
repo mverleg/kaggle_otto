@@ -7,6 +7,7 @@
 from numpy import zeros, array
 from random import Random
 from numpy.random import RandomState
+from settings import SEED
 
 
 def get_sample_key(N, k, seed):
@@ -39,7 +40,7 @@ def get_permutation_key(N, seed):
 	return key
 
 
-def shuffle(data, classes = None, seed = 4242):
+def shuffle(data, classes = None, seed = SEED):
 	"""
 		Shuffle the rows of data. For training data, which is ordered. Key can be used to unshuffle it before cross-validation or submission.
 

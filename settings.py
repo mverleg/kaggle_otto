@@ -6,6 +6,9 @@ from os.path import dirname, realpath, join
 
 # You can add settings here rather than hard-coding them.
 
+SEED = 4242
+
+
 """
 	Data information.
 """
