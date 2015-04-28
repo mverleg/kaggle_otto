@@ -9,7 +9,6 @@ from sys import setrecursionlimit
 from warnings import filterwarnings
 from lasagne.init import Orthogonal, GlorotNormal, GlorotUniform, HeNormal, HeUniform, Sparse, Constant
 from lasagne.layers import InputLayer, DenseLayer, DropoutLayer
-from lasagne.regularization import l2
 from numpy import float32
 from lasagne.nonlinearities import softmax, tanh, sigmoid, rectify, LeakyRectify
 from lasagne.updates import nesterov_momentum
@@ -30,6 +29,7 @@ nonlinearities = {
 	'rectify': rectify,
 	'leaky2': LeakyRectify(leakiness = 0.02),
 	'leaky20': LeakyRectify(leakiness = 0.2),
+	'softmax': softmax,
 }
 
 initializers = {
@@ -49,7 +49,7 @@ def make_net(
 		dense1_init = 'orthogonal',
 		dense2_size = None,
 		dense2_nonlinearity = 'tanh',
-		dense2_init = 'orthogonal',
+		dense2_init = 'he_normal',
 		learning_rate_start = 0.001,
 		learning_rate_end = 0.00001,
 		momentum_start = 0.9,
@@ -58,6 +58,7 @@ def make_net(
 		dropout1_rate = None,
 		dropout2_rate = None,
 		weight_decay = 0,
+		output_nonlinearity = 'softmax',
 	):
 	"""
 		Create the network with the selected parameters.
@@ -116,7 +117,7 @@ def make_net(
 		dense1_W = initializers[dense1_init],
 		dense1_b = Constant(0.),
 
-		output_nonlinearity = softmax,
+		output_nonlinearity = nonlinearities[output_nonlinearity],
 		output_num_units = NCLASSES,
 		output_W = Orthogonal(),
 
@@ -137,7 +138,7 @@ def make_net(
 
 		regression = False,
 		max_epochs = max_epochs,
-		verbose = bool(VERBOSITY),
+		verbose = VERBOSITY >= 2,
 
 		**params
 	)

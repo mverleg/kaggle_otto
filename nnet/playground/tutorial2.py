@@ -9,12 +9,12 @@ from lasagne.nonlinearities import softmax
 from lasagne import layers
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet
-from nnet.prepare import prepare_data
+from nnet.prepare import normalize_data
 from settings import NCLASSES, VERBOSITY
 from utils.shuffling import shuffle
 
 
-X, y, features = prepare_data()
+X, y, features = normalize_data()
 
 net = NeuralNet(
 	layers = [

@@ -1,0 +1,19 @@
+
+
+dynamic.py: ignore
+early_stopping.py: ignore
+make_net.py: can look, no need to change
+nnio.py: saves networks; ignore
+prepare.py: normalize the data (no need to change)
+visualization.py: shows image (no need to change)
+single_test_train.py: this code can generate a prediction file for Kaggle
+
+THE IMPORTANT FILE:
+optimize_hidden_size.py: this one you can copy for each parameter(s) to compare; the ones which are lists will be compared
+
+all the caching is done automatically; if you want to add or remove normalization or outlier detection, you can do it by simply removing that command
+
+outliers with SVM or mahalanobis distance(EE): http://scikit-learn.org/stable/auto_examples/covariance/plot_outlier_detection.html
+
+
+

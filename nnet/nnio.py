@@ -1,6 +1,5 @@
 
 from cPickle import dump, load
-from os import makedirs
 from os.path import dirname, join
 from settings import NNET_STATE_DIR, VERBOSITY
 
@@ -13,10 +12,6 @@ def save_net(net, filepath):
 
 		This is not guaranteed to work between versions or computers!
 	"""
-	try:
-		makedirs(dirname(filepath))
-	except OSError:
-		pass
 	with open(filepath, 'wb+') as fh:
 		dump(obj = net, file = fh, protocol = -1)
 

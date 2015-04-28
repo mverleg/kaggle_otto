@@ -1,5 +1,5 @@
 
-from bardeen.mpl import subplots
+from matplotlib.pyplot import subplots
 from numpy import array
 
 

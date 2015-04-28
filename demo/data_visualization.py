@@ -11,6 +11,7 @@ train_data, classes, features = get_training_data()
 	Show class balance.
 """
 clssizes = histogram(classes, bins = [q + .5 for q in range(10)])[0]
+print 'class sizes:', clssizes
 fig1, ax1 = subplots(figsize = (6, 4))
 ax1.bar(range(1, 10), clssizes)
 ax1.set_title('class frequencies')

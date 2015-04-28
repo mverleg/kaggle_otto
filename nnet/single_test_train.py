@@ -1,9 +1,10 @@
 
 from os.path import join
 from nnet.make_net import make_net
-from nnet.prepare import prepare_data
+from nnet.nnio import load_net
+from nnet.prepare import normalize_data
 from nnet.visualization import show_train_progress
-from settings import SUBMISSIONS_DIR
+from settings import SUBMISSIONS_DIR, NNET_STATE_DIR
 from utils.ioutil import makeSubmission as make_submission
 from utils.loading import get_training_data, get_testing_data
 from utils.outliers import filter_data
@@ -17,8 +18,11 @@ train, classes, features = get_training_data()
 print '>> loading test data'
 test = get_testing_data()[0]
 
-print '>> normalizing data'
-train = prepare_data(train)
+print '>> normalizing training data'
+train, norm = normalize_data(train, use_log = True)
+
+print '>> normalizing testing data'
+test = normalize_data(test, norms = norm)[0]
 
 print '>> shuffling data'
 train, classes, key = shuffle(train, classes)
@@ -46,6 +50,8 @@ net = make_net(
 	weight_decay = 0,
 	max_epochs = 3000
 )
+
+net = load_net(join(NNET_STATE_DIR, 'init_150_80.net'))
 
 print '>> training network'
 out = net.fit(train, classes - 1)
