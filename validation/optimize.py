@@ -3,6 +3,7 @@
 	General code to optimize parameters to a model.
 """
 
+from hashlib import sha1
 from collections import Iterable, OrderedDict
 from json import dumps, loads
 from os import makedirs
@@ -10,7 +11,6 @@ from os.path import join
 from sys import stdout
 from matplotlib.pyplot import show
 from numpy import zeros, prod, float64, unravel_index, ravel_multi_index, where
-from utils.grid import to_coordinate
 from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY
 from validation.crossvalidate import Validator
 from validation.views import compare_bars, compare_plot, compare_surface
@@ -60,7 +60,7 @@ class GridOptimizer(object):
 	def params_name(self, params):
 		params = OrderedDict(sorted(params.items()))
 		return (
-			self.prefix + '_'.join('{0:s}-{1:}'.format(key, val) for key, val in params.items()),
+			sha1(self.prefix + '_'.join('{0:s}-{1:}'.format(key, val) for key, val in params.items())).hexdigest(),
 			', '.join('{0:s} = {1:}'.format(key, val) for key, val in params.items()),
 		)
 
@@ -93,7 +93,7 @@ class GridOptimizer(object):
 		"""
 		for p in range(prod(self.dims)):
 			""" Every combination of parameters. """
-			coord = to_coordinate(p, self.dims)
+			coord = unravel_index(p, self.dims)
 			params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
 			params.update(self.fixed_params)
 			self.validator.reset()
@@ -119,7 +119,7 @@ class GridOptimizer(object):
 	def add_results(self, logloss, accuracy, duration):
 		param_index = self.results_added // self.rounds
 		round_index = self.results_added % self.rounds
-		coord = to_coordinate(param_index, self.dims)
+		coord = unravel_index(param_index, self.dims)
 		arr = self.results
 		for k in coord:
 			arr = arr[k]
@@ -133,7 +133,7 @@ class GridOptimizer(object):
 			:param prediction: SxC array with predicted probabilities, with each row corresponding to a test data sample and each column corresponding to a class.
 		"""
 		assert self.results_added < prod(self.dims) * self.rounds, 'There are already {0:d} results for {1:d} slots.'.format(self.results_added + 1, prod(self.dims) * self.rounds)
-		coord = to_coordinate(self.results_added // self.rounds, self.dims)
+		coord = unravel_index(self.results_added // self.rounds, self.dims)
 		round = self.results_added % self.rounds
 		params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
 		params.update(self.fixed_params)
