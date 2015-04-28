@@ -1,5 +1,5 @@
 
-from os.path import join
+from os.path import join, basename, splitext
 from nnet.make_net import make_net
 from nnet.prepare import normalize_data
 from nnet.visualization import show_train_progress
@@ -13,8 +13,8 @@ from validation.optimize import GridOptimizer
 # try with and without logscale
 # try with EE and OCSVM
 train_data, true_classes, features = get_training_data()  # load the train data
-train_data = normalize_data(train_data, use_log = True)  # also converts to floats
 train_data, true_classes = filter_data(train_data, true_classes, cut_outlier_frac = 0.06, method = 'OCSVM')  # remove ourliers
+train_data = normalize_data(train_data, use_log = True)  # also converts to floats
 validator = SampleCrossValidator(train_data, true_classes, rounds = 3, test_frac = 0.2, use_data_frac = 1)
 optimizer = GridOptimizer(validator = validator, use_caching = True,
 	name = 'hidden1_size',
@@ -31,7 +31,7 @@ optimizer = GridOptimizer(validator = validator, use_caching = True,
 	dropout1_rate = None,
 	dropout2_rate = None,
 	weight_decay = 0,
-	max_epochs = 20,
+	max_epochs = 40,
 	output_nonlinearity = 'softmax',
 )
 for parameters, train, classes, test in optimizer.yield_batches():
@@ -40,8 +40,8 @@ for parameters, train, classes, test in optimizer.yield_batches():
 	prediction = net.predict_proba(test)
 	optimizer.register_results(prediction)
 	fig, ax = show_train_progress(net)
-	fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_{1:d}.png'.format(parameters['name'], parameters['dense1_size'])))
+	fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_{1:d}_{2:d}.png'.format(parameters['name'], parameters['dense1_size'], parameters['dense2_size'])))
 	fig.close()
-optimizer.print_plot_results()
+optimizer.print_plot_results(save_fig_basename = splitext(basename(__file__))[0])
 
 

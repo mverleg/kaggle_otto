@@ -11,7 +11,7 @@ from os.path import join
 from sys import stdout
 from matplotlib.pyplot import show
 from numpy import zeros, prod, float64, unravel_index, ravel_multi_index, where
-from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY
+from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY, AUTO_IMAGES_DIR
 from validation.crossvalidate import Validator
 from validation.views import compare_bars, compare_plot, compare_surface
 
@@ -162,7 +162,7 @@ class GridOptimizer(object):
 				stdout.write('  {0:16s}'.format(unicode(self.values[k][j])))
 			stdout.write('\n')
 
-	def print_plot_results(self, topprint = 12):
+	def print_plot_results(self, topprint = 12, save_fig_basename = None):
 		"""
 			Once all results are calculated, print statistics and plot graphs to see the performance.
 		"""
@@ -171,11 +171,17 @@ class GridOptimizer(object):
 		elif len(self.dims) == 1:
 			print 'Showing results for "{0:s}"'.format(self.labels[0])
 			if all(is_number(param) for param in sum(self.values, [])):
-				compare_plot(self.results, self.labels, self.values)
-			compare_bars(self.results, self.labels, self.values)
+				fig, axi = compare_plot(self.results, self.labels, self.values)
+				if save_fig_basename:
+					fig.imsave(join(AUTO_IMAGES_DIR, '{0:s}_plot.png'.format(save_fig_basename)))
+			fig, axi = compare_bars(self.results, self.labels, self.values)
+			if save_fig_basename:
+				fig.imsave(join(AUTO_IMAGES_DIR, '{0:s}_bars.png'.format(save_fig_basename)))
 		elif len(self.dims) == 2:
 			print 'Showing results for "{0:s}" and "{1:s}"'.format(self.labels[0], self.labels[1])
-			compare_surface(self.results, self.labels, self.values)
+			fig, axi = compare_surface(self.results, self.labels, self.values)
+			if save_fig_basename:
+				fig.imsave(join(AUTO_IMAGES_DIR, '{0:s}_surf.png'.format(save_fig_basename)))
 		else:
 			print 'There are more than two parameters to compare; no visualization options.'
 		self.print_top(topprint)

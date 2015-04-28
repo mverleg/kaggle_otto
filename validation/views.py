@@ -11,12 +11,14 @@ from numpy import arange, abs
 def extract_1D_data(results, labels, values):
 	assert len(results.shape) == 3
 	assert results.shape[-1] >= 3
+
 	logloss_mean = results[:, :, 0].mean(1)
 	logloss_std = results[:, :, 0].std(1)
 	accuracy_mean = 100 * results[:, :, 1].mean(1)
 	accuracy_std = 100 * results[:, :, 1].std(1)
 	time_mean = results[:, :, 2].mean(1)
 	time_std = results[:, :, 2].std(1)
+
 	return logloss_mean, logloss_std, accuracy_mean, accuracy_std, time_mean, time_std
 
 
@@ -46,6 +48,8 @@ def compare_1D_3axis(plot_func, labels):
 	ax2.axis['right'].label.set_color('green')
 	ax3.axis['right'].label.set_color('red')
 
+	return fig, (ax1, ax2, ax3)
+
 
 def compare_plot(results, labels, values):
 	"""
@@ -64,7 +68,7 @@ def compare_plot(results, labels, values):
 		ax2.errorbar(x = values[0], y = accuracy_mean, yerr = accuracy_std, c = 'green', label = 'accuracy')
 		ax3.errorbar(x = values[0], y = time_mean, yerr = time_std, c = 'red', label = 'time')
 
-	compare_1D_3axis(plot_func = plot_handler, labels = labels)
+	return compare_1D_3axis(plot_func = plot_handler, labels = labels)
 
 
 def compare_bars(results, labels, values):
@@ -81,7 +85,7 @@ def compare_bars(results, labels, values):
 		ax1.set_xlim([-0.55, len(logloss_mean) - 0.45])
 		ax1.xaxis.set_ticklabels([unicode(v) for v in values[0]])
 
-	compare_1D_3axis(plot_func = bars_handler, labels = labels)
+	return compare_1D_3axis(plot_func = bars_handler, labels = labels)
 
 
 def compare_surface(results, labels, values):
@@ -138,5 +142,7 @@ def compare_surface(results, labels, values):
 	ax1.set_title('Logloss')
 	ax2.set_title('Accuracy')
 	ax3.set_title('Time')
+
+	return fig, (ax1, ax2, ax3)
 
 
