@@ -4,13 +4,15 @@
 """
 
 from matplotlib.pyplot import subplots, show
-from numpy import log10, zeros, where, array
+from numpy import log10, zeros, where
 from theano.scalar import float32
 from settings import NCLASSES, VERBOSITY
 
 
-def normalize_data(data, use_log = True):
-	data = data / data.max(0).astype(float32)
+def normalize_data(data, norms = None, use_log = True):
+	if norms is None:
+		norms = data.max(0).astype(float32)
+	data = data / norms
 	if use_log:
 		data = log10(1 + 200 * data)
 		if VERBOSITY >= 1:
@@ -18,7 +20,7 @@ def normalize_data(data, use_log = True):
 	else:
 		if VERBOSITY >= 1:
 			print 'normalizing positive data to [0, 1] linearly'
-	return data
+	return data, norms
 
 
 def equalize_class_sizes(data, classes, min_size = 1929, class_count = NCLASSES):

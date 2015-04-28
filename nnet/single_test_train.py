@@ -19,10 +19,10 @@ print '>> loading test data'
 test = get_testing_data()[0]
 
 print '>> normalizing training data'
-train = normalize_data(train, use_log = True)
+train, norm = normalize_data(train, use_log = True)
 
 print '>> normalizing testing data'
-test = normalize_data(test)
+test = normalize_data(test, norms = norm)[0]
 
 print '>> shuffling data'
 train, classes, key = shuffle(train, classes)
