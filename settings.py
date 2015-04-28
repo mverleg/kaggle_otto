@@ -1,5 +1,6 @@
 
 from argparse import ArgumentParser
+from os import makedirs
 from sys import argv
 from os.path import dirname, realpath, join
 
@@ -22,13 +23,18 @@ NCLASSES = 9
 	Special files.
 """
 BASE_DIR = dirname(realpath(__file__))
-TRAIN_DATA_PATH = join(BASE_DIR, 'data/train.csv')
-TEST_DATA_PATH = join(BASE_DIR, 'data/test.csv')
-COLUMN_MAX_PATH = join(BASE_DIR, 'data/max.npy')
-OPTIMIZE_RESULTS_DIR = join(BASE_DIR, 'results/optimize')
-NNET_STATE_DIR = join(BASE_DIR, 'results/nnets')
-AUTO_IMAGES_DIR = join(BASE_DIR, 'results/images')
-SUBMISSIONS_DIR = join(BASE_DIR, 'results/submissions')
+TRAIN_DATA_PATH = join(BASE_DIR, 'data', 'train.csv')
+TEST_DATA_PATH = join(BASE_DIR, 'data', 'test.csv')
+COLUMN_MAX_PATH = join(BASE_DIR, 'data', 'max.npy')
+OPTIMIZE_RESULTS_DIR = join(BASE_DIR, 'results', 'optimize')
+NNET_STATE_DIR = join(BASE_DIR, 'results', 'nnets')
+AUTO_IMAGES_DIR = join(BASE_DIR, 'results', 'images')
+SUBMISSIONS_DIR = join(BASE_DIR, 'results', 'submissions')
+for pth in (OPTIMIZE_RESULTS_DIR, NNET_STATE_DIR, AUTO_IMAGES_DIR, SUBMISSIONS_DIR):
+	try:
+		makedirs(pth)
+	except OSError:
+		""" probably already exists, ignore """
 
 
 """

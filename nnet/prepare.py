@@ -4,15 +4,37 @@
 """
 
 from matplotlib.pyplot import subplots, show
-from numpy import log10
+from numpy import log10, zeros, where, array
 from theano.scalar import float32
+from settings import NCLASSES, VERBOSITY
 
 
 def normalize_data(data, use_log = True):
 	data = data / data.max(0).astype(float32)
 	if use_log:
 		data = log10(1 + 200 * data)
+		if VERBOSITY >= 1:
+			print 'normalizing positive data to [0, ... with log scale'
+	else:
+		if VERBOSITY >= 1:
+			print 'normalizing positive data to [0, 1] linearly'
 	return data
+
+
+def equalize_class_sizes(data, classes, min_size = 1929, class_count = NCLASSES):
+	"""
+		Equalize classes by removing samples to make them all the same size.
+
+		:param min_size: The number of samples to use for each class.
+		:return: trimmmed data and classes.
+	"""
+	if VERBOSITY >= 1:
+		print 'balancing {0:d} classes by trimming all to {1:d} samples'.format(class_count, min_size)
+	filter = zeros(classes.shape, dtype = bool)
+	for cls in range(1, class_count + 1):
+		this_cls = where(classes == cls)[0][:min_size]
+		filter[this_cls] = True
+	return data[filter], classes[filter]
 
 
 if __name__ == '__main__':

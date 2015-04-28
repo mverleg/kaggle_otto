@@ -6,7 +6,6 @@
 from hashlib import sha1
 from collections import Iterable, OrderedDict
 from json import dumps, loads
-from os import makedirs
 from os.path import join
 from sys import stdout
 from matplotlib.pyplot import show
@@ -47,15 +46,16 @@ class GridOptimizer(object):
 		self.prefix = prefix or ''
 		self.fixed_params = {key: val for key, val in params.items() if not is_nonstr_iterable(val)}
 		iter_params = OrderedDict((key, sorted(val)) for key, val in params.items() if is_nonstr_iterable(val))
-		self.labels, self.values = zip(*[(key, val) for key, val in iter_params.items() if is_nonstr_iterable(val)])
+		try:
+			self.labels, self.values = zip(*[(key, val) for key, val in iter_params.items() if is_nonstr_iterable(val)])
+		except ValueError:
+			print 'you should set at least one attribute to a list of values, or there will be nothing to compare!'
+			exit()
+			self.labels, self.values = tuple(), tuple()
 		self.dims = tuple(len(li) for li in self.values)
 		self.results = zeros(self.dims + (self.rounds, 3,), dtype = float64)
 		self.results_added = 0
 		print 'grid optimize: {0:s} comparisons x {1:d} rounds = {2:d} iterations'.format(' x '.join(unicode(d) for d in self.dims), self.rounds, prod(self.dims) * self.rounds)
-		try:
-			makedirs(OPTIMIZE_RESULTS_DIR)
-		except OSError:
-			""" Probably already exists; ignore it. """
 
 	def params_name(self, params):
 		params = OrderedDict(sorted(params.items()))
@@ -173,15 +173,15 @@ class GridOptimizer(object):
 			if all(is_number(param) for param in sum(self.values, [])):
 				fig, axi = compare_plot(self.results, self.labels, self.values)
 				if save_fig_basename:
-					fig.imsave(join(AUTO_IMAGES_DIR, '{0:s}_plot.png'.format(save_fig_basename)))
+					fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_plot.png'.format(save_fig_basename)))
 			fig, axi = compare_bars(self.results, self.labels, self.values)
 			if save_fig_basename:
-				fig.imsave(join(AUTO_IMAGES_DIR, '{0:s}_bars.png'.format(save_fig_basename)))
+				fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_bars.png'.format(save_fig_basename)))
 		elif len(self.dims) == 2:
 			print 'Showing results for "{0:s}" and "{1:s}"'.format(self.labels[0], self.labels[1])
 			fig, axi = compare_surface(self.results, self.labels, self.values)
 			if save_fig_basename:
-				fig.imsave(join(AUTO_IMAGES_DIR, '{0:s}_surf.png'.format(save_fig_basename)))
+				fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_surf.png'.format(save_fig_basename)))
 		else:
 			print 'There are more than two parameters to compare; no visualization options.'
 		self.print_top(topprint)
