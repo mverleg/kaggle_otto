@@ -16,22 +16,7 @@ Git instruction
 Installation
 -------------------------------
 
-If you're at the university (or some other computer where you're now admin), or you want to keep this project seperated from others, you can first do this:
-
-    virtualenv env
-    . env/bin/activate
-
-If you use this way, everything is installed locally in directory "env". You need to repeat that last command (activate) every time. If you use an IDE you may need to set it for that one (in PyCharm it's under settings > interpreter).
-
-The following steps apply with or without virtualenv. To install the Python packages that you need, you can do:
-
-    pip install -r dev/freeze.pip
-
-After that, if you want to do any neural network stuff, you need Lasagne. Just type:
-
-    pip install -r https://raw.githubusercontent.com/dnouri/kfkd-tutorial/master/requirements.txt
-
-Check carefully for errors in the middle. If there are none, you are done!
+The installation steps for Anaconda are in `dev/anaconda.md` whereas the steps for everything else are in `dev/pip.md`.
 
 How to run
 -------------------------------
@@ -76,13 +61,13 @@ The general steps for parameter optimization are very similar to those for cross
     
     train_data, true_classes, features = get_training_data()
     validator = SampleCrossValidator(train_data, true_classes, rounds = 5, test_frac = 0.1, use_data_frac = 0.2)
-    optimizer = GridOptimizer(validator = validator, learning_rate = [10, 1, 0.1, 0.01, 0.001], hidden_layer_size = [60, 30, 50, 40, 20], momentum = 0.9, use_cache = True)
+    optimizer = GridOptimizer(validator = validator, learning_rate = [10, 1, 0.1, 0.01, 0.001], hidden_layer_size = [60, 30, 50, 40, 20], momentum = 0.9, use_caching = True)
     for parameters, train, classes, test in optimizer.yield_batches():
         prediction = # your code here, which should use the specified parameters
         optimizer.register_results(prediction)
     optimizer.print_plot_results()
 
-Note that results are cached in `settings.OPTIMIZE_RESULTS_DIR`. You can turn this off with the `use_cache` parameter, or remove the directory to clear chance.
+Note that results are cached in `settings.OPTIMIZE_RESULTS_DIR`. You can turn this off with the `use_caching` parameter, or remove the directory to clear chance.
 
 As suggested by Jona, you can also use hyperopt (http://jaberg.github.io/hyperopt/) to find an optimum automatically. I don't know about performance; the interface is different but understandable and it is more automatic but without the figure.
 
