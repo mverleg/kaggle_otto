@@ -2,6 +2,8 @@
 read until April 26th: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/12882/guess-this-is-really-the-time-to-try-out-neural-nets?page=5
 long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
 
+There was stuff about using previous weights in the blog post; don't just reload the network pickle but just the weights
+
 #todo: train vs test output
 #todo: dynamic learning rate
 An overfitting net can generally be made to perform better by using more training data. (And if your unregularized net does not overfit, you should probably make it larger.)
