@@ -13,7 +13,10 @@ def save_net(net, filepath):
 
 		This is not guaranteed to work between versions or computers!
 	"""
-	#todo: there has to be a better way
+	try:
+		makedirs(dirname(filepath))
+	except OSError:
+		pass
 	with open(filepath, 'wb+') as fh:
 		dump(obj = net, file = fh, protocol = -1)
 
@@ -32,10 +35,6 @@ class SnapshotSaver(object):
 	def __init__(self, every = 500, base_name = 'net'):
 		self.every = every
 		self.base_path = join(NNET_STATE_DIR, base_name)
-		try:
-			makedirs(dirname(self.base_path))
-		except OSError:
-			pass
 
 	def __call__(self, nn, train_history):
 		epoch = train_history[-1]['epoch']

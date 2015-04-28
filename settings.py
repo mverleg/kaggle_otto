@@ -28,6 +28,7 @@ COLUMN_MAX_PATH = join(BASE_DIR, 'data/max.npy')
 OPTIMIZE_RESULTS_DIR = join(BASE_DIR, 'results/optimize')
 NNET_STATE_DIR = join(BASE_DIR, 'results/nnets')
 AUTO_IMAGES_DIR = join(BASE_DIR, 'results/images')
+SUBMISSIONS_DIR = join(BASE_DIR, 'results/submissions')
 
 
 """

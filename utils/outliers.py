@@ -32,7 +32,7 @@ def get_filtered_data(cut_outlier_frac = 0.05, method = 'EE', filepath = TRAIN_D
 	return data, classes, features
 
 
-def filter_data(data, classes, cut_outlier_frac = 0.05, method = 'EE'):
+def filter_data(data, classes, cut_outlier_frac = 0.05, method = 'EE', use_caching = True):
 	"""
 		Filteres ndarrays data and classes to remove an approximate fraction of outliers.
 
@@ -43,8 +43,7 @@ def filter_data(data, classes, cut_outlier_frac = 0.05, method = 'EE'):
 		:return: filtered data and classes
 	"""
 	hash = '{0:s}_{1:04d}_{2:.10s}.npy'.format(method, int(cut_outlier_frac * 1000), sha1((data.tostring())).hexdigest())
-	return filter_data_cache(data, classes, hash = hash, method = method, cut_outlier_frac = cut_outlier_frac)
-
+	return filter_data_cache(data, classes, hash = hash, method = method, cut_outlier_frac = cut_outlier_frac, use_caching = use_caching)
 
 def make_filtered_data(train_data, true_classes, cut_outlier_frac, detector):
 	""" Not intended for direct use. """
@@ -57,14 +56,17 @@ def make_filtered_data(train_data, true_classes, cut_outlier_frac, detector):
 		cls_train = train_data[true_classes == cls, :]
 		transformed = PCA(n_components = 40, copy = True, whiten = False).fit(cls_train).transform(cls_train)
 		decisions = detector.fit(transformed).decision_function(transformed)
+		if len(decisions.shape) > 1:
+			decisions = decisions[:, 0]
 		keep[true_classes == cls] *= (decisions > 0)
 	return train_data[keep, :], true_classes[keep]
 
 
-def filter_data_cache(data, classes, hash, method, cut_outlier_frac):
+def filter_data_cache(data, classes, hash, method, cut_outlier_frac, use_caching = True):
 	""" Not intended for direct use. """
-	print join(gettempdir(), 'cache_data_nooutliers_{0:s}.npy'.format(hash))
 	try:
+		if not use_caching:
+			raise IOError('Okay this is kind of hackish but whatever...')
 		data = load(join(gettempdir(), 'cache_data_nooutliers_{0:s}.npy'.format(hash)))
 		classes = load(join(gettempdir(), 'cache_classes_nooutliers_{0:s}.npy'.format(hash)))
 		if VERBOSITY >= 1:
