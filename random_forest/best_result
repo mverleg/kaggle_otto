@@ -1,0 +1,24 @@
+n = 200
+max_depth = 35
+/tmp/cache_data_nooutliers_EE_0060_526e956b87.npy.npy
+removing outliers
+*cross validation results*
+code version  f9907ba172961927104e4778bc1609d89bfb0fa7
+repetitions   2
+training #    46528
+testing #     11632
+cls +          confusion matrix (per mille)         + excess %
+  1 |  392   38    7    0    4   74   26  233  226  |   -54
+  2 |    0  899   87    5    1    2    4    2    1  |   +28
+  3 |    0  506  467    9    0    4    8    5    1  |   -28
+  4 |    0  434  144  380    6   27    6    2    1  |   -54
+  5 |    0   17    0    0  975    1    3    2    2  |    -0
+  6 |    1   11    1    1    0  953    5   18    9  |    +2
+  7 |    9  130   69   12    7   74  597   91   11  |   -28
+  8 |    4   11    3    0    0   28    6  937   12  |    +8
+  9 |   13   23    1    0    1   37    3   36  887  |    +3
+                  mean       min       max
+logloss         0.5630    0.5584    0.5676
+accuracy       81.134%   81.044%   81.224%
+duration       4.6687s   4.4110s   4.9265s
+room for improvement
