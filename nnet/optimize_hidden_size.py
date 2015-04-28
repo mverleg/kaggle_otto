@@ -31,7 +31,7 @@ optimizer = GridOptimizer(validator = validator, use_caching = True,
 	dropout1_rate = None,
 	dropout2_rate = None,
 	weight_decay = 0,
-	max_epochs = 1200,
+	max_epochs = 20,
 	output_nonlinearity = 'softmax',
 )
 for parameters, train, classes, test in optimizer.yield_batches():
@@ -41,6 +41,7 @@ for parameters, train, classes, test in optimizer.yield_batches():
 	optimizer.register_results(prediction)
 	fig, ax = show_train_progress(net)
 	fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_{1:d}.png'.format(parameters['name'], parameters['dense1_size'])))
+	fig.close()
 optimizer.print_plot_results()
 
 

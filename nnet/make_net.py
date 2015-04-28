@@ -29,6 +29,7 @@ nonlinearities = {
 	'rectify': rectify,
 	'leaky2': LeakyRectify(leakiness = 0.02),
 	'leaky20': LeakyRectify(leakiness = 0.2),
+	'softmax': softmax,
 }
 
 initializers = {
@@ -57,7 +58,7 @@ def make_net(
 		dropout1_rate = None,
 		dropout2_rate = None,
 		weight_decay = 0,
-		output_nonlinearity = softmax,
+		output_nonlinearity = 'softmax',
 	):
 	"""
 		Create the network with the selected parameters.
@@ -116,7 +117,7 @@ def make_net(
 		dense1_W = initializers[dense1_init],
 		dense1_b = Constant(0.),
 
-		#output_nonlinearity = softmax,
+		output_nonlinearity = nonlinearities[output_nonlinearity],
 		output_num_units = NCLASSES,
 		output_W = Orthogonal(),
 
