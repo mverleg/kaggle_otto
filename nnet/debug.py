@@ -36,7 +36,7 @@ optimizer = GridOptimizer(validator = validator, use_caching = True,
 	dropout1_rate = None,
 	dropout2_rate = None,
 	weight_decay = 0,
-	max_epochs = 500,
+	max_epochs = 1,
 	output_nonlinearity = 'softmax',
 )
 for parameters, train, classes, test in optimizer.yield_batches():

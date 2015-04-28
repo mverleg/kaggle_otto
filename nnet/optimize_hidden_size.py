@@ -22,7 +22,7 @@ optimizer = GridOptimizer(validator = validator, use_caching = True,
 	dense1_size = [15, 20, 25, 30],
 	dense1_nonlinearity = 'tanh',
 	dense1_init = 'he_normal',
-	dense2_size = [15, 20, 25, 30],
+	dense2_size = None,
 	dense2_nonlinearity = 'tanh',
 	dense2_init = 'he_normal',
 	learning_rate_start = 0.001,
@@ -32,7 +32,7 @@ optimizer = GridOptimizer(validator = validator, use_caching = True,
 	dropout1_rate = None,
 	dropout2_rate = None,
 	weight_decay = 0,
-	max_epochs = 40,
+	max_epochs = 1,
 	output_nonlinearity = 'softmax',
 )
 for parameters, train, classes, test in optimizer.yield_batches():
@@ -41,8 +41,8 @@ for parameters, train, classes, test in optimizer.yield_batches():
 	prediction = net.predict_proba(test)
 	optimizer.register_results(prediction)
 	fig, ax = show_train_progress(net)
-	fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_{1:d}_{2:d}.png'.format(parameters['name'], parameters['dense1_size'], parameters['dense2_size'])))
-	#fig.close()
+	fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_{1:d}_{2:d}.png'.format(parameters['name'], parameters['dense1_size'], parameters['dense2_size'] or 0)))
+	fig.close()
 optimizer.print_plot_results(save_fig_basename = splitext(basename(__file__))[0])
 
 

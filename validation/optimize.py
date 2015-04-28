@@ -49,13 +49,11 @@ class GridOptimizer(object):
 		try:
 			self.labels, self.values = zip(*[(key, val) for key, val in iter_params.items() if is_nonstr_iterable(val)])
 		except ValueError:
-			print 'you should set at least one attribute to a list of values, or there will be nothing to compare!'
-			exit()
 			self.labels, self.values = tuple(), tuple()
 		self.dims = tuple(len(li) for li in self.values)
 		self.results = zeros(self.dims + (self.rounds, 3,), dtype = float64)
 		self.results_added = 0
-		print 'grid optimize: {0:s} comparisons x {1:d} rounds = {2:d} iterations'.format(' x '.join(unicode(d) for d in self.dims), self.rounds, prod(self.dims) * self.rounds)
+		print 'grid optimize: {0:s} comparisons x {1:d} rounds = {2:d} iterations'.format(' x '.join(unicode(d) for d in self.dims), self.rounds, prod(self.dims, dtype = int) * self.rounds)
 
 	def params_name(self, params):
 		params = OrderedDict(sorted(params.items()))
@@ -91,9 +89,9 @@ class GridOptimizer(object):
 
 			:return: An iterator with (parameters, train_data, train_classes, test_data) tuple on each iteration.
 		"""
-		for p in range(prod(self.dims)):
+		for p in range(prod(self.dims, dtype = int)):
 			""" Every combination of parameters. """
-			coord = unravel_index(p, self.dims)
+			coord = unravel_index(p, self.dims) if self.dims else tuple()
 			params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
 			params.update(self.fixed_params)
 			self.validator.reset()
@@ -119,7 +117,7 @@ class GridOptimizer(object):
 	def add_results(self, logloss, accuracy, duration):
 		param_index = self.results_added // self.rounds
 		round_index = self.results_added % self.rounds
-		coord = unravel_index(param_index, self.dims)
+		coord = unravel_index(param_index, self.dims) if self.dims else tuple()
 		arr = self.results
 		for k in coord:
 			arr = arr[k]
@@ -133,7 +131,7 @@ class GridOptimizer(object):
 			:param prediction: SxC array with predicted probabilities, with each row corresponding to a test data sample and each column corresponding to a class.
 		"""
 		assert self.results_added < prod(self.dims) * self.rounds, 'There are already {0:d} results for {1:d} slots.'.format(self.results_added + 1, prod(self.dims) * self.rounds)
-		coord = unravel_index(self.results_added // self.rounds, self.dims)
+		coord = unravel_index(self.results_added // self.rounds, self.dims) if self.dims else tuple()
 		round = self.results_added % self.rounds
 		params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
 		params.update(self.fixed_params)

@@ -138,7 +138,7 @@ def make_net(
 
 		regression = False,
 		max_epochs = max_epochs,
-		verbose = bool(VERBOSITY),
+		verbose = VERBOSITY >= 2,
 
 		**params
 	)
