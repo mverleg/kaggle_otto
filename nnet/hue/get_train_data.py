@@ -1,5 +1,5 @@
 
-from numpy import vstack, logical_not, hstack, concatenate
+from numpy import logical_not, concatenate, copy
 from numpy.random import permutation
 
 
@@ -19,11 +19,11 @@ def equalize_train_classes(max_samples, class_set, class_set_labels):
 		#print class_set[clsi].shape
 		#print index
 		#print len(index)
-		trainData.append(class_set[clsi][index, :])
+		trainData.append(copy(class_set[clsi][index, :]))
 		#concatenate((trainData, class_set[clsi][index, :]), axis = 0)
-		trainLabels.append(class_set_labels[clsi][index])
-		residualData.append(class_set[clsi][logical_not(index), :])
-		residualLabels.append(class_set_labels[clsi][logical_not(index)])
+		trainLabels.append(copy(class_set_labels[clsi][index]))
+		residualData.append(copy(class_set[clsi][logical_not(index), :]))
+		residualLabels.append(copy(class_set_labels[clsi][logical_not(index)]))
 		#print clsi + 1, len(index), class_set[clsi].shape
 
 	# combine a list of matrices into big matrix

@@ -60,6 +60,7 @@ def make_net(
 		weight_decay = 0,
 		output_nonlinearity = 'softmax',
 		verbosity = VERBOSITY >= 2,
+		auto_stopping = True,
 	):
 	"""
 		Create the network with the selected parameters.
@@ -108,6 +109,17 @@ def make_net(
 		params['dropout2_p'] = dropout2_rate
 	layers += [('output', DenseLayer)]
 
+	handlers = [
+		LogarithmicVariable('update_learning_rate', start = learning_rate_start, stop = learning_rate_end),
+		LogarithmicVariable('update_momentum', start = momentum_start, stop = momentum_end),
+	]
+	if auto_stopping:
+		handlers += [
+			SnapshotSaver(every = 100, base_name = name),
+			StopWhenOverfitting(loss_fraction = 0.8, base_name = name),
+			StopAfterMinimum(patience = 70, base_name = name),
+		]
+
 	net = NeuralNet(
 		layers = layers,
 
@@ -129,13 +141,7 @@ def make_net(
 		#regularization = l2,
 		#regularization_rate = weight_decay,
 
-		on_epoch_finished = [
-			LogarithmicVariable('update_learning_rate', start = learning_rate_start, stop = learning_rate_end),
-			LogarithmicVariable('update_momentum', start = momentum_start, stop = momentum_end),
-			SnapshotSaver(every = 100, base_name = name),
-			StopWhenOverfitting(loss_fraction = 0.8, base_name = name),
-			StopAfterMinimum(patience = 70, base_name = name),
-		],
+		on_epoch_finished = handlers,
 
 		regression = False,
 		max_epochs = max_epochs,
