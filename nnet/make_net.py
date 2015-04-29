@@ -59,6 +59,7 @@ def make_net(
 		dropout2_rate = None,
 		weight_decay = 0,
 		output_nonlinearity = 'softmax',
+		verbosity = VERBOSITY >= 2,
 	):
 	"""
 		Create the network with the selected parameters.
@@ -138,7 +139,7 @@ def make_net(
 
 		regression = False,
 		max_epochs = max_epochs,
-		verbose = VERBOSITY >= 2,
+		verbose = verbosity,
 
 		**params
 	)

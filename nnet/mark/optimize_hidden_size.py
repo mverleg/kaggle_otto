@@ -1,22 +1,17 @@
 
-from os.path import join, basename, splitext
+from os.path import basename, splitext
 from nnet.make_net import make_net
-from nnet.prepare import normalize_data, equalize_class_sizes
+from nnet.prepare import normalize_data
 from utils.loading import get_training_data
 from utils.outliers import filter_data
 from validation.crossvalidate import SampleCrossValidator
 from validation.optimize import GridOptimizer
 
 
-# try with and without logscale
-# try with EE and OCSVM
-train_data, true_classes, features = get_training_data()  # load the train data
-train_data, true_classes = equalize_class_sizes(train_data, true_classes)
-train_data, true_classes = filter_data(train_data, true_classes, cut_outlier_frac = 0.06, method = 'OCSVM')  # remove ourliers
-train_data = normalize_data(train_data, use_log = True)[0]  # also converts to floats
-validator = SampleCrossValidator(train_data, true_classes, rounds = 3, test_frac = 0.2, use_data_frac = 1)
+train_data, true_classes, features = get_training_data()
+validator = SampleCrossValidator(train_data, true_classes, rounds = 5, test_frac = 0.2, use_data_frac = 1)
 optimizer = GridOptimizer(validator = validator, use_caching = True,
-	name = 'hidden1_size',
+	name = 'dense_sizes',
 	dense1_size = [30, 25, 80, 120, 180],
 	dense1_nonlinearity = 'leaky20',
 	dense1_init = 'orthogonal',
@@ -31,10 +26,13 @@ optimizer = GridOptimizer(validator = validator, use_caching = True,
 	dropout2_rate = None,
 	weight_decay = 0,
 	max_epochs = 2500,
-	output_nonlinearity = 'softmax',
+	normalize_use_log = True,
+	outlier_method = 'OCSVM'
 )
 for parameters, train, classes, test in optimizer.yield_batches():
-	net = make_net(**parameters)  # dynamic epoch count, only for 1 layer network
+	train, classes = filter_data(train, classes, cut_outlier_frac = 0.02, method = parameters.pop('outlier_method'))
+	train = normalize_data(train, use_log = parameters.pop('normalize_use_log'))[0]
+	net = make_net(**parameters)
 	out = net.fit(train, classes - 1)
 	prediction = net.predict_proba(test)
 	optimizer.register_results(prediction)

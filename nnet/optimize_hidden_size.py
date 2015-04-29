@@ -16,7 +16,7 @@ train_data, true_classes, features = get_training_data()  # load the train data
 train_data, true_classes = equalize_class_sizes(train_data, true_classes)
 train_data, true_classes = filter_data(train_data, true_classes, cut_outlier_frac = 0.06, method = 'OCSVM')  # remove ourliers
 train_data = normalize_data(train_data, use_log = True)[0]  # also converts to floats
-validator = SampleCrossValidator(train_data, true_classes, rounds = 3, test_frac = 0.2, use_data_frac = 1)
+validator = SampleCrossValidator(train_data, true_classes, rounds = 100, test_frac = 0.2, use_data_frac = 1)
 optimizer = GridOptimizer(validator = validator, use_caching = True,
 	name = 'hidden1_size',
 	dense1_size = [30, 25, 80, 120],
@@ -32,17 +32,17 @@ optimizer = GridOptimizer(validator = validator, use_caching = True,
 	dropout1_rate = 0.5,
 	dropout2_rate = None,
 	weight_decay = 0,
-	max_epochs = 2000,
+	max_epochs = 1,
 	output_nonlinearity = 'softmax',
 )
 for parameters, train, classes, test in optimizer.yield_batches():
+	print 'CLASSES IN #1:', (classes == 1).sum()
 	net = make_net(**parameters)  # dynamic epoch count, only for 1 layer network
 	out = net.fit(train, classes - 1)
 	prediction = net.predict_proba(test)
 	optimizer.register_results(prediction)
-	fig, ax = show_train_progress(net)
-	fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_{1:d}_{2:d}.png'.format(parameters['name'], parameters['dense1_size'], parameters['dense2_size'] or 0)))
-	print dir(fig)
+	#fig, ax = show_train_progress(net)
+	#fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_{1:d}_{2:d}.png'.format(parameters['name'], parameters['dense1_size'], parameters['dense2_size'] or 0)))
 optimizer.print_plot_results(save_fig_basename = splitext(basename(__file__))[0])
 
 
