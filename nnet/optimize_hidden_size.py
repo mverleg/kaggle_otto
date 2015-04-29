@@ -32,11 +32,10 @@ optimizer = GridOptimizer(validator = validator, use_caching = True,
 	dropout1_rate = 0.5,
 	dropout2_rate = None,
 	weight_decay = 0,
-	max_epochs = 1,
+	max_epochs = 500,
 	output_nonlinearity = 'softmax',
 )
 for parameters, train, classes, test in optimizer.yield_batches():
-	print 'CLASSES IN #1:', (classes == 1).sum()
 	net = make_net(**parameters)  # dynamic epoch count, only for 1 layer network
 	out = net.fit(train, classes - 1)
 	prediction = net.predict_proba(test)
