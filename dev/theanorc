@@ -1,0 +1,12 @@
+
+[global]
+floatX = float32
+
+[nvcc]
+fastmath = True
+
+[blas]
+ldflags = -lblas -lifcore
+
+
+

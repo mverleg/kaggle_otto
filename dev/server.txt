@@ -1,4 +1,5 @@
 
+#ssh cn77 # 77-80
 source env/bin/activate
 source /opt/intel/bin/compilervars.sh intel64
 source /opt/intel/mkl/bin/mklvars.sh intel64
