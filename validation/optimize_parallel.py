@@ -2,21 +2,16 @@
 """
 	General code to optimize parameters to a model.
 """
+
 from copy import deepcopy
 from functools import partial
-
-from hashlib import sha1
-from collections import Iterable, OrderedDict
-from json import dumps, loads
+from collections import Iterable
 from multiprocessing import cpu_count, Pool
 from os.path import join
-from sys import stdout, stderr
-from matplotlib.pyplot import show
-from numpy import zeros, prod, float64, unravel_index, ravel_multi_index, where
-from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY, AUTO_IMAGES_DIR
-from validation.crossvalidate import Validator
+from sys import stderr
+from numpy import prod, unravel_index
+from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY
 from validation.optimize import GridOptimizer, load_results, params_name, store_results
-from validation.views import compare_bars, compare_plot, compare_surface
 
 
 def is_nonstr_iterable(obj):
