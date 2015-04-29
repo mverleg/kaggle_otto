@@ -15,7 +15,7 @@ from matplotlib.pyplot import show
 from numpy import zeros, prod, float64, unravel_index, ravel_multi_index, where
 from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY, AUTO_IMAGES_DIR
 from validation.crossvalidate import Validator
-from validation.optimize import GridOptimizer, load_results, params_name
+from validation.optimize import GridOptimizer, load_results, params_name, store_results
 from validation.views import compare_bars, compare_plot, compare_surface
 
 
@@ -67,25 +67,23 @@ class ParallelGridOptimizer(GridOptimizer):
 			all_params.append(params)
 		""" See which have already been calculated. """
 		todo_jobs = []
-		for k, params in enumerate(all_params):
+		for index, params in enumerate(all_params):
 			for round in range(self.validator.rounds):
 				if self.use_caching:
 					filename, dispname = params_name(params, self.prefix)
 					try:
 						""" Try to load cache. """
 						res = load_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)))
-					except IOError as err:
-						print err
+					except IOError:
 						""" No cache; this one is still to be calculated. """
-						todo_jobs.append((k, params, round))
+						todo_jobs.append((index, params, round))
 					else:
 						""" Cache loaded; handle. """
-						self.add_results(*res)
+						self.add_results(index * self.rounds + round, *res)
 						if print_current_parameters:
 							print 'cache: %s, round #%d/%d' % (dispname, round + 1, self.rounds)
 				else:
-					todo_jobs.append((k, params, round))
-		exit()
+					todo_jobs.append((index, params, round))
 		""" Calculate probabilties for the others using subprocesses. """
 		func = partial(job_handler,
 			train_test_func = self.train_test_func,
@@ -103,12 +101,13 @@ class ParallelGridOptimizer(GridOptimizer):
 
 def job_handler(tup, train_test_func, validator, prefix):
 	index, params, round = tup
-	name = params_name(params, prefix)[1]
+	filename, dispname = params_name(params, prefix)
 	if VERBOSITY >= 2:
-		print 'calculate: %s, round #%d/%d' % (name, round + 1, validator.rounds)
+		print 'calculate: %s, round #%d/%d' % (dispname, round + 1, validator.rounds)
 	train, classes, test = validator.start_round(round)
 	prediction = train_test_func(train, classes, test, **params)
 	results = validator.add_prediction(prediction)
+	store_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)), *results)
 	return results
 
 
