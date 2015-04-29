@@ -1,38 +1,27 @@
 
 from numpy import logical_not, concatenate, copy
 from numpy.random import permutation
-
+import numpy as np
 
 def equalize_train_classes(max_samples, class_set, class_set_labels):
 	numClasses = 9
-	trainData= []
-	trainLabels = []
-	residualData = []
-	residualLabels = []
+	residualData = np.empty((0,93))
+	residualLabels = np.empty((0))
+	trainData = np.empty((0,93))
+	trainLabels = np.empty((0))
 
 	for clsi in range(0, numClasses):
-		#assert max_samples <= class_set.shape[0], 'not enough samples'
-		nr_samples = min(max_samples, class_set[clsi].shape[0] - 1)
-		#print nr_samples, max_samples
-		index = permutation(range(class_set[clsi].shape[0]))[:nr_samples]
-		#print class_set[clsi].shape, class_set_labels[clsi].shape, index.shape
-		#print class_set[clsi].shape
-		#print index
-		#print len(index)
-		trainData.append(copy(class_set[clsi][index, :]))
-		#concatenate((trainData, class_set[clsi][index, :]), axis = 0)
-		trainLabels.append(copy(class_set_labels[clsi][index]))
-		residualData.append(copy(class_set[clsi][logical_not(index), :]))
-		residualLabels.append(copy(class_set_labels[clsi][logical_not(index)]))
-		#print clsi + 1, len(index), class_set[clsi].shape
+		nr_samples = min(max_samples, class_set[clsi].shape[0])
+		# print class_set[clsi].shape[0], max_samples
+		index = permutation(class_set[clsi].shape[0])[:nr_samples]
+		resIndex = list(set(permutation(class_set[clsi].shape[0])) - set(index))
+		# print len(index), len(resIndex)
 
-	# combine a list of matrices into big matrix
-	#print 'res', [r.shape for r in trainData]
-	trainData = concatenate(trainData, 0)
-	trainLabels = concatenate(trainLabels, 0)
-	#print 'res', [r.shape for r in residualData]
-	residualData = concatenate(residualData, 0)
-	residualLabels = concatenate(residualLabels, 0)
+		trainData = np.vstack((trainData, class_set[clsi][index, :]))
+		trainLabels = np.append(trainLabels, class_set_labels[clsi][index])
+		if len(resIndex)>0:
+			residualData = np.vstack((residualData, class_set[clsi][resIndex, :]))
+			residualLabels = np.append(residualLabels, class_set_labels[clsi][resIndex])
 
 	return trainData, trainLabels, residualData, residualLabels
 
