@@ -2,6 +2,8 @@
 """
 	General code to optimize parameters to a model.
 """
+from copy import deepcopy
+from functools import partial
 
 from hashlib import sha1
 from collections import Iterable, OrderedDict
@@ -13,7 +15,7 @@ from matplotlib.pyplot import show
 from numpy import zeros, prod, float64, unravel_index, ravel_multi_index, where
 from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY, AUTO_IMAGES_DIR
 from validation.crossvalidate import Validator
-from validation.optimize import GridOptimizer, load_results
+from validation.optimize import GridOptimizer, load_results, params_name
 from validation.views import compare_bars, compare_plot, compare_surface
 
 
@@ -56,6 +58,47 @@ class ParallelGridOptimizer(GridOptimizer):
 		"""
 			Start executing jobs in parallel.
 		"""
+		""" Create all the parameter sets. """
+		all_params = []
+		for p in range(prod(self.dims, dtype = int)):
+			coord = unravel_index(p, self.dims) if self.dims else tuple()
+			params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
+			params.update(self.fixed_params)
+			all_params.append(params)
+		""" See which have already been calculated. """
+		todo_jobs = []
+		for k, params in enumerate(all_params):
+			for round in range(self.validator.rounds):
+				if self.use_caching:
+					filename, dispname = params_name(params, self.prefix)
+					try:
+						""" Try to load cache. """
+						res = load_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)))
+					except IOError as err:
+						""" No cache; this one is still to be calculated. """
+						todo_jobs.append((k, params, round))
+					else:
+						""" Cache loaded; handle. """
+						self.add_results(*res)
+						if print_current_parameters:
+							print 'cache: %s, round #%d/%d' % (dispname, round + 1, self.rounds)
+				else:
+					todo_jobs.append((k, params, round))
+		""" Calculate probabilties for the others using subprocesses. """
+		func = partial(job_handler,
+			train_test_func = self.train_test_func,
+			validator = deepcopy(self.validator),
+			prefix = self.prefix,
+		)
+		pool = Pool(processes = self.process_count)
+		job_results = pool.map(func, todo_jobs)
+		""" Convert probabilities to scores and store them. """
+		for (index, params, round), result in zip(todo_jobs, job_results):
+			print 'calculated', index, round
+		""" Visualize. """
+
+
+	def _REMOVE_ME(self):  #todo
 		job_args = []
 		for p in range(prod(self.dims, dtype = int)):
 			""" Every combination of parameters. """
@@ -63,31 +106,27 @@ class ParallelGridOptimizer(GridOptimizer):
 			params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
 			params.update(self.fixed_params)
 			job_args.append(params)
-
-			filename, dispname = self.params_name(params)
-			if print_current_parameters:
-				print 'calculating {0:d} rounds for parameters {1:s}'.format(self.rounds, dispname)
-			for round in range(self.rounds):
-				job_args.append(self.get_single_batch(params, round, dispname))
 		pool = Pool(processes = self.process_count)
-		job_results = pool.map()
+		job_results = pool.map(partial(job_handler,
+			func = self.train_test_func,
+			use_caching = self.use_caching,
+			validator = deepcopy(self.validator),
+			prefix = self.prefix,
+		), job_args)
+		print job_results
 
 
-def job_handler(use_caching, job_params, validator_params):
-	#todo: validator = ...
-	if use_caching:
-		try:
-			""" Try to load cache. """
-			res = load_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)))
-		except IOError as err:
-			""" No cache; yield the data (storage happens elsewhere). """
-			yield self.get_single_batch(params, round, dispname)
-		else:
-			""" Cache loaded; handle. """
-			self.add_results(*res)
-			if VERBOSITY >= 2:
-				print 'cache: %s, round #%d/%d' % (dispname, round + 1, self.rounds)
-	else:
-		raise NotImplementedError('todo')
+def job_handler(tup, train_test_func, validator, prefix):
+	index, params, round = tup
+	print '>>', index, round
+	name = params_name(params, prefix)[1]
+	predictions_li = []
+	if VERBOSITY >= 2:
+		print 'calculate: %s, round #%d/%d' % (name, round + 1, validator.rounds)
+	train, classes, test = validator.start_round(round)
+	prediction = train_test_func(train, classes, test, **params)
+	validator.add_prediction()
+	predictions_li.append(prediction)
+	return predictions_li
 
 

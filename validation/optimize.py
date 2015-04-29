@@ -49,13 +49,6 @@ class GridOptimizer(object):
 		self.results_added = 0
 		print 'grid optimize: {0:s} comparisons x {1:d} rounds = {2:d} iterations'.format(' x '.join(unicode(d) for d in self.dims), self.rounds, prod(self.dims, dtype = int) * self.rounds)
 
-	def params_name(self, params):
-		params = OrderedDict(sorted(params.items()))
-		return (
-			sha1(self.prefix + '_'.join('{0:s}-{1:}'.format(key, val) for key, val in params.items())).hexdigest(),
-			', '.join('{0:s} = {1:}'.format(key, val) for key, val in params.items()),
-		)
-
 	def get_single_batch(self, params, round, name):
 		"""
 			Return a single batch (intended for internal use).
@@ -77,7 +70,7 @@ class GridOptimizer(object):
 			params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
 			params.update(self.fixed_params)
 			self.validator.reset()
-			filename, dispname = self.params_name(params)
+			filename, dispname = self.params_name(params, self.prefix)
 			if print_current_parameters:
 				print 'calculating {0:d} rounds for parameters {1:s}'.format(self.rounds, dispname)
 			for round in range(self.rounds):
@@ -90,15 +83,15 @@ class GridOptimizer(object):
 						yield self.get_single_batch(params, round, dispname)
 					else:
 						""" Cache loaded; handle. """
-						self.add_results(*res)
-						if VERBOSITY >= 2:
+						self.add_results(self.results_added, *res)
+						if print_current_parameters:
 							print 'cache: %s, round #%d/%d' % (dispname, round + 1, self.rounds)
 				else:
 					yield self.get_single_batch(params, round, dispname)
 
-	def add_results(self, logloss, accuracy, duration):
-		param_index = self.results_added // self.rounds
-		round_index = self.results_added % self.rounds
+	def add_results(self, index, logloss, accuracy, duration):
+		param_index = index // self.rounds
+		round_index = index % self.rounds
 		coord = unravel_index(param_index, self.dims) if self.dims else tuple()
 		arr = self.results
 		for k in coord:
@@ -117,9 +110,9 @@ class GridOptimizer(object):
 		round = self.results_added % self.rounds
 		params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
 		params.update(self.fixed_params)
-		filename, dispname = self.params_name(params)
+		filename, dispname = params_name(params, self.prefix)
 		res = self.validator.add_prediction(prediction)
-		self.add_results(*res)
+		self.add_results(self.results_added, *res)
 		store_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)), *res)
 		return res
 
@@ -192,4 +185,9 @@ def is_nonstr_iterable(obj):
 	"""
 	return not isinstance(obj, str) and isinstance(obj, Iterable)
 
-
+def params_name(params, prefix):
+	params = OrderedDict(sorted(params.items()))
+	return (
+		sha1(prefix + '_'.join('{0:s}-{1:}'.format(key, val) for key, val in params.items())).hexdigest(),
+		', '.join('{0:s} = {1:}'.format(key, val) for key, val in params.items()),
+	)
