@@ -1,6 +1,7 @@
 
 from nnet.make_net import make_net
 from nnet.prepare import normalize_data
+from settings import VERBOSITY
 from utils.loading import get_training_data
 from utils.outliers import filter_data
 from validation.crossvalidate import SampleCrossValidator
@@ -35,6 +36,6 @@ optimizer = ParallelGridOptimizer(train_test_func = train_test, validator = vali
 	normalize_use_log = True,
 	outlier_method = 'OCSVM',
 	outlier_fraction = 0.02,
-).readygo()
+).readygo(print_current_parameters = VERBOSITY, topprint = 1000, save_fig_basename = 'dense_sizes')
 
 

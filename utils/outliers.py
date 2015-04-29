@@ -51,7 +51,7 @@ def make_filtered_data(train_data, true_classes, cut_outlier_frac, detector):
 	assert 0 <= cut_outlier_frac <= 1. + 1e-6
 	keep = ones(true_classes.shape, dtype = bool)
 	for cls in range(1, NCLASSES + 1):
-		if VERBOSITY:
+		if VERBOSITY >= 2:
 			print 'removing outliers from class {0:d}'.format(cls)
 		cls_train = train_data[true_classes == cls, :]
 		transformed = PCA(n_components = 40, copy = True, whiten = False).fit(cls_train).transform(cls_train)
