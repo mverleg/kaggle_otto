@@ -14,7 +14,7 @@ validator = SampleCrossValidator(train_data, true_labels, rounds = 6, test_frac 
 optimizer = ParallelGridOptimizer(train_test_func = train_test, validator = validator,  use_cache = True, process_count = 3,
 	learning_rate = [10, 1, 0.1, 0.01, 0.001],
 	hidden_layer_size = [60, 30, 50, 40, 20],
-	weight_decay = [0.01, 0.02, 0.03, 0.04, 0.05],
+	weight_decay = 0.1,
 	momentum = 0.9
 ).readygo()
 

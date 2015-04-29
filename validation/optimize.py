@@ -187,6 +187,7 @@ def is_nonstr_iterable(obj):
 
 def params_name(params, prefix):
 	params = OrderedDict(sorted(params.items()))
+	print prefix + '_'.join('{0:s}-{1:}'.format(key, val) for key, val in params.items())
 	return (
 		sha1(prefix + '_'.join('{0:s}-{1:}'.format(key, val) for key, val in params.items())).hexdigest(),
 		', '.join('{0:s} = {1:}'.format(key, val) for key, val in params.items()),

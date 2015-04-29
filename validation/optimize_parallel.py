@@ -54,7 +54,7 @@ class ParallelGridOptimizer(GridOptimizer):
 			self.warning_shown = True
 		super(ParallelGridOptimizer, self).yield_batches(*args, **kwargs)
 
-	def readygo(self, print_current_parameters = VERBOSITY):
+	def readygo(self, print_current_parameters = VERBOSITY, topprint = 12, save_fig_basename = None):
 		"""
 			Start executing jobs in parallel.
 		"""
@@ -75,6 +75,7 @@ class ParallelGridOptimizer(GridOptimizer):
 						""" Try to load cache. """
 						res = load_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)))
 					except IOError as err:
+						print err
 						""" No cache; this one is still to be calculated. """
 						todo_jobs.append((k, params, round))
 					else:
@@ -84,6 +85,7 @@ class ParallelGridOptimizer(GridOptimizer):
 							print 'cache: %s, round #%d/%d' % (dispname, round + 1, self.rounds)
 				else:
 					todo_jobs.append((k, params, round))
+		exit()
 		""" Calculate probabilties for the others using subprocesses. """
 		func = partial(job_handler,
 			train_test_func = self.train_test_func,
@@ -94,39 +96,19 @@ class ParallelGridOptimizer(GridOptimizer):
 		job_results = pool.map(func, todo_jobs)
 		""" Convert probabilities to scores and store them. """
 		for (index, params, round), result in zip(todo_jobs, job_results):
-			print 'calculated', index, round
+			self.add_results(index * self.rounds + round, *result)
 		""" Visualize. """
-
-
-	def _REMOVE_ME(self):  #todo
-		job_args = []
-		for p in range(prod(self.dims, dtype = int)):
-			""" Every combination of parameters. """
-			coord = unravel_index(p, self.dims) if self.dims else tuple()
-			params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
-			params.update(self.fixed_params)
-			job_args.append(params)
-		pool = Pool(processes = self.process_count)
-		job_results = pool.map(partial(job_handler,
-			func = self.train_test_func,
-			use_caching = self.use_caching,
-			validator = deepcopy(self.validator),
-			prefix = self.prefix,
-		), job_args)
-		print job_results
+		self.print_plot_results(topprint = topprint, save_fig_basename = save_fig_basename)
 
 
 def job_handler(tup, train_test_func, validator, prefix):
 	index, params, round = tup
-	print '>>', index, round
 	name = params_name(params, prefix)[1]
-	predictions_li = []
 	if VERBOSITY >= 2:
 		print 'calculate: %s, round #%d/%d' % (name, round + 1, validator.rounds)
 	train, classes, test = validator.start_round(round)
 	prediction = train_test_func(train, classes, test, **params)
-	validator.add_prediction()
-	predictions_li.append(prediction)
-	return predictions_li
+	results = validator.add_prediction(prediction)
+	return results
 
 
