@@ -15,13 +15,6 @@ from validation.crossvalidate import Validator
 from validation.views import compare_bars, compare_plot, compare_surface
 
 
-def is_nonstr_iterable(obj):
-	"""
-		http://stackoverflow.com/questions/19943654/type-checking-an-iterable-type-that-is-not-a-string
-	"""
-	return not isinstance(obj, str) and isinstance(obj, Iterable)
-
-
 class GridOptimizer(object):
 
 	def __init__(self, validator, use_caching = True, prefix = None, **params):
@@ -39,6 +32,7 @@ class GridOptimizer(object):
 
 			The code was not designed for iterable parameters. You can try to put them in another iterable, but a simple mapping may be easier (e.g. m = {1: [...], 2: [...]} , pass [1, 2] to GridOptimizer and let the code use m[param]).
 		"""
+		print 'Note: there is now a parallel version of GridOptimizer. It works a little differently, but can be much faster.'
 		assert isinstance(validator, Validator), 'Argument "validator" should be an instantiated Validator (not "{0:s}").'.format(type(validator))
 		self.validator = validator
 		self.rounds = self.validator.rounds
@@ -54,25 +48,6 @@ class GridOptimizer(object):
 		self.results = zeros(self.dims + (self.rounds, 3,), dtype = float64)
 		self.results_added = 0
 		print 'grid optimize: {0:s} comparisons x {1:d} rounds = {2:d} iterations'.format(' x '.join(unicode(d) for d in self.dims), self.rounds, prod(self.dims, dtype = int) * self.rounds)
-
-	def params_name(self, params):
-		params = OrderedDict(sorted(params.items()))
-		return (
-			sha1(self.prefix + '_'.join('{0:s}-{1:}'.format(key, val) for key, val in params.items())).hexdigest(),
-			', '.join('{0:s} = {1:}'.format(key, val) for key, val in params.items()),
-		)
-
-	def store_results(self, filepath, logloss, accuracy, duration):
-		with open(filepath, 'w+') as fh:
-			fh.write(dumps({'logloss': logloss, 'accuracy': accuracy, 'duration': duration}, indent = 4, sort_keys = True))
-
-	def load_results(self, filepath):
-		"""
-			:return: (logloss, accuracy, duration) tuple
-		"""
-		with open(filepath, 'r') as fh:
-			d = loads(fh.read())
-		return d['logloss'], d['accuracy'], d['duration'],
 
 	def get_single_batch(self, params, round, name):
 		"""
@@ -95,28 +70,28 @@ class GridOptimizer(object):
 			params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
 			params.update(self.fixed_params)
 			self.validator.reset()
-			filename, dispname = self.params_name(params)
+			filename, dispname = self.params_name(params, self.prefix)
 			if print_current_parameters:
 				print 'calculating {0:d} rounds for parameters {1:s}'.format(self.rounds, dispname)
 			for round in range(self.rounds):
 				if self.use_caching:
 					try:
 						""" Try to load cache. """
-						res = self.load_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)))
+						res = load_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)))
 					except IOError as err:
 						""" No cache; yield the data (storage happens elsewhere). """
 						yield self.get_single_batch(params, round, dispname)
 					else:
 						""" Cache loaded; handle. """
-						self.add_results(*res)
-						if VERBOSITY >= 2:
+						self.add_results(self.results_added, *res)
+						if print_current_parameters:
 							print 'cache: %s, round #%d/%d' % (dispname, round + 1, self.rounds)
 				else:
 					yield self.get_single_batch(params, round, dispname)
 
-	def add_results(self, logloss, accuracy, duration):
-		param_index = self.results_added // self.rounds
-		round_index = self.results_added % self.rounds
+	def add_results(self, index, logloss, accuracy, duration):
+		param_index = index // self.rounds
+		round_index = index % self.rounds
 		coord = unravel_index(param_index, self.dims) if self.dims else tuple()
 		arr = self.results
 		for k in coord:
@@ -135,10 +110,10 @@ class GridOptimizer(object):
 		round = self.results_added % self.rounds
 		params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
 		params.update(self.fixed_params)
-		filename, dispname = self.params_name(params)
+		filename, dispname = params_name(params, self.prefix)
 		res = self.validator.add_prediction(prediction)
-		self.add_results(*res)
-		self.store_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)), *res)
+		self.add_results(self.results_added, *res)
+		store_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)), *res)
 		return res
 
 	def print_top(self, topprint):
@@ -187,7 +162,32 @@ class GridOptimizer(object):
 		return self.results
 
 
+def store_results(filepath, logloss, accuracy, duration):
+	with open(filepath, 'w+') as fh:
+		fh.write(dumps({'logloss': logloss, 'accuracy': accuracy, 'duration': duration}, indent = 4, sort_keys = True))
+
+def load_results(filepath):
+	"""
+		:return: (logloss, accuracy, duration) tuple
+	"""
+	with open(filepath, 'r') as fh:
+		d = loads(fh.read())
+	return d['logloss'], d['accuracy'], d['duration']
+
+
 def is_number(obj):
 	return isinstance(obj, float) or isinstance(obj, int)
 
 
+def is_nonstr_iterable(obj):
+	"""
+		http://stackoverflow.com/questions/19943654/type-checking-an-iterable-type-that-is-not-a-string
+	"""
+	return not isinstance(obj, str) and isinstance(obj, Iterable)
+
+def params_name(params, prefix):
+	params = OrderedDict(sorted(params.items()))
+	return (
+		sha1(prefix + '_'.join('{0:s}-{1:}'.format(key, val) for key, val in params.items())).hexdigest(),
+		', '.join('{0:s} = {1:}'.format(key, val) for key, val in params.items()),
+	)
