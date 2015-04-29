@@ -1,4 +1,5 @@
 
+from numpy import float32
 from nnet.hue.get_train_data import equalize_train_classes
 from nnet.make_net import make_net
 from validation.score import calc_logloss, calc_accuracy
@@ -35,11 +36,14 @@ def do_train(min_cls_size, trainData, trainLabels, residualData, residualLabels,
 					)
 
 					print 'equalizing classes'
+					print trainData[0].dtype
 					trainData, trainLabels, residualData, residualLabels = equalize_train_classes(min_cls_size, trainData, trainLabels)
-					#testData = vstack(testData)
-					#testLabels = vstack(testLabels)
+
+					# convert everything to float32 because float64 does not work
+					#trainData, trainLabels, residualData, residualLabels = [arr.astype(float32) for arr in (trainData, trainLabels, residualData, residualLabels)]
 
 					print 'training network'
+					print trainData.dtype, trainLabels.dtype
 					out = net.fit(trainData, trainLabels - 1)
 
 					print 'predicting test data'

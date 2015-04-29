@@ -2,13 +2,15 @@
 from numpy import logical_not, concatenate, copy
 from numpy.random import permutation
 import numpy as np
+from theano.scalar import uint16
+
 
 def equalize_train_classes(max_samples, class_set, class_set_labels):
 	numClasses = 9
-	residualData = np.empty((0,93))
-	residualLabels = np.empty((0))
-	trainData = np.empty((0,93))
-	trainLabels = np.empty((0))
+	residualData = np.empty((0,93), dtype = uint16)
+	residualLabels = np.empty((0), dtype = uint16)
+	trainData = np.empty((0,93), dtype = uint16)
+	trainLabels = np.empty((0), dtype = uint16)
 
 	for clsi in range(0, numClasses):
 		nr_samples = min(max_samples, class_set[clsi].shape[0])
