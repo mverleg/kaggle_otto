@@ -8,8 +8,9 @@ Created on Wed Apr 15 18:58:22 2015
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.calibration import CalibratedClassifierCV
 from math import floor
+from numpy import ones, shape
 
-def gradientBoosting(train, labels, test, n_estimators = 50, max_depth = 5, calibration = None, calibrationmethod = 'sigmoid', verbose = 0):
+def gradientBoosting(train, labels, test, loss = 'deviance', n_estimators = 50, max_depth = 3, learning_rate = 0.1, min_samples_split = 2, min_samples_leaf = 1, min_weight_fraction_leaf = 0, max_features = None, calibration = None, calibrationmethod = 'sigmoid', sample_weight = None,  verbose = 1):
     """
     Trains a model by giving it a feature matrix, as well as the labels (the ground truth)
     then using that model, predicts the given test samples
@@ -25,7 +26,12 @@ def gradientBoosting(train, labels, test, n_estimators = 50, max_depth = 5, cali
     :param verbose: See sklearn documentation
     """
     if not calibration: #no calibration is done
-        model = GradientBoostingClassifier(n_estimators=n_estimators, max_depth = max_depth, verbose = verbose).fit(train, labels)
+        model = GradientBoostingClassifier(loss = loss, min_samples_split = min_samples_split, min_samples_leaf = min_samples_leaf, min_weight_fraction_leaf = min_weight_fraction_leaf,max_features = max_features, learning_rate = learning_rate, n_estimators=n_estimators, max_depth = max_depth, verbose = verbose)
+        print "Now doing some fitting, hold tight!"
+        print loss, learning_rate, n_estimators, max_depth, min_samples_split, min_samples_leaf, min_weight_fraction_leaf, max_features, verbose
+        print sample_weight, shape(train), shape(labels)
+        model.fit(train, labels, sample_weight)
+        print "Done fitting!"
         return model.predict_proba(test)
         
     N = len(labels)
@@ -34,10 +40,13 @@ def gradientBoosting(train, labels, test, n_estimators = 50, max_depth = 5, cali
     
     if calibration > 1:
         calibratedmodel = CalibratedClassifierCV(model, calibrationmethod, calibration)
-    else:      
-        model.fit(train[:trainrows, :], labels[:trainrows])
+        calibratedmodel.fit(train, labels, sample_weight)
+    else:
+        if sample_weight is None:
+            sample_weight = ones((len(labels)))
+        model.fit(train[:trainrows, :], labels[:trainrows],sample_weight[:trainrows])
         calibratedmodel = CalibratedClassifierCV(model, calibrationmethod, "prefit")
-        calibratedmodel.fit(train[trainrows:,:], labels[trainrows:])
+        calibratedmodel.fit(train[trainrows:,:], labels[trainrows:], sample_weight = sample_weight[trainrows:])
     return calibratedmodel.predict_proba(test)    
 
 
