@@ -16,7 +16,7 @@ def normalize_data(data, norms = None, use_log = True):
 	if use_log:
 		data = log10(1 + 200 * data)
 		if VERBOSITY >= 1:
-			print 'normalizing positive data to [0, ... with log scale'
+			print 'normalizing positive data to [0, ...) with log scale'
 	else:
 		if VERBOSITY >= 1:
 			print 'normalizing positive data to [0, 1] linearly'
