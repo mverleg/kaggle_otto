@@ -13,7 +13,9 @@ def train_test(train, classes, test, **parameters):
 	train = normalize_data(train, use_log = parameters.pop('normalize_use_log'))[0]
 	net = make_net(**parameters)
 	net.fit(train, classes - 1)
-	return net.predict_proba(test)
+	probabilities = net.predict_proba(test)
+	probabilities.sum(axis = 1)
+	return probabilities
 
 train_data, true_labels = get_training_data()[:2]
 validator = SampleCrossValidator(train_data, true_labels, rounds = 5, test_frac = 0.2, use_data_frac = 1)

@@ -70,7 +70,7 @@ class GridOptimizer(object):
 			params = {self.labels[d]: self.values[d][k] for d, k in enumerate(coord)}
 			params.update(self.fixed_params)
 			self.validator.reset()
-			filename, dispname = self.params_name(params, self.prefix)
+			filename, dispname = params_name(params, self.prefix)
 			if print_current_parameters:
 				print 'calculating {0:d} rounds for parameters {1:s}'.format(self.rounds, dispname)
 			for round in range(self.rounds):
@@ -157,7 +157,8 @@ class GridOptimizer(object):
 				fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_surf.png'.format(save_fig_basename)))
 		else:
 			print 'There are more than two parameters to compare; no visualization options.'
-		self.print_top(topprint)
+		if self.dims:
+			self.print_top(topprint)
 		show()
 		return self.results
 

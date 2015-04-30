@@ -98,6 +98,7 @@ class ParallelGridOptimizer(GridOptimizer):
 			self.add_results(index * self.rounds + round, *result)
 		""" Visualize. """
 		self.print_plot_results(topprint = topprint, save_fig_basename = save_fig_basename)
+		return self
 
 
 def make_logfile(filename):
