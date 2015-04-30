@@ -60,7 +60,7 @@ def normalize_probabilities(predictions):
 	return predictions / predictions.sum(axis = 1)[:,None]
 
 
-def check_rows_normalized(predictions, epsilon = 1e-8):
+def check_rows_normalized(predictions, epsilon = 1e-4):
 	"""
 		:return: True if rows add up to 1.
 	"""
