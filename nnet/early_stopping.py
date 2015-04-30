@@ -38,7 +38,7 @@ class StopAfterMinimum(object):
 			self.best_weights = [w.get_value() for w in nn.get_all_params()]
 		elif self.best_valid_epoch + self.patience < current_epoch:
 			print 'Stopping early since test error has been increasing.'
-			print 'Best valid loss was {:.6f} at epoch {}.'.format(self.best_valid, self.best_valid_epoch)
+			print 'Best validation loss was {:.6f} at epoch {}.'.format(self.best_valid, self.best_valid_epoch)
 			filepath = '{0:s}_{1:d}.net'.format(self.base_path, train_history[-1]['epoch'])
 			save_net(nn, filepath)
 			nn.load_weights_from(self.best_weights)

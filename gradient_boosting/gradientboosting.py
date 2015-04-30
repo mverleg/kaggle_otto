@@ -27,11 +27,7 @@ def gradientBoosting(train, labels, test, loss = 'deviance', n_estimators = 50, 
     """
     if not calibration: #no calibration is done
         model = GradientBoostingClassifier(loss = loss, min_samples_split = min_samples_split, min_samples_leaf = min_samples_leaf, min_weight_fraction_leaf = min_weight_fraction_leaf,max_features = max_features, learning_rate = learning_rate, n_estimators=n_estimators, max_depth = max_depth, verbose = verbose)
-        print "Now doing some fitting, hold tight!"
-        print loss, learning_rate, n_estimators, max_depth, min_samples_split, min_samples_leaf, min_weight_fraction_leaf, max_features, verbose
-        print sample_weight, shape(train), shape(labels)
         model.fit(train, labels, sample_weight)
-        print "Done fitting!"
         return model.predict_proba(test)
         
     N = len(labels)

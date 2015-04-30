@@ -50,7 +50,7 @@ class ParallelGridOptimizer(GridOptimizer):
 			self.warning_shown = True
 		super(ParallelGridOptimizer, self).yield_batches(*args, **kwargs)
 
-	def readygo(self, print_current_parameters = VERBOSITY, topprint = 12, save_fig_basename = None, log_name = None):
+	def readygo(self, print_current_parameters = VERBOSITY, topprint = 12, save_fig_basename = None, log_name = None, only_show_top = False):
 		"""
 			Start executing jobs in parallel.
 		"""
@@ -97,7 +97,11 @@ class ParallelGridOptimizer(GridOptimizer):
 		for (index, params, round), result in zip(todo_jobs, job_results):
 			self.add_results(index * self.rounds + round, *result)
 		""" Visualize. """
+		if only_show_top:
+			self.print_top(topprint = topprint)
+			return self
 		self.print_plot_results(topprint = topprint, save_fig_basename = save_fig_basename)
+		return self
 
 
 def make_logfile(filename):

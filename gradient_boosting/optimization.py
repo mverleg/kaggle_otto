@@ -5,12 +5,13 @@
 from utils.loading import get_training_data
 from validation.crossvalidate import SampleCrossValidator
 from validation.optimize import GridOptimizer
+from validation.optimize_parallel import ParallelGridOptimizer
 from gradient_boosting.gradientboosting import gradientBoosting
 #lol, 3 different ways of naming variables in one line :P
 
 loss = ['deviance', 'exponential']
 learning_rate = [0.05, 0.1, 0.5]
-n_estimators = 200
+n_estimators = 50
 max_depth = [3,5,7]
 min_samples_split = [1,2,3]
 min_samples_leaf = [1,2,3]
@@ -26,8 +27,16 @@ testparams.update(  {"learning_rate" : learning_rate, "max_depth" :  max_depth} 
 
 train_data, true_classes, _ = get_training_data()    
 validator = SampleCrossValidator(train_data, true_classes, rounds=1, test_frac=0.1, use_data_frac=1.0)
+
+#The parallelized code
+optimizer = ParallelGridOptimizer(gradientBoosting, validator, process_count = 4, **testparams)
+optimizer.readygo()
+
+#The non parallelized-code
+"""
 optimizer = GridOptimizer(validator, **testparams)
 for params, train, classes, test in optimizer.yield_batches():
     prediction = gradientBoosting(train, classes, test, **params)
     optimizer.register_results(prediction)
 optimizer.print_plot_results()
+"""
