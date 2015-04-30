@@ -24,7 +24,7 @@ train_data, true_classes, features = get_training_data()  # load the train data
 train_data, true_classes = equalize_class_sizes(train_data, true_classes)
 train_data, true_classes = filter_data(train_data, true_classes, cut_outlier_frac = 0.06, method = 'OCSVM')  # remove ourliers
 train_data = normalize_data(train_data, use_log = True)[0]  # also converts to floats
-validator = SampleCrossValidator(train_data, true_classes, rounds = 100, test_frac = 0.2, use_data_frac = 1)
+validator = SampleCrossValidator(train_data, true_classes, rounds = 3, test_frac = 0.2, use_data_frac = 1)
 optimizer = ParallelGridOptimizer(train_test_func = train_test_NN, validator = validator, use_caching = True,
 	name = name,            # just choose something sensible
 	dense1_size = [30, 25, 80, 120, 180],  # [30, 25, 80, 120, 180]
