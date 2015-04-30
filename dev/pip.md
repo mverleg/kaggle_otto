@@ -13,6 +13,8 @@ If you're at the university (or some other computer where you're now admin), or 
 
 If you use this way, everything is installed locally in directory "env". You need to repeat that last command (activate) every time. If you use an IDE you may need to set it for that one (in PyCharm it's under settings > interpreter).
 
+On the server, run `source dev/server.txt` when starting.
+
 The following steps apply with or without virtualenv. To install the Python packages that you need, you can do:
 
     pip install -r dev/freeze.pip
