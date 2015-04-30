@@ -33,17 +33,17 @@ train_data = normalize_data(train_data, use_log = True)[0]  # also converts to f
 validator = SampleCrossValidator(train_data, true_classes, rounds = 3, test_frac = 0.2, use_data_frac = 1)
 optimizer = ParallelGridOptimizer(train_test_func = train_test_NN, validator = validator, use_caching = True,
 	name = name,                      # just choose something sensible
-	dense1_size = [30, 25, 80, 120, 180],  # [30, 25, 80, 120, 180]
+	dense1_size = 80,                 # [30, 25, 80, 120, 180]
 	dense1_nonlinearity = 'leaky20',  # ['tanh', 'sigmoid', 'rectify', 'leaky2', 'leaky20' 'softmax']
 	dense1_init = 'orthogonal',       # ['orthogonal', 'sparse', 'glorot_normal', 'glorot_uniform', 'he_normal', 'he_uniform']
-	dense2_size = [30, 25, 80, 120, 180],  # [30, 25, 80, 120, 180]
+	dense2_size = 80,                 # [30, 25, 80, 120, 180]
 	dense2_nonlinearity = 'leaky20',  # this is coupled to dense1_nonlinearity through hack#1
 	dense2_init = 'orthogonal',       # idem hack2
-	learning_rate = 0.001,            # [0.1, 0.01, 0.001, 0.0001]
-	learning_rate_scaling = 100,      # [1, 10, 100]
-	momentum = 0.9,                   # [0, 0.9, 0.99]
-	momentum_scaling = 100,           # [1, 10, 100]
-	dropout1_rate = [0, 0.5],         # [0, 0.5]
+	learning_rate = [0.1, 0.01, 0.001, 0.0001],
+	learning_rate_scaling = [1, 10, 100],
+	momentum = [0, 0.9, 0.99],
+	momentum_scaling = [1, 10, 100],
+	dropout1_rate = 0.5,              # [0, 0.5]
 	dropout2_rate = None,
 	weight_decay = 0,                 # doesn't work
 	max_epochs = 3000,                # it terminates when overfitting or increasing, so just leave high
