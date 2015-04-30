@@ -17,7 +17,7 @@ def train_test(train, classes, test, **parameters):
 
 train_data, true_labels = get_training_data()[:2]
 validator = SampleCrossValidator(train_data, true_labels, rounds = 5, test_frac = 0.2, use_data_frac = 1)
-optimizer = ParallelGridOptimizer(train_test_func = train_test, validator = validator, process_count = 60,
+optimizer = ParallelGridOptimizer(train_test_func = train_test, validator = validator,
 	name = 'dense_sizes',
 	dense1_size = [30, 25, 80, 120, 180],
 	dense1_nonlinearity = 'leaky20',

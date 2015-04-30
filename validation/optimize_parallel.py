@@ -7,10 +7,11 @@ from copy import deepcopy
 from functools import partial
 from collections import Iterable
 from multiprocessing import cpu_count, Pool
-from os.path import join
-from sys import stderr
+from os.path import join, basename, splitext
+from sys import stderr, modules, stdout
+from datetime import datetime
 from numpy import prod, unravel_index
-from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY
+from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY, LOGS_DIR
 from validation.optimize import GridOptimizer, load_results, params_name, store_results
 
 
@@ -49,10 +50,13 @@ class ParallelGridOptimizer(GridOptimizer):
 			self.warning_shown = True
 		super(ParallelGridOptimizer, self).yield_batches(*args, **kwargs)
 
-	def readygo(self, print_current_parameters = VERBOSITY, topprint = 12, save_fig_basename = None):
+	def readygo(self, print_current_parameters = VERBOSITY, topprint = 12, save_fig_basename = None, log_name = None):
 		"""
 			Start executing jobs in parallel.
 		"""
+		if log_name is None:
+			log_name = '{0:s}.log'.format(splitext(basename(getattr(modules['__main__'], '__file__', 'optimize.default')))[0])
+		make_logfile(log_name)
 		""" Create all the parameter sets. """
 		all_params = []
 		for p in range(prod(self.dims, dtype = int)):
@@ -68,13 +72,14 @@ class ParallelGridOptimizer(GridOptimizer):
 					filename, dispname = params_name(params, self.prefix)
 					try:
 						""" Try to load cache. """
-						res = load_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)))
+						results = load_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)))
 					except IOError:
 						""" No cache; this one is still to be calculated. """
 						todo_jobs.append((index, params, round))
 					else:
 						""" Cache loaded; handle. """
-						self.add_results(index * self.rounds + round, *res)
+						self.add_results(index * self.rounds + round, *results)
+						log_result(log_name, dispname, *results)
 						if print_current_parameters:
 							print 'cache: %s, round #%d/%d' % (dispname, round + 1, self.rounds)
 				else:
@@ -84,6 +89,7 @@ class ParallelGridOptimizer(GridOptimizer):
 			train_test_func = self.train_test_func,
 			validator = deepcopy(self.validator),
 			prefix = self.prefix,
+			log_name = log_name,
 		)
 		pool = Pool(processes = self.process_count)
 		job_results = pool.map(func, todo_jobs)
@@ -94,15 +100,28 @@ class ParallelGridOptimizer(GridOptimizer):
 		self.print_plot_results(topprint = topprint, save_fig_basename = save_fig_basename)
 
 
-def job_handler(tup, train_test_func, validator, prefix):
+def make_logfile(filename):
+	with open(join(LOGS_DIR, filename), 'w+') as fh:
+		fh.write('# datetime\tparameters\tloss\taccuracy(%)\tduration(s)\n')
+
+
+def log_result(filename, param_name, *results):
+	result_txt = '{0:s}\t{1:8.5f}\t{2:7.4f}\t{3:8.5f}'.format(param_name, *results)
+	with open(join(LOGS_DIR, filename), 'a+') as fh:
+		fh.write('{1:s}\t{0:s}\n'.format(result_txt, datetime.now().strftime("%Y-%d-%B %H:%M:%S")))
+
+
+def job_handler(tup, train_test_func, validator, prefix, log_name):
 	index, params, round = tup
 	filename, dispname = params_name(params, prefix)
 	if VERBOSITY >= 2:
 		print 'calculate: %s, round #%d/%d' % (dispname, round + 1, validator.rounds)
 	train, classes, test = validator.start_round(round)
 	prediction = train_test_func(train, classes, test, **params)
-	results = validator.add_prediction(prediction)
+	results = validator.add_prediction(prediction, _force_round = round)
 	store_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)), *results)
+	print '{0:s}\t{1:6.3f}\t{2:5.2f}%\t{3:6.3f}s'.format(dispname, *results)
+	log_result(log_name, dispname, *results)
 	return results
 
 
