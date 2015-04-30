@@ -9,7 +9,7 @@ from json import dumps, loads
 from os.path import join
 from sys import stdout
 from matplotlib.pyplot import show
-from numpy import zeros, prod, float64, unravel_index, ravel_multi_index, where
+from numpy import zeros, prod, float64, unravel_index, ravel_multi_index, where, size
 from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY, AUTO_IMAGES_DIR
 from validation.crossvalidate import Validator
 from validation.views import compare_bars, compare_plot, compare_surface
@@ -123,8 +123,8 @@ class GridOptimizer(object):
 		logloss_slice = [slice(None)] * len(self.dims) + [slice(None), 0]
 		logloss_all = self.results[logloss_slice]
 		logloss_mean = logloss_all.mean(len(self.dims))
-		logloss_cutoff = sorted(logloss_mean.flat, reverse = False)[min(topprint, len(logloss_mean) - 1)]
-		min_coords = zip(*where(logloss_mean < logloss_cutoff))
+		logloss_cutoff = sorted(logloss_mean.flat, reverse = False)[min(topprint, size(logloss_mean) - 1)]
+		min_coords = zip(*where(logloss_mean <= logloss_cutoff))
 		min_coords = sorted(min_coords, key = lambda pos: logloss_mean.flat[ravel_multi_index(pos, self.dims)])
 		stdout.write('pos     loss      {0:s}\n'.format('  '.join('{0:16s}'.format(label.replace('_', ' '))[-16:] for label in self.labels)))
 		for pos, min_coord in enumerate(min_coords):
