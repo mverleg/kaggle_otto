@@ -30,7 +30,8 @@ OPTIMIZE_RESULTS_DIR = join(BASE_DIR, 'results', 'optimize')
 NNET_STATE_DIR = join(BASE_DIR, 'results', 'nnets')
 AUTO_IMAGES_DIR = join(BASE_DIR, 'results', 'images')
 SUBMISSIONS_DIR = join(BASE_DIR, 'results', 'submissions')
-for pth in (OPTIMIZE_RESULTS_DIR, NNET_STATE_DIR, AUTO_IMAGES_DIR, SUBMISSIONS_DIR):
+LOGS_DIR = join(BASE_DIR, 'results', 'logs')
+for pth in (OPTIMIZE_RESULTS_DIR, NNET_STATE_DIR, AUTO_IMAGES_DIR, SUBMISSIONS_DIR, LOGS_DIR):
 	try:
 		makedirs(pth)
 	except OSError:
