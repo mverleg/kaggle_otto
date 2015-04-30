@@ -45,5 +45,3 @@ for parameters, train, classes, test in optimizer.yield_batches():
 optimizer.print_plot_results(save_fig_basename = 'dense_sizes')
 
 
-
-
