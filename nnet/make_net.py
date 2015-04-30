@@ -110,8 +110,8 @@ def make_net(
 	layers += [('output', DenseLayer)]
 
 	handlers = [
-		LogarithmicVariable('update_learning_rate', start = learning_rate_start, stop = learning_rate_end),
-		LogarithmicVariable('update_momentum', start = momentum_start, stop = momentum_end),
+		LogarithmicVariable('update_learning_rate', start = learning_rate, stop = learning_rate / float(learning_rate_scaling)),
+		LogarithmicVariable('update_momentum', start = momentum, stop = momentum / float(momentum_scaling)),
 	]
 	if auto_stopping:
 		handlers += [
@@ -135,8 +135,8 @@ def make_net(
 		output_W = Orthogonal(),
 
 		update = nesterov_momentum,
-		update_learning_rate = shared(float32(learning_rate_start)),
-		update_momentum = shared(float32(momentum_start)),
+		update_learning_rate = shared(float32(learning_rate)),
+		update_momentum = shared(float32(momentum)),
 
 		#regularization = l2,
 		#regularization_rate = weight_decay,
