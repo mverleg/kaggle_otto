@@ -39,7 +39,7 @@ class ParallelGridOptimizer(GridOptimizer):
 
 			The code was not designed for iterable parameters. You can try to put them in another iterable, but a simple mapping may be easier (e.g. m = {1: [...], 2: [...]} , pass [1, 2] to GridOptimizer and let the code use m[param]).
 		"""
-		super(ParallelGridOptimizer, self).__init__(validator, use_caching = True, prefix = None, **params)
+		super(ParallelGridOptimizer, self).__init__(validator, use_caching = use_caching, prefix = prefix, **params)
 		self.train_test_func = train_test_func
 		self.process_count = process_count
 		self.warning_shown = False
