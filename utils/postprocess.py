@@ -4,7 +4,7 @@
 """
 
 import numpy as np
-
+from utils.normalize import normalize_probabilities
 
 def rescale_prior(predictionmatrix, priorprobs):
     """
@@ -14,10 +14,12 @@ def rescale_prior(predictionmatrix, priorprobs):
         so can just be a bincount of the true_class vector
     :return: A prediction matrix with rescaled probabilities
     """
+    priorprobs = np.trim_zeros(priorprobs, 'f')
     N, C = np.shape(predictionmatrix)
     assert C == np.size(priorprobs)
     priorprobs = priorprobs / np.sum(priorprobs).astype(float)
     averageprediction = np.mean(predictionmatrix, axis = 0)
     factor = priorprobs / averageprediction
-    return predictionmatrix * np.repeat(factor[None,:],N,0)
+    result = predictionmatrix * np.repeat(factor[None,:],N,0)
+    return normalize_probabilities(result)
     

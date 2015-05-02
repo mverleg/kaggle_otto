@@ -3,7 +3,7 @@
     Functions for preprocessing the data, before classification
 """
 
-from numpy import bincount, array, shape, empty, concatenate
+from numpy import bincount, array, min, zeros, nonzero, where, sum
 from settings import NCLASSES
 
 def obtain_class_weights(true_classes, weight_calc = "inverted"):
@@ -24,27 +24,27 @@ def obtain_class_weights(true_classes, weight_calc = "inverted"):
     weightFunc = funcDict[weight_calc]  
     priorprobs = bincount(true_classes, minlength = NCLASSES)
     priorprobs = priorprobs / sum(priorprobs).astype(float)
-    return array([weightFunc(priorprobs[true_classes[i]]) for i in range(len(true_classes))])
+    newprobs =  array([weightFunc(priorprobs[true_classes[i]]) for i in range(len(true_classes))])
+    factor = sum(newprobs) / len(newprobs)
+    return newprobs / factor
     
-def undersample(featureMatrix, trueClasses):
+def equalize_class_sizes(data, classes):
     """
-    Given a number of samples, reduces the featurematrix to contain an equal number of each class
-    namely the number of samples of the minimum occuring class
-    Any classes with 0 elements will be ignored
-    Also, the samples are just picked in order of appeareance, so if you want it to be random, shuffle the data first
+		Equalize classes by removing samples to make them all the same size.
+
+		:param min_size: The number of samples to use for each class.
+		:return: trimmmed data and classes.
     """
-    _, C = shape(featureMatrix)
-    count = bincount(trueClasses)
-    minsamples = min(count[count != 0])
-    result = empty((0,C))
-    resultclasses = empty((0),dtype = int)
-    for i in range(len(count)):
-        newsamples = featureMatrix[trueClasses == i, :][:minsamples, :]
-        result = concatenate((result, newsamples), axis=0)
-        temp = empty((minsamples))
-        temp.fill(i)
-        resultclasses = concatenate((resultclasses, temp))
-    return result
+    classsizes = bincount(classes)
+    print(classsizes)
+    min_size = min(classsizes[nonzero(classsizes)]) #ignore classes with 0 entries
+    print(min_size)
+    filter = zeros(classes.shape, dtype = bool)
+    for cls in range(1, NCLASSES + 1):
+        this_cls = where(classes == cls)[0][:min_size]
+        filter[this_cls] = True
+    return data[filter], classes[filter]
 
 if __name__ == '__main__':
-    print undersample(array([[1,2],[2,3],[4,5],[3,2],[3,1],[2,9],[4,6]]), array([1,2,2,1,2,3,4]))
+    #print undersample(array([[1,2],[2,3],[4,5],[3,2],[3,1],[2,9],[4,6]]), array([1,2,2,1,2,3,4]))
+    print "tests later pls"
