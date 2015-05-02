@@ -8,9 +8,12 @@ Created on Wed Apr 15 18:58:22 2015
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.calibration import CalibratedClassifierCV
 from math import floor
-from numpy import ones, shape
+from numpy import ones, shape, bincount
+from utils.preprocess import obtain_class_weights, equalize_class_sizes
+from utils.outliers import filter_data
+from utils.postprocess import rescale_prior
 
-def gradientBoosting(train, labels, test, loss = 'deviance', n_estimators = 50, max_depth = 3, learning_rate = 0.1, min_samples_split = 2, min_samples_leaf = 1, min_weight_fraction_leaf = 0, max_features = None, calibration = None, calibrationmethod = 'sigmoid', sample_weight = None,  verbose = 1):
+def gradientBoosting(train, labels, test, loss = 'deviance', n_estimators = 50, max_depth = 5, learning_rate = 0.1, min_samples_split = 2, min_samples_leaf =3, min_weight_fraction_leaf = 0, max_features = None, calibration = None, calibrationmethod = 'sigmoid', sample_weight = None, outlier_frac = False, outlier_method = 'EE', undersample = False, rescale_pred = False, verbose = 1):
     """
     Trains a model by giving it a feature matrix, as well as the labels (the ground truth)
     then using that model, predicts the given test samples
@@ -25,26 +28,35 @@ def gradientBoosting(train, labels, test, loss = 'deviance', n_estimators = 50, 
         If calibration is n > 1, then crossvalidation will be done, using n folds.
     :param verbose: See sklearn documentation
     """
-    if not calibration: #no calibration is done
-        model = GradientBoostingClassifier(loss = loss, min_samples_split = min_samples_split, min_samples_leaf = min_samples_leaf, min_weight_fraction_leaf = min_weight_fraction_leaf,max_features = max_features, learning_rate = learning_rate, n_estimators=n_estimators, max_depth = max_depth, verbose = verbose)
-        model.fit(train, labels, sample_weight)
-        return model.predict_proba(test)
+    
+    if outlier_frac:
+        train, labels = filter_data(train, labels, cut_outlier_frac = outlier_frac, method = outlier_method) #remove outliers
+    if undersample:
+        train, labels = equalize_class_sizes(train, labels)
+    if isinstance(sample_weight, str):
+        sample_weight = obtain_class_weights(labels, sample_weight)
         
     N = len(labels)
     trainrows = floor((1.0 - calibration) * N)
-    model = GradientBoostingClassifier(n_estimators=n_estimators, max_depth = max_depth, verbose = verbose)
-    
-    if calibration > 1:
+    model = GradientBoostingClassifier(loss = loss, min_samples_split = min_samples_split, min_samples_leaf = min_samples_leaf, min_weight_fraction_leaf = min_weight_fraction_leaf,max_features = max_features, learning_rate = learning_rate, n_estimators=n_estimators, max_depth = max_depth, verbose = verbose)
+    if not calibration: 
+        model.fit(train, labels, sample_weight)
+        predictions = model.predict_proba(test)    
+    elif calibration > 1:
         calibratedmodel = CalibratedClassifierCV(model, calibrationmethod, calibration)
         calibratedmodel.fit(train, labels, sample_weight)
+        predictions = calibratedmodel.predict_proba(test)    
     else:
         if sample_weight is None:
             sample_weight = ones((len(labels)))
         model.fit(train[:trainrows, :], labels[:trainrows],sample_weight[:trainrows])
         calibratedmodel = CalibratedClassifierCV(model, calibrationmethod, "prefit")
         calibratedmodel.fit(train[trainrows:,:], labels[trainrows:], sample_weight = sample_weight[trainrows:])
-    return calibratedmodel.predict_proba(test)    
-
+        predictions = calibratedmodel.predict_proba(test)    
+    
+    if rescale_pred:
+        predictions = rescale_prior(predictions, bincount(labels))
+    return predictions
 
 if __name__ == '__main__':
 
