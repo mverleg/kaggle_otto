@@ -34,24 +34,28 @@ train, classes = filter_data(train, classes, cut_outlier_frac = 0.06, method = '
 
 print '>> making network'
 net = make_net(
-	name = 'singlebig',
-	dense1_size = 150,
-	dense1_nonlinearity = 'tanh',
-	dense1_init = 'orthogonal',
-	dense2_size = 80,
-	dense2_nonlinearity = 'tanh',
-	dense2_init = 'orthogonal',
-	learning_rate_start = 0.001,
-	learning_rate_end = 0.00001,
-	momentum_start = 0.9,
-	momentum_end = 0.999,
-	dropout1_rate = 0.5,
+	name = name,                      # just choose something sensible
+	dense1_size = 180,                # [30, 25, 80, 120, 180]
+	dense1_nonlinearity = 'tanh',     # ['tanh', 'sigmoid', 'rectify', 'leaky2', 'leaky20' 'softmax']
+	dense1_init = 'glorot_uniform',   # ['orthogonal', 'sparse', 'glorot_normal', 'glorot_uniform', 'he_normal', 'he_uniform']
+	dense2_size = 180,                # [30, 25, 80, 120, 180]
+	dense2_nonlinearity = 'tanh',     # this is coupled to dense1_nonlinearity through hack#1
+	dense2_init = 'glorot_uniform',   # idem hack2
+	learning_rate = 0.001,            # initial learning reate
+	learning_rate_scaling = 10,       # pogression over time; 0.1 scaled by 10 is 0.01
+	momentum = 0.99,                  # initial momentum
+	momentum_scaling = 10,            # 0.9 scaled by 10 is 0.99
+	dropout1_rate = 0.5,              # [0, 0.5]
 	dropout2_rate = None,
-	weight_decay = 0,
-	max_epochs = 3000
+	weight_decay = 0,                 # doesn't work
+	max_epochs = 10,                  # it terminates when overfitting or increasing, so just leave high
+	output_nonlinearity = 'softmax',  # just keep softmax
+	auto_stopping = True,             # stop training automatically if it seems to be failing
+	outlier_frac = 0.06,              # which fraction of each class to remove as outliers
+	normalize_log = True,             # use logarithm for normalization
 )
 
-net = load_net(join(NNET_STATE_DIR, 'init_150_80.net'))
+#net = load_net(join(NNET_STATE_DIR, 'init_150_80.net'))
 
 print '>> training network'
 out = net.fit(train, classes - 1)
