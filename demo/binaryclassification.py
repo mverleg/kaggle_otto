@@ -8,10 +8,8 @@ from random_forest.randomforest import randomForest
 from gradient_boosting.gradientboosting import gradientBoosting
 from utils.loading import get_training_data
 from validation.crossvalidate import SampleCrossValidator
-from utils.shuffling import shuffle
 import numpy as np
 
-#WARNING: NEEDS NCLASSES = 2 SET IN SETTINGS!
 
 train, labels, features = get_training_data()
 
@@ -31,8 +29,6 @@ y = np.where(newlabels == np.max(newlabels))[0]
 newlabels[x] = 1#np.zeros(len(x), dtype = 'int32')
 newlabels[y] = 2#np.ones(len(y), dtype = 'int32')
 
-newtrain, newlabels, _ = shuffle(newtrain, newlabels)
-
 
 print len(x)
 print len(y)
@@ -49,8 +45,8 @@ validator = SampleCrossValidator(newtrain, newlabels, rounds=1, test_frac=0.1, u
 
 for train, classes, test in validator.yield_cross_validation_sets():
 
-    #prediction = randomForest(train, classes, test, 5, n_estimators = 200 )
-    prediction = gradientBoosting(train, classes, test, n_estimators = 1000)#, learning_rate = 0.05, min_samples_leaf = 5)
+    prediction = randomForest(train, classes, test, 5, n_estimators = 200 )
+    #prediction = gradientBoosting(train, classes, test, n_estimators = 1000)
       
     validator.add_prediction(prediction)
 validator.print_results()
