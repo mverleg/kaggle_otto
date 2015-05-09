@@ -16,4 +16,3 @@ all the caching is done automatically; if you want to add or remove normalizatio
 outliers with SVM or mahalanobis distance(EE): http://scikit-learn.org/stable/auto_examples/covariance/plot_outlier_detection.html
 
 
-

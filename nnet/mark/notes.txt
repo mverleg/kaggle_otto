@@ -2,6 +2,8 @@
 read until April 26th: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/12882/guess-this-is-really-the-time-to-try-out-neural-nets?page=5
 long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
 
+#todo: compare Lasagne output with cross validation
+
 There was stuff about using previous weights in the blog post; don't just reload the network pickle but just the weights
 
 #todo: train vs test output
@@ -29,5 +31,12 @@ dealing with class imbalance: undersampling, class weight, and rescaling probabi
 is log scaling working well?
 maybe try calibration being implemented for RF; probably no need but already being made anyway
 
+#todo: extra features for NN
+Have any tests been done to see if/which ourlier removal works best?
+And has any test been done with scaling probabilities to match priors? (probably before calibration?)
+Do we already have the "correlation" between features and labels (e.g. which features contain information about #2 & #3)? We should probably generate almost all extra features based on that...
+#todo: calibration
+
+Maybe the difference between them would be a useful feature [two features, one if positive one if negative]
 
 

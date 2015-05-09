@@ -4,8 +4,10 @@
 
 	http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
 """
+from functools import partial
 
 from sys import setrecursionlimit
+from nnet.weight_decay import WeightDecayObjective
 from warnings import filterwarnings
 from lasagne.init import Orthogonal, GlorotNormal, GlorotUniform, HeNormal, HeUniform, Sparse, Constant
 from lasagne.layers import InputLayer, DenseLayer, DropoutLayer
@@ -84,7 +86,7 @@ def make_net(
 	assert dense2_nonlinearity in nonlinearities.keys() + [None], 'Linearity 2 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), dense2_nonlinearity)
 	assert dense1_init in initializers.keys(), 'Initializer 1 should be one of "{0}", got "{1}" instead.'.format('", "'.join(initializers.keys()), dense1_init)
 	assert dense2_init in initializers.keys() + [None], 'Initializer 2 should be one of "{0}", got "{1}" instead.'.format('", "'.join(initializers.keys()), dense2_init)
-	assert weight_decay == 0, 'Weight decay doesn\'t fully work in Lasagne/nolearn yet. More info https://github.com/dnouri/nolearn/pull/53' # and https://groups.google.com/forum/#!topic/lasagne-users/sUY7K4diHhY
+	#assert weight_decay == 0, 'Weight decay doesn\'t fully work in Lasagne/nolearn yet. More info https://github.com/dnouri/nolearn/pull/53' # and https://groups.google.com/forum/#!topic/lasagne-users/sUY7K4diHhY
 
 	params = {}
 	layers = [
@@ -109,9 +111,12 @@ def make_net(
 		params['dropout2_p'] = dropout2_rate
 	layers += [('output', DenseLayer)]
 
+	if VERBOSITY >= 1:
+		print 'learning rate: {0:.6f} -> {1:.6f}'.format(learning_rate, learning_rate / float(learning_rate_scaling))
+		print 'momentum:      {0:.6f} -> {1:.6f}'.format(momentum, 1 - ((1 - momentum) / float(momentum_scaling)))
 	handlers = [
 		LogarithmicVariable('update_learning_rate', start = learning_rate, stop = learning_rate / float(learning_rate_scaling)),
-		LogarithmicVariable('update_momentum', start = momentum, stop = momentum / float(momentum_scaling)),
+		LogarithmicVariable('update_momentum', start = momentum, stop = 1 - ((1 - momentum) / float(momentum_scaling))),
 	]
 	if auto_stopping:
 		handlers += [
@@ -121,7 +126,10 @@ def make_net(
 		]
 
 	net = NeuralNet(
+
 		layers = layers,
+
+		objective = partial(WeightDecayObjective, decay = weight_decay),
 
 		input_shape = (None, 93),  # batch size
 
