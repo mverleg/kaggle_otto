@@ -13,7 +13,7 @@ from utils.preprocess import obtain_class_weights, equalize_class_sizes
 from utils.outliers import filter_data
 from utils.postprocess import rescale_prior
 
-def gradientBoosting(train, labels, test, loss = 'deviance', n_estimators = 50, max_depth = 5, learning_rate = 0.1, min_samples_split = 2, min_samples_leaf =3, min_weight_fraction_leaf = 0, max_features = None, calibration = None, calibrationmethod = 'sigmoid', sample_weight = None, outlier_frac = False, outlier_method = 'EE', undersample = False, rescale_pred = False, verbose = 1):
+def gradientBoosting(train, labels, test, loss = 'deviance', n_estimators = 50, max_depth = 5, learning_rate = 0.1, min_samples_split = 2, min_samples_leaf =3, min_weight_fraction_leaf = 0, max_features = None, calibration = 0, calibrationmethod = 'sigmoid', sample_weight = None, outlier_frac = False, outlier_method = 'EE', undersample = False, rescale_pred = False, verbose = 1):
     """
     Trains a model by giving it a feature matrix, as well as the labels (the ground truth)
     then using that model, predicts the given test samples

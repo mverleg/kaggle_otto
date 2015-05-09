@@ -58,7 +58,7 @@ class SampleCrossValidator(Validator):
 			:param use_data_frac: Optionally, the fraction of the total data to include in test and training.
 			:param seed: A fixed seed for sampling, so that the same data yields the same results consistently. Should probably not be changed.
 		"""
-		assert 0 < test_frac < 1
+		assert 0 < test_frac < 1 + 1e-6
 		assert 0 < use_data_frac < 1 + 1e-6 or use_data_frac is None
 		super(SampleCrossValidator, self).__init__(data, true_classes, rounds)
 		self.total_data_count = self.data.shape[0]
