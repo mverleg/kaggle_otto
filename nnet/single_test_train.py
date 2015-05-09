@@ -34,7 +34,7 @@ train, classes = filter_data(train, classes, cut_outlier_frac = 0.06, method = '
 
 print '>> making network'
 net = make_net(
-	name = name,                      # just choose something sensible
+	name = 'single',                  # just choose something sensible
 	dense1_size = 180,                # [30, 25, 80, 120, 180]
 	dense1_nonlinearity = 'tanh',     # ['tanh', 'sigmoid', 'rectify', 'leaky2', 'leaky20' 'softmax']
 	dense1_init = 'glorot_uniform',   # ['orthogonal', 'sparse', 'glorot_normal', 'glorot_uniform', 'he_normal', 'he_uniform']
@@ -47,12 +47,10 @@ net = make_net(
 	momentum_scaling = 10,            # 0.9 scaled by 10 is 0.99
 	dropout1_rate = 0.5,              # [0, 0.5]
 	dropout2_rate = None,
-	weight_decay = 0,                 # doesn't work
-	max_epochs = 10,                  # it terminates when overfitting or increasing, so just leave high
+	weight_decay = 0.01,
+	max_epochs = 100,                 # it terminates when overfitting or increasing, so just leave high
 	output_nonlinearity = 'softmax',  # just keep softmax
 	auto_stopping = True,             # stop training automatically if it seems to be failing
-	outlier_frac = 0.06,              # which fraction of each class to remove as outliers
-	normalize_log = True,             # use logarithm for normalization
 )
 
 #net = load_net(join(NNET_STATE_DIR, 'init_150_80.net'))
