@@ -54,10 +54,10 @@ optimizer = ParallelGridOptimizer(train_test_func = train_test_NN, validator = v
 	auto_stopping = True,             # stop training automatically if it seems to be failing
 	pretrain = None,                  # use pretraining? (True for automatic, filename for specific)
 	outlier_method = 'OCSVM',         # method for outlier removal ['OCSVM', 'EE']
-	outlier_frac = None,              # which fraction of each class to remove as outliers
-	normalize_log = True,             # use logarithm for normalization
-	use_calibration = False,          # use calibration of probabilities
-	use_rescale_priors = False,       # rescale predictions to match priors
+	outlier_frac = [0, 0.2, 0.6, 0.12],  # which fraction of each class to remove as outliers
+	normalize_log = [False, True],       # use logarithm for normalization
+	use_calibration = [False, True],     # use calibration of probabilities
+	use_rescale_priors = [False, True],  # rescale predictions to match priors
 ).readygo(topprint = 20, save_fig_basename = name, log_name = name, only_show_top = True)
 
 

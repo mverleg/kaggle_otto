@@ -7,6 +7,7 @@
 
 from functools import partial
 from sys import setrecursionlimit
+from os.path import isfile
 from nnet.weight_decay import WeightDecayObjective
 from warnings import filterwarnings
 from lasagne.init import Orthogonal, GlorotNormal, GlorotUniform, HeNormal, HeUniform, Sparse, Constant
@@ -16,7 +17,7 @@ from lasagne.nonlinearities import softmax, tanh, sigmoid, rectify, LeakyRectify
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet
 from theano import shared
-from nnet.nnio import SnapshotSaver
+from nnet.nnio import SnapshotSaver, load_knowledge
 from nnet.dynamic import LogarithmicVariable
 from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum
 from settings import NCLASSES, VERBOSITY, NFEATS
@@ -64,8 +65,9 @@ def make_net(
 		dropout2_rate = None,
 		weight_decay = 0,
 		output_nonlinearity = 'softmax',
-		verbosity = VERBOSITY >= 2,
 		auto_stopping = True,
+		pretrain = False,
+		verbosity = VERBOSITY >= 2,
 	):
 	"""
 		Create the network with the selected parameters.
@@ -78,11 +80,16 @@ def make_net(
 		:param learning_rate_end: End value at last epoch (logarithmic scale)
 		:param momentum_start: Start value at first epoch (logarithmic scale)
 		:param momentum_end: End value at last epoch (logarithmic scale)
-		:param max_epochs: Total number of epochs
+		:param max_epochs: Total number of epochs (at most)
 		:param dropout1_rate: Percentage of connections dropped each step.
+		:param weight_decay: Constrain the weights by L2 norm.
+		:param auto_stopping: Stop early if the network seems to stop performing well.
+		:param pretrain: Filepath of the previous weights to start at (or None).
 		:return:
 	"""
-
+	"""
+		Initial arguments checks and defaults.
+	"""
 	assert dropout1_rate is None or 0 <= dropout1_rate < 1, 'Dropout rate 1 should be a value between 0 and 1, or None for no dropout'
 	assert dropout2_rate is None or 0 <= dropout1_rate < 1, 'Dropout rate 2 should be a value between 0 and 1, or None for no dropout'
 	assert dense1_nonlinearity in nonlinearities.keys(), 'Linearity 1 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), dense1_nonlinearity)
@@ -91,7 +98,6 @@ def make_net(
 	assert dense1_init in initializers.keys(), 'Initializer 1 should be one of "{0}", got "{1}" instead.'.format('", "'.join(initializers.keys()), dense1_init)
 	assert dense2_init in initializers.keys() + [None], 'Initializer 2 should be one of "{0}", got "{1}" instead.'.format('", "'.join(initializers.keys()), dense2_init)
 	assert dense3_init in initializers.keys() + [None], 'Initializer 3 should be one of "{0}", got "{1}" instead.'.format('", "'.join(initializers.keys()), dense3_init)
-	#assert weight_decay == 0, 'Weight decay doesn\'t fully work in Lasagne/nolearn yet. More info https://github.com/dnouri/nolearn/pull/53' # and https://groups.google.com/forum/#!topic/lasagne-users/sUY7K4diHhY
 
 	if dense2_nonlinearity is None:
 		dense2_nonlinearity = dense1_nonlinearity
@@ -102,6 +108,9 @@ def make_net(
 	if dense3_init is None:
 		dense3_init = dense2_init
 
+	"""
+		Create the layers and their settings.
+	"""
 	params = {}
 	layers = [
 		('input', InputLayer),
@@ -134,6 +143,9 @@ def make_net(
 		})
 	layers += [('output', DenseLayer)]
 
+	"""
+		Create meta parameters and special handlers.
+	"""
 	if VERBOSITY >= 1:
 		print 'learning rate: {0:.6f} -> {1:.6f}'.format(learning_rate, learning_rate / float(learning_rate_scaling))
 		print 'momentum:      {0:.6f} -> {1:.6f}'.format(momentum, 1 - ((1 - momentum) / float(momentum_scaling)))
@@ -148,6 +160,9 @@ def make_net(
 			StopAfterMinimum(patience = 70, base_name = name),
 		]
 
+	"""
+		Create the actual nolearn network with above information.
+	"""
 	net = NeuralNet(
 
 		layers = layers,
@@ -179,6 +194,13 @@ def make_net(
 	)
 
 	net.initialize()
+
+	"""
+		Load weights from earlier training (by name, no auto-choosing).
+	"""
+	if pretrain:
+		assert isfile(pretrain), 'Pre-train file "{0:s}" not found'.format(pretrain)
+		load_knowledge(net, isfile)
 
 	return net
 

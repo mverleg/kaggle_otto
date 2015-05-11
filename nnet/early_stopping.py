@@ -13,7 +13,7 @@ class StopWhenOverfitting(object):
 	def __call__(self, nn, train_history):
 		if train_history[-1]['train_loss'] / train_history[-1]['valid_loss'] <= self.loss_fraction:
 			print 'Terminating training since the network is starting to overfit too much.'
-			filepath = '{0:s}_{1:d}.net'.format(self.base_path, train_history[-1]['epoch'])
+			filepath = '{0:s}_{1:d}.net.npz'.format(self.base_path, train_history[-1]['epoch'])
 			save_knowledge(nn, filepath)
 			raise StopIteration('overfitting')
 
@@ -39,10 +39,10 @@ class StopAfterMinimum(object):
 		elif self.best_valid_epoch + self.patience < current_epoch:
 			print 'Stopping early since test error has been increasing.'
 			print 'Best validation loss was {:.6f} at epoch {}.'.format(self.best_valid, self.best_valid_epoch)
-			filepath = '{0:s}_{1:d}.net'.format(self.base_path, train_history[-1]['epoch'])
+			filepath = '{0:s}_{1:d}.net.npz'.format(self.base_path, train_history[-1]['epoch'])
 			save_knowledge(nn, filepath)
 			nn.load_weights_from(self.best_weights)
-			filepath = '{0:s}_{1:d}_best.net'.format(self.base_path, self.best_valid_epoch)
+			filepath = '{0:s}_{1:d}_best.net.npz'.format(self.base_path, self.best_valid_epoch)
 			save_knowledge(nn, filepath)
 			print 'The network has been restored to the state at this epoch and both have been saved.'
 			raise StopIteration('loss increasing')
