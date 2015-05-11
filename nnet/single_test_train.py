@@ -1,4 +1,5 @@
 
+from nnet.nnio import load_knowledge
 from os.path import join
 from nnet.make_net import make_net
 from nnet.prepare import normalize_data
@@ -38,7 +39,7 @@ net = make_net(
 	dense1_init = 'glorot_uniform',   # ['orthogonal', 'sparse', 'glorot_normal', 'glorot_uniform', 'he_normal', 'he_uniform']
 	dense1_size = 180,                # [30, 25, 80, 120, 180]
 	dense2_size = 180,
-	dense3_size = 180,
+	dense3_size = None,
 	learning_rate = 0.001,            # initial learning reate
 	learning_rate_scaling = 10,       # pogression over time; 0.1 scaled by 10 is 0.01
 	momentum = 0.99,                  # initial momentum
@@ -46,19 +47,23 @@ net = make_net(
 	dropout1_rate = 0.5,              # [0, 0.5]
 	dropout2_rate = 0.5,
 	weight_decay = 0,                 # constrain the weights to avoid overfitting
-	max_epochs = 1,                   # it terminates when overfitting or increasing, so just leave high
+	max_epochs = 1000,                # it terminates when overfitting or increasing, so just leave high
 	output_nonlinearity = 'softmax',  # just keep softmax
 	auto_stopping = True,             # stop training automatically if it seems to be failing
 )
 
-print '>> training network'
-out = net.fit(train, classes - 1)
+print '>> loading pretrained network'
+load_knowledge(net, 'results/nnets/single_pretrain.net.npz')
+
+if False:
+	print '>> training network'
+	out = net.fit(train, classes - 1)
 
 print '>> predicting test data'
 prediction = net.predict_proba(test)
 
 print '>> making submission file'
-make_submission(prediction, fname = join(SUBMISSIONS_DIR, 'singlebig.csv'), digits = 8)
+make_submission(prediction, fname = join(SUBMISSIONS_DIR, 'single.csv'), digits = 8)
 
 print '>> plotting training progress'
 fig, ax = show_train_progress(net)

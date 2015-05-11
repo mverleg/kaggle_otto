@@ -177,6 +177,9 @@ def make_net(
 
 		**params
 	)
+
+	net.initialize()
+
 	return net
 
 

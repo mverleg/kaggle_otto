@@ -41,7 +41,8 @@ net = make_net(
 	auto_stopping = True,             # stop training automatically if it seems to be failing
 )
 
-# load_knowledge(net, '/home/mark/test.npz')
+print '>> loading pretrained network'
+load_knowledge(net, 'results/nnets/single_pretrain.net.npz')
 
 print '>> training network'
 out = net.fit(train, classes - 1)

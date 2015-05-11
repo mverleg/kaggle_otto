@@ -10,8 +10,6 @@ from validation.optimize_parallel import ParallelGridOptimizer
 
 
 def train_test_NN(train, classes, test, **parameters):
-	#parameters['dense2_nonlinearity'] = parameters['dense1_nonlinearity']  # hack1
-	#parameters['dense2_init'] = parameters['dense1_init']  # hack2
 	outlier_frac = parameters.pop('outlier_frac', 0)
 	outlier_method = parameters.pop('outlier_method', 'OCSVM')
 	normalize_log = parameters.pop('normalize_log', True)
@@ -32,9 +30,9 @@ optimizer = ParallelGridOptimizer(train_test_func = train_test_NN, validator = v
 	name = name,                      # just choose something sensible
 	dense1_nonlinearity = 'tanh',     # ['tanh', 'sigmoid', 'rectify', 'leaky2', 'leaky20' 'softmax']
 	dense1_init = 'glorot_uniform',   # ['orthogonal', 'sparse', 'glorot_normal', 'glorot_uniform', 'he_normal', 'he_uniform']
-	dense1_size = 180,                # [30, 25, 80, 120, 180]
-	dense2_size = 180,
-	dense3_size = 180,
+	dense1_size = 128,                # [30, 25, 80, 120, 180]
+	dense2_size = None,
+	dense3_size = None,
 	learning_rate = 0.001,            # initial learning reate
 	learning_rate_scaling = 10,       # pogression over time; 0.1 scaled by 10 is 0.01
 	momentum = 0.99,                  # initial momentum
