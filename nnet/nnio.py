@@ -37,7 +37,7 @@ def save_knowledge(net, filepath):
 
 def load_knowledge(net, filepath):
 	"""
-		Load the weights and biasses for an already initialized network from disk.
+		Load the weights and biasses for an already network from disk.
 	"""
 	reloaded = loadz(filepath)
 	knowledge = [(name, reloaded[name]) for name in sorted(reloaded.keys())]
@@ -55,7 +55,7 @@ class SnapshotSaver(object):
 		epoch = train_history[-1]['epoch']
 		if epoch % self.every == 0 or epoch == nn.max_epochs:
 			filepath = '{0:s}_{1:d}.net'.format(self.base_path, epoch)
-			save_net(nn, filepath)
+			save_knowledge(nn, filepath)
 			if VERBOSITY >= 1:
 				print 'saved network to "{0:s}" at iteration {1:d}'.format(filepath, epoch)
 
