@@ -44,12 +44,13 @@ def make_weights_list(numweights, numinterval, totalsum = 1.0):
     return result
         
     
-def grid_ensemble(predictionmatrix, trueclasses, numinterval = None, printWeights = True, data_frac = 1.0):
+def grid_ensemble(predictionmatrix, trueclasses, numinterval = None, printWeights = True, printtop = 20, data_frac = 1.0):
     """
     Does a grid search to find good weights for the ensemble
     predictionmatrix is a QxNxC matrix, where Q is the number of models, N is the number of samples, C is the number of classes
     The parameters for the crossvalidator are fixed because taking a weighted average does not need training and is deterministic
     numinterval is the number of possible weights to consider, evenly spaced between 0 and 1.
+    important: numinterval is a postive integer, not a float!
     By default, this is Q + 1, where Q is the number of models
     """
     Q, _,_ = np.shape(predictionmatrix)
@@ -69,7 +70,7 @@ def grid_ensemble(predictionmatrix, trueclasses, numinterval = None, printWeight
         stackedPredict = stack_predictions(test, Q)
         prediction = mean_ensemble(stackedPredict, weights = weightDict[weights['weights']])
         optimizer.register_results(prediction)
-    optimizer.print_plot_results(20)
+    optimizer.print_top(printtop)
     return weightDict
     
 def linear_reg_ensemble(predictionmatrix, trueclasses, testmatrix):
@@ -110,10 +111,22 @@ def fwls_ensemble(predictionmatrix, predictfeatures, trueclasses, testmatrix, te
     return linear_reg_ensemble(trainMatrixFull, trueclasses, testMatrixFull)
     
 if __name__ == '__main__':
-    from demo.fake_testing_probabilities import get_random_probabilities
-    N = 100
-    Q = 6
-    C = 5
-    randompredictions = np.array([get_random_probabilities(N, C) for i in range(Q)])
-    randomclasslabels = np.random.randint(0,C,N)
-    grid_ensemble(randompredictions, randomclasslabels, data_frac = 0.9)
+    """
+    forestprediction = np.load('data/forestprediction.npy')
+    gradientprediction = np.load('data/gradientprediction.npy')
+    neuralprediction = np.load('data/neuralprediction.npy')
+    trueclasses = np.load('data/testclas.npy')
+    p = np.hstack((forestprediction, gradientprediction, neuralprediction))
+    p = stack_predictions(p, 3)
+    print np.shape(p)
+    grid_ensemble(p, trueclasses, numinterval = 10)
+    """
+    forestprediction = np.load('data/forestprediction.npy')
+    gradientprediction = np.load('data/gradientprediction.npy')
+    p = np.hstack((forestprediction, gradientprediction))
+    p = stack_predictions(p, 2)
+    trueprediction = mean_ensemble(p, [0.75,0.25])
+    
+    from ioutil import makeSubmission
+    makeSubmission(trueprediction)
+    

@@ -1,22 +1,19 @@
 
-read until April 26th: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/12882/guess-this-is-really-the-time-to-try-out-neural-nets?page=5
+read until May 9th: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/12882/guess-this-is-really-the-time-to-try-out-neural-nets?page=5
+read until May 9th: feature: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14092/feature-generation-for-dataset-ideas
+read until May 9th: NN https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/13632/achieve-0-48-in-5-min-with-a-deep-net-feat-batchnorm-prelu
+read until May 9th: feature: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14092/feature-generation-for-dataset-ideas
+read until May 9th: difficult cls: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/13768/how-to-classify-the-class-2-3-4-better
 long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
 
-There was stuff about using previous weights in the blog post; don't just reload the network pickle but just the weights
 
-#todo: train vs test output
-#todo: dynamic learning rate
-An overfitting net can generally be made to perform better by using more training data. (And if your unregularized net does not overfit, you should probably make it larger.)
+#todo: see what has been implemented
+#todo: BatchNorm and PReLU
+#todo: pretraining
+#todo: calibration
+#todo: rescaling to priors
+#todo: extra features
 
-#todo: after other useful functionality
-#todo: especially dropout
-#todo: extract good weights and use for next training
-#todo: save / load models
-#todo: weight decay
-I used that exact script to achieve a LB Score of 0.5078. (Single layer, 128 hidden nodes. You'll have to play around with alpha so you don't over fit.)
-really hard time to distinguish classes 2, 3 and 4
-1) transform by taking log(X+1)
-2) Scale everything with sckit's StandardScaler (or equivalent)
 #todo: Nolearn/Lasagne has a built-in automatic choice of CV
 That's a single network with dropout. CV is 0.445 and LB is 0.448. I'll be happy to post the code afterwards, but currently its nothing special, just parameter tuning so far.
 Learning rate 0.00x - 0.000x
@@ -29,5 +26,38 @@ dealing with class imbalance: undersampling, class weight, and rescaling probabi
 is log scaling working well?
 maybe try calibration being implemented for RF; probably no need but already being made anyway
 
+#todo: extra features for NN
+Have any tests been done to see if/which ourlier removal works best?
+And has any test been done with scaling probabilities to match priors? (probably before calibration?)
+Do we already have the "correlation" between features and labels (e.g. which features contain information about #2 & #3)? We should probably generate almost all extra features based on that...
+#todo: calibration
+
+Maybe the difference between them would be a useful feature [two features, one if positive one if negative]
+
+Look at batch size
+
+My problem is that I was able to get 0.43702 with nolearn/lasagne - https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/13799/what-models-may-give-score-under-0-5
+simple linear combination of NN (.46107) and XGBoost (.43941) puts me at .4259.
+Maybe make several NNs and feed the probabilities into a new NN
+You got a very nice score with SVC. Do you mean the support vector classifier in scikit-learn?
+Compare different normalizations
+NN can also improve with CalibratedClassifierCV
+Average of many NN can most probably increase the score
+The key point of my method is that I tuned NN hyper parameters for an averaging model rather than for a single model.
+NN2 has 4 hidden layers, all of which are RectifiedLinear and have 1024 nodes. The first layer is sparse and the rest is dense. The output is Softmax.
+Some people mentioned that all of the features appeared useful.
+Compensate for class unbalance
+from typical 1-2 hour run time (93/200/200/200/9) to 6-8+ hours (93/800/800/800/9)
+
+
+Kinda done:
+- An overfitting net can generally be made to perform better by using more training data.
+- If your unregularized net does not overfit, you should probably make it larger.
+- If I can store just the weights and biasses, I can start the network from those points instead of reloading everything.
+
+Maybe later:
+- There was stuff about using previous weights in the blog post; don't just reload the network pickle but just the weights
+- Really hard time to distinguish classes 2, 3 and 4
+-
 
 

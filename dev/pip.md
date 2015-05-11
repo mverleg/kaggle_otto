@@ -21,7 +21,6 @@ The following steps apply with or without virtualenv. To install the Python pack
 
 After that, if you want to do any neural network stuff, you need Lasagne. Just type these two lines:
 
-	pip install pyparsing==1.5.7
     pip install -r https://raw.githubusercontent.com/dnouri/kfkd-tutorial/master/requirements.txt
     pip install --upgrade git+https://github.com/Lasagne/Lasagne.git
 

@@ -120,6 +120,8 @@ class GridOptimizer(object):
 		"""
 			Print the lowest logloss results.
 		"""
+		if not self.dims:
+			return
 		logloss_slice = [slice(None)] * len(self.dims) + [slice(None), 0]
 		logloss_all = self.results[logloss_slice]
 		logloss_mean = logloss_all.mean(len(self.dims))
@@ -129,7 +131,7 @@ class GridOptimizer(object):
 		stdout.write('pos     loss      {0:s}\n'.format('  '.join('{0:16s}'.format(label.replace('_', ' '))[-16:] for label in self.labels)))
 		for pos, min_coord in enumerate(min_coords):
 			stdout.write('{0:2d}  {1:8.4f}     '.format(pos + 1,
-				logloss_mean.flat[ravel_multi_index(min_coord, self.dims)],
+				logloss_mean.flat[ravel_multi_index(min_coord if self.dims else tuple(), self.dims)],
 			))
 			for k, j in enumerate(min_coord):
 				stdout.write('  {0:16s}'.format(unicode(self.values[k][j])))

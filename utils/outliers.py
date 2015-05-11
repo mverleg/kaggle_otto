@@ -47,7 +47,6 @@ def filter_data(data, classes, cut_outlier_frac = 0.05, method = 'EE', use_cachi
 
 def make_filtered_data(train_data, true_classes, cut_outlier_frac, detector):
 	""" Not intended for direct use. """
-	print 'removing outliers'
 	assert 0 <= cut_outlier_frac <= 1. + 1e-6
 	keep = ones(true_classes.shape, dtype = bool)
 	for cls in range(1, NCLASSES + 1):
