@@ -1,6 +1,7 @@
 
 from cPickle import dump, load
-from os.path import dirname, join
+from numpy import savez, load as loadz
+from os.path import join
 from settings import NNET_STATE_DIR, VERBOSITY
 
 
@@ -24,6 +25,25 @@ def load_net(filepath):
 	"""
 	with open(filepath, 'r') as fh:
 		return load(file = fh)
+
+
+def save_knowledge(net, filepath):
+	"""
+		Save the weights and biasses of the neural network to disk.
+	"""
+	knowledge = [param.get_value() for param in net.get_all_params()]
+	savez(filepath, *knowledge)
+
+
+def load_knowledge(net, filepath):
+	"""
+		Load the weights and biasses for an already initialized network from disk.
+	"""
+	reloaded = loadz(filepath)
+	knowledge = [(name, reloaded[name]) for name in sorted(reloaded.keys())]
+	for (name, values), param in zip(knowledge, net.get_all_params()):
+		assert param.get_value().shape == values.shape, 'Loaded data from "{0:s}" does not match shape of network "{1:s}" for "{2:s}": expected {3:s}, got {4:s}'.format(filepath, net, name, param.get_value().shape, values.shape)
+		param.set_value(values)
 
 
 class SnapshotSaver(object):
