@@ -12,10 +12,11 @@ SEED = 4242
 
 """
 	Data information.
+
+	NFEATS was removed because there are extra features now, making this not a constant.
 """
 TRAINSIZE = 61878
 TESTSIZE = 144368
-NFEATS = 93
 NCLASSES = 9
 
 
@@ -32,7 +33,7 @@ AUTO_IMAGES_DIR = join(BASE_DIR, 'results', 'images')
 SUBMISSIONS_DIR = join(BASE_DIR, 'results', 'submissions')
 LOGS_DIR = join(BASE_DIR, 'results', 'logs')
 PRETRAIN_DIR = join(BASE_DIR, 'results', 'pretrain')
-for pth in (OPTIMIZE_RESULTS_DIR, NNET_STATE_DIR, AUTO_IMAGES_DIR, SUBMISSIONS_DIR, LOGS_DIR):
+for pth in (OPTIMIZE_RESULTS_DIR, NNET_STATE_DIR, AUTO_IMAGES_DIR, SUBMISSIONS_DIR, LOGS_DIR, PRETRAIN_DIR):
 	try:
 		makedirs(pth)
 	except OSError:
