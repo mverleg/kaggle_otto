@@ -45,6 +45,7 @@ def filter_data(data, classes, cut_outlier_frac = 0.05, method = 'EE', use_cachi
 	hash = '{0:s}_{1:04d}_{2:.10s}.npy'.format(method, int(cut_outlier_frac * 1000), sha1((data.tostring())).hexdigest())
 	return filter_data_cache(data, classes, hash = hash, method = method, cut_outlier_frac = cut_outlier_frac, use_caching = use_caching)
 
+
 def make_filtered_data(train_data, true_classes, cut_outlier_frac, detector):
 	""" Not intended for direct use. """
 	assert 0 <= cut_outlier_frac <= 1. + 1e-6

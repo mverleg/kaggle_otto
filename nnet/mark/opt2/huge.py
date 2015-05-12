@@ -39,7 +39,7 @@ params = {
 
 make_pretrain(pretrain, train_data, true_labels, **params)
 
-validator = SampleCrossValidator(train_data, true_labels, rounds = 1, test_frac = 0.2, use_data_frac = 1)
+validator = SampleCrossValidator(train_data, true_labels, rounds = 3, test_frac = 0.2, use_data_frac = 1)
 optimizer = ParallelGridOptimizer(train_test_func = train_test_NN, validator = validator, use_caching = False, **params
 ).readygo(topprint = 20, save_fig_basename = name, log_name = name + '.log', only_show_top = True)
 
