@@ -26,7 +26,6 @@ params = {
 	'dropout2_rate': 0,
 	'weight_decay': 0,                 # constrain the weights to avoid overfitting
 	'max_epochs': 1000,                # it terminates when overfitting or increasing, so just leave high
-	'output_nonlinearity': 'softmax',  # just keep softmax
 	'auto_stopping': True,             # stop training automatically if it seems to be failing
 	'pretrain': pretrain,              # use pretraining? (True for automatic, filename for specific)
 	'outlier_method': 'OCSVM',         # method for outlier removal ['OCSVM', 'EE']
@@ -34,6 +33,8 @@ params = {
 	'normalize_log': [False, True],       # use logarithm for normalization
 	'use_calibration': [False, True],     # use calibration of probabilities
 	'use_rescale_priors': [False, True],  # rescale predictions to match priors
+	'extra_feature_count': None,       # how many new features to generate (163)
+	'extra_feature_seed': 0,           # a seed for the feature generation
 }
 
 make_pretrain(pretrain, train_data, true_labels, **params)

@@ -19,14 +19,13 @@ params = {
 	'dense2_size': None,
 	'dense3_size': None,
 	'learning_rate': 0.0001,           # initial learning reate
-	'learning_rate_scaling': 10,       # pogression over time; 0.1 scaled by 10 is 0.01
+	'learning_rate_scaling': 100,      # pogression over time; 0.1 scaled by 10 is 0.01
 	'momentum': 0.99,                  # initial momentum
-	'momentum_scaling': 1,             # 0.9 scaled by 10 is 0.99
+	'momentum_scaling': 10,            # 0.9 scaled by 10 is 0.99
 	'dropout1_rate': 0,                # [0, 0.5]
 	'dropout2_rate': 0,
 	'weight_decay': 0,                 # constrain the weights to avoid overfitting
-	'max_epochs': 1000,                # it terminates when overfitting or increasing, so just leave high
-	'output_nonlinearity': 'softmax',  # just keep softmax
+	'max_epochs': 100,                 # it terminates when overfitting or increasing, so just leave high
 	'auto_stopping': True,             # stop training automatically if it seems to be failing
 	'pretrain': pretrain,              # use pretraining? (True for automatic, filename for specific)
 	'outlier_method': 'OCSVM',         # method for outlier removal ['OCSVM', 'EE']
@@ -34,9 +33,13 @@ params = {
 	'normalize_log': True,             # use logarithm for normalization
 	'use_calibration': False,          # use calibration of probabilities
 	'use_rescale_priors': False,       # rescale predictions to match priors
+	'extra_feature_count': None,       # how many new features to generate (163)
+	'extra_feature_seed': 0,           # a seed for the feature generation
 }
 
 make_pretrain(pretrain, train_data, true_labels, **params)
+
+train_test_NN(train_data, true_labels, train_data, **params)
 
 validator = SampleCrossValidator(train_data, true_labels, rounds = 1, test_frac = 0.2, use_data_frac = 1)
 optimizer = ParallelGridOptimizer(train_test_func = train_test_NN, validator = validator, use_caching = False, **params

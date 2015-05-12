@@ -13,7 +13,7 @@ name = '{0:s}'.format(splitext(basename(getattr(modules['__main__'], '__file__',
 pretrain = join(PRETRAIN_DIR, 'pt_400x400x400.net.npz')
 params = {
 	'name': name,
-	'dense1_nonlinearity': 'tanh',     # tanh, sigmoid, rectify, leaky2, leaky20, softmax
+	'dense1_nonlinearity': 'leaky20',  # tanh, sigmoid, rectify, leaky2, leaky20, softmax
 	'dense1_init': 'glorot_uniform',   # orthogonal, sparse, glorot_normal, glorot_uniform, he_normal, he_uniform
 	'dense1_size': 400,                # [30, 25, 80, 120, 180]
 	'dense2_size': 400,
@@ -26,7 +26,6 @@ params = {
 	'dropout2_rate': None,
 	'weight_decay': 0,                 # constrain the weights to avoid overfitting
 	'max_epochs': 1000,                # it terminates when overfitting or increasing, so just leave high
-	'output_nonlinearity': 'softmax',  # just keep softmax
 	'auto_stopping': True,             # stop training automatically if it seems to be failing
 	'pretrain': pretrain,              # use pretraining? (True for automatic, filename for specific)
 	'outlier_method': 'OCSVM',         # method for outlier removal ['OCSVM', 'EE']
@@ -34,6 +33,8 @@ params = {
 	'normalize_log': True,             # use logarithm for normalization
 	'use_calibration': False,          # use calibration of probabilities
 	'use_rescale_priors': False,       # rescale predictions to match priors
+	'extra_feature_count': None,       # how many new features to generate (163)
+	'extra_feature_seed': 0,           # a seed for the feature generation
 }
 
 make_pretrain(pretrain, train_data, true_labels, **params)

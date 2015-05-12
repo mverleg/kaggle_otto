@@ -10,6 +10,33 @@ from utils.loading import get_training_data
 from utils.normalize import normalized_sum
 
 
+DIFFICULT_CLASSES_MIX = {
+	(2, 3): 0.3,
+	(2, 3, 4): 0.3,
+	(1, 9): 0.4,
+}
+
+
+def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFICULT_CLASSES_MIX, extra_features = 57,
+		multiplicity = 3, operation_probs = (0.3, 0.3, 0.2, 0.2), seed = 0):
+	"""
+		Apply several feature generators for different pairs of difficult classes.
+
+		:param train_data: The data on which the feature generator bases the choice of features. Also immediately creates features for this data.
+		:param test_data: This data is only used to generate features.
+		:param classes: A dictionary with contributions from different pairs of classes.
+		:return: The augmented train and test data.
+	"""
+	assert abs(sum(classes.values()) - 1) < 1e-6,  'Class contributions should be normalized.'
+	assert sum(int(round(extra_features * q)) for q in classes.values()) == extra_features, 'Rounding errors, sorry.'
+	for offset, (difficult, contribution) in enumerate(classes.items()):
+		print 'diff', difficult
+		gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = difficult,
+			extra_features = int(round(extra_features * contribution)), seed = offset)
+		train_data, test_data = gen.add_features_tt(train_data, test_data)
+	return train_data, test_data
+
+
 class PositiveSparseFeatureGenerator(object):
 
 	def __init__(self, data, labels, difficult_classes = (2, 3), extra_features = 57, multiplicity = 3,
@@ -40,7 +67,7 @@ class PositiveSparseFeatureGenerator(object):
 
 			Adapted from demo/class_feature_relation.py
 		"""
-		cnt = zeros((NFEATS, NCLASSES))
+		cnt = zeros((train.shape[1], NCLASSES))
 		for cls in range(0, NCLASSES):
 			cnt[:, cls] = (train[cls + 1 == labels] != 0).sum(0)
 		return cnt
@@ -94,13 +121,14 @@ class PositiveSparseFeatureGenerator(object):
 		feats = self.make_features(data)
 		return concatenate([data, feats], axis = 1)
 
+	def add_features_tt(self, train, test):
+		return self.add_features(train), self.add_features(test)
+
 
 if __name__ == '__main__':
 	train_data, true_labels = get_training_data()[:2]
-	gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = (2, 3), extra_features = 57, seed = 1)
-	gen.add_features(train_data)
-	gen.add_features(test_data)
+	augmented_data, duplicate_data = chain_feature_generators(train_data, true_labels, train_data, extra_features = 57, multiplicity = 3, seed = 0)
 	print 'old shape', train_data.shape
-	print 'new shape', gen.add_features(train_data).shape
+	print 'new shape', augmented_data.shape
 
 
