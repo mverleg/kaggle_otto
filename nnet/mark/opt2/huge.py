@@ -10,7 +10,7 @@ from validation.optimize_parallel import ParallelGridOptimizer
 
 train_data, true_labels, features = get_training_data()
 name = '{0:s}'.format(splitext(basename(getattr(modules['__main__'], '__file__', 'optimize.default')))[0])
-pretrain = join(PRETRAIN_DIR, 'pt_400x400x400.net.npz')
+pretrain = join(PRETRAIN_DIR, 'pt_93x400x400x400.net.npz')
 params = {
 	'name': name,
 	'dense1_nonlinearity': 'leaky20',  # tanh, sigmoid, rectify, leaky2, leaky20, softmax

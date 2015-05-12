@@ -56,7 +56,7 @@ from validation.optimize_parallel import ParallelGridOptimizer
 
 train_data, true_labels, features = get_training_data()
 name = '{0:s}'.format(splitext(basename(getattr(modules['__main__'], '__file__', 'optimize.default')))[0])
-pretrain = join(PRETRAIN_DIR, 'pt_128.net.npz')
+pretrain = join(PRETRAIN_DIR, 'pt_93x128x64.net.npz')
 params = {
 	'name': name,
 	'dense1_nonlinearity': 'tanh',     # tanh, sigmoid, rectify, leaky2, leaky20, softmax
@@ -83,8 +83,6 @@ params = {
 }
 
 make_pretrain(pretrain, train_data, true_labels, **params)
-
-train_test_NN(train_data, true_labels, train_data, **params)
 
 validator = SampleCrossValidator(train_data, true_labels, rounds = 5, test_frac = 0.2, use_data_frac = 1)
 optimizer = ParallelGridOptimizer(train_test_func = train_test_NN, validator = validator, use_caching = False, **params
