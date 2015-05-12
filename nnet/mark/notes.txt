@@ -13,22 +13,14 @@ long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neura
 #todo: calibration
 #todo: rescaling to priors
 #todo: extra features
+#todo: predictions from several nets into one
 
-#todo: Nolearn/Lasagne has a built-in automatic choice of CV
 That's a single network with dropout. CV is 0.445 and LB is 0.448. I'll be happy to post the code afterwards, but currently its nothing special, just parameter tuning so far.
 Learning rate 0.00x - 0.000x
-One heuristic metric I've found useful is that lasagne/nolearn outputs the ratio of the training loss to the test loss as a function of time. When that ratio gets below 0.8 or so, the network seems to mostly overfit from there on if you keep on training.
 
-optimize parameters one by one, by doing an line optimization and changing the winning parameter
-is oversampling the classes which cause most problems a good idea? Or any other ideas to focus on specific classes?
 It's important to remember to get your net to train nicely and overfit first, then regularize.
-dealing with class imbalance: undersampling, class weight, and rescaling probabilities
-is log scaling working well?
-maybe try calibration being implemented for RF; probably no need but already being made anyway
 
 #todo: extra features for NN
-Have any tests been done to see if/which ourlier removal works best?
-And has any test been done with scaling probabilities to match priors? (probably before calibration?)
 Do we already have the "correlation" between features and labels (e.g. which features contain information about #2 & #3)? We should probably generate almost all extra features based on that...
 #todo: calibration
 
@@ -54,10 +46,12 @@ Kinda done:
 - An overfitting net can generally be made to perform better by using more training data.
 - If your unregularized net does not overfit, you should probably make it larger.
 - If I can store just the weights and biasses, I can start the network from those points instead of reloading everything.
+- Dealing with class imbalance: undersampling, class weight, and rescaling probabilities
+-
 
 Maybe later:
 - There was stuff about using previous weights in the blog post; don't just reload the network pickle but just the weights
 - Really hard time to distinguish classes 2, 3 and 4
 -
-
+-
 
