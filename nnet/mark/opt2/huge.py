@@ -9,19 +9,19 @@ from validation.optimize_parallel import ParallelGridOptimizer
 
 
 train_data, true_labels, features = get_training_data()
-name = '{0:s}.log'.format(splitext(basename(getattr(modules['__main__'], '__file__', 'optimize.default')))[0])
-pretrain = join(PRETRAIN_DIR, 'pt_128.net.npz')
+name = '{0:s}'.format(splitext(basename(getattr(modules['__main__'], '__file__', 'optimize.default')))[0])
+pretrain = join(PRETRAIN_DIR, 'pt_400x400x400.net.npz')
 params = {
 	'name': name,
-	'dense1_nonlinearity': 'leaky20',  # tanh, sigmoid, rectify, leaky2, leaky20, softmax
+	'dense1_nonlinearity': 'tanh',     # tanh, sigmoid, rectify, leaky2, leaky20, softmax
 	'dense1_init': 'glorot_uniform',   # orthogonal, sparse, glorot_normal, glorot_uniform, he_normal, he_uniform
 	'dense1_size': 400,                # [30, 25, 80, 120, 180]
 	'dense2_size': 400,
 	'dense3_size': 400,
-	'learning_rate': 0.001,            # initial learning reate
-	'learning_rate_scaling': 100,      # pogression over time; 0.1 scaled by 10 is 0.01
+	'learning_rate': 0.0001,           # initial learning reate
+	'learning_rate_scaling': 10,       # pogression over time; 0.1 scaled by 10 is 0.01
 	'momentum': 0.99,                  # initial momentum
-	'momentum_scaling': 100,           # 0.9 scaled by 10 is 0.99
+	'momentum_scaling': 1,             # 0.9 scaled by 10 is 0.99
 	'dropout1_rate': [0, 0.5],         # [0, 0.5]
 	'dropout2_rate': None,
 	'weight_decay': 0,                 # constrain the weights to avoid overfitting
@@ -33,13 +33,13 @@ params = {
 	'outlier_frac': None,              # which fraction of each class to remove as outliers
 	'normalize_log': True,             # use logarithm for normalization
 	'use_calibration': False,          # use calibration of probabilities
-	'use_rescale_priors': True,       # rescale predictions to match priors
+	'use_rescale_priors': False,       # rescale predictions to match priors
 }
 
-make_pretrain(pretrain, train_data, true_labels, **dict(params.items() + [('dropout1_rate', 0.5)]))
+make_pretrain(pretrain, train_data, true_labels, **params)
 
 validator = SampleCrossValidator(train_data, true_labels, rounds = 1, test_frac = 0.2, use_data_frac = 1)
 optimizer = ParallelGridOptimizer(train_test_func = train_test_NN, validator = validator, use_caching = False, **params
-).readygo(topprint = 20, save_fig_basename = name, log_name = name, only_show_top = True)
+).readygo(topprint = 20, save_fig_basename = name, log_name = name + '.log', only_show_top = True)
 
 

@@ -32,14 +32,8 @@ My problem is that I was able to get 0.43702 with nolearn/lasagne - https://www.
 simple linear combination of NN (.46107) and XGBoost (.43941) puts me at .4259.
 Maybe make several NNs and feed the probabilities into a new NN
 You got a very nice score with SVC. Do you mean the support vector classifier in scikit-learn?
-Compare different normalizations
-NN can also improve with CalibratedClassifierCV
-Average of many NN can most probably increase the score
 The key point of my method is that I tuned NN hyper parameters for an averaging model rather than for a single model.
 NN2 has 4 hidden layers, all of which are RectifiedLinear and have 1024 nodes. The first layer is sparse and the rest is dense. The output is Softmax.
-Some people mentioned that all of the features appeared useful.
-Compensate for class unbalance
-from typical 1-2 hour run time (93/200/200/200/9) to 6-8+ hours (93/800/800/800/9)
 
 
 Kinda done:
