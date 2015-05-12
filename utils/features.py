@@ -5,7 +5,7 @@
 
 from random import Random
 from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack
-from settings import NFEATS, NCLASSES, SEED, VERBOSITY
+from settings import NCLASSES, SEED, VERBOSITY
 from utils.loading import get_training_data
 from utils.normalize import normalized_sum
 

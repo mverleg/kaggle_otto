@@ -1,5 +1,5 @@
 
-from numpy import inf, NaN
+from numpy import inf, isnan
 from os.path import join
 from nnet.nnio import save_knowledge
 from settings import NNET_STATE_DIR
@@ -50,7 +50,7 @@ class StopAfterMinimum(object):
 
 class StopNaN(object):
 	def __call__(self, nn, train_history):
-		if train_history[-1]['train_loss'] == NaN or train_history[-1]['valid_loss'] == NaN:
+		if isnan(train_history[-1]['train_loss']) or isnan(train_history[-1]['valid_loss']):
 			print 'Stopped since loss diverged (NaN)'
 			raise StopIteration('diverged')
 

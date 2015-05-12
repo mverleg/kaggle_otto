@@ -20,7 +20,7 @@ from theano import shared
 from nnet.nnio import SnapshotSaver, load_knowledge
 from nnet.dynamic import LogarithmicVariable
 from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum, StopNaN
-from settings import NCLASSES, VERBOSITY, NFEATS
+from settings import NCLASSES, VERBOSITY
 
 
 filterwarnings('ignore', '.*topo.*')
@@ -46,6 +46,7 @@ initializers = {
 
 
 def make_net(
+		NFEATS,
 		name = 'hidden1_size',
 		dense1_size = 60,
 		dense1_nonlinearity = 'tanh',
