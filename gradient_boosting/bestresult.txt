@@ -1,0 +1,17 @@
+
+learning_rate = 0.05 #[0.05,0.075,0.1] #default 0.1
+n_estimators = 300
+max_depth = 5 #5 works okay, 7 as well, default 5
+min_samples_split = 2 #[2,5,7] #really does not matter for [1,2,3]
+min_samples_leaf = 5 #[3,5,7] #small difference, but higher seems a little better
+min_weight_fraction_leaf = 0 #[0,0.1,0.2] #default 0
+max_features = 'sqrt' #['sqrt','log2',None]
+verbose = 1
+calibration = False#[0,0.1]
+calibrationmethod = 'sigmoid' #['sigmoid', 'isotonic']
+
+outlier_frac = False #[False, 0.03, 0.06]
+outlier_method = 'EE' #['EE', 'OCSVM']
+undersample = False #[False,True] #didn't try, because probably won't work anyway
+rescale_pred = False # [False,True] 
+sample_weight = None #[None, "inverted"]
