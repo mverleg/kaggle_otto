@@ -1,7 +1,7 @@
 
-from numpy import inf
+from numpy import inf, NaN
 from os.path import join
-from nnet.nnio import save_net, save_knowledge
+from nnet.nnio import save_knowledge
 from settings import NNET_STATE_DIR
 
 
@@ -11,7 +11,7 @@ class StopWhenOverfitting(object):
 		self.base_path = join(NNET_STATE_DIR, base_name)
 
 	def __call__(self, nn, train_history):
-		if train_history[-1]['train_loss'] / train_history[-1]['valid_loss'] <= self.loss_fraction:
+		if train_history[-1]['epoch'] > 10 and train_history[-1]['train_loss'] / train_history[-1]['valid_loss'] <= self.loss_fraction:
 			print 'Terminating training since the network is starting to overfit too much.'
 			filepath = '{0:s}_{1:d}.net.npz'.format(self.base_path, train_history[-1]['epoch'])
 			save_knowledge(nn, filepath)
@@ -46,5 +46,12 @@ class StopAfterMinimum(object):
 			save_knowledge(nn, filepath)
 			print 'The network has been restored to the state at this epoch and both have been saved.'
 			raise StopIteration('loss increasing')
+
+
+class StopNaN(object):
+	def __call__(self, nn, train_history):
+		if train_history[-1]['train_loss'] == NaN or train_history[-1]['valid_loss'] == NaN:
+			print 'Stopped since loss diverged (NaN)'
+			raise StopIteration('diverged')
 
 
