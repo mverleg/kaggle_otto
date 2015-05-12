@@ -1,12 +1,12 @@
 
-from numpy import zeros, abs, logical_xor
-from settings import NCLASSES, NFEATS
+from numpy import zeros
+from settings import NCLASSES
 from utils.loading import get_training_data
 from matplotlib.pyplot import subplots, show
 
 
 def class_feature_sum_count(train, labels):
-	sm, cnt = zeros((NFEATS, NCLASSES)), zeros((NFEATS, NCLASSES))
+	sm, cnt = zeros((train.shape[1], NCLASSES)), zeros((train.shape[1], NCLASSES))
 	for cls in range(0, NCLASSES):
 		sm[:, cls] = train[cls + 1 == labels].sum(0)
 		cnt[:, cls] = (train[cls + 1 == labels] != 0).sum(0)
@@ -17,7 +17,7 @@ def class_feature_sum_count(train, labels):
 	ax_cnt.imshow(cnt.T, interpolation = 'none')
 	ax_cnt.set_title('Class features count')
 
-	return sm,cnt
+	return sm, cnt
 
 
 # def biclass_distance(train, labels, cls1, cls2):

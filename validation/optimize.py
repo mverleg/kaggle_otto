@@ -32,7 +32,6 @@ class GridOptimizer(object):
 
 			The code was not designed for iterable parameters. You can try to put them in another iterable, but a simple mapping may be easier (e.g. m = {1: [...], 2: [...]} , pass [1, 2] to GridOptimizer and let the code use m[param]).
 		"""
-		#print 'Note: there is now a parallel version of GridOptimizer. It works a little differently, but can be much faster.'
 		assert isinstance(validator, Validator), 'Argument "validator" should be an instantiated Validator (not "{0:s}").'.format(type(validator))
 		self.validator = validator
 		self.rounds = self.validator.rounds

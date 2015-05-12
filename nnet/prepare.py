@@ -23,6 +23,12 @@ def normalize_data(data, norms = None, use_log = True):
 	return data, norms
 
 
+def conormalize_data(train, test, use_log = True):
+	train, norms = normalize_data(train, use_log = use_log)
+	test = normalize_data(train, use_log = use_log)[0]
+	return train, test
+
+
 def equalize_class_sizes(data, classes, min_size = 1929, class_count = NCLASSES):
 	"""
 		Equalize classes by removing samples to make them all the same size.

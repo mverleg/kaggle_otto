@@ -12,7 +12,8 @@
 from tempfile import gettempdir
 from numpy import uint16, load, save, empty
 from os.path import join
-from settings import VERBOSITY, TRAIN_DATA_PATH, TEST_DATA_PATH, TRAINSIZE, TESTSIZE, NFEATS
+from settings import VERBOSITY, TRAIN_DATA_PATH, TEST_DATA_PATH, TRAINSIZE, TESTSIZE
+NFEATS = 93
 
 
 def load_training_data(filepath):

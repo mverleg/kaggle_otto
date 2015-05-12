@@ -20,7 +20,7 @@ from theano import shared
 from nnet.nnio import SnapshotSaver, load_knowledge
 from nnet.dynamic import LogarithmicVariable
 from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum, StopNaN
-from settings import NCLASSES, VERBOSITY, NFEATS
+from settings import NCLASSES, VERBOSITY
 
 
 filterwarnings('ignore', '.*topo.*')
@@ -46,6 +46,7 @@ initializers = {
 
 
 def make_net(
+		NFEATS,
 		name = 'hidden1_size',
 		dense1_size = 60,
 		dense1_nonlinearity = 'tanh',
@@ -62,7 +63,7 @@ def make_net(
 		momentum_scaling = 100,
 		max_epochs = 3000,
 		dropout1_rate = None,
-		dropout2_rate = None,
+		dropout2_rate = None,           # inherits dropout1_rate
 		weight_decay = 0,
 		output_nonlinearity = 'softmax',
 		auto_stopping = True,
@@ -203,7 +204,7 @@ def make_net(
 	"""
 	if pretrain:
 		assert isfile(pretrain), 'Pre-train file "{0:s}" not found'.format(pretrain)
-		load_knowledge(net, isfile)
+		load_knowledge(net, pretrain)
 
 	return net
 

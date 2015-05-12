@@ -8,7 +8,7 @@ from functools import partial
 from collections import Iterable
 from multiprocessing import cpu_count, Pool
 from os.path import join, basename, splitext
-from sys import stderr, modules, stdout
+from sys import stderr, modules
 from datetime import datetime
 from numpy import prod, unravel_index
 from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY, LOGS_DIR
