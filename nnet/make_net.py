@@ -19,7 +19,7 @@ from nolearn.lasagne import NeuralNet
 from theano import shared
 from nnet.nnio import SnapshotSaver, load_knowledge
 from nnet.dynamic import LogarithmicVariable
-from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum
+from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum, StopNaN
 from settings import NCLASSES, VERBOSITY, NFEATS
 
 
@@ -107,6 +107,8 @@ def make_net(
 		dense3_nonlinearity = dense2_nonlinearity
 	if dense3_init is None:
 		dense3_init = dense2_init
+	if dropout2_rate is None:
+		dropout2_rate = dropout1_rate
 
 	"""
 		Create the layers and their settings.
@@ -152,6 +154,7 @@ def make_net(
 	handlers = [
 		LogarithmicVariable('update_learning_rate', start = learning_rate, stop = learning_rate / float(learning_rate_scaling)),
 		LogarithmicVariable('update_momentum', start = momentum, stop = 1 - ((1 - momentum) / float(momentum_scaling))),
+		StopNaN(),
 	]
 	if auto_stopping:
 		handlers += [

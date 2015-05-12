@@ -54,6 +54,7 @@ class ParallelGridOptimizer(GridOptimizer):
 		"""
 			Start executing jobs in parallel.
 		"""
+		""" Some setup stuff """
 		if log_name is None:
 			log_name = '{0:s}.log'.format(splitext(basename(getattr(modules['__main__'], '__file__', 'optimize.default')))[0])
 		make_logfile(log_name)
