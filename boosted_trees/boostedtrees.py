@@ -3,6 +3,8 @@ import logging
 logging.disable(logging.INFO)
 import pandas as pd
 import numpy as np
+from utils.outliers import filter_data
+from utils.postprocess import rescale_prior
 
 
 def boostedTrees(train, 
@@ -15,7 +17,7 @@ def boostedTrees(train,
                  step_size = 0.2, 
                  max_depth = 10, 
                  class_weights = None, 
-                 min_loss_reduction = 0.01,
+                 min_loss_reduction = 0.5,
                  verbose = 0,
                  outlier_frac=0.0,
                  outlier_method='EE',
@@ -49,7 +51,8 @@ def boostedTrees(train,
                                                step_size = step_size,
                                                max_depth = max_depth,
                                                class_weights = class_weights,
-                                               min_loss_reduction = min_loss_reduction   )
+                                               min_loss_reduction = min_loss_reduction,
+                                               verbose = verbose   )
     
     preds = model.predict_topk(testFrame, output_type='probability', k=9)
     preds['id'] = preds['id'].astype(int)

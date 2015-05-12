@@ -17,7 +17,7 @@ def class_feature_sum_count(train, labels):
 	ax_cnt.imshow(cnt.T, interpolation = 'none')
 	ax_cnt.set_title('Class features count')
 
-	return sm,cnt
+	return sm, cnt
 
 
 # def biclass_distance(train, labels, cls1, cls2):

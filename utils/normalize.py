@@ -8,7 +8,7 @@
 		normalize_probabilities(..)
 """
 
-from numpy import abs, float32, array, save, load
+from numpy import abs, float32, array, save, load, float64
 from numpy.random import uniform
 from utils.loading import get_training_data, get_testing_data
 from settings import COLUMN_MAX_PATH, VERBOSITY
@@ -65,6 +65,13 @@ def check_rows_normalized(predictions, epsilon = 1e-4):
 		:return: True if rows add up to 1.
 	"""
 	return all(abs(predictions.sum(axis = 1) - 1) < epsilon)
+
+
+def normalized_sum(v):
+	"""
+		:return: A copy of v that has a sum of 1.
+	"""
+	return array(v) / float64(array(v).sum())
 
 
 if __name__ == '__main__':

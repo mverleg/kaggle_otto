@@ -7,39 +7,14 @@ read until May 9th: difficult cls: https://www.kaggle.com/c/otto-group-product-c
 long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
 
 
-#todo: see what has been implemented
 #todo: BatchNorm and PReLU
-#todo: pretraining
-#todo: calibration
-#todo: rescaling to priors
-#todo: extra features
 #todo: predictions from several nets into one
 
 That's a single network with dropout. CV is 0.445 and LB is 0.448. I'll be happy to post the code afterwards, but currently its nothing special, just parameter tuning so far.
-Learning rate 0.00x - 0.000x
-
-It's important to remember to get your net to train nicely and overfit first, then regularize.
-
-#todo: extra features for NN
-Do we already have the "correlation" between features and labels (e.g. which features contain information about #2 & #3)? We should probably generate almost all extra features based on that...
-#todo: calibration
-
-Maybe the difference between them would be a useful feature [two features, one if positive one if negative]
-
-Look at batch size
-
 My problem is that I was able to get 0.43702 with nolearn/lasagne - https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/13799/what-models-may-give-score-under-0-5
 simple linear combination of NN (.46107) and XGBoost (.43941) puts me at .4259.
 Maybe make several NNs and feed the probabilities into a new NN
-You got a very nice score with SVC. Do you mean the support vector classifier in scikit-learn?
-Compare different normalizations
-NN can also improve with CalibratedClassifierCV
-Average of many NN can most probably increase the score
 The key point of my method is that I tuned NN hyper parameters for an averaging model rather than for a single model.
-NN2 has 4 hidden layers, all of which are RectifiedLinear and have 1024 nodes. The first layer is sparse and the rest is dense. The output is Softmax.
-Some people mentioned that all of the features appeared useful.
-Compensate for class unbalance
-from typical 1-2 hour run time (93/200/200/200/9) to 6-8+ hours (93/800/800/800/9)
 
 
 Kinda done:
@@ -50,8 +25,7 @@ Kinda done:
 -
 
 Maybe later:
-- There was stuff about using previous weights in the blog post; don't just reload the network pickle but just the weights
 - Really hard time to distinguish classes 2, 3 and 4
--
+- It's important to remember to get your net to train nicely and overfit first, then regularize.
 -
 

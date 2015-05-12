@@ -54,7 +54,7 @@ class SnapshotSaver(object):
 	def __call__(self, nn, train_history):
 		epoch = train_history[-1]['epoch']
 		if epoch % self.every == 0 or epoch == nn.max_epochs:
-			filepath = '{0:s}_{1:d}.net'.format(self.base_path, epoch)
+			filepath = '{0:s}_{1:d}.net.npz'.format(self.base_path, epoch)
 			save_knowledge(nn, filepath)
 			if VERBOSITY >= 1:
 				print 'saved network to "{0:s}" at iteration {1:d}'.format(filepath, epoch)
