@@ -58,6 +58,17 @@ Furthermore it is worth noting:
 
     python demo/test_crossvalidate.py -v
 
+Extra features
+-------------------------------
+
+To generate extra features, use:
+
+    gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = (2, 3), extra_features = 57, seed = 1)
+    	gen.add_features(train_data)
+    	gen.add_features(test_data)
+
+It finds the existing features that correlate with the difficult classes, then builds new features from them with several randomly selected operations. You can try a bunch of seeds to find features that work well.
+
 Git instruction
 -------------------------------
 
