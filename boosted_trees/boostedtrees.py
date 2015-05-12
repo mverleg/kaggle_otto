@@ -29,10 +29,9 @@ def boostedTrees(train,
     Because it's graphlab and not sklearn, the calibration is not implemented (it's possible, but harder)
     Also, seemingly, setting sample weights is also not supported by graphlab
     """
-    
+    print outlier_frac, outlier_method, rescale_pred
     if outlier_frac > 0:
-        train, labels = filter_data(train, labels, cut_outlier_frac = outlier_frac, method = outlier_method)  # remove ourliers
-    
+        train, labels = filter_data(train, labels, cut_outlier_frac = outlier_frac, method = outlier_method, use_caching=False)  # remove ourliers
     if column_names is None:
         column_names = range(np.shape(train)[1])
     target = 'target'
@@ -43,7 +42,6 @@ def boostedTrees(train,
     pdTest = pd.DataFrame(test, columns = column_names)
     testFrame = gl.SFrame(pdTest)
     del pdTest
-    
     model = gl.boosted_trees_classifier.create(trainFrame, 
                                                target=target, 
                                                max_iterations=max_iterations, 
@@ -52,8 +50,7 @@ def boostedTrees(train,
                                                max_depth = max_depth,
                                                class_weights = class_weights,
                                                min_loss_reduction = min_loss_reduction,
-                                               verbose = verbose   )
-    
+                                               verbose = verbose)
     preds = model.predict_topk(testFrame, output_type='probability', k=9)
     preds['id'] = preds['id'].astype(int)
     #some hacky dataframe magic, creates Nx10 matrix (id in first column)
@@ -66,5 +63,5 @@ def boostedTrees(train,
     assert np.shape(newPreds)[0] == np.shape(test)[0], "conversion failed somewhere, size doesn't match"
     
     if rescale_pred:
-        newPreds = rescale_prior(newPreds, bincount(labels))
+        newPreds = rescale_prior(newPreds, np.bincount(labels))
     return newPreds  
