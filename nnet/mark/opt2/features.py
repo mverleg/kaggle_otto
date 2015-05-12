@@ -15,9 +15,9 @@ params = {
 	'name': name,
 	'dense1_nonlinearity': 'tanh',     # tanh, sigmoid, rectify, leaky2, leaky20, softmax
 	'dense1_init': 'glorot_uniform',   # orthogonal, sparse, glorot_normal, glorot_uniform, he_normal, he_uniform
-	'dense1_size': 128,                # [30, 25, 80, 120, 180]
-	'dense2_size': None,
-	'dense3_size': None,
+	'dense1_size': 256,                # [30, 25, 80, 120, 180]
+	'dense2_size': 256,
+	'dense3_size': 64,
 	'learning_rate': 0.0001,           # initial learning reate
 	'learning_rate_scaling': 100,      # pogression over time; 0.1 scaled by 10 is 0.01
 	'momentum': 0.99,                  # initial momentum
@@ -33,7 +33,7 @@ params = {
 	'normalize_log': True,             # use logarithm for normalization
 	'use_calibration': False,          # use calibration of probabilities
 	'use_rescale_priors': False,       # rescale predictions to match priors
-	'extra_feature_count': None,       # how many new features to generate (163)
+	'extra_feature_count': [0, 20, 50, 100, 250, 500], # how many new features to generate (163)
 	'extra_feature_seed': 0,           # a seed for the feature generation
 }
 
@@ -41,7 +41,7 @@ make_pretrain(pretrain, train_data, true_labels, **params)
 
 train_test_NN(train_data, true_labels, train_data, **params)
 
-validator = SampleCrossValidator(train_data, true_labels, rounds = 1, test_frac = 0.2, use_data_frac = 1)
+validator = SampleCrossValidator(train_data, true_labels, rounds = 3, test_frac = 0.2, use_data_frac = 1)
 optimizer = ParallelGridOptimizer(train_test_func = train_test_NN, validator = validator, use_caching = False, **params
 ).readygo(topprint = 20, save_fig_basename = name, log_name = name + '.log', only_show_top = True)
 

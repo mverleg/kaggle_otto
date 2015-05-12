@@ -62,7 +62,7 @@ def make_net(
 		momentum_scaling = 100,
 		max_epochs = 3000,
 		dropout1_rate = None,
-		dropout2_rate = None,
+		dropout2_rate = None,           # inherits dropout1_rate
 		weight_decay = 0,
 		output_nonlinearity = 'softmax',
 		auto_stopping = True,
@@ -203,7 +203,7 @@ def make_net(
 	"""
 	if pretrain:
 		assert isfile(pretrain), 'Pre-train file "{0:s}" not found'.format(pretrain)
-		load_knowledge(net, isfile)
+		load_knowledge(net, pretrain)
 
 	return net
 

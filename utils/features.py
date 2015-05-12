@@ -5,7 +5,7 @@
 
 from random import Random
 from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack
-from settings import NFEATS, NCLASSES, SEED
+from settings import NFEATS, NCLASSES, SEED, VERBOSITY
 from utils.loading import get_training_data
 from utils.normalize import normalized_sum
 
@@ -27,10 +27,13 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 		:param classes: A dictionary with contributions from different pairs of classes.
 		:return: The augmented train and test data.
 	"""
+	if not extra_features:
+		return train_data, test_data
 	assert abs(sum(classes.values()) - 1) < 1e-6,  'Class contributions should be normalized.'
 	assert sum(int(round(extra_features * q)) for q in classes.values()) == extra_features, 'Rounding errors, sorry.'
+	if VERBOSITY >= 1:
+		print 'creating {0:d} extra features for {1:d} groups of classes'.format(extra_features, len(classes))
 	for offset, (difficult, contribution) in enumerate(classes.items()):
-		print 'diff', difficult
 		gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = difficult,
 			extra_features = int(round(extra_features * contribution)), seed = offset)
 		train_data, test_data = gen.add_features_tt(train_data, test_data)
