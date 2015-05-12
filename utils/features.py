@@ -30,9 +30,13 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 	if not extra_features:
 		return train_data, test_data
 	assert abs(sum(classes.values()) - 1) < 1e-6,  'Class contributions should be normalized.'
-	assert sum(int(round(extra_features * q)) for q in classes.values()) == extra_features, 'Rounding errors, sorry.'
 	if VERBOSITY >= 1:
 		print 'creating {0:d} extra features for {1:d} groups of classes'.format(extra_features, len(classes))
+	class_counts = {key: int(extra_features * val) for key, val in classes.items()}
+	for key in class_counts.keys():
+		if sum(class_counts.values()) >= extra_features:
+			break
+		class_counts[key] += 1
 	for offset, (difficult, contribution) in enumerate(classes.items()):
 		gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = difficult,
 			extra_features = int(round(extra_features * contribution)), seed = offset)

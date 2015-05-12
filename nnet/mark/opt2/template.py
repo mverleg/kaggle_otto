@@ -33,7 +33,7 @@ params = {
 	'normalize_log': True,              # use logarithm for normalization
 	'use_calibration': False,           # use calibration of probabilities
 	'use_rescale_priors': True,         # rescale predictions to match priors
-	'extra_feature_count': 0,           # how many new features to generate
+	'extra_feature_count': 4,           # how many new features to generate
 	'extra_feature_seed': 0,            # a seed for the feature generation
 }
 

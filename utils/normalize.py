@@ -1,6 +1,6 @@
 
 """
-	This file contains fucntions for two normalization operations:
+	This file contains functions for two normalization operations:
 
 	1. normalize the data, making sure all values are [0, 1]
 		normalize_data(..)
