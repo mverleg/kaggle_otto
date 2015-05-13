@@ -1,16 +1,16 @@
 
-from nnet.base_optimize import optimize
+from nnet.base_optimize import optimize_NN
 
 
-optimize(debug = True, **{
-	'dense1_size': 256,
+optimize_NN(debug = True, **{
+	'dense1_size': 128,
 	'dense2_size': None,
 	'dense3_size': None,
-	'learning_rate': 0.001,
+	'learning_rate': 0.01,
 	'dropout1_rate': 0,
 	'max_epochs': 3,
-	'extra_feature_count': 13,
-	'pretrain': False,
+	'extra_feature_count': 20,
+	'pretrain': None,
 })
 
 

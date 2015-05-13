@@ -5,8 +5,8 @@
 
 from random import Random
 from matplotlib.pyplot import subplots, show
-from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack
-from settings import NCLASSES, SEED, VERBOSITY
+from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack, isnan, any, sqrt
+from settings import NCLASSES, SEED, VERBOSITY, RAW_NFEATS
 from utils.loading import get_training_data
 from utils.normalize import normalized_sum
 
@@ -31,7 +31,7 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 	if not extra_features:
 		return train_data, test_data
 	if multiplicity is None:
-		multiplicity = min(extra_features // 10, 3)
+		multiplicity = max(min(extra_features // 10, 3), 1)
 	assert abs(sum(classes.values()) - 1) < 1e-6,  'Class contributions should be normalized.'
 	if VERBOSITY >= 1:
 		print 'creating {0:d} extra features for {1:d} groups of classes'.format(extra_features, len(classes))
@@ -42,7 +42,7 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 		class_counts[key] += 1
 	for offset, (difficult, contribution) in enumerate(classes.items()):
 		gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = difficult,
-			extra_features = int(round(extra_features * contribution)), multiplicity = multiplicity, seed = offset)
+			extra_features = int(round(extra_features * contribution)), multiplicity = multiplicity, seed = offset + 100 * seed)
 		train_data, test_data = gen.add_features_tt(train_data, test_data)
 	return train_data, test_data
 
@@ -50,7 +50,7 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 class PositiveSparseFeatureGenerator(object):
 
 	def __init__(self, data, labels, difficult_classes = (2, 3), extra_features = 57, multiplicity = 3,
-			operation_probs = (0.3, 0.3, 0.2, 0.2), seed = 0):
+			operation_probs = (0.3, 0.3, 0.4), only_upto = RAW_NFEATS, seed = 0):
 		"""
 			Feature generator to create positive features from positive, sparse data.
 
@@ -59,16 +59,15 @@ class PositiveSparseFeatureGenerator(object):
 			:param multiplicity: The N new features are based on the N // multiplicity best old ones.
 			:param operations: Probabilities for each operation:
 
-			and   (a + b) / 2
-			xor   a or b iff one of them is set
-			-     max(a - b, 0)
-			-     max(b - a, 0)
+			and   (a + b + c+ ...) / 2
+			xor   a or b iff one of them is set (anything after b ignored)
+			+-    max(a - b + c - d + ..., 0)
 		"""
 		assert extra_features // multiplicity >= 2, 'Need extra_features / multiplicity >= 2 or there will be not enough source features (for {0:d} / {1:d}).'.format(extra_features, multiplicity)
 		self.extra_features = extra_features
 		self.operation_cumprobs = cumsum(normalized_sum(operation_probs))
 		self.seed = SEED + seed
-		self.sources = self.features_for_difficult_classes(data, labels,
+		self.sources = self.features_for_difficult_classes(data[:, :only_upto], labels,
 			extra_feature_count = extra_features // multiplicity, difficult_classes = difficult_classes)
 
 	def class_feature_count(self, train, labels):
@@ -95,11 +94,16 @@ class PositiveSparseFeatureGenerator(object):
 		cutoff = sort(difficult_cnts)[-extra_feature_count]
 		return where(difficult_cnts >= cutoff)[0]
 
-	def binary_feature(self, data1, data2, seed):
-		operation = 0
+	def get_operation(self, seed):
 		for operation, border in enumerate(self.operation_cumprobs):
 			if seed < border:
 				break
+		else:
+			raise AssertionError('Operation not found for seed {0}'.format(seed))
+		return operation
+
+	def binary_feature(self, data1, data2, seed):
+		operation = self.get_operation(seed)
 		if operation == 0:
 			return (data1 + data2 + 1) // 2
 		elif operation == 1:
@@ -111,20 +115,37 @@ class PositiveSparseFeatureGenerator(object):
 			feat = data1 - data2
 			feat[data1 <= data2] = 0
 			return feat
-		elif operation == 3:
-			feat = data2 - data1
-			feat[data2 <= data1] = 0
+		else:
+			raise AssertionError('Binary operation with index {0:d} not found'.format(operation))
+
+	def poly_feature(self, datas, seed):
+		operation = self.get_operation(seed)
+		if operation == 0:
+			feat = sum(datas) // len(datas)
+			return feat
+		elif operation == 1:
+			feat = datas[0] + datas[1]
+			feat[logical_and(datas[0], datas[1])] = 0
+			return feat
+		elif operation == 2:
+			""" It is important to use data1 <= data2 and not feat < 0, since uint8 overflows when < 0. """
+			pos, neg = sum(datas[0::2]), sum(datas[1::2])
+			feat = (pos - neg) // int(sqrt(len(datas)))
+			feat[pos <= neg] = 0
 			return feat
 		else:
-			raise AssertionError('Operation with index {0:d} not found'.format(operation))
+			raise AssertionError('Poly operation with index {0:d} not found'.format(operation))
 
 	def make_features(self, data):
 		self.random = Random(self.seed)
 		features = []
 		for k in range(self.extra_features):
-			(f1, f2), s = self.random.sample(self.sources, 2), self.random.random()
-			feat = self.binary_feature(data[:, f1], data[:, f2], s)
+			cnt = int(self.random.randint(2, len(self.sources))**0.6 + 1)
+			indices = self.random.sample(self.sources, cnt)
+			seed = self.random.random()
+			feat = self.poly_feature([data[:, index] for index in indices], seed)
 			features.append(feat)
+			assert feat.max() > 0, 'Feature #{0:d} seems to be all zeros, which should not happen (it also causes problems with some classifiers).'.format(k)
 		return vstack(features).T
 
 	def add_features(self, data):
@@ -137,7 +158,7 @@ class PositiveSparseFeatureGenerator(object):
 
 if __name__ == '__main__':
 	train_data, true_labels = get_training_data()[:2]
-	augmented_data, duplicate_data = chain_feature_generators(train_data, true_labels, train_data, extra_features = 163, multiplicity = 3, seed = 0)
+	augmented_data, duplicate_data = chain_feature_generators(train_data, true_labels, train_data, extra_features = 163, multiplicity = 3, seed = 1)
 	print 'old shape', train_data.shape
 	print 'new shape', augmented_data.shape
 	fig, (ax1, ax2) = subplots(2)
