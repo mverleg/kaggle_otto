@@ -44,13 +44,6 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 		gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = difficult,
 			extra_features = int(round(extra_features * contribution)), multiplicity = multiplicity, seed = offset + 100 * seed)
 		train_data, test_data = gen.add_features_tt(train_data, test_data)
-	fig, (ax1, ax2) = subplots(2)  # tmp
-	im = ax1.imshow(train_data[:100, :])
-	print '>>>>>>>', train_data.mean(0)[93:].shape
-	print 'NaN?', any(isnan(train_data))
-	print train_data.max(0)[93:]
-	fig.colorbar(im, ax = ax1)
-	ax2.bar(range(train_data.shape[1]), train_data.mean(0))
 	return train_data, test_data
 
 

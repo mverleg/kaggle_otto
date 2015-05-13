@@ -34,7 +34,7 @@ DEFAULT_PARAMS = {
 	'weight_decay': 0,                  # constrain the weights to avoid overfitting
 	'max_epochs': 1000,                 # it terminates when overfitting or increasing, so just leave high
 	'auto_stopping': True,              # stop training automatically if it seems to be failing
-	'pretrain': True,                   # use pretraining? (True for automatic, filename for specific)
+	'pretrain': None,                   # use pretraining? (True/False / filename / None[= when possible])
 	'outlier_method': 'OCSVM',          # method for outlier removal ['OCSVM', 'EE']
 	'outlier_frac': None,               # which fraction of each class to remove as outliers
 	'normalize_log': True,              # use logarithm for normalization
@@ -65,13 +65,16 @@ def optimize_NN(name = name_from_file(), rounds = 1, debug = False, use_caching 
 	"""
 		Pre-training.
 	"""
-	if params['pretrain']:
+	if params['pretrain'] or params['pretrain'] is None:
 		layer_sizes = [params['extra_feature_count'] or 0, params['dense1_size'] or 0, params['dense2_size'] or 0, params['dense2_size'] or 0, params['dropout1_rate'] or 0, params['dropout2_rate'] or 0]
-		assert all(is_nonstr_iterable(nr) for nr in layer_sizes), 'Pretraining is not available when there are different network layouts (e.g. different numbers of neurons or features).'
-	if params['pretrain'] is True:
-		params['pretrain'] = join(PRETRAIN_DIR, 'pt{0:s}.net.npz'.format('x'.join(str(nr) for nr in layer_sizes if nr is not None)))
-	if params['pretrain']:
-		make_pretrain(params['pretrain'], train_data, true_labels, **params)
+		if all(is_nonstr_iterable(nr) for nr in layer_sizes):
+			if params['pretrain'] is not None:
+				raise AssertionError('Pre-training is not available when there are different network layouts (e.g. different numbers of neurons or features).')
+			if params['pretrain'] is True:
+				params['pretrain'] = join(PRETRAIN_DIR, 'pt{0:s}.net.npz'.format('x'.join(str(nr) for nr in layer_sizes if nr is not None)))
+			make_pretrain(params['pretrain'], train_data, true_labels, **params)
+		elif params['pretrain'] is None:
+			print 'Pre-training is not available due to different network layouts'
 
 	"""
 		The actual optimization, optionally in debug mode (non-parallel for stacktrace and resource use).

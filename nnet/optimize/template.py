@@ -10,9 +10,7 @@ optimize_NN(debug = True, **{
 	'dropout1_rate': 0,
 	'max_epochs': 3,
 	'extra_feature_count': 20,
-	'extra_feature_seed': [3, 4],
-	'pretrain': False,
-	'use_caching': False,
+	'pretrain': None,
 })
 
 

@@ -5,7 +5,7 @@ from numpy import savetxt, isnan
 from utils.loading import get_training_data, get_testing_data
 
 
-# load the trian and test data without any shuffling / normalziing / filtering / ...
+# load the train and test data without any shuffling / normalziing / filtering / ...
 train_data, true_labels = get_training_data()[:2]
 test_data = get_testing_data()[0]
 
