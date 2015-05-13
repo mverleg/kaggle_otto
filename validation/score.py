@@ -26,6 +26,7 @@ def calc_logloss(predictions, true_classes, epsilon = 1.e-15):
 	"""
 	assert check_rows_normalized(predictions), 'The predictions you submitted aren\'t normalized! You can use normalize_probabilities(..). Current norms-1 are in the range {0:.5f}-{1:.5f}'.format((predictions.sum(axis = 1) - 1).min(), (predictions.sum(axis = 1) - 1).max())
 	pred = clip(predictions, epsilon, 1 - epsilon)
+	print predictions.shape, true_classes.shape
 	predictions_for_true = pred[range(predictions.shape[0]), true_classes - 1]
 	return - log(predictions_for_true).sum() / len(true_classes)
 

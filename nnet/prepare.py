@@ -25,7 +25,7 @@ def normalize_data(data, norms = None, use_log = True):
 
 def conormalize_data(train, test, use_log = True):
 	train, norms = normalize_data(train, use_log = use_log)
-	test = normalize_data(train, use_log = use_log)[0]
+	test = normalize_data(test, use_log = use_log)[0]
 	return train, test
 
 
