@@ -44,7 +44,7 @@ DEFAULT_PARAMS = {
 }
 
 
-def optimize(name = name_from_file(), pretrain = None, rounds = 1, debug = False, **special_params):
+def optimize(name = name_from_file(), rounds = 1, debug = False, **special_params):
 	"""
 		Some default code for optimization, adding default parameters and debug, and using mostly other classes to do the rest of the work.
 	"""
@@ -64,18 +64,20 @@ def optimize(name = name_from_file(), pretrain = None, rounds = 1, debug = False
 	"""
 		Pre-training.
 	"""
-	if pretrain is True:
-		pretrain = join(PRETRAIN_DIR, 'pt{0:s}.net.npz'.format('x'.join(str(nr) for nr in [params['extra_feature_count']
+	if params['pretrain'] is True:
+		params['pretrain'] = join(PRETRAIN_DIR, 'pt{0:s}.net.npz'.format('x'.join(str(nr) for nr in [params['extra_feature_count']
 			+ 93, params['dense1_size'], params['dense2_size'], params['dense2_size']] if nr is not None)))
-		make_pretrain(pretrain, train_data, true_labels, **params)
+		make_pretrain(params['pretrain'], train_data, true_labels, **params)
 
 	"""
 		The actual optimization, optionally in debug mode (non-parallel for stacktrace and resource use).
 	"""
 	validator = SampleCrossValidator(train_data, true_labels, rounds = rounds, test_frac = 0.2, use_data_frac = 1)
 	if debug:
-		for subparams, train, labels, test in GridOptimizer(validator, **params).yield_batches():
-			train_test_NN(train, labels, test, **subparams)
+		optimizer = GridOptimizer(validator, **params)
+		for subparams, train, labels, test in optimizer.yield_batches():
+			optimizer.register_results(train_test_NN(train, labels, test, **subparams))
+		optimizer.print_plot_results()
 	else:
 		ParallelGridOptimizer(train_test_func = train_test_NN, validator = validator, use_caching = False, **params
 			).readygo(save_fig_basename = name, log_name = name + '.log', only_show_top = True)

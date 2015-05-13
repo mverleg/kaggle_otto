@@ -9,6 +9,7 @@ from functools import partial
 from sys import setrecursionlimit
 from os.path import isfile
 from nnet.weight_decay import WeightDecayObjective
+from validation.optimize import params_name
 from warnings import filterwarnings
 from lasagne.init import Orthogonal, GlorotNormal, GlorotUniform, HeNormal, HeUniform, Sparse, Constant
 from lasagne.layers import InputLayer, DenseLayer, DropoutLayer
@@ -158,9 +159,10 @@ def make_net(
 		StopNaN(),
 	]
 	if auto_stopping:
+		snapshot_name = params_name(params, prefix = name)[0]
 		handlers += [
-			SnapshotSaver(every = 100, base_name = name),
-			StopWhenOverfitting(loss_fraction = 0.8, base_name = name),
+			SnapshotSaver(every = 100, base_name = snapshot_name),
+			StopWhenOverfitting(loss_fraction = 0.8, base_name = snapshot_name),
 			StopAfterMinimum(patience = 70, base_name = name),
 		]
 

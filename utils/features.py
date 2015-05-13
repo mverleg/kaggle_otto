@@ -4,6 +4,7 @@
 """
 
 from random import Random
+from matplotlib.pyplot import subplots, show
 from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack
 from settings import NCLASSES, SEED, VERBOSITY
 from utils.loading import get_training_data
@@ -58,8 +59,8 @@ class PositiveSparseFeatureGenerator(object):
 			:param multiplicity: The N new features are based on the N // multiplicity best old ones.
 			:param operations: Probabilities for each operation:
 
-			and   a + b
-			xor   a + b if not (a and b) else 0
+			and   (a + b) / 2
+			xor   a or b iff one of them is set
 			-     max(a - b, 0)
 			-     max(b - a, 0)
 		"""
@@ -100,7 +101,7 @@ class PositiveSparseFeatureGenerator(object):
 			if seed < border:
 				break
 		if operation == 0:
-			return data1 + data2
+			return (data1 + data2 + 1) // 2
 		elif operation == 1:
 			feat = data1 + data2
 			feat[logical_and(data1, data2)] = 0
@@ -136,8 +137,13 @@ class PositiveSparseFeatureGenerator(object):
 
 if __name__ == '__main__':
 	train_data, true_labels = get_training_data()[:2]
-	augmented_data, duplicate_data = chain_feature_generators(train_data, true_labels, train_data, extra_features = 57, multiplicity = 3, seed = 0)
+	augmented_data, duplicate_data = chain_feature_generators(train_data, true_labels, train_data, extra_features = 163, multiplicity = 3, seed = 0)
 	print 'old shape', train_data.shape
 	print 'new shape', augmented_data.shape
+	fig, (ax1, ax2) = subplots(2)
+	im = ax1.imshow(augmented_data[:100, :])
+	fig.colorbar(im, ax = ax1)
+	ax2.bar(range(augmented_data.shape[1]), augmented_data.mean(0))
+	show()
 
 

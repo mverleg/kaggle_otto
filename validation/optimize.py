@@ -119,7 +119,7 @@ class GridOptimizer(object):
 	def print_top(self, topprint, hackreturn = False):
 		"""
 			Print the lowest logloss results.
-            hackreturn returns the top ranked features, only works if there was one input feature
+			hackreturn returns the top ranked features, only works if there was one input feature
 		"""
 		if not self.dims:
 			return
@@ -198,3 +198,5 @@ def params_name(params, prefix):
 		sha1(prefix + '_'.join('{0:s}-{1:}'.format(key, val) for key, val in params.items())).hexdigest(),
 		', '.join('{0:s} = {1:}'.format(key, val) for key, val in params.items()),
 	)
+
+
