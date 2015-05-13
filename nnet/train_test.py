@@ -19,7 +19,7 @@ def train_NN(train, labels, test, outlier_frac = 0, outlier_method = 'OCSVM', us
 	"""
 		Train a neural network, for internal use by other functions in this file.
 	"""
-	train, test = chain_feature_generators(train, labels, test, extra_features = extra_feature_count, multiplicity = 3, seed = extra_feature_seed)
+	train, test = chain_feature_generators(train, labels, test, extra_features = extra_feature_count, seed = extra_feature_seed)
 	train, test = conormalize_data(train, test, use_log = normalize_log)
 	if outlier_frac:
 		train, labels = filter_data(train, labels, cut_outlier_frac = outlier_frac, method = outlier_method)
@@ -48,7 +48,7 @@ def make_pretrain(pretrain_path, data, labels, minimum_train_loss = 0.7, **param
 	"""
 		Make a pretrain file given parameters. If there are iterable parameters, a 'random' one is chosen.
 	"""
-	if pretrain_path is None or isfile(pretrain_path):
+	if not pretrain_path or isfile(pretrain_path):
 		return
 	print 'pretraining file not found, pretraining a network now'
 	pretrain_params = {

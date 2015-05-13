@@ -29,7 +29,6 @@ def boostedTrees(train,
     Because it's graphlab and not sklearn, the calibration is not implemented (it's possible, but harder)
     Also, seemingly, setting sample weights is also not supported by graphlab
     """
-    print outlier_frac, outlier_method, rescale_pred
     if outlier_frac > 0:
         train, labels = filter_data(train, labels, cut_outlier_frac = outlier_frac, method = outlier_method, use_caching=False)  # remove ourliers
     if column_names is None:

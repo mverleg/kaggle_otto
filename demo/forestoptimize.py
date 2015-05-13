@@ -19,7 +19,7 @@ min_samples_split = [2, 4, 6] #not much difference, 2 (default) seems slightly t
 min_samples_leaf = [1, 2, 3] #1 seems clearly the best (default)
 min_weight_fraction_leaf = [0., 0.1, 0.2] #0 seems clearly the best (default)
 max_leaf_nodes = [None, 5000, 10000, 50000] #can vary, don't do simultaneously with max_depth
-n_jobs = -1
+n_jobs = 1
 verbose = 1
 class_weight = [None, "auto"] #None seems slightly better
 
