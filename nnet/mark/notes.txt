@@ -7,16 +7,16 @@ read until May 9th: difficult cls: https://www.kaggle.com/c/otto-group-product-c
 long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
 
 
-#todo: BatchNorm and PReLU
+#todo: use other optimization results to compare promising networks
+#todo: use best submit file to get confident samples, class-balance them and add to train
 #todo: predictions from several nets into one
-#todo: combine more variables in the features (most are just the original variable now)
 
 That's a single network with dropout. CV is 0.445 and LB is 0.448. I'll be happy to post the code afterwards, but currently its nothing special, just parameter tuning so far.
 My problem is that I was able to get 0.43702 with nolearn/lasagne - https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/13799/what-models-may-give-score-under-0-5
 simple linear combination of NN (.46107) and XGBoost (.43941) puts me at .4259.
 Maybe make several NNs and feed the probabilities into a new NN
 The key point of my method is that I tuned NN hyper parameters for an averaging model rather than for a single model.
-
+BatchNorm and PReLU
 
 Kinda done:
 - An overfitting net can generally be made to perform better by using more training data.
