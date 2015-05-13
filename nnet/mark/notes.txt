@@ -7,6 +7,7 @@ read until May 9th: difficult cls: https://www.kaggle.com/c/otto-group-product-c
 long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
 
 
+#todo: investigate overfitting better!
 #todo: use other optimization results to compare promising networks
 #todo: use best submit file to get confident samples, class-balance them and add to train
 #todo: predictions from several nets into one

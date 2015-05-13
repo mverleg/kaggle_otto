@@ -64,7 +64,7 @@ Extra features
 To generate extra features using some defaults, use:
 
     from utils.features import chain_feature_generators
-    train_data, test_data = chain_feature_generators(train_data, true_labels, train_data, extra_features = 57, multiplicity = 3, seed = 0)
+    train_data, test_data = chain_feature_generators(train_data, true_labels, train_data, extra_features = 57, seed = 0)
 
 It finds the existing features that correlate with the difficult classes, then builds new features from them with several randomly selected operations.
 
