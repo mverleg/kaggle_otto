@@ -44,7 +44,7 @@ def scale_to_priors(probabilities, priors):
 	result = minimize(prior_mismatch, x0 = priors / probabilities.mean(0), method = 'BFGS',
 		args = (probabilities, priors), options = {'maxiter': 1000})
 	if VERBOSITY >= 1:
-		print 'scaled to priors; mismatch was {0:.4f} (0 being perfect)'.format(sqrt((result.x - 1)**2))
+		print 'scaled to priors; mismatch was {0:.4f} (0 being perfect)'.format(sqrt(sum((result.x - 1)**2)))
 	return normalize_probabilities(probabilities * result.x)
 
 
