@@ -8,9 +8,9 @@ optimize(debug = True, **{
 	'dense3_size': None,
 	'learning_rate': 0.001,
 	'dropout1_rate': 0,
-	'max_epochs': 20,
+	'max_epochs': 3,
 	'extra_feature_count': 13,
-	'pretrain': True,
+	'pretrain': False,
 })
 
 
