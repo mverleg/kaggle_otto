@@ -76,6 +76,7 @@ class GridOptimizer(object):
 				if self.use_caching:
 					try:
 						""" Try to load cache. """
+						print "Trying to load filename " + filename
 						res = load_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)))
 					except IOError as err:
 						""" No cache; yield the data (storage happens elsewhere). """
@@ -115,9 +116,10 @@ class GridOptimizer(object):
 		store_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)), *res)
 		return res
 
-	def print_top(self, topprint):
+	def print_top(self, topprint, hackreturn = False):
 		"""
 			Print the lowest logloss results.
+            hackreturn returns the top ranked features, only works if there was one input feature
 		"""
 		if not self.dims:
 			return
@@ -135,6 +137,9 @@ class GridOptimizer(object):
 			for k, j in enumerate(min_coord):
 				stdout.write('  {0:16s}'.format(unicode(self.values[k][j])))
 			stdout.write('\n')
+		if hackreturn:
+			ranks = [x[0] for x in min_coords]
+			return zip(ranks, logloss_mean[ranks])
 
 	def print_plot_results(self, topprint = 12, save_fig_basename = None):
 		"""

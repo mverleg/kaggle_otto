@@ -1,17 +1,32 @@
 
-learning_rate = 0.05 #[0.05,0.075,0.1] #default 0.1
-n_estimators = 300
-max_depth = 5 #5 works okay, 7 as well, default 5
-min_samples_split = 2 #[2,5,7] #really does not matter for [1,2,3]
-min_samples_leaf = 5 #[3,5,7] #small difference, but higher seems a little better
-min_weight_fraction_leaf = 0 #[0,0.1,0.2] #default 0
-max_features = 'sqrt' #['sqrt','log2',None]
+learning_rate = 0.075 is slightly better
+n_estimators = 300 but more is better
+max_depth = 7 seems slightly better but 5 works as well
+min_samples_split = 2  does not matter that much
+min_samples_leaf = 5 #[3,5,7] #small difference, but 5 seems a little better
+min_weight_fraction_leaf = 0 
+max_features = 'sqrt' #None also works as well, but takes about 10x longer
 verbose = 1
-calibration = False#[0,0.1]
-calibrationmethod = 'sigmoid' #['sigmoid', 'isotonic']
+calibration = False
 
-outlier_frac = False #[False, 0.03, 0.06]
-outlier_method = 'EE' #['EE', 'OCSVM']
-undersample = False #[False,True] #didn't try, because probably won't work anyway
-rescale_pred = False # [False,True] 
+outlier_frac = False 
+rescale_pred = True #makes very little difference
 sample_weight = None #[None, "inverted"]
+
+pos     loss      learning rate     rescale pred      max features      max depth 
+ 1    0.4633       0.075             True              sqrt              7               
+ 2    0.4656       0.075             False             sqrt              7               
+ 3    0.4701       0.05              True              sqrt              7               
+ 4    0.4711       0.05              True              None              7               
+ 5    0.4714       0.05              False             sqrt              7               
+ 6    0.4734       0.05              False             None              7               
+ 7    0.4783       0.075             True              None              5               
+ 8    0.4790       0.075             False             None              5               
+ 9    0.4797       0.075             True              None              7               
+10    0.4835       0.075             False             None              7               
+11    0.4894       0.075             True              sqrt              5               
+12    0.4898       0.075             False             sqrt              5               
+13    0.4947       0.05              True              None              5  
+
+
+
