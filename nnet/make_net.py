@@ -108,7 +108,7 @@ def make_net(
 		dense3_nonlinearity = dense2_nonlinearity
 	if dense3_init is None:
 		dense3_init = dense2_init
-	if dropout2_rate is None:
+	if dropout2_rate is None and dense3_size:
 		dropout2_rate = dropout1_rate
 
 	"""

@@ -18,7 +18,7 @@ DIFFICULT_CLASSES_MIX = {
 
 
 def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFICULT_CLASSES_MIX, extra_features = 57,
-		multiplicity = 3, operation_probs = (0.3, 0.3, 0.2, 0.2), seed = 0):
+		multiplicity = None, operation_probs = (0.3, 0.3, 0.2, 0.2), seed = 0):
 	"""
 		Apply several feature generators for different pairs of difficult classes.
 
@@ -29,6 +29,8 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 	"""
 	if not extra_features:
 		return train_data, test_data
+	if multiplicity is None:
+		multiplicity = min(extra_features // 10, 3)
 	assert abs(sum(classes.values()) - 1) < 1e-6,  'Class contributions should be normalized.'
 	if VERBOSITY >= 1:
 		print 'creating {0:d} extra features for {1:d} groups of classes'.format(extra_features, len(classes))
@@ -39,7 +41,7 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 		class_counts[key] += 1
 	for offset, (difficult, contribution) in enumerate(classes.items()):
 		gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = difficult,
-			extra_features = int(round(extra_features * contribution)), seed = offset)
+			extra_features = int(round(extra_features * contribution)), multiplicity = multiplicity, seed = offset)
 		train_data, test_data = gen.add_features_tt(train_data, test_data)
 	return train_data, test_data
 
@@ -61,7 +63,7 @@ class PositiveSparseFeatureGenerator(object):
 			-     max(a - b, 0)
 			-     max(b - a, 0)
 		"""
-		assert extra_features // multiplicity >= 2, 'Need extra_features / multiplicity >= 2 or there will be not enough source features.'
+		assert extra_features // multiplicity >= 2, 'Need extra_features / multiplicity >= 2 or there will be not enough source features (for {0:d} / {1:d}).'.format(extra_features, multiplicity)
 		self.extra_features = extra_features
 		self.operation_cumprobs = cumsum(normalized_sum(operation_probs))
 		self.seed = SEED + seed
