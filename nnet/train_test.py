@@ -69,7 +69,7 @@ def make_pretrain(pretrain_path, data, labels, minimum_train_loss = 0.7, **param
 	for key, val in pretrain_params.items():
 		if is_nonstr_iterable(val):
 			pretrain_params[key] = val[0]
-	net, train, duplicate = train_NN(data, labels, zeros((0, data.shape[1])), **pretrain_params)
+	net, train, duplicate = train_NN(data, labels, data[0:1, :], **pretrain_params)
 	train_err = calc_logloss(net.predict_proba(train), labels)
 	assert train_err < minimum_train_loss, 'Pre-training did not converge ({0:.4f} >= {1:.4f})'.format(train_err, minimum_train_loss)
 	save_knowledge(net, pretrain_path)

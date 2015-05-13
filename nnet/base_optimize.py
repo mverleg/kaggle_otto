@@ -1,12 +1,13 @@
 
 from copy import copy
+from numpy import vstack, hstack
 from nnet.train_test import train_test_NN, make_pretrain
 from os.path import basename, splitext, join
 from sys import modules
 from settings import PRETRAIN_DIR
 from utils.loading import get_training_data
 from validation.crossvalidate import SampleCrossValidator
-from validation.optimize import GridOptimizer
+from validation.optimize import GridOptimizer, is_nonstr_iterable
 from validation.optimize_parallel import ParallelGridOptimizer
 
 
@@ -64,9 +65,12 @@ def optimize(name = name_from_file(), rounds = 1, debug = False, **special_param
 	"""
 		Pre-training.
 	"""
+	if params['pretrain']:
+		layer_sizes = [params['extra_feature_count'] or 0, params['dense1_size'] or 0, params['dense2_size'] or 0, params['dense2_size'] or 0, params['dropout1_rate'] or 0, params['dropout2_rate'] or 0]
+		assert all(is_nonstr_iterable(nr) for nr in layer_sizes), 'Pretraining is not available when there are different network layouts (e.g. different numbers of neurons or features).'
 	if params['pretrain'] is True:
-		params['pretrain'] = join(PRETRAIN_DIR, 'pt{0:s}.net.npz'.format('x'.join(str(nr) for nr in [params['extra_feature_count']
-			+ 93, params['dense1_size'], params['dense2_size'], params['dense2_size']] if nr is not None)))
+		params['pretrain'] = join(PRETRAIN_DIR, 'pt{0:s}.net.npz'.format('x'.join(str(nr) for nr in layer_sizes if nr is not None)))
+	if params['pretrain']:
 		make_pretrain(params['pretrain'], train_data, true_labels, **params)
 
 	"""
