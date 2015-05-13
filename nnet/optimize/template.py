@@ -2,7 +2,7 @@
 from nnet.base_optimize import optimize_NN
 
 
-optimize_NN(debug = True, **{
+optimize_NN(debug = False, **{
 	'dense1_size': 128,
 	'dense2_size': None,
 	'dense3_size': None,

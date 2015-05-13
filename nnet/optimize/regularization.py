@@ -1,6 +1,7 @@
 
 from nnet.base_optimize import optimize_NN
 
+# previously called 'big'
 
 optimize_NN(debug = False, **{
 	'dense1_size': 512,

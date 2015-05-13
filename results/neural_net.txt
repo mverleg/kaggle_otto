@@ -1,0 +1,25 @@
+
+pos     loss      normalize log
+ 1    0.6267       True
+ 2    0.7395       False
+
+pos     loss      use calibration    rescale priors
+ 1    0.6238       False             True
+ 2    0.6304       False             False
+ 3    0.7346       True              True
+ 4    0.7375       True              False
+
+pos     loss      outlier method    outlier frac
+ 1    0.6110       EE                0
+ 2    0.6112       OCSVM             0
+ 3    0.6254       EE                0.02
+ 4    0.6445       OCSVM             0.02
+ 5    0.6687       EE                0.12
+ 6    0.6869       OCSVM             0.12
+ 7    0.7231       OCSVM             0.2
+ 8    0.7715       EE                0.2
+ 9    0.9159       OCSVM             0.5
+10    2.7451       EE                0.5
+
+
+
