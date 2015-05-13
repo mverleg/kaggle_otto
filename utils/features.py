@@ -6,7 +6,7 @@
 from random import Random
 from matplotlib.pyplot import subplots, show
 from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack, isnan, any, sqrt
-from settings import NCLASSES, SEED, VERBOSITY
+from settings import NCLASSES, SEED, VERBOSITY, RAW_NFEATS
 from utils.loading import get_training_data
 from utils.normalize import normalized_sum
 
@@ -44,13 +44,20 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 		gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = difficult,
 			extra_features = int(round(extra_features * contribution)), multiplicity = multiplicity, seed = offset + 100 * seed)
 		train_data, test_data = gen.add_features_tt(train_data, test_data)
+	fig, (ax1, ax2) = subplots(2)  # tmp
+	im = ax1.imshow(train_data[:100, :])
+	print '>>>>>>>', train_data.mean(0)[93:].shape
+	print 'NaN?', any(isnan(train_data))
+	print train_data.max(0)[93:]
+	fig.colorbar(im, ax = ax1)
+	ax2.bar(range(train_data.shape[1]), train_data.mean(0))
 	return train_data, test_data
 
 
 class PositiveSparseFeatureGenerator(object):
 
 	def __init__(self, data, labels, difficult_classes = (2, 3), extra_features = 57, multiplicity = 3,
-			operation_probs = (0.3, 0.3, 0.4), seed = 0):
+			operation_probs = (0.3, 0.3, 0.4), only_upto = RAW_NFEATS, seed = 0):
 		"""
 			Feature generator to create positive features from positive, sparse data.
 
@@ -67,7 +74,7 @@ class PositiveSparseFeatureGenerator(object):
 		self.extra_features = extra_features
 		self.operation_cumprobs = cumsum(normalized_sum(operation_probs))
 		self.seed = SEED + seed
-		self.sources = self.features_for_difficult_classes(data, labels,
+		self.sources = self.features_for_difficult_classes(data[:, :only_upto], labels,
 			extra_feature_count = extra_features // multiplicity, difficult_classes = difficult_classes)
 
 	def class_feature_count(self, train, labels):
@@ -145,6 +152,7 @@ class PositiveSparseFeatureGenerator(object):
 			seed = self.random.random()
 			feat = self.poly_feature([data[:, index] for index in indices], seed)
 			features.append(feat)
+			assert feat.max() > 0, 'Feature #{0:d} seems to be all zeros, which should not happen (it also causes problems with some classifiers).'.format(k)
 		return vstack(features).T
 
 	def add_features(self, data):

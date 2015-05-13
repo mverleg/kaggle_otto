@@ -15,6 +15,7 @@ SEED = 4242
 
 	NFEATS was removed because there are extra features now, making this not a constant.
 """
+RAW_NFEATS = 93
 TRAINSIZE = 61878
 TESTSIZE = 144368
 NCLASSES = 9

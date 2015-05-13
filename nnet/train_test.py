@@ -11,7 +11,6 @@ from utils.postprocess import scale_to_priors
 from numpy import bincount, float64
 from validation.optimize import is_nonstr_iterable
 from validation.score import calc_logloss
-from numpy import zeros
 
 
 def train_NN(train, labels, test, outlier_frac = 0, outlier_method = 'OCSVM', use_calibration = False, normalize_log = True,

@@ -159,7 +159,7 @@ def make_net(
 		StopNaN(),
 	]
 	if auto_stopping:
-		snapshot_name = params_name(params, prefix = name)[0]
+		snapshot_name = 'nn_' + params_name(params, prefix = name)[0]
 		handlers += [
 			SnapshotSaver(every = 100, base_name = snapshot_name),
 			StopWhenOverfitting(loss_fraction = 0.8, base_name = snapshot_name),

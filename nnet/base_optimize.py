@@ -45,7 +45,7 @@ DEFAULT_PARAMS = {
 }
 
 
-def optimize(name = name_from_file(), rounds = 1, debug = False, **special_params):
+def optimize_NN(name = name_from_file(), rounds = 1, debug = False, use_caching = True, **special_params):
 	"""
 		Some default code for optimization, adding default parameters and debug, and using mostly other classes to do the rest of the work.
 	"""
@@ -78,12 +78,12 @@ def optimize(name = name_from_file(), rounds = 1, debug = False, **special_param
 	"""
 	validator = SampleCrossValidator(train_data, true_labels, rounds = rounds, test_frac = 0.2, use_data_frac = 1)
 	if debug:
-		optimizer = GridOptimizer(validator, **params)
+		optimizer = GridOptimizer(validator, use_caching = use_caching, **params)
 		for subparams, train, labels, test in optimizer.yield_batches():
 			optimizer.register_results(train_test_NN(train, labels, test, **subparams))
 		optimizer.print_plot_results()
 	else:
-		ParallelGridOptimizer(train_test_func = train_test_NN, validator = validator, use_caching = False, **params
+		ParallelGridOptimizer(train_test_func = train_test_NN, validator = validator, use_caching = use_caching, **params
 			).readygo(save_fig_basename = name, log_name = name + '.log', only_show_top = True)
 
 

@@ -1,8 +1,8 @@
 
-from nnet.base_optimize import optimize
+from nnet.base_optimize import optimize_NN
 
 
-optimize(debug = True, **{
+optimize_NN(debug = True, **{
 	'dense1_size': 512,
 	'dense2_size': 512,
 	'dense3_size': 256,

@@ -12,8 +12,7 @@
 from tempfile import gettempdir
 from numpy import uint16, load, save, empty
 from os.path import join
-from settings import VERBOSITY, TRAIN_DATA_PATH, TEST_DATA_PATH, TRAINSIZE, TESTSIZE
-NFEATS = 93
+from settings import VERBOSITY, TRAIN_DATA_PATH, TEST_DATA_PATH, TRAINSIZE, TESTSIZE, RAW_NFEATS
 
 
 def load_training_data(filepath):
@@ -30,7 +29,7 @@ def load_training_data(filepath):
 		cells = [line.split(',') for line in fh.read().splitlines()]
 	features = cells[0][1:-1]
 	classes = empty((TRAINSIZE,), dtype = uint16)
-	data = empty((TRAINSIZE, NFEATS), dtype = uint16)
+	data = empty((TRAINSIZE, RAW_NFEATS), dtype = uint16)
 	for k, row in enumerate(cells[1:]):
 		classes[k] = row[-1].split('_')[-1]
 		data[k, :] = row[1:-1]
@@ -46,7 +45,7 @@ def load_testing_data(filepath):
 	with open(filepath, 'r') as fh:
 		cells = [line.split(',') for line in fh.read().splitlines()]
 	features = cells[0][1:]
-	data = empty((TESTSIZE, NFEATS), dtype = uint16)
+	data = empty((TESTSIZE, RAW_NFEATS), dtype = uint16)
 	for k, row in enumerate(cells[1:]):
 		data[k, :] = row[1:]
 	return data, features
