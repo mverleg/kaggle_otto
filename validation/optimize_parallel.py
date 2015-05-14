@@ -92,7 +92,7 @@ class ParallelGridOptimizer(GridOptimizer):
 			prefix = self.prefix,
 			log_name = log_name,
 		)
-		pool = Pool(processes = self.process_count)
+		pool = Pool(processes = min(self.process_count, len(all_params)))
 		job_results = pool.map(func, todo_jobs)
 		""" Convert probabilities to scores and store them. """
 		for (index, params, round), result in zip(todo_jobs, job_results):

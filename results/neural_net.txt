@@ -21,16 +21,15 @@ pos     loss      outlier method    outlier frac
  9    0.9289       OCSVM             0.5
 10    1.3811       EE                0.5
 
-FOR 1 ROUND, NOW CALCULATING 3 ROUNDS:
-pos     loss      ra feature count
- 1    0.5847       287
- 2    0.5863       217
- 3    0.5902       157
- 4    0.5947       7
- 5    0.5977       107
- 6    0.5979       67
- 7    0.5997       37
- 8    0.6014       17
+ pos     loss      ra feature count
+  1    0.5682       287
+  2    0.5691       217
+  3    0.5745       157
+  4    0.5789       67
+  5    0.5793       107
+  6    0.5821       17
+  7    0.5823       7
+  8    0.5856       37
 
 pos     loss      nonlinearity
  1    0.5835       rectify
@@ -48,9 +47,18 @@ pos     loss      dense1 init
  5    0.5835       he_uniform
  6    0.6103       sparse
 
+with scaling over time
 pos     loss      learning rate
  1    0.5461       0.01
  2    0.5508       0.003
  3    0.5855       0.001
  4    0.6329       0.0003
  5    0.6836       0.0001
+
+with scaling over time and initial learning rate adapted accordingly
+pos     loss      momentum
+ 1    0.5811       0.99
+ 2    0.5815       0.9
+ 3    0.5820       0.999
+ 4    0.5863       0.1
+
