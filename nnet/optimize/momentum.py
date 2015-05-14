@@ -8,7 +8,7 @@ def train_test_NN_scale_lr(train, labels, test, learning_rate = None, momentum =
 	return train_test_NN(train, labels, test, learning_rate = learning_rate * (1 - momentum), momentum = momentum, **kwargs)
 
 
-optimize_NN(debug = True, train_test_func = train_test_NN_scale_lr, **{
+optimize_NN(debug = False, train_test_func = train_test_NN_scale_lr, **{
 	'dense1_size': 256,
 	'dense2_size': 128,
 	'learning_rate': 0.01,
