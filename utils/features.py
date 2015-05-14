@@ -43,7 +43,10 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 	for offset, (difficult, contribution) in enumerate(classes.items()):
 		gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = difficult,
 			extra_features = int(round(extra_features * contribution)), multiplicity = multiplicity, seed = offset + 100 * seed)
-		train_data, test_data = gen.add_features_tt(train_data, test_data)
+		if test_data:
+			train_data, test_data = gen.add_features_tt(train_data, test_data)
+		else:
+			train_data, gen.add_features(train_data)
 	return train_data, test_data
 
 
@@ -59,7 +62,7 @@ class PositiveSparseFeatureGenerator(object):
 			:param multiplicity: The N new features are based on the N // multiplicity best old ones.
 			:param operations: Probabilities for each operation:
 
-			and   (a + b + c+ ...) / 2
+			and   (a + b + c + ...) / N
 			xor   a or b iff one of them is set (anything after b ignored)
 			+-    max(a - b + c - d + ..., 0)
 		"""
@@ -145,7 +148,7 @@ class PositiveSparseFeatureGenerator(object):
 			seed = self.random.random()
 			feat = self.poly_feature([data[:, index] for index in indices], seed)
 			features.append(feat)
-			assert feat.max() > 0, 'Feature #{0:d} seems to be all zeros, which should not happen (it also causes problems with some classifiers).'.format(k)
+			assert feat.max() > 0, 'Extra feature #{0:d} seems to be all zeros among {3:d} samples, which should not happen (it also causes problems with some classifiers). Feature operation {1:d} based on {2:s}'.format(k, self.get_operation(seed), str(indices), data.shape[0])
 		return vstack(features).T
 
 	def add_features(self, data):
