@@ -4,17 +4,22 @@
 """
 
 from matplotlib.pyplot import subplots, show
-from numpy import empty, float64, uint16, bincount, array, where, concatenate
+from numpy import empty, float64, uint16, bincount, array, where, concatenate, vstack, hstack
 from settings import TOP_PREDICTIONS, TESTSIZE, NCLASSES
 from utils.loading import get_training_data, get_testing_data
 
 
 class ConfidentTestSelector(object):
+	"""
+		Given high-scoring predictions, get a set of confident predictions from test data, rebalance them to keep prior probabilities, then add them to training data.
+	"""
 
 	def __init__(self, predictions_path, prior_sizes, test_data, confidence = 0.9):
 		"""
-
 			:param predictions_path: path to the predictions file to use.
+			:param: prior sizes: sizes of the classes in train/true data.
+			:param test_data: simply the test data which predictions are based on.
+			:param confidence: how high should the highest probability be?
 			:return:
 		"""
 		self.test_data = test_data
@@ -59,10 +64,13 @@ class ConfidentTestSelector(object):
 		limits = (min(frac) * self.prior_sizes).astype(uint16)
 		select = []
 		for cls in range(1, NCLASSES + 1):
-			#print cls, len(where(labels == cls)[0]), limits[cls - 1], len(where(labels == cls)[0][:limits[cls - 1]])
 			select.append(where(labels == cls)[0][:limits[cls - 1]])
 		filter = concatenate(select)
 		return data[filter, :], labels[filter]
+
+	def add_to_train(self, trian_data, train_labels):
+		extra_data, extra_labels = selector.make_balanced_data()
+		return vstack((trian_data, extra_data)), concatenate((train_labels, extra_labels))
 
 
 def load_predictions(filepath):
@@ -82,7 +90,8 @@ if __name__ == '__main__':
 	prior_sizes = bincount(true_labels)[1:]
 	selector = ConfidentTestSelector(TOP_PREDICTIONS, prior_sizes, get_testing_data()[0], confidence = 0.9)
 	extra_data, extra_labels = selector.make_balanced_data()
-	print extra_data.shape, extra_labels.shape
+	bigger_data, bigger_labels = selector.add_to_train(train_data, true_labels)
+	print 'increase: {0:.2f}%'.format(float(len(bigger_labels)) / len(true_labels) * 100 - 100)
 	selector.plot()
 	show()
 

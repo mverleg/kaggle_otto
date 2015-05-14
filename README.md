@@ -58,6 +58,16 @@ Furthermore it is worth noting:
 
     python demo/test_crossvalidate.py -v
 
+Extra train data
+-------------------------------
+
+To convert the confident part of test data to additional training data, you need to have a confident prediction file. You can download our best one from Kaggle, for example. `TOP_PREDICTIONS` in settings.py should point to it (so best store it in `results/submissions/topscore.csv`). Then use:
+
+    selector = ConfidentTestSelector(TOP_PREDICTIONS, prior_sizes, get_testing_data()[0], confidence = 0.9)
+    bigger_data, bigger_labels = selector.add_to_train(train_data, true_labels)
+
+Find a good confidence value (but extra size goes down quickly). Best do this before adding features.
+
 Extra features
 -------------------------------
 
