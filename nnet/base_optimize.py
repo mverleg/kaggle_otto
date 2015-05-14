@@ -20,8 +20,8 @@ def name_from_file(pth = getattr(modules['__main__'], '__file__', 'optimize.defa
 
 DEFAULT_PARAMS = {
 	'name': name_from_file(),
-	'dense1_nonlinearity': 'leaky20',   # tanh, sigmoid, rectify, leaky2, leaky20, softmax
-	'dense1_init': 'glorot_uniform',    # orthogonal, sparse, glorot_normal, glorot_uniform, he_normal, he_uniform
+	'dense1_nonlinearity': 'rectify',   # tanh, sigmoid, rectify, leaky2, leaky20, softmax
+	'dense1_init': 'glorot_normal',     # orthogonal, sparse, glorot_normal, glorot_uniform, he_normal, he_uniform
 	'dense1_size': 128,                 # hidden neurons in layer (30~1000)
 	'dense2_size': None,
 	'dense3_size': None,
@@ -35,7 +35,7 @@ DEFAULT_PARAMS = {
 	'max_epochs': 1000,                 # it terminates when overfitting or increasing, so just leave high
 	'auto_stopping': True,              # stop training automatically if it seems to be failing
 	'pretrain': None,                   # use pretraining? (True/False / filename / None[= when possible])
-	'outlier_method': 'OCSVM',          # method for outlier removal ['OCSVM', 'EE']
+	'outlier_method': 'EE',             # method for outlier removal ['OCSVM', 'EE']
 	'outlier_frac': None,               # which fraction of each class to remove as outliers
 	'normalize_log': True,              # use logarithm for normalization
 	'use_calibration': False,           # use calibration of probabilities
