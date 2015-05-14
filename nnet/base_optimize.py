@@ -42,6 +42,7 @@ DEFAULT_PARAMS = {
 	'use_rescale_priors': True,         # rescale predictions to match priors
 	'extra_feature_count': 0,           # how many new features to generate
 	'extra_feature_seed': 0,            # a seed for the feature generation
+	'save_snapshots_stepsize': None,    # save snapshot of the network every X epochs
 }
 
 

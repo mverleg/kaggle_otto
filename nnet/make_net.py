@@ -69,6 +69,7 @@ def make_net(
 		output_nonlinearity = 'softmax',
 		auto_stopping = True,
 		pretrain = False,
+		save_snapshots_stepsize = None,
 		verbosity = VERBOSITY >= 2,
 	):
 	"""
@@ -158,10 +159,13 @@ def make_net(
 		LogarithmicVariable('update_momentum', start = momentum, stop = 1 - ((1 - momentum) / float(momentum_scaling))),
 		StopNaN(),
 	]
-	if auto_stopping:
-		snapshot_name = 'nn_' + params_name(params, prefix = name)[0]
+	snapshot_name = 'nn_' + params_name(params, prefix = name)[0]
+	if save_snapshots_stepsize:
 		handlers += [
-			SnapshotSaver(every = 100, base_name = snapshot_name),
+			SnapshotSaver(every = save_snapshots_stepsize, base_name = snapshot_name),
+		]
+	if auto_stopping:
+		handlers += [
 			StopWhenOverfitting(loss_fraction = 0.8, base_name = snapshot_name),
 			StopAfterMinimum(patience = 70, base_name = name),
 		]
