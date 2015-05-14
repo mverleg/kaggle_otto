@@ -1,0 +1,8 @@
+loaded train data from cache in "/tmp"
+Pre-training is not available due to different network layouts
+grid optimize: 2 comparisons x 1 rounds = 2 iterations
+cache: auto_stopping = True, dense1_init = glorot_uniform, dense1_nonlinearity = leaky20, dense1_size = 128, dense2_size = None, dense3_size = None, dropout1_rate = 0, dropout2_rate = None, extra_feature_count = 0, extra_feature_seed = 0, learning_rate = 0.001, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.9, momentum_scaling = 100, name = normalize, normalize_log = False, outlier_frac = None, outlier_method = OCSVM, pretrain = None, use_calibration = False, use_rescale_priors = True, weight_decay = 0, round #1/1
+cache: auto_stopping = True, dense1_init = glorot_uniform, dense1_nonlinearity = leaky20, dense1_size = 128, dense2_size = None, dense3_size = None, dropout1_rate = 0, dropout2_rate = None, extra_feature_count = 0, extra_feature_seed = 0, learning_rate = 0.001, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.9, momentum_scaling = 100, name = normalize, normalize_log = True, outlier_frac = None, outlier_method = OCSVM, pretrain = None, use_calibration = False, use_rescale_priors = True, weight_decay = 0, round #1/1
+pos     loss      normalize log   
+ 1    0.6267       True            
+ 2    0.7395       False           

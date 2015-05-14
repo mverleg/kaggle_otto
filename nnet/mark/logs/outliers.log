@@ -1,0 +1,29 @@
+loaded train data from cache in "/tmp"
+Pre-training is not available due to different network layouts
+grid optimize: 2 x 5 comparisons x 1 rounds = 10 iterations
+cache: auto_stopping = True, dense1_init = glorot_uniform, dense1_nonlinearity = leaky20, dense1_size = 128, dense2_size = None, dense3_size = None, dropout1_rate = 0, dropout2_rate = None, extra_feature_count = 0, extra_feature_seed = 0, learning_rate = 0.001, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.9, momentum_scaling = 100, name = outliers, normalize_log = True, outlier_frac = 0, outlier_method = EE, pretrain = None, use_calibration = False, use_rescale_priors = True, weight_decay = 0, round #1/1
+cache: auto_stopping = True, dense1_init = glorot_uniform, dense1_nonlinearity = leaky20, dense1_size = 128, dense2_size = None, dense3_size = None, dropout1_rate = 0, dropout2_rate = None, extra_feature_count = 0, extra_feature_seed = 0, learning_rate = 0.001, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.9, momentum_scaling = 100, name = outliers, normalize_log = True, outlier_frac = 0.12, outlier_method = EE, pretrain = None, use_calibration = False, use_rescale_priors = True, weight_decay = 0, round #1/1
+cache: auto_stopping = True, dense1_init = glorot_uniform, dense1_nonlinearity = leaky20, dense1_size = 128, dense2_size = None, dense3_size = None, dropout1_rate = 0, dropout2_rate = None, extra_feature_count = 0, extra_feature_seed = 0, learning_rate = 0.001, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.9, momentum_scaling = 100, name = outliers, normalize_log = True, outlier_frac = 0.2, outlier_method = EE, pretrain = None, use_calibration = False, use_rescale_priors = True, weight_decay = 0, round #1/1
+cache: auto_stopping = True, dense1_init = glorot_uniform, dense1_nonlinearity = leaky20, dense1_size = 128, dense2_size = None, dense3_size = None, dropout1_rate = 0, dropout2_rate = None, extra_feature_count = 0, extra_feature_seed = 0, learning_rate = 0.001, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.9, momentum_scaling = 100, name = outliers, normalize_log = True, outlier_frac = 0.2, outlier_method = EE, pretrain = None, use_calibration = False, use_rescale_priors = True, weight_decay = 0, round #1/1
+cache: auto_stopping = True, dense1_init = glorot_uniform, dense1_nonlinearity = leaky20, dense1_size = 128, dense2_size = None, dense3_size = None, dropout1_rate = 0, dropout2_rate = None, extra_feature_count = 0, extra_feature_seed = 0, learning_rate = 0.001, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.9, momentum_scaling = 100, name = outliers, normalize_log = True, outlier_frac = 0.5, outlier_method = EE, pretrain = None, use_calibration = False, use_rescale_priors = True, weight_decay = 0, round #1/1
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+pos     loss      outlier method    outlier frac    
+ 1    0.6241       EE                0               
+ 2    0.6334       OCSVM             0               
+ 3    0.6801       EE                0.12            
+ 4    0.7060       OCSVM             0.12            
+ 5    0.7444       OCSVM             0.2             
+ 6    0.7445       OCSVM             0.2             
+ 7    0.8279       EE                0.2             
+ 8    0.8279       EE                0.2             
+ 9    0.9289       OCSVM             0.5             
+10    1.3811       EE                0.5             

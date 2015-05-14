@@ -1,0 +1,115 @@
+nohup: ignoring input
+loaded train data from cache in "/tmp"
+grid optimize: 6 x 2 comparisons x 3 rounds = 36 iterations
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27097' (I am process '27028')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27097' (I am process '27044')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27097' (I am process '27100')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27097' (I am process '27108')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27097' (I am process '27015')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27097' (I am process '27105')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27097' (I am process '27054')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27097' (I am process '27049')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27097' (I am process '27072')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27097' (I am process '27023')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27097' (I am process '27041')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27055' (I am process '27122')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27083' (I am process '27127')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27117' (I am process '27031')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '27044')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '27054')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27041' (I am process '27077')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27100' (I am process '27072')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27100' (I am process '27105')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '27132')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+Traceback (most recent call last):
+  File "nnet/mark/opt2/huge.py", line 44, in <module>
+    ).readygo(topprint = 20, save_fig_basename = name, log_name = name + '.log', only_show_top = True)
+  File "/home/mverleg/mlip2/validation/optimize_parallel.py", line 96, in readygo
+    job_results = pool.map(func, todo_jobs)
+  File "/usr/lib/python2.7/multiprocessing/pool.py", line 227, in map
+    return self.map_async(func, iterable, chunksize).get()
+  File "/usr/lib/python2.7/multiprocessing/pool.py", line 528, in get
+    raise self._value
+ValueError: Unknown format code 'f' for object of type 'str'

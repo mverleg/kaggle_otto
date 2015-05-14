@@ -1,0 +1,1626 @@
+nohup: ignoring input
+loaded train data from cache in "/tmp"
+Pre-training is not available due to different network layouts
+grid optimize: 6 comparisons x 3 rounds = 18 iterations
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): Deleting (broken cache directory [EOF]): /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/hoERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1045, in module_from_key
+    module = self._get_from_key(key)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/hoERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh/key.pkl because the corresponding module is gone from the file system.
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh/key.pkl because the corresponding module is gone from the file system.
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 954, in _get_from_hash
+    module = self._get_from_key(None, key_data)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 949, in _get_from_key
+    return self._get_module(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 632, in _get_module
+    self.module_from_name[name] = dlimport(name)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 293, in dlimport
+    rval = __import__(module_name, {}, {}, [module_name])
+ImportError: No module named tmpdHb8Qh.326ab08c0b6ceea0ab4d9aebb227e2ad
+
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46766')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46784')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46781')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46774')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46736')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46808')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46756')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46754')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46795')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46729')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46778')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46730')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46790')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46765' (I am process '46771')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46777' (I am process '46784')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46777' (I am process '46781')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46777' (I am process '46736')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46766' (I am process '46778')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46766' (I am process '46795')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46790' (I am process '46808')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46790' (I am process '46771')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '46790' (I am process '46736')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdHb8Qh/key.pkl because the corresponding module is gone from the file system.
+pos     loss      se1 nonlinearity
+ 1    0.5835       rectify         
+ 2    0.5838       leaky2          
+ 3    0.5857       leaky20         
+ 4    0.5872       tanh            
+ 5    0.6989       sigmoid         
+ 6    1.9496       softmax         

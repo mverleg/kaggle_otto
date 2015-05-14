@@ -1,0 +1,13 @@
+loaded train data from cache in "/tmp"
+Pre-training is not available due to different network layouts
+grid optimize: 2 x 2 comparisons x 1 rounds = 4 iterations
+cache: auto_stopping = True, dense1_init = glorot_uniform, dense1_nonlinearity = leaky20, dense1_size = 128, dense2_size = None, dense3_size = None, dropout1_rate = 0, dropout2_rate = None, extra_feature_count = 0, extra_feature_seed = 0, learning_rate = 0.001, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.9, momentum_scaling = 100, name = rescaling, normalize_log = True, outlier_frac = None, outlier_method = OCSVM, pretrain = None, use_calibration = False, use_rescale_priors = False, weight_decay = 0, round #1/1
+cache: auto_stopping = True, dense1_init = glorot_uniform, dense1_nonlinearity = leaky20, dense1_size = 128, dense2_size = None, dense3_size = None, dropout1_rate = 0, dropout2_rate = None, extra_feature_count = 0, extra_feature_seed = 0, learning_rate = 0.001, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.9, momentum_scaling = 100, name = rescaling, normalize_log = True, outlier_frac = None, outlier_method = OCSVM, pretrain = None, use_calibration = False, use_rescale_priors = True, weight_decay = 0, round #1/1
+cache: auto_stopping = True, dense1_init = glorot_uniform, dense1_nonlinearity = leaky20, dense1_size = 128, dense2_size = None, dense3_size = None, dropout1_rate = 0, dropout2_rate = None, extra_feature_count = 0, extra_feature_seed = 0, learning_rate = 0.001, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.9, momentum_scaling = 100, name = rescaling, normalize_log = True, outlier_frac = None, outlier_method = OCSVM, pretrain = None, use_calibration = True, use_rescale_priors = False, weight_decay = 0, round #1/1
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+pos     loss      use calibration   e rescale priors
+ 1    0.6238       False             True            
+ 2    0.6304       False             False           
+ 3    0.7346       True              True            
+ 4    0.7375       True              False           
