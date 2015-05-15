@@ -66,6 +66,7 @@ def make_pretrain(pretrain_path, data, labels, minimum_train_loss = 0.7, **param
 		'momentum_scaling': 10,
 		'dropout1_rate': 0.5 if params['dense2_size'] else 0,
 		'dropout2_rate': 0.5 if params['dense3_size'] else 0,
+		'weight_decay': params['weight_decay'],
 		'max_epochs': 1000,
 		'extra_feature_count': params['extra_feature_count'],
 	}
