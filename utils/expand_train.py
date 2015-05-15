@@ -16,6 +16,7 @@ def expand_from_test(train_data, labels, test_data, confidence = 0.9, prediction
 		print 'adding confident test samples to train data'
 	selector = ConfidentTestSelector(predictions_path = predictions_path, prior_sizes = bincount(labels)[1:],
 		test_data = test_data, confidence = confidence)
+	d, l = selector.add_to_train(train_data, labels)
 	return selector.add_to_train(train_data, labels)
 
 
@@ -81,7 +82,7 @@ class ConfidentTestSelector(object):
 
 	def add_to_train(self, trian_data, train_labels):
 		extra_data, extra_labels = self.make_balanced_data()
-		return vstack((trian_data, extra_data)), concatenate((train_labels, extra_labels))
+		return vstack((trian_data, extra_data)), concatenate((train_labels, extra_labels)).astype(train_labels.dtype)
 
 
 def load_predictions(filepath):
