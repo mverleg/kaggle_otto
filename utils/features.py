@@ -43,7 +43,7 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 	for offset, (difficult, contribution) in enumerate(classes.items()):
 		gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = difficult,
 			extra_features = int(round(extra_features * contribution)), multiplicity = multiplicity, seed = offset + 100 * seed)
-		if test_data:
+		if test_data is not None:
 			train_data, test_data = gen.add_features_tt(train_data, test_data)
 		else:
 			train_data, gen.add_features(train_data)

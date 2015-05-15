@@ -62,3 +62,13 @@ pos     loss      momentum
  3    0.5820       0.999
  4    0.5863       0.1
 
+FOR 1 ROUND SMALL NET, NOW RECALCULATING FOR BIG
+pos     loss   test_data_confidence
+ 1    0.5194       None
+ 2    0.5208       0.98
+ 3    0.5252       0.95
+ 4    0.5307       0.9
+ 5    0.5506       0.8
+ 6    0.5790       0.6
+
+
