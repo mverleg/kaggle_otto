@@ -1,11 +1,11 @@
 
 from copy import copy
-from numpy import vstack, hstack
 from nnet.train_test import train_test_NN, make_pretrain
 from os.path import basename, splitext, join
 from sys import modules
 from settings import PRETRAIN_DIR
-from utils.loading import get_training_data
+from utils.expand_train import expand_from_test
+from utils.loading import get_training_data, get_testing_data
 from validation.crossvalidate import SampleCrossValidator
 from validation.optimize import GridOptimizer, is_nonstr_iterable
 from validation.optimize_parallel import ParallelGridOptimizer
@@ -43,6 +43,7 @@ DEFAULT_PARAMS = {
 	'extra_feature_count': 0,           # how many new features to generate
 	'extra_feature_seed': 0,            # a seed for the feature generation
 	'save_snapshots_stepsize': None,    # save snapshot of the network every X epochs
+	'test_data_confidence': None,       # how confident test samples should be to be added to train ([0.5 - 1.0] or None)
 }
 
 
@@ -51,17 +52,17 @@ def optimize_NN(name = name_from_file(), rounds = 1, debug = False, use_caching 
 		Some default code for optimization, adding default parameters and debug, and using mostly other classes to do the rest of the work.
 	"""
 	"""
-		Load data.
-	"""
-	train_data, true_labels, features = get_training_data()
-
-	"""
 		Default parameters.
 	"""
 	for key in special_params.keys():
 		assert key in DEFAULT_PARAMS.keys(), '"{0:s}" is not a known parameter'.format(key)
 	params = copy(DEFAULT_PARAMS)
 	params.update(special_params)
+
+	"""
+		Load data.
+	"""
+	train_data, true_labels, features = get_training_data()
 
 	"""
 		Pre-training.

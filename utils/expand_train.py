@@ -5,8 +5,18 @@
 
 from matplotlib.pyplot import subplots, show
 from numpy import empty, float64, uint16, bincount, array, where, concatenate, vstack, hstack
-from settings import TOP_PREDICTIONS, TESTSIZE, NCLASSES
+from settings import TOP_PREDICTIONS, TESTSIZE, NCLASSES, VERBOSITY
 from utils.loading import get_training_data, get_testing_data
+
+
+def expand_from_test(train_data, labels, test_data, confidence = 0.9, predictions_path = TOP_PREDICTIONS):
+	if confidence is None:
+		return train_data, labels
+	if VERBOSITY >= 1:
+		print 'adding confident test samples to train data'
+	selector = ConfidentTestSelector(predictions_path = predictions_path, prior_sizes = bincount(labels)[1:],
+		test_data = test_data, confidence = confidence)
+	return selector.add_to_train(train_data, labels)
 
 
 class ConfidentTestSelector(object):
@@ -22,6 +32,7 @@ class ConfidentTestSelector(object):
 			:param confidence: how high should the highest probability be?
 			:return:
 		"""
+		assert 0.5 <= confidence <= 1, 'confidence should be in [0.5 - 1.0]'
 		self.test_data = test_data
 		self.predictions = load_predictions(predictions_path)
 		self.prior_sizes = prior_sizes
