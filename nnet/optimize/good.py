@@ -16,6 +16,7 @@ optimize_NN(debug = True, **{
 	'max_epochs': 2000,
 	'extra_feature_count': 163,
 	'pretrain': True,
+	#'test_data_confidence': 0.9, #todo change when results are in
 })
 
 
