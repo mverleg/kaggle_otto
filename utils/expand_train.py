@@ -80,7 +80,7 @@ class ConfidentTestSelector(object):
 		return data[filter, :], labels[filter]
 
 	def add_to_train(self, trian_data, train_labels):
-		extra_data, extra_labels = selector.make_balanced_data()
+		extra_data, extra_labels = self.make_balanced_data()
 		return vstack((trian_data, extra_data)), concatenate((train_labels, extra_labels))
 
 

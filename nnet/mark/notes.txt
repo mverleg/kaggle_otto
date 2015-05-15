@@ -8,8 +8,6 @@ long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neura
 
 
 #todo: investigate overfitting better!
-#todo: use other optimization results to compare promising networks
-#todo: use best submit file to get confident samples, class-balance them and add to train
 #todo: predictions from several nets into one
 
 That's a single network with dropout. CV is 0.445 and LB is 0.448. I'll be happy to post the code afterwards, but currently its nothing special, just parameter tuning so far.
