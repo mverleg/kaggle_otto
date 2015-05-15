@@ -5,7 +5,9 @@ from nnet.make_net import make_net
 from nnet.prepare import conormalize_data
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.cross_validation import ShuffleSplit
+from utils.expand_train import expand_from_test
 from utils.features import chain_feature_generators
+from utils.loading import get_testing_data
 from utils.outliers import filter_data
 from utils.postprocess import scale_to_priors
 from numpy import bincount, float64
@@ -14,10 +16,12 @@ from validation.score import calc_logloss
 
 
 def train_NN(train, labels, test, outlier_frac = 0, outlier_method = 'OCSVM', use_calibration = False, normalize_log = True,
-		use_rescale_priors = False, extra_feature_count = 0, extra_feature_seed = 0, **parameters):
+		use_rescale_priors = False, extra_feature_count = 0, extra_feature_seed = 0, test_data_confidence = None,
+		**parameters):
 	"""
 		Train a neural network, for internal use by other functions in this file.
 	"""
+	train, labels = expand_from_test(train, labels, get_testing_data()[0], confidence = test_data_confidence)
 	train, test = chain_feature_generators(train, labels, test, extra_features = extra_feature_count, seed = extra_feature_seed)
 	train, test = conormalize_data(train, test, use_log = normalize_log)
 	if outlier_frac:

@@ -58,6 +58,16 @@ Furthermore it is worth noting:
 
     python demo/test_crossvalidate.py -v
 
+Extra train data
+-------------------------------
+
+To convert the confident part of test data to additional training data, you need to have a prediction file. You can download our best one from Kaggle. The path to this file is given by `TOP_PREDICTIONS` (from `settings.py`), so make sure to place it there. Then use:
+
+    from utils.expand_train import expand_from_test
+    bigger_data, bigger_labels = expand_from_test(train_data, true_labels, test_data, confidence = params['test_data_confidence'])
+
+Find a good confidence value (but extra size goes down quickly). Best do this before adding features.
+
 Extra features
 -------------------------------
 

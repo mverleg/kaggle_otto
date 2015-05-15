@@ -42,6 +42,12 @@ for pth in (OPTIMIZE_RESULTS_DIR, NNET_STATE_DIR, AUTO_IMAGES_DIR, SUBMISSIONS_D
 
 
 """
+	Results.
+"""
+TOP_PREDICTIONS = join(SUBMISSIONS_DIR, 'topscore.csv')
+
+
+"""
 	Increase verbosity like -v or -vv.
 """
 parser = ArgumentParser()
