@@ -68,7 +68,7 @@ def optimize_NN(name = name_from_file(), rounds = 1, debug = False, use_caching 
 		Pre-training.
 	"""
 	if params['pretrain'] or params['pretrain'] is None:
-		layer_sizes = [params['extra_feature_count'] or 0, params['dense1_size'] or 0, params['dense2_size'] or 0, params['dense2_size'] or 0, params['dropout1_rate'] or 0, params['dropout2_rate'] or 0]
+		layer_sizes = [params['extra_feature_count'] or 0, params['dense1_size'] or 0, params['dense2_size'] or 0, params['dense3_size'] or 0, params['dropout1_rate'] or 0, params['dropout2_rate'] or 0]
 		if any(is_nonstr_iterable(nr) for nr in layer_sizes):
 			""" Different layouts, so no pre-training. """
 			if params['pretrain'] is None:
