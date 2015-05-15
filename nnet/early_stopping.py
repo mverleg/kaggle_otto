@@ -11,7 +11,7 @@ class StopWhenOverfitting(object):
 		self.base_path = join(NNET_STATE_DIR, base_name)
 
 	def __call__(self, nn, train_history):
-		if train_history[-1]['epoch'] > 10 and train_history[-1]['train_loss'] / train_history[-1]['valid_loss'] <= self.loss_fraction:
+		if train_history[-1]['epoch'] > 30 and train_history[-1]['train_loss'] / train_history[-1]['valid_loss'] <= self.loss_fraction:
 			print 'Terminating training since the network is starting to overfit too much.'
 			filepath = '{0:s}_{1:d}.net.npz'.format(self.base_path, train_history[-1]['epoch'])
 			save_knowledge(nn, filepath)
