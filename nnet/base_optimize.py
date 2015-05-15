@@ -4,8 +4,7 @@ from nnet.train_test import train_test_NN, make_pretrain
 from os.path import basename, splitext, join
 from sys import modules
 from settings import PRETRAIN_DIR
-from utils.expand_train import expand_from_test
-from utils.loading import get_training_data, get_testing_data
+from utils.loading import get_training_data
 from validation.crossvalidate import SampleCrossValidator
 from validation.optimize import GridOptimizer, is_nonstr_iterable
 from validation.optimize_parallel import ParallelGridOptimizer
