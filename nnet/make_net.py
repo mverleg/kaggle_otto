@@ -167,7 +167,7 @@ def make_net(
 	if auto_stopping:
 		handlers += [
 			StopWhenOverfitting(loss_fraction = 0.8, base_name = snapshot_name),
-			StopAfterMinimum(patience = 70, base_name = name),
+			StopAfterMinimum(patience = 40, base_name = name),
 		]
 
 	"""

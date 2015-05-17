@@ -17,7 +17,7 @@ from validation.score import calc_logloss
 
 def train_NN(train, labels, test, outlier_frac = 0, outlier_method = 'OCSVM', use_calibration = False, normalize_log = True,
 		use_rescale_priors = False, extra_feature_count = 0, extra_feature_seed = 0, test_data_confidence = None,
-		**parameters):
+		test_only = False, **parameters):
 	"""
 		Train a neural network, for internal use by other functions in this file.
 	"""
@@ -29,7 +29,8 @@ def train_NN(train, labels, test, outlier_frac = 0, outlier_method = 'OCSVM', us
 	net = make_net(NFEATS = train.shape[1], **parameters)
 	if use_calibration:
 		net = CalibratedClassifierCV(net, method = 'sigmoid', cv = ShuffleSplit(train.shape[0], n_iter = 1, test_size = 0.2))
-	net.fit(train, labels - 1)
+	if not test_only:
+		net.fit(train, labels - 1)
 	return net, train, test
 
 

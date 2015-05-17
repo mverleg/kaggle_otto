@@ -46,7 +46,8 @@ DEFAULT_PARAMS = {
 }
 
 
-def optimize_NN(name = name_from_file(), rounds = 1, debug = False, use_caching = True, train_test_func = train_test_NN, **special_params):
+def optimize_NN(name = name_from_file(), rounds = 1, debug = False, use_caching = True,
+		train_test_func = train_test_NN, test_only = False, **special_params):
 	"""
 		Some default code for optimization, adding default parameters and debug, and using mostly other classes to do the rest of the work.
 	"""
