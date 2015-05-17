@@ -122,7 +122,7 @@ class GridOptimizer(object):
 			hackreturn returns the top ranked features, only works if there was one input feature
 		"""
 		if not self.dims:
-			print 'single result:  {1:8.4f}  {1:8.4f}  {1:8.4f}  (loss/accuracy/duration)'.format(self.results[0, 1], self.results[0, 2])
+			print 'single result:  {0:8.4f}  {1:8.4f}  {2:8.4f}  (loss/accuracy/duration)'.format(self.results[0, 0], self.results[0, 1], self.results[0, 2])
 			return
 		logloss_slice = [slice(None)] * len(self.dims) + [slice(None), 0]
 		logloss_all = self.results[logloss_slice]
