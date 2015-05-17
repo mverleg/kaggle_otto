@@ -8,7 +8,7 @@ from settings import SEED, NNET_STATE_DIR
 
 def optimize_map(index):
 	random = Random(index + SEED)
-	name = 'many_debug_{1:d}'.format(name_from_file(), index)
+	name = 'many_{1:d}'.format(name_from_file(), index)
 	if isfile(join(NNET_STATE_DIR, name + '_best.net.npz')):
 		print name, 'best found'
 		pretrain = join(NNET_STATE_DIR, name + '_best.net.npz')
@@ -35,7 +35,7 @@ def optimize_map(index):
 		'pretrain': pretrain,
 		'save_snapshots_stepsize': 1500,
 	}
-	return optimize_NN(debug = True, test_only = True, verbosity = False, **params)
+	return optimize_NN(debug = True, test_only = True, **params)
 
 N = 600
 pool = Pool(processes = 1)

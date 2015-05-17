@@ -1,0 +1,13 @@
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+pretraining file not found, pretraining a network now
+Terminating training since the network is starting to overfit too much.
+(61878, 9) (61878,)
+Traceback (most recent call last):
+  File "nnet/optimize/good.py", line 18, in <module>
+    'pretrain': True,
+  File "/home/mverleg/mlip2/nnet/base_optimize.py", line 82, in optimize_NN
+    make_pretrain(params['pretrain'], train_data, true_labels, **params)
+  File "/home/mverleg/mlip2/nnet/train_test.py", line 73, in make_pretrain
+    assert train_err < minimum_train_loss, 'Pre-training did not converge ({0:.4f} >= {1:.4f})'.format(train_err, minimum_train_loss)
+AssertionError: Pre-training did not converge (6.3086 >= 0.7000)

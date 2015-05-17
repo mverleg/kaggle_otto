@@ -1,0 +1,39 @@
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+loaded train data from cache in "/tmp"
+pretraining file not found, pretraining a network now
+creating 163 extra features for 3 groups of classes
+normalizing positive data to [0, ...) with log scale
+learning rate: 0.010000 -> 0.001000
+momentum:      0.900000 -> 0.990000
+  input             	(None, 93)          	produces      93 outputs
+  dense1            	(None, 256)         	produces     256 outputs
+  dropout1          	(None, 256)         	produces     256 outputs
+  dense2            	(None, 256)         	produces     256 outputs
+  dropout2          	(None, 256)         	produces     256 outputs
+  dense3            	(None, 128)         	produces     128 outputs
+  output            	(None, 9)           	produces       9 outputs
+
+ Epoch  |  Train loss  |  Valid loss  |  Train / Val  |  Valid acc  |  Dur
+--------|--------------|--------------|---------------|-------------|-------
+     1  |  [94m  0.873843[0m  |  [32m  7.293649[0m  |     0.119809  |      8.29%  |  18.3s
+     2  |    0.971582  |  [32m  6.892903[0m  |     0.140954  |      8.29%  |  18.2s
+     3  |  [94m  0.795812[0m  |   10.155864  |     0.078360  |     10.04%  |  18.0s
+     4  |  [94m  0.585724[0m  |   11.874131  |     0.049328  |      8.30%  |  17.2s
+     5  |    0.647701  |   12.573971  |     0.051511  |      8.30%  |  17.9s
+     6  |    0.655339  |   13.070951  |     0.050137  |      8.53%  |  18.1s
+     7  |    0.589950  |   13.982791  |     0.042191  |      8.31%  |  18.2s
+     8  |    0.679096  |   13.391804  |     0.050710  |     11.01%  |  18.1s
+     9  |    0.678939  |    7.014586  |     0.096790  |     11.89%  |  18.1s
+    10  |    0.602137  |    7.208254  |     0.083534  |     10.95%  |  18.1s
+    11  |    0.646469  |    6.980700  |     0.092608  |     11.27%  |  18.1s
+Terminating training since the network is starting to overfit too much.
+(61878, 9) (61878,)
+Traceback (most recent call last):
+  File "nnet/optimize/good.py", line 18, in <module>
+    'pretrain': True,
+  File "/home/mverleg/mlip2/nnet/base_optimize.py", line 82, in optimize_NN
+    make_pretrain(params['pretrain'], train_data, true_labels, **params)
+  File "/home/mverleg/mlip2/nnet/train_test.py", line 73, in make_pretrain
+    assert train_err < minimum_train_loss, 'Pre-training did not converge ({0:.4f} >= {1:.4f})'.format(train_err, minimum_train_loss)
+AssertionError: Pre-training did not converge (6.9730 >= 0.7000)
