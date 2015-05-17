@@ -122,6 +122,7 @@ class GridOptimizer(object):
 			hackreturn returns the top ranked features, only works if there was one input feature
 		"""
 		if not self.dims:
+			print 'self.results:', self.results.shape
 			return
 		logloss_slice = [slice(None)] * len(self.dims) + [slice(None), 0]
 		logloss_all = self.results[logloss_slice]
@@ -163,8 +164,7 @@ class GridOptimizer(object):
 				fig.savefig(join(AUTO_IMAGES_DIR, '{0:s}_surf.png'.format(save_fig_basename)))
 		else:
 			print 'There are more than two parameters to compare; no visualization options.'
-		if self.dims:
-			self.print_top(topprint)
+		self.print_top(topprint)
 		show()
 		return self.results
 

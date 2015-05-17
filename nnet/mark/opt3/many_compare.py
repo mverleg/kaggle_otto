@@ -17,7 +17,8 @@ def optimize_map(index):
 		pretrain = join(NNET_STATE_DIR, name + '.net.npz')
 	else:
 		print name, 'NOT found'
-		return
+		pretrain = None
+		#return
 	params = {
 		'name': name,
 		'dense1_size': 64 + random.randint(0, 384),
@@ -35,7 +36,10 @@ def optimize_map(index):
 		'pretrain': pretrain,
 		'save_snapshots_stepsize': 1500,
 	}
-	return optimize_NN(debug = True, test_only = True, verbosity = False, **params)
+	if index < 10:
+		print index, params
+	return
+	return optimize_NN(debug = True, test_only = True, **params)
 
 N = 600
 pool = Pool(processes = 1)

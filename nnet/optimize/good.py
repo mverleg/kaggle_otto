@@ -12,7 +12,7 @@ optimize_NN(debug = True, **{
 	'momentum_scaling': 10,
 	'dropout1_rate': 0.5,
 	'dropout2_rate': 0.5,
-	'weight_decay': 0.0001,
+	'weight_decay': 0.001,
 	'max_epochs': 1500,
 	'extra_feature_count': 163,
 	'pretrain': False,
