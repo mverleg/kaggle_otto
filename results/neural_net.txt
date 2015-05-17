@@ -70,4 +70,15 @@ pos     loss      test_data_confidence
  5    0.5199       0.8
  6    2.1964       0.6
 
+possibly a lot of overfitting and early termination here
+pos     loss      weight decay      dropout
+ 1    0.5496       0.001             0.5
+ 2    0.5603       0.0001            0.5
+ 3    0.5663       0.001             0
+ 4    0.6511       0                 0
+ 5    0.6578       1e-05             0
+ 6    1.5966       1e-05             0.5
+ 7    1.8002       0.0001            0
+ 8    1.8527       0                 0.5
+
 

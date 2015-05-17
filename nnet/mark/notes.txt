@@ -10,6 +10,8 @@ long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neura
 #todo: investigate overfitting better!
 #todo: predictions from several nets into one
 
+naming scheme for files etc is a mess
+
 Maybe make several NNs and feed the probabilities into a new NN
 The key point of my method is that I tuned NN hyper parameters for an averaging model rather than for a single model.
 BatchNorm and PReLU
