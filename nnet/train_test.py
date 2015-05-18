@@ -22,9 +22,7 @@ def train_NN(train, labels, test, outlier_frac = 0, outlier_method = 'OCSVM', us
 		Train a neural network, for internal use by other functions in this file.
 	"""
 	train, labels = expand_from_test(train, labels, get_testing_data()[0], confidence = test_data_confidence)
-	print '&&&', extra_feature_count, train.shape
 	train, test = chain_feature_generators(train, labels, test, extra_features = extra_feature_count, seed = extra_feature_seed)
-	print train.shape
 	train, test = conormalize_data(train, test, use_log = normalize_log)
 	if outlier_frac:
 		train, labels = filter_data(train, labels, cut_outlier_frac = outlier_frac, method = outlier_method)
