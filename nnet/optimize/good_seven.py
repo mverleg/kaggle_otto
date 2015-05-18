@@ -15,11 +15,11 @@ optimize_NN(debug = False, **{
 	'dropout1_rate': 0.5,
 	'dropout2_rate': None,
 	'dropout3_rate': None,
-	'weight_decay': [0.00006, 0.00006, 0.00006, 0.00006, 0.00006],
+	'weight_decay': [0.00001, 0.00006, 0.00015, 0.00040, 0.00100],
 	'max_epochs': 500,
 	'auto_stopping': True,
 	'extra_feature_count': [0, 163],
-	'pretrain': True,
+	'pretrain': None,
 	'save_snapshots_stepsize': 500,
 	'rounds': 1,
 })
