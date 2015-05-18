@@ -65,6 +65,7 @@ def make_net(
 		max_epochs = 3000,
 		dropout1_rate = None,
 		dropout2_rate = None,           # inherits dropout1_rate
+		dropout3_rate = None,
 		weight_decay = 0,
 		output_nonlinearity = 'softmax',
 		auto_stopping = True,
@@ -93,8 +94,9 @@ def make_net(
 	"""
 		Initial arguments checks and defaults.
 	"""
-	assert dropout1_rate is None or 0 <= dropout1_rate < 1, 'Dropout rate 1 should be a value between 0 and 1, or None for no dropout'
-	assert dropout2_rate is None or 0 <= dropout1_rate < 1, 'Dropout rate 2 should be a value between 0 and 1, or None for no dropout'
+	assert dropout1_rate is None or 0 <= dropout1_rate < 1, 'Dropout rate 1 should be a value between 0 and 1'
+	assert dropout2_rate is None or 0 <= dropout1_rate < 1, 'Dropout rate 2 should be a value between 0 and 1, or None for inheritance'
+	assert dropout3_rate is None or 0 <= dropout1_rate < 1, 'Dropout rate 3 should be a value between 0 and 1, or None for inheritance'
 	assert dense1_nonlinearity in nonlinearities.keys(), 'Linearity 1 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), dense1_nonlinearity)
 	assert dense2_nonlinearity in nonlinearities.keys() + [None], 'Linearity 2 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), dense2_nonlinearity)
 	assert dense3_nonlinearity in nonlinearities.keys() + [None], 'Linearity 3 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), dense3_nonlinearity)
@@ -110,8 +112,10 @@ def make_net(
 		dense3_nonlinearity = dense2_nonlinearity
 	if dense3_init is None:
 		dense3_init = dense2_init
-	if dropout2_rate is None and dense3_size:
+	if dropout2_rate is None and dense2_size:
 		dropout2_rate = dropout1_rate
+	if dropout3_rate is None and dense3_size:
+		dropout3_rate = dropout2_rate
 
 	"""
 		Create the layers and their settings.
@@ -146,6 +150,10 @@ def make_net(
 			'dense3_W': initializers[dense3_init],
 			'dense3_b': Constant(0.),
 		})
+	if dropout3_rate:
+		assert dense2_size is not None, 'There cannot be a third dropout layer without a third dense layer.'
+		layers += [('dropout3', DropoutLayer)]
+		params['dropout3_p'] = dropout2_rate
 	layers += [('output', DenseLayer)]
 
 	"""
