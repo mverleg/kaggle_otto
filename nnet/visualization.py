@@ -10,6 +10,7 @@ def get_train_progress(net):
 		array([res['valid_loss'] for res in net.train_history_]),
 	]
 
+
 def show_train_progress(net):
 
 	epochs, train_loss, valid_loss = get_train_progress(net)

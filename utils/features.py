@@ -46,7 +46,7 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 		if test_data is not None:
 			train_data, test_data = gen.add_features_tt(train_data, test_data)
 		else:
-			train_data, gen.add_features(train_data)
+			train_data = gen.add_features(train_data)
 	return train_data, test_data
 
 
