@@ -32,7 +32,7 @@ def optimize_map(index):
 	return optimize_NN(debug = True, **params)
 
 N = 600
-pool = Pool(processes = min(N, 60))
+pool = Pool(processes = 1)#min(N, 60))
 pool.map(optimize_map, range(N))
 
 
