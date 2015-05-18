@@ -30,7 +30,7 @@ DEFAULT_PARAMS = {
 	'momentum_scaling': 100,            # 0.9 scaled by 10 is 0.99
 	'dropout1_rate': 0,                 # [0, 0.5]
 	'dropout2_rate': None,              # inherit dropout1_rate if dense2 exists
-	'dropout3_rate': None,              # inherit dropout2_rate if dense3 exists
+	'dropout3_rate': None,              # inherit dropout2_rate if dense3 exist
 	'weight_decay': 0,                  # constrain the weights to avoid overfitting
 	'max_epochs': 1000,                 # it terminates when overfitting or increasing, so just leave high
 	'auto_stopping': True,              # stop training automatically if it seems to be failing
