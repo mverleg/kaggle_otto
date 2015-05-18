@@ -159,7 +159,7 @@ def make_net(
 	"""
 		Create meta parameters and special handlers.
 	"""
-	if VERBOSITY >= 1:
+	if VERBOSITY >= 3:
 		print 'learning rate: {0:.6f} -> {1:.6f}'.format(learning_rate, learning_rate / float(learning_rate_scaling))
 		print 'momentum:      {0:.6f} -> {1:.6f}'.format(momentum, 1 - ((1 - momentum) / float(momentum_scaling)))
 	handlers = [
