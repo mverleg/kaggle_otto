@@ -18,7 +18,7 @@ from lasagne.nonlinearities import softmax, tanh, sigmoid, rectify, LeakyRectify
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet
 from theano import shared
-from nnet.nnio import SnapshotSaver, load_knowledge
+from nnet.nnio import SnapshotStepSaver, load_knowledge
 from nnet.dynamic import LogarithmicVariable
 from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum, StopNaN
 from settings import NCLASSES, VERBOSITY
@@ -170,7 +170,7 @@ def make_net(
 	snapshot_name = 'nn_' + params_name(params, prefix = name)[0]
 	if save_snapshots_stepsize:
 		handlers += [
-			SnapshotSaver(every = save_snapshots_stepsize, base_name = snapshot_name),
+			SnapshotStepSaver(every = save_snapshots_stepsize, base_name = snapshot_name),
 		]
 	if auto_stopping:
 		handlers += [

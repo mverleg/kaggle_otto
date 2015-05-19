@@ -46,17 +46,28 @@ def load_knowledge(net, filepath):
 		param.set_value(values)
 
 
-class SnapshotSaver(object):
+class SnapshotStepSaver(object):
 	def __init__(self, every = 500, base_name = 'net'):
 		self.every = every
 		self.base_path = join(NNET_STATE_DIR, base_name)
 
 	def __call__(self, nn, train_history):
 		epoch = train_history[-1]['epoch']
-		if epoch % self.every == 0 or epoch == nn.max_epochs:
+		if epoch % self.every == 0:
 			filepath = '{0:s}_{1:d}.net.npz'.format(self.base_path, epoch)
 			save_knowledge(nn, filepath)
 			if VERBOSITY >= 1:
 				print 'saved network to "{0:s}" at iteration {1:d}'.format(filepath, epoch)
+
+
+class SnapshotEndSaver(object):
+	def __init__(self, base_name = 'net_done'):
+		self.base_path = join(NNET_STATE_DIR, base_name)
+
+	def __call__(self, nn, train_history):
+		filepath = '{0:s}_complete.net.npz'.format(self.base_path)
+		save_knowledge(nn, filepath)
+		if VERBOSITY >= 1:
+			print 'saved network to "{0:s}" after training ended'.format(filepath)
 
 
