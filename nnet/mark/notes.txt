@@ -28,3 +28,39 @@ Maybe later:
 - It's important to remember to get your net to train nicely and overfit first, then regularize.
 -
 
+
+
+
+Layers were (512,256,128), the score was .428
+Dropout(.15) -> Dense(n_in, l1, activation='tanh') -> BatchNormalization((l1,)) -> Dropout(.5) -> Dense(l1, l2) -> PReLU((l2,)) -> BatchNormalization((l2,)) -> Dropout(.3) -> Dense(l2, l3) -> PReLU((l3,)) -> BatchNormalization((l3,)) -> Dropout(.1) -> Dense(l3, n_out) -> Activation('softmax')
+sgd = SGD(lr=0.004, decay=1e-7, momentum=0.99, nesterov=True)
+
+Average several NNs
+
+public score of 0.42399 combined with XGB
+InputLayer (94) - DropoutLayer (94) - DenseLayer (1024) - DenseLayer (512) - DenseLayer (9)
+dropout_p = 0.2
+update=adagrad
+update_learning_rate = linear decay from 0.02 to 0.001
+eval_size = 0.2
+max_epochs=100 + early stopping with patience = 7
+output_nonlinearity=softmax
+
+just removing stuff from the training set that had an individual logloss less than 2-3% of the average logloss, and iterating that 16 times or so. Each training sequence can be quite short, only 20 epochs or so
+
+nolearn + lasagne wrapped with CallibratedClassifierCV (around 0.43)
+
+I finally finished parameter and structure tuning for lasagne neural network, and get a single lasagne model to achieve 0.426 on LB
+
+counting features doesn't work, create feature by summing all rows, find max of each rows, count the number of zeros, number in a certain range i.e. range(10,20) give slightly better result
+
+Pseudo-labeling didn't work at https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14297/share-your-models/79345#post79345
+
+I've seen one person use dropout only after input layer, and another using it after every hidden layer (like I do) (good score) https://github.com/ahara/kaggle_otto/blob/master/otto/model/model_09_nn_adagrad/nn_adagrad.py
+He also had momentum (epsilon) as ~0 (seems like an optimized value)
+
+1000x700x600 / 1100x800x600 / 1300x1000x800  with dropout rates .20-.25 https://github.com/Kunstmord/kaggle-otto/blob/master/final.rst
+
+Cloud computing (AWS?) spot instances (the cheap, leftover part that can be terminated at any time). Can get a trial for 10ish days at Google Compute or Microsoft Azure
+
+
