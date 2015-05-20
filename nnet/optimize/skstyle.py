@@ -50,7 +50,7 @@ cpus = max(cpu_count() - 1, 1)
 random = RandomState(SEED)
 
 print Pipeline([
-	('rowgen', PositiveSparseRowFeatureGenerator()),  #todo: add to the function
+	('rowgen', PositiveSparseRowFeatureGenerator(extra_featurs = 5)),  #todo: add to the function
 	('gen1', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 50)),
 	('gen2', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 50)),
 	('gen3', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),

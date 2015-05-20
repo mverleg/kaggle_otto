@@ -5,7 +5,7 @@
 
 from random import Random
 from matplotlib.pyplot import subplots, show
-from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack, isnan, any, sqrt
+from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack, isnan, any, sqrt, array, hstack
 from sklearn.base import TransformerMixin, BaseEstimator
 from settings import NCLASSES, SEED, VERBOSITY, RAW_NFEATS
 from utils.loading import get_training_data
@@ -31,6 +31,10 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 	"""
 	if not extra_features:
 		return train_data, test_data
+	gen = PositiveSparseRowFeatureGenerator(extra_features = min(extra_features, 12))
+	train_data = gen.fit_transform(train_data)
+	test_data = gen.fit_transform(test_data)
+	extra_features -= min(extra_features, 12)
 	if multiplicity is None:
 		multiplicity = max(min(extra_features // 10, 3), 1)
 	assert abs(sum(classes.values()) - 1) < 1e-6,  'Class contributions should be normalized.'
@@ -178,7 +182,16 @@ class PositiveSparseFeatureGenerator(BaseEstimator, TransformerMixin):
 
 class PositiveSparseRowFeatureGenerator(BaseEstimator, TransformerMixin):
 
-	def __init__(self, only_upto = RAW_NFEATS):
+	def __init__(self, extra_featurs = None, only_upto = RAW_NFEATS):
+		"""
+			Add some row-based extra features.
+
+			:param extra_featurs: How many extra features to add at most (there is a limited amount).
+			:param only_upto:
+
+			Note that this doesn't use any learning, so it can be applied before training/validation to all data.
+		"""
+		self.extra_featurs = extra_featurs
 		self.only_upto = only_upto
 
 	def fit(self, X, y = None, **fit_params):
@@ -186,9 +199,12 @@ class PositiveSparseRowFeatureGenerator(BaseEstimator, TransformerMixin):
 
 	def transform(self, X, y = None, copy = False):
 		if VERBOSITY >= 1:
-			print 'adding row features'
+			if self.extra_featurs is None:
+				print 'adding all extra row features'.format(self.extra_featurs)
+			else:
+				print 'adding upto {0:d} row features'.format(self.extra_featurs)
 		Xf = X[:, :self.only_upto]
-		feats = [
+		feats = array([
 			Xf.sum(1),
 			Xf.max(1),
 			Xf.argmax(1),
@@ -201,9 +217,13 @@ class PositiveSparseRowFeatureGenerator(BaseEstimator, TransformerMixin):
 			((Xf > 15) * (Xf <= 30)).sum(1),
 			((Xf > 30) * (Xf <= 70)).sum(1),
 			(Xf > 70).sum(1),
-		    #todo: maybe manifold algorithms, but slow and non-integer
-		]
-		print [f.shape for f in feats]
+			#todo: maybe manifold algorithms, but slow and non-integer
+		]).T
+		if self.extra_featurs is not None and feats.shape[1] < self.extra_featurs:
+			print 'WARNING: {0:s} added only {1:d} features instead of {2:d} requested'.format(self.__class__.__name__, feats.shape[1], self.extra_featurs)
+		if self.extra_featurs is None:
+			return hstack((X, feats))
+		return hstack((X, feats[:, :self.extra_featurs]))
 
 
 if __name__ == '__main__':

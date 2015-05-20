@@ -4,8 +4,9 @@
 """
 
 from matplotlib.pyplot import subplots, show
-from numpy import log10, zeros, where
-from theano.scalar import float32
+from numpy import log10, zeros, where, float32, float64
+from sklearn.base import BaseEstimator
+from sklearn.base import TransformerMixin
 from settings import NCLASSES, VERBOSITY
 
 
@@ -44,6 +45,24 @@ def equalize_class_sizes(data, classes, min_size = 1929, class_count = NCLASSES)
 		this_cls = where(classes == cls)[0][:min_size]
 		filter[this_cls] = True
 	return data[filter], classes[filter]
+
+
+class LogTransform(BaseEstimator, TransformerMixin):
+	"""
+		Transform as log10( 1 + x ) and transforms to float32
+
+		See also MinMaxScaler from sklearn
+	"""
+
+	def fit(self, X, y = None, **fit_params):
+		return self
+
+	def transform(self, X, y = None, copy = True):
+		if VERBOSITY >= 1:
+			print 'applying log transform to {0:d}x{1:d} data'.format(*X.shape)
+		if not copy:
+			print 'LogTransform always copies data as the input and output data type differ'
+		return log10(X.astype(float32) + 1)
 
 
 if __name__ == '__main__':

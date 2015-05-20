@@ -218,7 +218,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 
 			eval_size = 0.1,
 
-			custom_loss = categorical_crossentropy,
+			#custom_loss = categorical_crossentropy, # todo
 
 			**self.params
 		)
@@ -238,6 +238,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 	def fit(self, X, y):
 		self.init_net(feature_count = X.shape[1], class_count = y.max())
 		print 'feature_count =', X.shape[1], 'class_count =', y.max()
+		print X.shape, y.shape, X.dtype, y.dtype
 		net = self.net.fit(X, y)
 		self.save()
 		return net
@@ -248,16 +249,18 @@ class NNet(BaseEstimator, ClassifierMixin):
 	def predict(self, X):
 		return self.net.predict(X)
 
-	def score(self, X, y):
+	def score(self, X, y, **kwargs):
 		return self.net.score(X, y)
 
 	def save(self, filepath = None):
 		#todo: test
 		parameters = self.get_params(deep = False)
-		filename = filepath or join(NNET_STATE_DIR, self.name)
-		with open(filename + '.json', 'w+') as fh:
+		filepath = filepath or join(NNET_STATE_DIR, self.name)
+		if VERBOSITY >= 1:
+			print 'saving network to "{0:s}.net.npz/.net.json"'.format(filepath)
+		with open(filepath + '.net.json', 'w+') as fh:
 			dump(parameters, fp = fh)
-		save_knowledge(self, filename + '.net.npz')
+		save_knowledge(self, filepath + '.net.npz')
 
 	@classmethod
 	def load(cls, filepath = None, name = None):
@@ -266,11 +269,13 @@ class NNet(BaseEstimator, ClassifierMixin):
 			:param name: The name of the network to load (if filename is not given)
 			:return: The loaded network
 		"""
-		filename = filepath or join(NNET_STATE_DIR, name)
-		with open(filename + '.json', 'w+') as fh:
+		filepath = filepath or join(NNET_STATE_DIR, name)
+		if VERBOSITY >= 1:
+			print 'loading network from "{0:s}.net.npz/.net.json"'.format(filepath)
+		with open(filepath + '.json', 'w+') as fh:
 			parameters = load(fp = fh)
 		net = cls(**parameters)
-		load_knowledge(net, filename + '.net.npz')
+		load_knowledge(net, filepath + '.net.npz')
 		return net
 
 

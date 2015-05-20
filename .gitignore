@@ -5,4 +5,5 @@
 env/
 build/
 nohup.*
+*.swp
 

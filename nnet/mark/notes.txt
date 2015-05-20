@@ -2,7 +2,6 @@
 read until May 9th: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/12882/guess-this-is-really-the-time-to-try-out-neural-nets?page=5
 read until May 9th: feature: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14092/feature-generation-for-dataset-ideas
 read until May 9th: NN https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/13632/achieve-0-48-in-5-min-with-a-deep-net-feat-batchnorm-prelu
-read until May 9th: feature: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14092/feature-generation-for-dataset-ideas
 read until May 9th: difficult cls: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/13768/how-to-classify-the-class-2-3-4-better
 long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
 
@@ -51,8 +50,6 @@ just removing stuff from the training set that had an individual logloss less th
 nolearn + lasagne wrapped with CallibratedClassifierCV (around 0.43)
 
 I finally finished parameter and structure tuning for lasagne neural network, and get a single lasagne model to achieve 0.426 on LB
-
-counting features doesn't work, create feature by summing all rows, find max of each rows, count the number of zeros, number in a certain range i.e. range(10,20) give slightly better result
 
 Pseudo-labeling didn't work at https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14297/share-your-models/79345#post79345
 
