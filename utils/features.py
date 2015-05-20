@@ -75,10 +75,12 @@ class PositiveSparseFeatureGenerator(BaseEstimator, TransformerMixin):
 		"""
 		assert extra_features // multiplicity >= 2, 'Need extra_features / multiplicity >= 2 or there will be not enough source features (for {0:d} / {1:d}).'.format(extra_features, multiplicity)
 		self.extra_features = extra_features
-		self.source_count = self.extra_features // multiplicity
-		self.operation_cumprobs = cumsum(normalized_sum(operation_probs))
+		self.multiplicity = multiplicity
+		self.source_count = self.extra_features // self.multiplicity
 		self.difficult_classes = difficult_classes
 		self.only_upto = only_upto
+		self.operation_probs = operation_probs
+		self.operation_cumprobs = cumsum(normalized_sum(operation_probs))
 		self.seed = SEED + seed
 
 	def fit(self, X, y, **fit_params):
@@ -90,6 +92,16 @@ class PositiveSparseFeatureGenerator(BaseEstimator, TransformerMixin):
 		if VERBOSITY >= 1:
 			print 'adding {0:d} features for classes {1:s}'.format(self.extra_features, self.difficult_classes)
 		return self.add_features(X)
+
+	def get_params(self, deep = True):
+		return {
+			'difficult_classes': self.difficult_classes,
+			'extra_features': self.extra_features,
+			'multiplicity': self.multiplicity,
+			'operation_probs': self.operation_probs,
+			'only_upto': self.only_upto,
+			'seed': self.seed - SEED,
+		}
 
 	def class_feature_count(self, train, labels):
 		"""

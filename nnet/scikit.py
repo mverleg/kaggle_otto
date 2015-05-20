@@ -8,6 +8,7 @@
 			   http://scikit-learn.org/stable/modules/generated/sklearn.base.ClassifierMixin.html
 	sampling: http://en.wikipedia.org/wiki/Stratified_sampling
 """
+from collections import OrderedDict
 
 from functools import partial
 from json import load
@@ -111,7 +112,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 			Input argument storage: automatically store all locals, which should be exactly the arguments at this point, but storing a little too much is not a big problem.
 		"""
 		self.__dict__.update(locals())
-		self.parameter_names = copy(locals().keys())
+		self.parameter_names = sorted(copy(locals().keys()))
 		self.parameter_names.remove('self')
 
 	def init_net(self, feature_count, class_count = NCLASSES, verbosity = VERBOSITY >= 2):
@@ -120,6 +121,8 @@ class NNet(BaseEstimator, ClassifierMixin):
 		"""
 		if VERBOSITY >= 1:
 			print 'initializing network {0:s} {1:d}x{2:d}x{3:d}'.format(self.name, self.dense1_size or 0, self.dense2_size or 0, self.dense3_size or 0)
+			if VERBOSITY >= 2:
+				print 'parameters: ' + ', '.join('{0:s} = {1:}'.format(k, v) for k,v in self.get_params(deep = False).items())
 		"""
 			Create the layers and their settings.
 		"""
@@ -228,7 +231,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 		return self.net
 
 	def get_params(self, deep = True):
-		return {name: getattr(self, name) for name in self.parameter_names}
+		return OrderedDict((name, getattr(self, name)) for name in self.parameter_names)
 
 	def set_params(self, **params):
 		for name, val in params.items():
@@ -236,10 +239,9 @@ class NNet(BaseEstimator, ClassifierMixin):
 			setattr(self, name, val)
 
 	def fit(self, X, y):
-		self.init_net(feature_count = X.shape[1], class_count = y.max())
-		print 'feature_count =', X.shape[1], 'class_count =', y.max()
-		print X.shape, y.shape, X.dtype, y.dtype
-		net = self.net.fit(X, y)
+		labels = y - y.min()
+		self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
+		net = self.net.fit(X, labels)
 		self.save()
 		return net
 
@@ -253,14 +255,13 @@ class NNet(BaseEstimator, ClassifierMixin):
 		return self.net.score(X, y)
 
 	def save(self, filepath = None):
-		#todo: test
 		parameters = self.get_params(deep = False)
 		filepath = filepath or join(NNET_STATE_DIR, self.name)
 		if VERBOSITY >= 1:
 			print 'saving network to "{0:s}.net.npz/.net.json"'.format(filepath)
 		with open(filepath + '.net.json', 'w+') as fh:
 			dump(parameters, fp = fh)
-		save_knowledge(self, filepath + '.net.npz')
+		save_knowledge(self.net, filepath + '.net.npz')
 
 	@classmethod
 	def load(cls, filepath = None, name = None):

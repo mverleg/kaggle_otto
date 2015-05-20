@@ -1,6 +1,6 @@
 
 from multiprocessing import cpu_count
-from scipy.stats import binom
+from scipy.stats import binom, norm
 from numpy.random import RandomState
 from sklearn.cross_validation import KFold
 from sklearn.grid_search import RandomizedSearchCV
@@ -14,55 +14,30 @@ from utils.expand_train import expand_from_test
 from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator
 
 
-#[{'C': scipy.stats.expon(scale=100), 'gamma': scipy.stats.expon(scale=.1),
-#  'kernel': ['rbf'], 'class_weight':['auto', None]}]
-# note that there is no random state object, only global seeding, but I guess it's not needed for param estimation anyway
-# provide 'scoring' function to use logloss
-
 train, labels = get_training_data()[:2]
 test = get_testing_data()[0]
-
 train, labels = expand_from_test(train, labels, test, confidence = 0.9)
-
 gen = PositiveSparseRowFeatureGenerator()
 train = gen.fit_transform(train, labels)
-test = gen.fit_transform(test, labels)
-gen = PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 50)
-train = gen.fit_transform(train, labels)
-test = gen.fit_transform(test, labels)
-gen = PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 50)
-train = gen.fit_transform(train, labels)
-test = gen.fit_transform(test, labels)
-gen = PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)
-train = gen.fit_transform(train, labels)
-test = gen.fit_transform(test, labels)
-
-trans = LogTransform()
-train = trans.fit_transform(train)
-test = trans.transform(test)
-
-scaler = MinMaxScaler(feature_range = (0, 3))
-scaler.fit(train)
-train = scaler.fit_transform(train)
-test = scaler.transform(test)
+test = gen.transform(test, labels)
 
 cpus = max(cpu_count() - 1, 1)
 random = RandomState(SEED)
 
-print Pipeline([
-	('rowgen', PositiveSparseRowFeatureGenerator(extra_featurs = 5)),  #todo: add to the function
-	('gen1', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 50)),
-	('gen2', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 50)),
-	('gen3', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
-	('log', LogTransform()),
-	('scale', MinMaxScaler(feature_range = (0, 3))),
-	('nn', NNet()),
-])
-
 opt = RandomizedSearchCV(
-	estimator = NNet(),
+	estimator = Pipeline([
+		('gen1', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 50)),
+		('gen2', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 50)),
+		('gen3', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
+		('log', LogTransform()),
+		('scale', MinMaxScaler(feature_range = (0, 3))),
+		('nn', NNet()),
+	]),
 	param_distributions = {
-		'batch_size': binom(n = 256, p = 0.5),
+		'nn__batch_size': binom(n = 256, p = 0.5),
+		'nn__learning_rate': norm(0.001, 0.002),
+	},
+	fit_params = {
 	},
 	n_iter = 10,
 	n_jobs = cpus,

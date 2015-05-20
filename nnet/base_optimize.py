@@ -44,7 +44,7 @@ DEFAULT_PARAMS = {
 	'extra_feature_seed': 0,            # a seed for the feature generation
 	'save_snapshots_stepsize': None,    # save snapshot of the network every X epochs
 	'test_data_confidence': None,       # how confident test samples should be to be added to train ([0.5 - 1.0] or None)
-	'batch_size': 128,
+	'batch_size': 128,                  # size of batches (128 is nolearn default)
 }
 
 
