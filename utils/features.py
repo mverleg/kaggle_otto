@@ -6,6 +6,7 @@
 from random import Random
 from matplotlib.pyplot import subplots, show
 from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack, isnan, any, sqrt
+from sklearn.base import TransformerMixin, BaseEstimator
 from settings import NCLASSES, SEED, VERBOSITY, RAW_NFEATS
 from utils.loading import get_training_data
 from utils.normalize import normalized_sum
@@ -41,8 +42,10 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 			break
 		class_counts[key] += 1
 	for offset, (difficult, contribution) in enumerate(classes.items()):
-		gen = PositiveSparseFeatureGenerator(train_data, true_labels, difficult_classes = difficult,
-			extra_features = int(round(extra_features * contribution)), multiplicity = multiplicity, seed = offset + 100 * seed)
+		gen = PositiveSparseFeatureGenerator(difficult_classes = difficult,
+			extra_features = int(round(extra_features * contribution)), multiplicity = multiplicity,
+			seed = offset + 100 * seed)
+		gen.fit(train_data, true_labels)
 		if test_data is not None:
 			train_data, test_data = gen.add_features_tt(train_data, test_data)
 		else:
@@ -50,9 +53,9 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 	return train_data, test_data
 
 
-class PositiveSparseFeatureGenerator(object):
+class PositiveSparseFeatureGenerator(BaseEstimator, TransformerMixin):
 
-	def __init__(self, data, labels, difficult_classes = (2, 3), extra_features = 57, multiplicity = 3,
+	def __init__(self, difficult_classes = (2, 3), extra_features = 57, multiplicity = 3,
 			operation_probs = (0.3, 0.3, 0.4), only_upto = RAW_NFEATS, seed = 0):
 		"""
 			Feature generator to create positive features from positive, sparse data.
@@ -68,10 +71,21 @@ class PositiveSparseFeatureGenerator(object):
 		"""
 		assert extra_features // multiplicity >= 2, 'Need extra_features / multiplicity >= 2 or there will be not enough source features (for {0:d} / {1:d}).'.format(extra_features, multiplicity)
 		self.extra_features = extra_features
+		self.source_count = self.extra_features // multiplicity
 		self.operation_cumprobs = cumsum(normalized_sum(operation_probs))
+		self.difficult_classes = difficult_classes
+		self.only_upto = only_upto
 		self.seed = SEED + seed
-		self.sources = self.features_for_difficult_classes(data[:, :only_upto], labels,
-			extra_feature_count = extra_features // multiplicity, difficult_classes = difficult_classes)
+
+	def fit(self, X, y, **fit_params):
+		self.sources = self.features_for_difficult_classes(X[:, :self.only_upto], y,
+			difficult_feature_count = self.source_count, difficult_classes = self.difficult_classes)
+		return self
+
+	def transform(self, X, y = None, copy = False):
+		if VERBOSITY >= 1:
+			print 'adding {0:d} features for classes {1:s}'.format(self.extra_features, self.difficult_classes)
+		return self.add_features(X)
 
 	def class_feature_count(self, train, labels):
 		"""
@@ -84,7 +98,7 @@ class PositiveSparseFeatureGenerator(object):
 			cnt[:, cls] = (train[cls + 1 == labels] != 0).sum(0)
 		return cnt
 
-	def features_for_difficult_classes(self, data, labels, extra_feature_count = 57, difficult_classes = (2, 3)):
+	def features_for_difficult_classes(self, data, labels, difficult_feature_count=57, difficult_classes=(2, 3)):
 		"""
 			Select the features which are related to the difficult classes.
 
@@ -94,7 +108,7 @@ class PositiveSparseFeatureGenerator(object):
 		difficult_cnts = 0
 		for cls in difficult_classes:
 			difficult_cnts += normalized_sum(all_cnts[:, cls - 1])
-		cutoff = sort(difficult_cnts)[-extra_feature_count]
+		cutoff = sort(difficult_cnts)[-difficult_feature_count]
 		return where(difficult_cnts >= cutoff)[0]
 
 	def get_operation(self, seed):
@@ -140,6 +154,7 @@ class PositiveSparseFeatureGenerator(object):
 			raise AssertionError('Poly operation with index {0:d} not found'.format(operation))
 
 	def make_features(self, data):
+		# call .fit() first
 		self.random = Random(self.seed)
 		features = []
 		for k in range(self.extra_features):
@@ -152,11 +167,43 @@ class PositiveSparseFeatureGenerator(object):
 		return vstack(features).T
 
 	def add_features(self, data):
+		# call .fit() first
 		feats = self.make_features(data)
 		return concatenate([data, feats], axis = 1)
 
-	def add_features_tt(self, train, test):
-		return self.add_features(train), self.add_features(test)
+	def add_features_tt(self, train, labels, test):
+		# call .fit() first
+		return self.transform(train), self.transform(test)
+
+
+class PositiveSparseRowFeatureGenerator(BaseEstimator, TransformerMixin):
+
+	def __init__(self, only_upto = RAW_NFEATS):
+		self.only_upto = only_upto
+
+	def fit(self, X, y = None, **fit_params):
+		return self
+
+	def transform(self, X, y = None, copy = False):
+		if VERBOSITY >= 1:
+			print 'adding row features'
+		Xf = X[:, :self.only_upto]
+		feats = [
+			Xf.sum(1),
+			Xf.max(1),
+			Xf.argmax(1),
+			(Xf == 0).sum(1),
+			(Xf == 1).sum(1),
+			(Xf == 2).sum(1),
+			(Xf == 3).sum(1),
+			((Xf >  3) * (Xf <=  7)).sum(1),
+			((Xf >  7) * (Xf <= 15)).sum(1),
+			((Xf > 15) * (Xf <= 30)).sum(1),
+			((Xf > 30) * (Xf <= 70)).sum(1),
+			(Xf > 70).sum(1),
+		    #todo: maybe manifold algorithms, but slow and non-integer
+		]
+		print [f.shape for f in feats]
 
 
 if __name__ == '__main__':

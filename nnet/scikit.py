@@ -6,16 +6,13 @@
 	optimization: http://scikit-learn.org/stable/modules/grid_search.html#randomized-parameter-optimization
 	estimator: http://scikit-learn.org/stable/modules/generated/sklearn.base.BaseEstimator.html
 			   http://scikit-learn.org/stable/modules/generated/sklearn.base.ClassifierMixin.html
-	sammpling: http://en.wikipedia.org/wiki/Stratified_sampling
-
-
+	sampling: http://en.wikipedia.org/wiki/Stratified_sampling
 """
 
 from functools import partial
-from multiprocessing import cpu_count
-from random import Random
-from sklearn.cross_validation import KFold
-from sklearn.grid_search import RandomizedSearchCV
+from json import load
+from json import dump
+from os.path import join
 from theano.tensor.nnet import categorical_crossentropy
 from nnet.weight_decay import WeightDecayObjective
 from lasagne.init import Orthogonal
@@ -26,16 +23,14 @@ from theano import shared
 from sklearn.base import BaseEstimator, ClassifierMixin
 from nnet.make_net import nonlinearities
 from nnet.make_net import initializers
-from utils.loading import get_training_data, get_testing_data
 from validation.optimize import params_name
 from lasagne.init import Constant
 from lasagne.layers import InputLayer, DenseLayer, DropoutLayer
-from nnet.nnio import SnapshotStepSaver, SnapshotEndSaver
+from nnet.nnio import SnapshotStepSaver, SnapshotEndSaver, save_knowledge, load_knowledge
 from nnet.dynamic import LogarithmicVariable
 from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum, StopNaN
-from settings import NCLASSES, VERBOSITY, SEED
-from utils.expand_train import expand_from_test
-from utils.features import chain_feature_generators
+from settings import NCLASSES, VERBOSITY, NNET_STATE_DIR
+from copy import copy
 
 
 class NNet(BaseEstimator, ClassifierMixin):
@@ -116,11 +111,15 @@ class NNet(BaseEstimator, ClassifierMixin):
 			Input argument storage: automatically store all locals, which should be exactly the arguments at this point, but storing a little too much is not a big problem.
 		"""
 		self.__dict__.update(locals())
+		self.parameter_names = copy(locals().keys())
+		self.parameter_names.remove('self')
 
 	def init_net(self, feature_count, class_count = NCLASSES, verbosity = VERBOSITY >= 2):
 		"""
 			Initialize the network (needs to be done when data is available in order to set dimensions).
 		"""
+		if VERBOSITY >= 1:
+			print 'initializing network {0:s} {1:d}x{2:d}x{3:d}'.format(self.name, self.dense1_size or 0, self.dense2_size or 0, self.dense3_size or 0)
 		"""
 			Create the layers and their settings.
 		"""
@@ -228,37 +227,50 @@ class NNet(BaseEstimator, ClassifierMixin):
 
 		return self.net
 
+	def get_params(self, deep = True):
+		return {name: getattr(self, name) for name in self.parameter_names}
 
-class ExpandFromTest(BaseEstimator, TransformationMixin): pass
+	def set_params(self, **params):
+		for name, val in params.items():
+			assert name in self.parameter_names, '"{0:s}" is not a valid parameter name (known parameters: "{1:s}")'.format(name, '", "'.join(self.parameter_names))
+			setattr(self, name, val)
 
+	def fit(self, X, y):
+		self.init_net(feature_count = X.shape[1], class_count = y.max())
+		print 'feature_count =', X.shape[1], 'class_count =', y.max()
+		net = self.net.fit(X, y)
+		self.save()
+		return net
 
-#[{'C': scipy.stats.expon(scale=100), 'gamma': scipy.stats.expon(scale=.1),
-#  'kernel': ['rbf'], 'class_weight':['auto', None]}]
-# note that there is no random state object, only global seeding, but I guess it's not needed for param estimation anyway
-# provide 'scoring' function to use logloss
+	def predict_proba(self, X):
+		return self.net.predict_proba(X)
 
-train_data, true_labels = get_training_data()[:2]
-test_data = get_testing_data()[0]
-bigger_data, bigger_labels = expand_from_test(train_data, true_labels, test_data, confidence = params['test_data_confidence'])
-train_data, test_data = chain_feature_generators(train_data, true_labels, train_data, extra_features = 57, seed = 0)
+	def predict(self, X):
+		return self.net.predict(X)
 
-cpus = max(cpu_count() - 1, 1)
-random = Random(SEED)
-RandomizedSearchCV(NNet,
-	param_distributions = {
+	def score(self, X, y):
+		return self.net.score(X, y)
 
-	},
-	n_iter = 10,
-	n_jobs = cpus,
-	scoring = None,
-	iid = False,
-	refit = False,
-	pre_dispatch = cpus + 2,
-	cv = KFold(
-		data.shape[0],
-		n_folds = 3, shuffle = True,
-		random_state = random
-	),
-	random_state = random,
-)
+	def save(self, filepath = None):
+		#todo: test
+		parameters = self.get_params(deep = False)
+		filename = filepath or join(NNET_STATE_DIR, self.name)
+		with open(filename + '.json', 'w+') as fh:
+			dump(parameters, fp = fh)
+		save_knowledge(self, filename + '.net.npz')
+
+	@classmethod
+	def load(cls, filepath = None, name = None):
+		"""
+			:param filepath: The base path (without extension) to load the file from, OR:
+			:param name: The name of the network to load (if filename is not given)
+			:return: The loaded network
+		"""
+		filename = filepath or join(NNET_STATE_DIR, name)
+		with open(filename + '.json', 'w+') as fh:
+			parameters = load(fp = fh)
+		net = cls(**parameters)
+		load_knowledge(net, filename + '.net.npz')
+		return net
+
 

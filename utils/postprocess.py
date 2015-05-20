@@ -5,6 +5,8 @@
 
 import numpy as np
 from numpy import log, sqrt
+from sklearn.base import BaseEstimator
+from sklearn.base import ClassifierMixin
 from sklearn.metrics import mean_squared_error
 from scipy.optimize import minimize
 from settings import VERBOSITY
