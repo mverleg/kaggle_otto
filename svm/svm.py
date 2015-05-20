@@ -7,11 +7,13 @@ Created on Wed Apr 15 18:58:22 2015
 
 from sklearn.svm import SVC
 from sklearn.calibration import CalibratedClassifierCV
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from math import floor
 from numpy import ones, shape, bincount
 from utils.preprocess import obtain_class_weights, equalize_class_sizes
 from utils.outliers import filter_data
 from utils.postprocess import rescale_prior
+from numpy import sqrt
 
 def svm(train,
          labels,
@@ -30,7 +32,8 @@ def svm(train,
          outlier_method='EE',
          rescale_pred=False,
          class_weight=None,
-         sample_weight = None):
+         sample_weight = None,
+         rescale = True):
     """
     Trains a model by giving it a feature matrix, as well as the labels (the ground truth)
     then using that model, predicts the given test samples
@@ -41,11 +44,25 @@ def svm(train,
         The data is simply split, no shuffling is done, so if the data is ordered, shuffle it first!
         If calibration is n > 1, then crossvalidation will be done, using n folds.
     :param verbose: See sklearn documentation
+    :param rescale: both the training and testing data are taken square root of, rescaled to unit variance, and moved to interval [0,1]
     """
     if outlier_frac > 0:
         train, labels = filter_data(train, labels, cut_outlier_frac = outlier_frac, method = outlier_method)  # remove ourliers
     if isinstance(sample_weight, str):
        sample_weight = obtain_class_weights(labels, sample_weight)
+       
+    if rescale: #take square root, rescale variance to unit, rescale to [0,1]
+        #this should preserve sparsity of matrix
+        train = sqrt(train)
+        test = sqrt(test)
+        scaler = StandardScaler(with_mean=False, with_std = True, copy = True)
+        train = scaler.fit_transform(train)        
+        scaler = StandardScaler(with_mean=False, with_std = True, copy = True)
+        test = scaler.fit_transform(test)
+        scaler = MinMaxScaler()
+        train = scaler.fit_transform(train)  
+        scaler = MinMaxScaler()
+        test = scaler.fit_transform(test)        
         
     model = SVC(C = C,
                kernel = kernel,
