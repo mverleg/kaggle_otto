@@ -28,6 +28,7 @@ DEFAULT_PARAMS = {
 	'learning_rate_scaling': 1000,      # progression over time; 0.1 scaled by 10 is 0.01
 	'momentum': 0.9,                    # initial momentum
 	'momentum_scaling': 100,            # 0.9 scaled by 10 is 0.99
+	'dropout0_rate': 0,                 # dropout after the input layer (no inheritance)
 	'dropout1_rate': 0,                 # [0, 0.5]
 	'dropout2_rate': None,              # inherit dropout1_rate if dense2 exists
 	'dropout3_rate': None,              # inherit dropout2_rate if dense3 exist

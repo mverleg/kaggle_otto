@@ -8,8 +8,8 @@
 			   http://scikit-learn.org/stable/modules/generated/sklearn.base.ClassifierMixin.html
 	sampling: http://en.wikipedia.org/wiki/Stratified_sampling
 """
-from collections import OrderedDict
 
+from collections import OrderedDict
 from functools import partial
 from json import load
 from json import dump
@@ -52,9 +52,10 @@ class NNet(BaseEstimator, ClassifierMixin):
 			momentum = 0.9,
 			momentum_scaling = 100,
 			max_epochs = 3000,
+			dropout0_rate = 0,              # this is the input layer
 			dropout1_rate = None,
 			dropout2_rate = None,           # inherits dropout1_rate
-			dropout3_rate = None,
+			dropout3_rate = None,           # inherits dropout2_rate
 			weight_decay = 0,
 			batch_size = 128,
 			output_nonlinearity = 'softmax',
@@ -68,52 +69,31 @@ class NNet(BaseEstimator, ClassifierMixin):
 			:param dense1_size: Number of neurons for first hidden layer
 			:param dense1_nonlinearity: The activation function for the first hidden layer
 			:param dense1_init: The weight initialization for the first hidden layer
-			:param learning_rate_start: Start value at first epoch (logarithmic scale)
-			:param learning_rate_end: End value at last epoch (logarithmic scale)
-			:param momentum_start: Start value at first epoch (logarithmic scale)
-			:param momentum_end: End value at last epoch (logarithmic scale)
+			:param learning_rate: The (initial) learning rate (how fast the network learns)
+			:param learning_rate_scaling: The total factor to gradually decrease the learning rate by
+			:param momentum: The (initial) momentum
+			:param momentum_scaling: Similar to learning_rate_scaling
 			:param max_epochs: Total number of epochs (at most)
-			:param dropout1_rate: Percentage of connections dropped each step.
-			:param weight_decay: Constrain the weights by L2 norm.
-			:param auto_stopping: Stop early if the network seems to stop performing well.
-			:param pretrain: Filepath of the previous weights to start at (or None).
+			:param dropout1_rate: Percentage of connections dropped each step for first hidden layer
+			:param weight_decay: Palatalizes the weights by L2 norm (regularizes but decreases results)
+			:param batch_size: How many samples to send through the network at a time
+			:param auto_stopping: Stop early if the network seems to stop performing well
+			:param pretrain: Filepath of the previous weights to start at (or None)
 			:return:
 		"""
-		"""
-			Initial arguments checks.
-		"""
-		assert dropout1_rate is None or 0 <= dropout1_rate < 1, 'Dropout rate 1 should be a value between 0 and 1'
-		assert dropout2_rate is None or 0 <= dropout1_rate < 1, 'Dropout rate 2 should be a value between 0 and 1, or None for inheritance'
-		assert dropout3_rate is None or 0 <= dropout1_rate < 1, 'Dropout rate 3 should be a value between 0 and 1, or None for inheritance'
-		assert dense1_nonlinearity in nonlinearities.keys(), 'Linearity 1 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), dense1_nonlinearity)
-		assert dense2_nonlinearity in nonlinearities.keys() + [None], 'Linearity 2 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), dense2_nonlinearity)
-		assert dense3_nonlinearity in nonlinearities.keys() + [None], 'Linearity 3 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), dense3_nonlinearity)
-		assert dense1_init in initializers.keys(), 'Initializer 1 should be one of "{0}", got "{1}" instead.'.format('", "'.join(initializers.keys()), dense1_init)
-		assert dense2_init in initializers.keys() + [None], 'Initializer 2 should be one of "{0}", got "{1}" instead.'.format('", "'.join(initializers.keys()), dense2_init)
-		assert dense3_init in initializers.keys() + [None], 'Initializer 3 should be one of "{0}", got "{1}" instead.'.format('", "'.join(initializers.keys()), dense3_init)
-
-		"""
-			Input argument defaults.
-		"""
-		if dense2_nonlinearity is None:
-			dense2_nonlinearity = dense1_nonlinearity
-		if dense2_init is None:
-			dense2_init = dense1_init
-		if dense3_nonlinearity is None:
-			dense3_nonlinearity = dense2_nonlinearity
-		if dense3_init is None:
-			dense3_init = dense2_init
-		if dropout2_rate is None and dense2_size:
-			dropout2_rate = dropout1_rate
-		if dropout3_rate is None and dense3_size:
-			dropout3_rate = dropout2_rate
 
 		"""
 			Input argument storage: automatically store all locals, which should be exactly the arguments at this point, but storing a little too much is not a big problem.
 		"""
-		self.__dict__.update(locals())
-		self.parameter_names = sorted(copy(locals().keys()))
-		self.parameter_names.remove('self')
+		params = locals()
+		del params['self']
+		self.__dict__.update(params)
+		self.parameter_names = sorted(params.keys())
+
+		"""
+			Check the parameters and update some defaults (will be done for 'self', no need to store again).
+		"""
+		self.set_params()
 
 	def init_net(self, feature_count, class_count = NCLASSES, verbosity = VERBOSITY >= 2):
 		"""
@@ -128,7 +108,6 @@ class NNet(BaseEstimator, ClassifierMixin):
 		"""
 		self.layers = [
 			('input', InputLayer),
-			('dense1', DenseLayer),
 		]
 		self.params = {
 			'dense1_num_units': self.dense1_size,
@@ -136,6 +115,10 @@ class NNet(BaseEstimator, ClassifierMixin):
 			'dense1_W': initializers[self.dense1_init],
 			'dense1_b': Constant(0.),
 		}
+		if self.dropout0_rate:
+			self.layers += [('dropout0', DropoutLayer)]
+			self.params['dropout0_p'] = self.dropout0_rate
+		self.layers += [('dense1', DenseLayer),]
 		if self.dropout1_rate:
 			self.layers += [('dropout1', DropoutLayer)]
 			self.params['dropout1_p'] = self.dropout1_rate
@@ -175,11 +158,11 @@ class NNet(BaseEstimator, ClassifierMixin):
 			Create meta parameters and special handlers.
 		"""
 		if VERBOSITY >= 3:
-			print 'learning rate: {0:.6f} -> {1:.6f}'.format(self.learning_rate, self.learning_rate / float(self.learning_rate_scaling))
-			print 'momentum:      {0:.6f} -> {1:.6f}'.format(self.momentum, 1 - ((1 - self.momentum) / float(self.momentum_scaling)))
+			print 'learning rate: {0:.6f} -> {1:.6f}'.format(abs(self.learning_rate), abs(self.learning_rate) / float(self.learning_rate_scaling))
+			print 'momentum:      {0:.6f} -> {1:.6f}'.format(abs(self.momentum), 1 - ((1 - abs(self.momentum)) / float(self.momentum_scaling)))
 		self.handlers = [
-			LogarithmicVariable('update_learning_rate', start = self.learning_rate, stop = self.learning_rate / float(self.learning_rate_scaling)),
-			LogarithmicVariable('update_momentum', start = self.momentum, stop = 1 - ((1 - self.momentum) / float(self.momentum_scaling))),
+			LogarithmicVariable('update_learning_rate', start = abs(self.learning_rate), stop = abs(self.learning_rate) / float(self.learning_rate_scaling)),
+			LogarithmicVariable('update_momentum', start = abs(self.momentum), stop = 1 - ((1 - abs(self.momentum)) / float(self.momentum_scaling))),
 			StopNaN(),
 		]
 		snapshot_name = 'nn_' + params_name(self.params, prefix = self.name)[0]
@@ -234,9 +217,44 @@ class NNet(BaseEstimator, ClassifierMixin):
 		return OrderedDict((name, getattr(self, name)) for name in self.parameter_names)
 
 	def set_params(self, **params):
+		"""
+			Set all the parameters.
+		"""
 		for name, val in params.items():
 			assert name in self.parameter_names, '"{0:s}" is not a valid parameter name (known parameters: "{1:s}")'.format(name, '", "'.join(self.parameter_names))
 			setattr(self, name, val)
+
+		"""
+			Arguments checks.
+		"""
+		assert self.dropout1_rate is None or 0 <= self.dropout1_rate < 1, 'Dropout rate 1 should be a value between 0 and 1'
+		assert self.dropout2_rate is None or 0 <= self.dropout1_rate < 1, 'Dropout rate 2 should be a value between 0 and 1, or None for inheritance'
+		assert self.dropout3_rate is None or 0 <= self.dropout1_rate < 1, 'Dropout rate 3 should be a value between 0 and 1, or None for inheritance'
+		assert self.dense1_nonlinearity in nonlinearities.keys(), 'Linearity 1 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), self.dense1_nonlinearity)
+		assert self.dense2_nonlinearity in nonlinearities.keys() + [None], 'Linearity 2 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), self.dense2_nonlinearity)
+		assert self.dense3_nonlinearity in nonlinearities.keys() + [None], 'Linearity 3 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), self.dense3_nonlinearity)
+		assert self.dense1_init in initializers.keys(), 'Initializer 1 should be one of "{0}", got "{1}" instead.'.format('", "'.join(initializers.keys()), self.dense1_init)
+		assert self.dense2_init in initializers.keys() + [None], 'Initializer 2 should be one of "{0}", got "{1}" instead.'.format('", "'.join(initializers.keys()), self.dense2_init)
+		assert self.dense3_init in initializers.keys() + [None], 'Initializer 3 should be one of "{0}", got "{1}" instead.'.format('", "'.join(initializers.keys()), self.dense3_init)
+
+		"""
+			Argument defaults.
+		"""
+		if self.dense2_nonlinearity is None:
+			self.dense2_nonlinearity = self.dense1_nonlinearity
+		if self.dense2_init is None:
+			self.dense2_init = self.dense1_init
+		if self.dense3_nonlinearity is None:
+			self.dense3_nonlinearity = self.dense2_nonlinearity
+		if self.dense3_init is None:
+			self.dense3_init = self.dense2_init
+		print 'DROPOUT DEFAULTS', self.dropout2_rate, self.dropout3_rate, self.dense2_size, self.dense3_size
+		if self.dropout2_rate is None and self.dense2_size:
+			print 'DROPOUT 2'
+			self.dropout2_rate = self.dropout1_rate
+		if self.dropout3_rate is None and self.dense3_size:
+			print 'DROPOUT 3'
+			self.dropout3_rate = self.dropout2_rate
 
 	def fit(self, X, y):
 		labels = y - y.min()
