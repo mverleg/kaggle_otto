@@ -48,7 +48,6 @@ opt = RandomizedSearchCV(
 			dropout2_rate = None,
 			dropout3_rate = None,
 			max_epochs = 1500,  # binom(n = 4000, p = 0.25)
-			epoch_steps = 1,
 			weight_decay = 0,
 		)),
 	]),
@@ -58,9 +57,9 @@ opt = RandomizedSearchCV(
 		'nn__learning_rate_scaling': [1, 10, 100, 1000],
 		'nn__momentum': [0, 0.9, 0.99, 0.999],
 		'nn__momentum_scaling': [1, 10, 100],
-		'nn__dense1_size': randint(low = 100, high = 120),  #todo: x10
-		'nn__dense2_size': randint(low = 50, high = 90),
-		'nn__dense3_size': randint(low = 25, high = 70),
+		'nn__dense1_size': randint(low = 100, high = 1200),
+		'nn__dense2_size': randint(low = 50, high = 900),
+		'nn__dense3_size': randint(low = 25, high = 700),
 		'nn__dropout0_rate': triang(loc = 0, c = 0, scale = 1),  # beta(a = 0.5, b = 0.5),
 		'nn__dropout1_rate': triang(loc = 0, c = 0, scale = 1),
 	},
