@@ -1,8 +1,9 @@
 
 from cPickle import dump, load
+from matplotlib.pyplot import subplots, show
 from numpy import savez, load as loadz
 from os.path import join
-from settings import NNET_STATE_DIR, VERBOSITY
+from settings import NNET_STATE_DIR, VERBOSITY, AUTO_IMAGES_DIR
 
 
 def save_net(net, filepath):
@@ -27,11 +28,21 @@ def load_net(filepath):
 		return load(file = fh)
 
 
+def get_knowledge(net):
+	return [param.get_value() for param in net.get_all_params()]
+
+
+def set_knowledge(net, knowledge):
+	for (name, values), param in zip(knowledge, net.get_all_params()):
+		assert param.get_value().shape == values.shape, 'Data does not match shape of network "{1:s}" for "{2:s}": expected {3:s}, got {4:s}'.format(net, name, param.get_value().shape, values.shape)
+		param.set_value(values)
+
+
 def save_knowledge(net, filepath):
 	"""
 		Save the weights and biasses of the neural network to disk.
 	"""
-	knowledge = [param.get_value() for param in net.get_all_params()]
+	knowledge = get_knowledge(net)
 	savez(filepath, *knowledge)
 
 
@@ -41,9 +52,7 @@ def load_knowledge(net, filepath):
 	"""
 	reloaded = loadz(filepath)
 	knowledge = [(name, reloaded[name]) for name in sorted(reloaded.keys())]
-	for (name, values), param in zip(knowledge, net.get_all_params()):
-		assert param.get_value().shape == values.shape, 'Loaded data from "{0:s}" does not match shape of network "{1:s}" for "{2:s}": expected {3:s}, got {4:s}'.format(filepath, net, name, param.get_value().shape, values.shape)
-		param.set_value(values)
+	set_knowledge(net, knowledge)
 
 
 class SnapshotStepSaver(object):
@@ -69,5 +78,22 @@ class SnapshotEndSaver(object):
 		save_knowledge(nn, filepath)
 		if VERBOSITY >= 1:
 			print 'saved network to "{0:s}" after training ended'.format(filepath)
+
+
+class TrainProgressPlotter(object):
+	def __init__(self, base_name = 'net_hist'):
+		self.base_path = join(AUTO_IMAGES_DIR, base_name) + '.png'
+
+	def __call__(self, nn, train_history):
+		fig, ax = subplots(figsize = (6, 4))
+		train = [d['train_loss'] for d in train_history]
+		valid = [d['valid_loss'] for d in train_history]
+		if len(train) >= 3:
+			ax.plot(train, color = 'blue', label = 'train')
+			ax.plot(valid, color = 'red', label = 'test')
+			ax.legend()
+			ax.set_xlim([0, max(10, len(train))])
+			ax.set_ylim([0, 1.05 * max(max(train), max(valid))])
+			fig.savefig(self.base_path)
 
 

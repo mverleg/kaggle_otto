@@ -12,6 +12,7 @@ def class_feature_sum_count(train, labels):
 		cnt[:, cls] = (train[cls + 1 == labels] != 0).sum(0)
 
 	fig, (ax_sm, ax_cnt) = subplots(2, figsize = (8, 3))
+	fig.tight_layout()
 	ax_sm.imshow(sm.T, interpolation = 'none')
 	ax_sm.set_title('Class features sum')
 	ax_cnt.imshow(cnt.T, interpolation = 'none')

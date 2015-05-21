@@ -31,10 +31,10 @@ def chain_feature_generators(train_data, true_labels, test_data, classes = DIFFI
 	"""
 	if not extra_features:
 		return train_data, test_data
-	gen = PositiveSparseRowFeatureGenerator(extra_features = min(extra_features, 12))
+	gen = PositiveSparseRowFeatureGenerator(extra_features = min(extra_features, 16))
 	train_data = gen.fit_transform(train_data)
 	test_data = gen.fit_transform(test_data)
-	extra_features -= min(extra_features, 12)
+	extra_features -= min(extra_features, 16)
 	if multiplicity is None:
 		multiplicity = max(min(extra_features // 10, 3), 1)
 	assert abs(sum(classes.values()) - 1) < 1e-6,  'Class contributions should be normalized.'
@@ -216,10 +216,17 @@ class PositiveSparseRowFeatureGenerator(BaseEstimator, TransformerMixin):
 			else:
 				print 'adding upto {0:d} row features'.format(self.extra_featurs)
 		Xf = X[:, :self.only_upto]
+		max_poss = Xf.argpartition(-5, axis = 1)[:, -5:]
+		max_poss = array(list(max_poss[k, Xf[k, max_poss[k, :]].argsort()[::-1]] for k in range(Xf.shape[0])))
 		feats = array([
 			Xf.sum(1),
 			Xf.max(1),
 			Xf.argmax(1),
+			max_poss[:, 0],
+			max_poss[:, 1],
+			max_poss[:, 2],
+			max_poss[:, 3],
+			max_poss[:, 4],
 			(Xf == 0).sum(1),
 			(Xf == 1).sum(1),
 			(Xf == 2).sum(1),

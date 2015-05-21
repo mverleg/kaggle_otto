@@ -1,6 +1,6 @@
 
 from multiprocessing import cpu_count
-from scipy.stats import binom, norm, triang, uniform, randint
+from scipy.stats import binom, norm, triang, randint
 from numpy.random import RandomState
 from sklearn.cross_validation import KFold
 from sklearn.grid_search import RandomizedSearchCV
@@ -30,7 +30,7 @@ train = gen.fit_transform(train, labels)
 test = gen.transform(test, labels)
 
 cpus = max(cpu_count() - 1, 1)
-random = RandomState(SEED)  # todo: maybe better no fixed seed
+random = RandomState()
 
 opt = RandomizedSearchCV(
 	estimator = Pipeline([
@@ -48,18 +48,19 @@ opt = RandomizedSearchCV(
 			dropout2_rate = None,
 			dropout3_rate = None,
 			max_epochs = 1500,  # binom(n = 4000, p = 0.25)
+			epoch_steps = 1,
 			weight_decay = 0,
 		)),
 	]),
 	param_distributions = {
 		'nn__batch_size': binom(n = 256, p = 0.5),
-		'nn__learning_rate': norm(0.001, 0.001),
+		'nn__learning_rate': norm(0.0005, 0.0005),
 		'nn__learning_rate_scaling': [1, 10, 100, 1000],
 		'nn__momentum': [0, 0.9, 0.99, 0.999],
 		'nn__momentum_scaling': [1, 10, 100],
-		'nn__dense1_size': randint(low = 100, high = 1200),
-		'nn__dense2_size': randint(low = 50, high = 900),
-		'nn__dense3_size': randint(low = 25, high = 700),
+		'nn__dense1_size': randint(low = 100, high = 120),  #todo: x10
+		'nn__dense2_size': randint(low = 50, high = 90),
+		'nn__dense3_size': randint(low = 25, high = 70),
 		'nn__dropout0_rate': triang(loc = 0, c = 0, scale = 1),  # beta(a = 0.5, b = 0.5),
 		'nn__dropout1_rate': triang(loc = 0, c = 0, scale = 1),
 	},
@@ -71,7 +72,7 @@ opt = RandomizedSearchCV(
 	iid = False,
 	refit = False,
 	pre_dispatch = cpus + 2,
-	cv = KFold(
+	cv = KFold( #todo: use less validation data
 		n = train.shape[0],
 		n_folds = 3, shuffle = True,
 		random_state = random

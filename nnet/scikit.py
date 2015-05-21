@@ -15,9 +15,9 @@ from json import load
 from json import dump
 from os.path import join
 from theano.tensor.nnet import categorical_crossentropy
-from nnet.weight_decay import WeightDecayObjective
+from nnet.weight_decay import WeightDecayObjective, AdaptiveWeightDecay
 from lasagne.init import Orthogonal
-from numpy import float32
+from numpy import float32, mean
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet, BatchIterator
 from theano import shared
@@ -27,11 +27,11 @@ from nnet.make_net import initializers
 from validation.optimize import params_name
 from lasagne.init import Constant
 from lasagne.layers import InputLayer, DenseLayer, DropoutLayer
-from nnet.nnio import SnapshotStepSaver, SnapshotEndSaver, save_knowledge, load_knowledge
+from nnet.nnio import SnapshotStepSaver, SnapshotEndSaver, save_knowledge, load_knowledge, TrainProgressPlotter, \
+	get_knowledge, set_knowledge
 from nnet.dynamic import LogarithmicVariable
-from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum, StopNaN
+from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum, StopNaN, BreakEveryN
 from settings import NCLASSES, VERBOSITY, NNET_STATE_DIR
-from copy import copy
 
 
 class NNet(BaseEstimator, ClassifierMixin):
@@ -52,11 +52,13 @@ class NNet(BaseEstimator, ClassifierMixin):
 			momentum = 0.9,
 			momentum_scaling = 100,
 			max_epochs = 3000,
+			epoch_steps = None,
 			dropout0_rate = 0,              # this is the input layer
 			dropout1_rate = None,
 			dropout2_rate = None,           # inherits dropout1_rate
 			dropout3_rate = None,           # inherits dropout2_rate
 			weight_decay = 0,
+			adaptive_weight_decay = False,
 			batch_size = 128,
 			output_nonlinearity = 'softmax',
 			auto_stopping = True,
@@ -76,6 +78,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 			:param max_epochs: Total number of epochs (at most)
 			:param dropout1_rate: Percentage of connections dropped each step for first hidden layer
 			:param weight_decay: Palatalizes the weights by L2 norm (regularizes but decreases results)
+			:param adaptive_weight_decay: Should the weight decay adapt automatically?
 			:param batch_size: How many samples to send through the network at a time
 			:param auto_stopping: Stop early if the network seems to stop performing well
 			:param pretrain: Filepath of the previous weights to start at (or None)
@@ -160,40 +163,51 @@ class NNet(BaseEstimator, ClassifierMixin):
 		if VERBOSITY >= 3:
 			print 'learning rate: {0:.6f} -> {1:.6f}'.format(abs(self.learning_rate), abs(self.learning_rate) / float(self.learning_rate_scaling))
 			print 'momentum:      {0:.6f} -> {1:.6f}'.format(abs(self.momentum), 1 - ((1 - abs(self.momentum)) / float(self.momentum_scaling)))
-		self.handlers = [
+		self.step_handlers = [
 			LogarithmicVariable('update_learning_rate', start = abs(self.learning_rate), stop = abs(self.learning_rate) / float(self.learning_rate_scaling)),
 			LogarithmicVariable('update_momentum', start = abs(self.momentum), stop = 1 - ((1 - abs(self.momentum)) / float(self.momentum_scaling))),
 			StopNaN(),
 		]
+		self.end_handlers = [
+			SnapshotEndSaver(base_name = self.name),
+			TrainProgressPlotter(base_name = self.name),
+		]
 		snapshot_name = 'nn_' + params_name(self.params, prefix = self.name)[0]
 		if self.save_snapshots_stepsize:
-			self.handlers += [
+			self.step_handlers += [
 				SnapshotStepSaver(every = self.save_snapshots_stepsize, base_name = snapshot_name),
 			]
 		if self.auto_stopping:
-			self.handlers += [
+			self.step_handlers += [
 				StopWhenOverfitting(loss_fraction = 0.8, base_name = snapshot_name),
 				StopAfterMinimum(patience = 40, base_name = self.name),
+			]
+		if self.adaptive_weight_decay:
+			raise AssertionError('adaptive weight decay doesn\'t work since objective can\'t be changed')
+		if self.epoch_steps:
+			self.step_handlers += [
+				BreakEveryN(self.epoch_steps),
 			]
 
 		"""
 			Create the actual nolearn network with information from __init__.
 		"""
+		weight_decay_holder = [self.weight_decay]
 		self.net = NeuralNet(
 
 			layers = self.layers,
 
-			objective = partial(WeightDecayObjective, decay = self.weight_decay),
+			objective = partial(WeightDecayObjective, weight_decay_holder = weight_decay_holder),
 
 			input_shape = (None, feature_count),
 			output_num_units = class_count,
 
 			update = nesterov_momentum,
 			update_learning_rate = shared(float32(self.learning_rate)),
-			update_momentum = shared(float32(self.momentum)),
+			update_momentum = shared(float(self.weight_decay)),
 
-			on_epoch_finished = self.handlers,
-			on_training_finished = [SnapshotEndSaver(base_name = self.name)],
+			on_epoch_finished = self.step_handlers,
+			on_training_finished = self.end_handlers,
 
 			regression = False,
 			max_epochs = self.max_epochs,
@@ -208,6 +222,9 @@ class NNet(BaseEstimator, ClassifierMixin):
 
 			**self.params
 		)
+
+		""" Attach weight decay value. """
+		self.net.weight_decay_holder = weight_decay_holder
 
 		self.net.initialize()
 
@@ -248,17 +265,38 @@ class NNet(BaseEstimator, ClassifierMixin):
 			self.dense3_nonlinearity = self.dense2_nonlinearity
 		if self.dense3_init is None:
 			self.dense3_init = self.dense2_init
-		print 'DROPOUT DEFAULTS', self.dropout2_rate, self.dropout3_rate, self.dense2_size, self.dense3_size
 		if self.dropout2_rate is None and self.dense2_size:
-			print 'DROPOUT 2'
 			self.dropout2_rate = self.dropout1_rate
 		if self.dropout3_rate is None and self.dense3_size:
-			print 'DROPOUT 3'
 			self.dropout3_rate = self.dropout2_rate
 
 	def fit(self, X, y):
 		labels = y - y.min()
 		self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
+		net = self.net.fit(X, labels)
+		self.save()
+		return net
+
+	def interrupted_fit(self, X, y):
+		""" DEPRECATED """
+		labels = y - y.min()
+		self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
+		knowledge = get_knowledge(self.net)
+		for epoch in range(0, self.max_epochs, self.epoch_steps):
+			#todo: so now dynamic variables don't work
+			set_knowledge(self.net, knowledge)
+			self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
+			print 'epoch {0:d}: learning {1:d} epochs'.format(epoch, self.epoch_steps)
+			self.net.fit(X, labels)
+			ratio = mean([d['valid_loss'] for d in self.net._train_history[-self.epoch_steps:]]) / \
+					mean([d['train_loss'] for d in self.net._train_history[-self.epoch_steps:]])
+			if ratio < 0.85:
+				self.weight_decay *= 1.3
+			if ratio > 0.95:
+				self.weight_decay /= 1.2
+			self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
+			knowledge = get_knowledge(self.net)
+		exit()
 		net = self.net.fit(X, labels)
 		self.save()
 		return net

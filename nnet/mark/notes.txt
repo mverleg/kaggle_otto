@@ -8,8 +8,13 @@ long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neura
 
 #todo: investigate overfitting better!
 #todo: predictions from several nets into one
+#todo: I could train ~10/25 epochs at a time, then change the weight decay in between and filter out easy samples
+    #todo ... BUT I SHOULD NOT DO THAT BECAUSE IT'LL TAKE A LONG TIME
+Maybe the network remembers the current epoch between calling .fit() twice
+Note that the end-of-iteration handlers will call every epoch_steps
+Well that was a great idea but I don't keep epochs since I have to re-initialize the network to reset the objective
 
-naming scheme for files etc is a mess
+
 
 Maybe make several NNs and feed the probabilities into a new NN
 The key point of my method is that I tuned NN hyper parameters for an averaging model rather than for a single model.
@@ -32,6 +37,8 @@ Maybe later:
 save each optimized network, possibly with loss in the name
 
 
+
+For NN with 0.44 single: No features scaling was used, with the raw data itself would be good.
 
 Layers were (512,256,128), the score was .428
 Dropout(.15) -> Dense(n_in, l1, activation='tanh') -> BatchNormalization((l1,)) -> Dropout(.5) -> Dense(l1, l2) -> PReLU((l2,)) -> BatchNormalization((l2,)) -> Dropout(.3) -> Dense(l2, l3) -> PReLU((l3,)) -> BatchNormalization((l3,)) -> Dropout(.1) -> Dense(l3, n_out) -> Activation('softmax')
@@ -62,5 +69,48 @@ He also had momentum (epsilon) as ~0 (seems like an optimized value)
 1000x700x600 / 1100x800x600 / 1300x1000x800  with dropout rates .20-.25 https://github.com/Kunstmord/kaggle-otto/blob/master/final.rst
 
 Cloud computing (AWS?) spot instances (the cheap, leftover part that can be terminated at any time). Can get a trial for 10ish days at Google Compute or Microsoft Azure
+
+-log((1-p)/p)  http://en.wikipedia.org/wiki/Logit
+
+It's extremely easy to overfit when blending, particularly if you're using the same data to determine the blending weights as you are when fitting the original model.
+
+One architecture I ended up getting reasonable results (LB=0.446) with was:
+    Input -> 0.13 Dropout -> 2500 -> 0.77 Dropout -> 1300 -> 0.35 Dropout -> 40 -> 0.1 Dropout -> Output (AdaGrad, 600 epochs, batch=1024, linear decreasing learning rate starting at 0.04, ending at 0.005)
+However, I also had networks with (LB=0.441):
+    Input -> 0.15 Drop -> 2000 -> 0.7 Drop -> 1200 -> 0.4 Drop -> 40 -> Output (AdaGrad, 400 epochs, batch = 512, learning rate from 0.04 to 0.001)
+or even (LB=0.463):
+    Input -> 0.15 Drop -> 180 -> 0.1 GaussianNoise -> 0.1 Drop -> 180 -> 0.05 Drop -> 180 -> 0.05 Drop -> 140 -> 0.05 Drop -> 140 -> 0.05 Drop -> 140 -> 0.1 Drop -> 140 -> 0.1 GaussianNoise -> 160 -> Output (AdaGrad, 100 epochs, batch=512, rate = 0.03 to 0.005)
+
+Boosted Neural Network: remove the high confidence training samples every 25 epochs: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14296/competition-write-up-optimistically-convergent
+
+Another NN layout with okay score and little work: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14303/0-416-in-just-a-few-lines-of-code
+
+Most people seem to tune NN by hand watching learning curves. So I might want to save those things.
+
+smart ensembling and having multiple different biases seemed to be the most important things for this competition
+
+...neural network ensemble algorithm had completely outpaced it
+
+in the last few days of the competition, we went back and stuck Scikit-Learn's CalibratedClassifierCV on things. It seemed to make a huge difference in the local CV of the neural networks to do 10-fold isotonic calibration. Stuff that was getting 0.443 on local CV was getting down to 0.435.
+
+The other side of it is if the ratio is above 1 but I'm not seeing improvements in either score, then that generally indicates that I have too much dropout (but the architecture might be broad enough).
+
+Optimistically convergent:
+-Layer Sizes: [93, 400, 400, 9]
+ Dropout: [.1, .4, .4]
+ Nesterov Momentum: 0.9 -
+ 0.999
+ Learning Rate: 0.008 - 0.001
+ Max Epochs: 400
+-Layer Sizes: [93, 512, 512, 512,
+ 9]
+ Dropout: [.2, .4, .4, .4]
+ Nesterov Momentum: .9 - .999
+ Learning Rate: .017 - 1e-6
+ Max Epochs: 1600
+
+RandomSearch: center on the current best point
+
+
 
 

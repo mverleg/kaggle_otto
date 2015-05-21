@@ -2,7 +2,7 @@
 from numpy import inf, isnan
 from os.path import join
 from nnet.nnio import save_knowledge
-from settings import NNET_STATE_DIR
+from settings import NNET_STATE_DIR, VERBOSITY
 
 
 class StopWhenOverfitting(object):
@@ -53,5 +53,18 @@ class StopNaN(object):
 		if isnan(train_history[-1]['train_loss']) or isnan(train_history[-1]['valid_loss']):
 			print 'Stopped since loss diverged (NaN)'
 			raise StopIteration('diverged')
+
+
+class BreakEveryN():
+	def __init__(self, interrupt_step):
+		self.interrupt_step = interrupt_step
+
+	def __call__(self, nn, train_history):
+		nn._train_history = train_history
+		epoch = train_history[-1]['epoch']
+		if epoch % self.interrupt_step == 0:
+			if VERBOSITY >= 2:
+				print 'stopping at {0:d} (every {1:d} steps)'.format(epoch, self.interrupt_step)
+			raise StopIteration('stop every {0:d}'.format(self.interrupt_step))
 
 
