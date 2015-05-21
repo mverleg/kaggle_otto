@@ -1,8 +1,9 @@
-
+from json import dump
 from multiprocessing import cpu_count
+from os.path import join
 from scipy.stats import binom, norm, triang, randint
 from numpy.random import RandomState
-from sklearn.cross_validation import KFold
+from sklearn.cross_validation import KFold, ShuffleSplit
 from sklearn.grid_search import RandomizedSearchCV
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
@@ -10,7 +11,7 @@ from nnet.base_optimize import name_from_file
 from nnet.prepare import LogTransform
 from nnet.scikit import NNet
 from utils.loading import get_training_data, get_testing_data
-from settings import SEED
+from settings import SEED, OPTIMIZE_RESULTS_DIR, LOGS_DIR
 from utils.expand_train import expand_from_test
 from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator
 
@@ -45,10 +46,7 @@ opt = RandomizedSearchCV(
 			dense1_init = 'glorot_normal',
 			#'nn__save_snapshots_stepsize': None,
 			auto_stopping = True,
-			dropout2_rate = None,
-			dropout3_rate = None,
 			max_epochs = 1500,  # binom(n = 4000, p = 0.25)
-			weight_decay = 0,
 		)),
 	]),
 	param_distributions = {
@@ -62,25 +60,32 @@ opt = RandomizedSearchCV(
 		'nn__dense3_size': randint(low = 25, high = 700),
 		'nn__dropout0_rate': triang(loc = 0, c = 0, scale = 1),  # beta(a = 0.5, b = 0.5),
 		'nn__dropout1_rate': triang(loc = 0, c = 0, scale = 1),
+		'nn__dropout2_rate': triang(loc = 0, c = 0, scale = 1),
+		'nn__dropout3_rate': triang(loc = 0, c = 0, scale = 1),
+		'nn__weight_decay': norm(0.00006, 0.0001),
 	},
 	fit_params = {
 	},
-	n_iter = 10,
+	n_iter = 600,
 	n_jobs = cpus,
 	scoring = None,
 	iid = False,
 	refit = False,
 	pre_dispatch = cpus + 2,
-	cv = KFold( #todo: use less validation data
+	cv = ShuffleSplit(
 		n = train.shape[0],
-		n_folds = 3, shuffle = True,
-		random_state = random
+		n_iter = 1,
+		test_size = 0.2,
+		#n_folds = 3, shuffle = True,
+		random_state = random,
 	),
 	random_state = random,
 )
-print opt
-print opt.fit(train, labels)
 
-#prediction = scale_to_priors(prediction, priors = bincount(labels)[1:] / float64(len(labels)))
+opt.fit(train, labels)
+
+with open(join(LOGS_DIR, 'random_search_{0:.4f}.json'.format(opt.best_score_)), 'w+') as fh:
+	print 'saving results (no scaling to priors) for top score {0:.4f}:'.format(opt.best_score_), opt.best_params_
+	dump(opt.best_params_, fp = fh, indent = 4)
 
 

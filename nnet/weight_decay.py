@@ -18,15 +18,13 @@ class WeightDecayObjective(Objective):
 		super(WeightDecayObjective, self).__init__(input_layer = input_layer, **kwargs)
 		self.weight_decay_holder = weight_decay_holder
 		if self.weight_decay_holder[0]:  #todo: is this what happens?
-			print 'note that setting weight decay ({0:.3g}) increases the loss as displayed by the training output (different objective); rely on cross validation'.format(self.weight_decay_holder[0].get_value())
+			print 'note that setting weight decay ({0:.3g}) increases the loss as displayed by the training output (different objective); rely on cross validation'.format(self.weight_decay_holder[0])
 
 	def get_loss(self, input = None, target = None, deterministic = False, **kwargs):
 		loss = super(WeightDecayObjective, self).get_loss(input = input, target = target, deterministic = deterministic, **kwargs)
 		if not deterministic:
-			print 'using special objective (WD)'
 			return loss + self.weight_decay_holder[0] * regularization.l2(self.input_layer)
 		else:
-			print 'NOT using special objective (WD)'
 			return loss
 
 
