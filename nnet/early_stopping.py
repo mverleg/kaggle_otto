@@ -1,4 +1,4 @@
-
+from sys import stderr
 from numpy import inf, isnan
 from os.path import join
 from nnet.nnio import save_knowledge
@@ -51,7 +51,7 @@ class StopAfterMinimum(object):
 class StopNaN(object):
 	def __call__(self, nn, train_history):
 		if isnan(train_history[-1]['train_loss']) or isnan(train_history[-1]['valid_loss']):
-			print 'Stopped since loss diverged (NaN)'
+			stderr.write('STOPPED SINCE LOSS DIVERGED (NaN)\nnetwork will be re-initialized to not crash the cross validator\none possible reason is a zero-column in the data\n')
 			nn.initialize()
 			raise StopIteration('diverged')
 

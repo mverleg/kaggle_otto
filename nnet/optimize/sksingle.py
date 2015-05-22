@@ -23,7 +23,7 @@ net = NNet(
 	dense1_nonlinearity = 'rectify',
 	dense1_init = 'glorot_normal',
 	auto_stopping = True,
-	max_epochs = 10,
+	max_epochs = 1000,
 	batch_size = 256,
 	learning_rate = 0.0005,
 	learning_rate_scaling = 100,
@@ -36,7 +36,7 @@ net = NNet(
 	dropout1_rate = 0,
 	dropout2_rate = 0,
 	dropout3_rate = 0,
-	weight_decay = 0,
+	weight_decay = 0.001,
 )
 
 pnet = Pipeline([
@@ -50,10 +50,10 @@ pnet = Pipeline([
 
 cv = ShuffleSplit(
 	n = train.shape[0],
-	n_iter = 3,
+	n_iter = 5,
 	test_size = 0.2,
-),
+)
 
-print cross_val_score(pnet, train, labels, scoring = log_loss_scorer, n_jobs = 1, verbose = True)
-#cv = cv,
+print cross_val_score(pnet, train, labels, scoring = log_loss_scorer, cv = cv, n_jobs = 1, verbose = True)
+
 

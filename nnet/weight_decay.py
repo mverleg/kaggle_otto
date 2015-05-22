@@ -17,8 +17,8 @@ class WeightDecayObjective(Objective):
 	def __init__(self, input_layer, weight_decay, **kwargs):
 		super(WeightDecayObjective, self).__init__(input_layer = input_layer, **kwargs)
 		self.weight_decay = weight_decay
-		if self.weight_decay.get_value():  #todo: is this what happens?
-			print 'note that setting weight decay ({0:.3g}) increases the loss as displayed by the training output (different objective); rely on cross validation'.format(self.weight_decay.get_value())
+		#if self.weight_decay.get_value():
+		#	print 'note that setting weight decay ({0:.3g}) increases the loss as displayed by the training output (different objective); rely on cross validation'.format(self.weight_decay.get_value())
 
 	def get_loss(self, input = None, target = None, deterministic = False, **kwargs):
 		loss = super(WeightDecayObjective, self).get_loss(input = input, target = target, deterministic = deterministic, **kwargs)
@@ -55,7 +55,7 @@ class AdaptiveWeightDecay(object):
 		self.increase_trigger = increase_trigger
 		self.decrease_factor = decrease_factor
 		self.decrease_trigger = decrease_trigger
-		self.countdown = 0 #self.cooldown todo cooldown_epochs
+		self.countdown = self.cooldown
 
 	def __call__(self, nn, train_history):
 		self.countdown -= 1
