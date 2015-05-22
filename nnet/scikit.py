@@ -182,8 +182,11 @@ class NNet(BaseEstimator, ClassifierMixin):
 				StopWhenOverfitting(loss_fraction = 0.8, base_name = snapshot_name),
 				StopAfterMinimum(patience = 40, base_name = self.name),
 			]
+		weight_decay = shared(float32(abs(self.weight_decay)), 'weight_decay')
 		if self.adaptive_weight_decay:
-			raise AssertionError('adaptive weight decay doesn\'t work since objective can\'t be changed')
+			self.step_handlers += [
+				AdaptiveWeightDecay(weight_decay),
+			]
 		if self.epoch_steps:
 			self.step_handlers += [
 				BreakEveryN(self.epoch_steps),
@@ -192,12 +195,11 @@ class NNet(BaseEstimator, ClassifierMixin):
 		"""
 			Create the actual nolearn network with information from __init__.
 		"""
-		weight_decay_holder = [self.weight_decay]
 		self.net = NeuralNet(
 
 			layers = self.layers,
 
-			objective = partial(WeightDecayObjective, weight_decay_holder = weight_decay_holder),
+			objective = partial(WeightDecayObjective, weight_decay = weight_decay),
 
 			input_shape = (None, feature_count),
 			output_num_units = class_count,
@@ -218,13 +220,10 @@ class NNet(BaseEstimator, ClassifierMixin):
 
 			eval_size = 0.1,
 
-			#custom_loss = categorical_crossentropy, # todo
+			#custom_score = ('custom_loss', categorical_crossentropy),
 
 			**self.params
 		)
-
-		""" Attach weight decay value. """
-		self.net.weight_decay_holder = weight_decay_holder
 
 		self.net.initialize()
 

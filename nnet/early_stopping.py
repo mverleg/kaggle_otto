@@ -52,6 +52,7 @@ class StopNaN(object):
 	def __call__(self, nn, train_history):
 		if isnan(train_history[-1]['train_loss']) or isnan(train_history[-1]['valid_loss']):
 			print 'Stopped since loss diverged (NaN)'
+			nn.initialize()
 			raise StopIteration('diverged')
 
 

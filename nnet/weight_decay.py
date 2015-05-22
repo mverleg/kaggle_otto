@@ -14,16 +14,16 @@ from settings import VERBOSITY
 
 class WeightDecayObjective(Objective):
 
-	def __init__(self, input_layer, weight_decay_holder, **kwargs):
+	def __init__(self, input_layer, weight_decay, **kwargs):
 		super(WeightDecayObjective, self).__init__(input_layer = input_layer, **kwargs)
-		self.weight_decay_holder = weight_decay_holder
-		if self.weight_decay_holder[0]:  #todo: is this what happens?
-			print 'note that setting weight decay ({0:.3g}) increases the loss as displayed by the training output (different objective); rely on cross validation'.format(self.weight_decay_holder[0])
+		self.weight_decay = weight_decay
+		if self.weight_decay.get_value():  #todo: is this what happens?
+			print 'note that setting weight decay ({0:.3g}) increases the loss as displayed by the training output (different objective); rely on cross validation'.format(self.weight_decay.get_value())
 
 	def get_loss(self, input = None, target = None, deterministic = False, **kwargs):
 		loss = super(WeightDecayObjective, self).get_loss(input = input, target = target, deterministic = deterministic, **kwargs)
 		if not deterministic:
-			return loss + self.weight_decay_holder[0] * regularization.l2(self.input_layer)
+			return loss + self.weight_decay * regularization.l2(self.input_layer)
 		else:
 			return loss
 
@@ -32,7 +32,7 @@ class AdaptiveWeightDecay(object):
 	"""
 		Change the weight decay based on current ratio of train and test data.
 	"""
-	def __init__(self, increase_factor = 1.5, increase_trigger = 0.90, decrease_factor = 0.8,
+	def __init__(self, weight_decay, increase_factor = 1.5, increase_trigger = 0.90, decrease_factor = 0.8,
 			decrease_trigger = 0.97, trigger_history = 7, cooldown_epochs = 10):
 		"""
 			:param weight_decay_ref: A shared variable storing the weight decay.
@@ -48,11 +48,12 @@ class AdaptiveWeightDecay(object):
 		assert increase_trigger < decrease_trigger or increase_trigger is None or decrease_trigger is None, 'Increase trigger value should be smaller than decrease one (to prevent both increase and decrease activating)'
 		assert increase_factor >= 1, 'increase_factor should increase the weight decay (that is, be larger than 1)'
 		assert decrease_factor <= 1, 'decrease_factor should decrease the weight decay (that is, be smaller than 1)'
+		self.weight_decay = weight_decay
 		self.cooldown = cooldown_epochs
 		self.hist = trigger_history
-		self.increase_factor = shared(increase_factor)
+		self.increase_factor = increase_factor
 		self.increase_trigger = increase_trigger
-		self.decrease_factor = shared(decrease_factor)
+		self.decrease_factor = decrease_factor
 		self.decrease_trigger = decrease_trigger
 		self.countdown = 0 #self.cooldown todo cooldown_epochs
 
@@ -61,15 +62,16 @@ class AdaptiveWeightDecay(object):
 		if self.countdown > 0:
 			return
 		ratio = mean([d['valid_loss'] for d in train_history[-self.hist:]]) / mean([d['train_loss'] for d in train_history[-self.hist:]])
+		print ratio, '->', self.weight_decay
 		if ratio < self.increase_trigger:
 			if VERBOSITY >= 2:
-				print 'increasing weight decay by factor {0:.5f}'.format(self.increase_factor.get_value())
-			nn.weight_decay_holder[0] = (nn.weight_decay_holder[0] * self.increase_factor)
+				print 'increasing weight decay by factor {0:.5f}'.format(self.increase_factor)
+			self.weight_decay.set_value(self.weight_decay.get_value() * self.increase_factor)
 			self.countdown = self.cooldown
 		elif ratio > self.decrease_trigger:
 			if VERBOSITY >= 2:
-				print 'decreasing weight decay by factor {0:.5f}'.format(self.decrease_factor.get_value())
-			nn.weight_decay_holder[0] = (nn.weight_decay_holder[0] * self.decrease_factor)
+				print 'decreasing weight decay by factor {0:.5f}'.format(self.decrease_factor)
+			self.weight_decay.set_value(self.weight_decay.get_value() * self.decrease_factor)
 			self.countdown = self.cooldown
 		else:
 			print '(no effect)'
