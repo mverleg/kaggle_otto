@@ -68,7 +68,7 @@ opt = RandomizedSearchCV(
 	pre_dispatch = cpus + 2,
 	cv = ShuffleSplit(
 		n = train.shape[0],
-		n_iter = 1,
+		n_iter = cpus,
 		test_size = 0.2,
 		random_state = random,
 	),
