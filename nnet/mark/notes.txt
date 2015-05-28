@@ -14,7 +14,17 @@ Maybe the network remembers the current epoch between calling .fit() twice
 Note that the end-of-iteration handlers will call every epoch_steps
 Well that was a great idea but I don't keep epochs since I have to re-initialize the network to reset the objective
 
+Winning features:
+-Feature 1: Distances to nearest neighbours of each classes
+-Feature 2: Sum of distances of 2 nearest neighbours of each classes
+-Feature 3: Sum of distances of 4 nearest neighbours of each classes
+-Feature 4: Distances to nearest neighbours of each classes in TFIDF space
+-Feature 5: Distances to nearest neighbours of each classed in T-SNE space (3 dimensions)
+-Feature 6: Clustering features of original dataset
+-Feature 7: Number of non-zeros elements in each row
+It is the output of standard KNeighborsClassifier from Scikit-Learn with weights 'uniform'. But you can also set weights to 'distance', it will improves the score! ;)
 
+top team (?): But he uses 20% data for level 1 and the reset for level 2. 
 
 Maybe make several NNs and feed the probabilities into a new NN
 The key point of my method is that I tuned NN hyper parameters for an averaging model rather than for a single model.
@@ -33,6 +43,7 @@ Maybe later:
 -
 
 
+Is there a spearmint version of sklearn Grid/Random SearchCV? The lite version seems reasonable: https://github.com/JasperSnoek/spearmint
 
 save each optimized network, possibly with loss in the name
 
