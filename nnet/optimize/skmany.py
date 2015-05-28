@@ -13,7 +13,7 @@ from nnet.base_optimize import name_from_file
 from nnet.prepare import LogTransform
 from nnet.scikit import NNet
 from utils.loading import get_training_data, get_testing_data
-from settings import LOGS_DIR
+from settings import LOGS_DIR, VERBOSITY
 from utils.expand_train import expand_from_test
 from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator
 
@@ -26,7 +26,7 @@ train = gen.fit_transform(train, labels)
 test = gen.transform(test, labels)
 
 cpus = max(cpu_count() - 1, 1)
-random = RandomState()
+#random = RandomState()
 
 opt = RandomizedSearchCV(
 	estimator = Pipeline([
@@ -49,9 +49,9 @@ opt = RandomizedSearchCV(
 		'nn__learning_rate_scaling': [1, 10, 100, 1000],
 		'nn__momentum': [0, 0.9, 0.99, 0.999],
 		'nn__momentum_scaling': [1, 10, 100],
-		'nn__dense1_size': randint(low = 100, high = 120),
-		'nn__dense2_size': randint(low = 50, high = 90),
-		'nn__dense3_size': randint(low = 25, high = 70),
+		'nn__dense1_size': randint(low = 100, high = 1200),
+		'nn__dense2_size': randint(low = 50, high = 900),
+		'nn__dense3_size': randint(low = 25, high = 700),
 		'nn__dropout0_rate': triang(loc = 0, c = 0, scale = 1),  # beta(a = 0.5, b = 0.5),
 		'nn__dropout1_rate': triang(loc = 0, c = 0, scale = 1),
 		'nn__dropout2_rate': triang(loc = 0, c = 0, scale = 1),
@@ -60,7 +60,7 @@ opt = RandomizedSearchCV(
 	},
 	fit_params = {
 	},
-	n_iter = 1,
+	n_iter = 600,
 	n_jobs = cpus,
 	scoring = log_loss_scorer,
 	iid = False,
@@ -68,11 +68,12 @@ opt = RandomizedSearchCV(
 	pre_dispatch = cpus + 2,
 	cv = ShuffleSplit(
 		n = train.shape[0],
-		n_iter = cpus,
+		n_iter = 1,
 		test_size = 0.2,
-		random_state = random,
+		#random_state = random,
 	),
-	random_state = random,
+	#random_state = random,
+	verbose = bool(VERBOSITY),
 )
 
 opt.fit(train, labels)
