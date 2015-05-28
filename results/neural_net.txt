@@ -1,0 +1,84 @@
+
+pos     loss      normalize log
+ 1    0.6267       True
+ 2    0.7395       False
+
+pos     loss      use calibration   e rescale priors
+ 1    0.6238       False             True
+ 2    0.6304       False             False
+ 3    0.7346       True              True
+ 4    0.7375       True              False
+
+pos     loss      outlier method    outlier frac
+ 1    0.6241       EE                0
+ 2    0.6334       OCSVM             0
+ 3    0.6801       EE                0.12
+ 4    0.7060       OCSVM             0.12
+ 5    0.7444       OCSVM             0.2
+ 6    0.7445       OCSVM             0.2
+ 7    0.8279       EE                0.2
+ 8    0.8279       EE                0.2
+ 9    0.9289       OCSVM             0.5
+10    1.3811       EE                0.5
+
+ pos     loss      ra feature count
+  1    0.5682       287
+  2    0.5691       217
+  3    0.5745       157
+  4    0.5789       67
+  5    0.5793       107
+  6    0.5821       17
+  7    0.5823       7
+  8    0.5856       37
+
+pos     loss      nonlinearity
+ 1    0.5835       rectify
+ 2    0.5838       leaky2
+ 3    0.5857       leaky20
+ 4    0.5872       tanh
+ 5    0.6989       sigmoid
+ 6    1.9496       softmax
+
+pos     loss      dense1 init
+ 1    0.5809       glorot_normal
+ 2    0.5822       glorot_uniform
+ 3    0.5826       he_normal
+ 4    0.5832       orthogonal
+ 5    0.5835       he_uniform
+ 6    0.6103       sparse
+
+with scaling over time
+pos     loss      learning rate
+ 1    0.5461       0.01
+ 2    0.5508       0.003
+ 3    0.5855       0.001
+ 4    0.6329       0.0003
+ 5    0.6836       0.0001
+
+with scaling over time and initial learning rate adapted accordingly
+pos     loss      momentum
+ 1    0.5811       0.99
+ 2    0.5815       0.9
+ 3    0.5820       0.999
+ 4    0.5863       0.1
+
+pos     loss      test_data_confidence
+ 1    0.4748       None
+ 2    0.4773       0.95
+ 3    0.4869       0.9
+ 4    0.4926       0.98
+ 5    0.5199       0.8
+ 6    2.1964       0.6
+
+possibly a lot of overfitting and early termination here
+pos     loss      weight decay      dropout
+ 1    0.5496       0.001             0.5
+ 2    0.5603       0.0001            0.5
+ 3    0.5663       0.001             0
+ 4    0.6511       0                 0
+ 5    0.6578       1e-05             0
+ 6    1.5966       1e-05             0.5
+ 7    1.8002       0.0001            0
+ 8    1.8527       0                 0.5
+
+
