@@ -185,7 +185,7 @@ def make_net(
 
 		layers = layers,
 
-		objective = partial(WeightDecayObjective, decay = weight_decay),
+		objective = partial(WeightDecayObjective, weight_decay = weight_decay),
 
 		input_shape = (None, NFEATS),
 
