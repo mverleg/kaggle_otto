@@ -33,6 +33,12 @@ Maybe later:
 -
 
 
+good results: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/13851/lasagne-with-2-hidden-layers/75923#post75923
+50 bags can apparently help - the trick with bagging is to use different sample of train data each time, then just take e.g. average
+bagging automatically: http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html
+
+permalink to a good performing bagged NN: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/14295/41599-via-tsne-meta-bagging/79084#post79084
+
 
 save each optimized network, possibly with loss in the name
 
