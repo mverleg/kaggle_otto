@@ -3,6 +3,7 @@ from cPickle import dump, load
 from matplotlib.pyplot import subplots, show
 from numpy import savez, load as loadz
 from os.path import join
+from sklearn.metrics.scorer import _ProbaScorer, log_loss
 from settings import NNET_STATE_DIR, VERBOSITY, AUTO_IMAGES_DIR
 
 
@@ -67,6 +68,12 @@ class SnapshotStepSaver(object):
 			save_knowledge(nn, filepath)
 			if VERBOSITY >= 1:
 				print 'saved network to "{0:s}" at iteration {1:d}'.format(filepath, epoch)
+
+
+class WriteOutputLogLoss(_ProbaScorer):
+	def __call__(self, clf, X, y, sample_weight = None):
+		y_pred = clf.predict_proba(X)
+		return log_loss(y, y_pred)
 
 
 class SnapshotEndSaver(object):

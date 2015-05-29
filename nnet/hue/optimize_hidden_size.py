@@ -1,5 +1,4 @@
-
-from nnet.make_net import make_net
+from nnet.oldstyle import make_net
 from nnet.prepare import normalize_data, equalize_class_sizes
 from utils.loading import get_training_data
 from utils.outliers import filter_data

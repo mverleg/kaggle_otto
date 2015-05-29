@@ -4,10 +4,12 @@
 """
 
 from copy import copy
+
 from numpy import load
+
 from nnet.nnio import load_knowledge
-from nnet.train_test import train_NN
-from utils.loading import get_training_data, get_testing_data
+from nnet.oldstyle.train_test import train_NN
+from utils.loading import get_training_data
 from utils.normalize import normalized_sum
 from utils.postprocess import scale_to_priors
 from validation.score import calc_logloss

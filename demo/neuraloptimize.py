@@ -1,13 +1,12 @@
-
 from os.path import basename, splitext
 from sys import modules
-from nnet.make_net import make_net
+
+from nnet.oldstyle import make_net
 from nnet.prepare import normalize_data, equalize_class_sizes
 from utils.loading import get_training_data
 from utils.outliers import filter_data
 from validation.crossvalidate import SampleCrossValidator
 from validation.optimize_parallel import ParallelGridOptimizer
-
 
 
 def train_test_NN(train, classes, test, **parameters):
@@ -16,7 +15,7 @@ def train_test_NN(train, classes, test, **parameters):
 	train, classes = filter_data(train, classes, cut_outlier_frac = 0.06, method = 'OCSVM')  # remove ourliers
 	train = normalize_data(train, use_log = True)[0]  # also converts to floats
 	test = normalize_data(test, use_log = True)[0]
-	
+
 	parameters['dense2_nonlinearity'] = parameters['dense1_nonlinearity']  # hack1
 	parameters['dense2_init'] = parameters['dense1_init']  # hack2
 	net = make_net(**parameters)

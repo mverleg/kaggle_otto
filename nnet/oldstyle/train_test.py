@@ -1,16 +1,17 @@
-
-from nnet.nnio import save_knowledge
 from os.path import isfile
-from nnet.make_net import make_net
-from nnet.prepare import conormalize_data
+
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.cross_validation import ShuffleSplit
+from numpy import bincount, float64
+
+from nnet.nnio import save_knowledge
+from nnet.oldstyle import make_net
+from nnet.prepare import conormalize_data
 from utils.expand_train import expand_from_test
 from utils.features import chain_feature_generators
 from utils.loading import get_testing_data
 from utils.outliers import filter_data
 from utils.postprocess import scale_to_priors
-from numpy import bincount, float64
 from validation.optimize import is_nonstr_iterable
 from validation.score import calc_logloss
 

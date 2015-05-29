@@ -1,7 +1,5 @@
-
-from numpy import float32
 from nnet.hue.get_train_data import equalize_train_classes
-from nnet.make_net import make_net
+from nnet.oldstyle import make_net
 from validation.score import calc_logloss, calc_accuracy
 
 

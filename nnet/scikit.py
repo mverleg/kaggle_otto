@@ -14,19 +14,20 @@ from functools import partial
 from json import load
 from json import dump
 from os.path import join
-from theano.tensor.nnet import categorical_crossentropy
-from nnet.weight_decay import WeightDecayObjective, AdaptiveWeightDecay
+
 from lasagne.init import Orthogonal
 from numpy import float32, mean
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet, BatchIterator
 from theano import shared
 from sklearn.base import BaseEstimator, ClassifierMixin
-from nnet.make_net import nonlinearities
-from nnet.make_net import initializers
-from validation.optimize import params_name
 from lasagne.init import Constant
 from lasagne.layers import InputLayer, DenseLayer, DropoutLayer
+
+from nnet.weight_decay import WeightDecayObjective, AdaptiveWeightDecay
+from nnet.oldstyle.make_net import nonlinearities
+from nnet.oldstyle.make_net import initializers
+from validation.optimize import params_name
 from nnet.nnio import SnapshotStepSaver, SnapshotEndSaver, save_knowledge, load_knowledge, TrainProgressPlotter, \
 	get_knowledge, set_knowledge
 from nnet.dynamic import LogarithmicVariable

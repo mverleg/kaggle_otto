@@ -9,32 +9,31 @@ from sklearn.grid_search import RandomizedSearchCV
 from sklearn.metrics.scorer import log_loss_scorer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
-from nnet.base_optimize import name_from_file
+from nnet.oldstyle.base_optimize import name_from_file
 from nnet.prepare import LogTransform
 from nnet.scikit import NNet
-from utils.loading import get_training_data, get_testing_data
 from settings import LOGS_DIR, VERBOSITY
-from utils.expand_train import expand_from_test
-from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator
+from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator, DistanceFeatureGenerator
+from utils.loading import get_preproc_data
 
 
-train, labels = get_training_data()[:2]
-test = get_testing_data()[0]
-train, labels = expand_from_test(train, labels, test, confidence = 0.9)
-gen = PositiveSparseRowFeatureGenerator()
-train = gen.fit_transform(train, labels)
-test = gen.transform(test, labels)
+train, labels, test = get_preproc_data(Pipeline([
+	('row', PositiveSparseRowFeatureGenerator()),
+	('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
+	('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
+]), expand_confidence = 0.9)
+exit()
 
 cpus = max(cpu_count() - 1, 1)
-#random = RandomState()
+random = RandomState()
 
 opt = RandomizedSearchCV(
 	estimator = Pipeline([
-		('gen1', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 50)),
-		('gen2', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 50)),
-		('gen3', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
+		('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
+		('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
+		('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
 		('log', LogTransform()),
-		('scale', MinMaxScaler(feature_range = (0, 3))),
+		('scale03', MinMaxScaler(feature_range = (0, 3))),
 		('nn', NNet(
 			name = name_from_file(),
 			dense1_nonlinearity = 'rectify',
@@ -70,9 +69,9 @@ opt = RandomizedSearchCV(
 		n = train.shape[0],
 		n_iter = 1,
 		test_size = 0.2,
-		#random_state = random,
+		random_state = random,
 	),
-	#random_state = random,
+	random_state = random,
 	verbose = bool(VERBOSITY),
 )
 

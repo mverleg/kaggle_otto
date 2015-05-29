@@ -1,6 +1,6 @@
 
-from nnet.base_optimize import optimize_NN
-from nnet.train_test import train_test_NN
+from nnet.oldstyle.base_optimize import optimize_NN
+from nnet.oldstyle.train_test import train_test_NN
 
 
 def train_test_NN_scale_lr(train, labels, test, learning_rate = None, momentum = None, **kwargs):

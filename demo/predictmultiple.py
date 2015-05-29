@@ -1,26 +1,29 @@
-from gradient_boosting.gradientboosting import gradientBoosting
-from random_forest.newRandomForest import randomForest
-from numpy import load, save, isnan, sum
-from nnet.make_net import make_net
-from nnet.prepare import normalize_data, equalize_class_sizes
-from utils.outliers import filter_data
 from os.path import basename, splitext
 from sys import modules
 
+from numpy import load, save
+
+from gradient_boosting.gradientboosting import gradientBoosting
+from random_forest.newRandomForest import randomForest
+from nnet.oldstyle import make_net
+from nnet.prepare import normalize_data, equalize_class_sizes
+from utils.outliers import filter_data
+
+
 def train_test_NN(train, classes, test, **parameters):
 
-    train, classes = equalize_class_sizes(train, classes)	
+    train, classes = equalize_class_sizes(train, classes)
     train, classes = filter_data(train, classes, cut_outlier_frac = 0.06, method = 'OCSVM')  # remove ourliers
-	
+
     train = normalize_data(train, use_log = True)[0]  # also converts to floats
     test = normalize_data(test, use_log = True)[0]
-	
+
     parameters['dense2_nonlinearity'] = parameters['dense1_nonlinearity']  # hack1
     parameters['dense2_init'] = parameters['dense1_init']  # hack2
     net = make_net(**parameters)
     net.fit(train, classes - 1)
     return net.predict_proba(test)
-	
+
 testmat = load('data/testmat.npy').astype('uint16')
 testmat = testmat[:,1:]
 trainmat = load('data/trainmat.npy').astype('uint16')
@@ -31,7 +34,7 @@ doForest = False
 doGradient = False
 doNeural = True
 
-forestparams = { 
+forestparams = {
 "n_estimators" : 200,
 "criterion" : 'gini', #['gini', 'entropy'], #gini seems better (default)
 "max_features" : 'sqrt', #['sqrt', 'log2', None], #sqrt seems good (default), None is about as good but much slower
@@ -48,8 +51,8 @@ forestparams = {
 "outlier_frac" : False, #[False, 0.03, 0.06]
 "outlier_method" : 'EE', #['EE', 'OCSVM']
 "undersample" : False, #[False,True]
-"rescale_pred" : True,#[False,True] 
-"sample_weight" : None #[None, "inverted"] 
+"rescale_pred" : True,#[False,True]
+"sample_weight" : None #[None, "inverted"]
 }
 if doForest:
     forestprediction = randomForest(trainmat, trainclas, testmat, **forestparams)
@@ -69,8 +72,8 @@ gradientparams = {
 "outlier_frac" : False, #[False, 0.03, 0.06]
 "outlier_method" : 'EE', #['EE', 'OCSVM']
 "undersample" : False, #[False,True] #didn't try, because probably won't work anyway
-"rescale_pred" : False, # [False,True] 
-"sample_weight" : None #[None, "inverted"] 
+"rescale_pred" : False, # [False,True]
+"sample_weight" : None #[None, "inverted"]
 }
 if doGradient:
     gradientprediction = gradientBoosting(trainmat, trainclas, testmat, **gradientparams)

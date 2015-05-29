@@ -1,19 +1,25 @@
-
 from sklearn.cross_validation import ShuffleSplit, cross_val_score
 from sklearn.metrics.scorer import log_loss_scorer
-from nnet.base_optimize import name_from_file
-from nnet.prepare import LogTransform, get_nn_train_data, get_nn_test_data
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import MinMaxScaler
+
+from nnet.oldstyle.base_optimize import name_from_file
+from nnet.prepare import LogTransform
 from nnet.scikit import NNet
+from utils.features import PositiveSparseRowFeatureGenerator, DistanceFeatureGenerator, PositiveSparseFeatureGenerator
+from utils.loading import get_preproc_data
 
 
-train, labels = get_nn_train_data()
-test = get_nn_test_data()[0]
-#train, labels = expand_from_test(train, labels, test, confidence = 0.9)
-#gen = PositiveSparseRowFeatureGenerator()
-#train = gen.fit_transform(train, labels)
-#test = gen.transform(test, labels)
-
-print train.shape, test.shape, labels.shape
+train, labels, test = get_preproc_data(Pipeline([
+	('row', PositiveSparseRowFeatureGenerator()),
+	('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
+	('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
+	('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
+	('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
+	('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 40)),
+	('log', LogTransform()),
+	('scale03', MinMaxScaler(feature_range = (0, 3))),
+]), expand_confidence = 0.9)
 
 net = NNet(
 	name = name_from_file(),
@@ -35,15 +41,6 @@ net = NNet(
 	dropout3_rate = 0,
 	weight_decay = 0.001,
 )
-
-#pnet = Pipeline([
-#	('gen1', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 50)),
-#	('gen2', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 50)),
-#	('gen3', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
-#	('log', LogTransform()),
-#	('scale', MinMaxScaler(feature_range = (0, 3))),
-#	('nn', net),
-#])
 
 cv = ShuffleSplit(
 	n = train.shape[0],

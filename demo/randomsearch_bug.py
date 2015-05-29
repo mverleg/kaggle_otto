@@ -1,21 +1,11 @@
-
-from json import dump
-from multiprocessing import cpu_count
-from os.path import join
-from scipy.stats import binom, norm, triang, randint
-from numpy.random import RandomState
+from scipy.stats import randint
 from sklearn.cross_validation import ShuffleSplit
 from sklearn.grid_search import RandomizedSearchCV
 from sklearn.metrics.scorer import log_loss_scorer
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import MinMaxScaler
-from nnet.base_optimize import name_from_file
-from nnet.prepare import LogTransform
+
+from nnet.oldstyle.base_optimize import name_from_file
 from nnet.scikit import NNet
-from utils.loading import get_training_data, get_testing_data
-from settings import LOGS_DIR, VERBOSITY
-from utils.expand_train import expand_from_test
-from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator
+from utils.loading import get_training_data
 
 
 train, labels = get_training_data()[:2]

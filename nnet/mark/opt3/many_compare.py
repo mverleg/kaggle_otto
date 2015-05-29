@@ -1,8 +1,8 @@
-
 from multiprocessing import Pool
 from random import Random
 from os.path import isfile, join
-from nnet.base_optimize import optimize_NN, name_from_file
+
+from nnet.oldstyle.base_optimize import optimize_NN, name_from_file
 from settings import SEED, NNET_STATE_DIR
 
 

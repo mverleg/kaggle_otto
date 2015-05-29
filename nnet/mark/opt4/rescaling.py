@@ -1,5 +1,5 @@
 
-from nnet.base_optimize import optimize_NN
+from nnet.oldstyle.base_optimize import optimize_NN
 
 
 optimize_NN(debug = False, **{

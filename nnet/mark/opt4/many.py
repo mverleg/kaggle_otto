@@ -1,9 +1,9 @@
-
 from json import dump
 from multiprocessing import Pool
 from os.path import join
 from random import Random
-from nnet.base_optimize import optimize_NN, name_from_file
+
+from nnet.oldstyle.base_optimize import optimize_NN, name_from_file
 from settings import SEED, NNET_STATE_DIR
 
 

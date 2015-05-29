@@ -1,8 +1,11 @@
-
 from genericpath import isfile
-from nnet.nnio import load_knowledge, save_knowledge
 from os.path import join
-from nnet.make_net import make_net
+
+from matplotlib.pyplot import show
+from numpy import bincount, float64
+
+from nnet.nnio import load_knowledge, save_knowledge
+from nnet.oldstyle import make_net
 from nnet.prepare import conormalize_data
 from nnet.train_test import make_pretrain
 from nnet.visualization import show_train_progress
@@ -10,10 +13,8 @@ from settings import SUBMISSIONS_DIR, PRETRAIN_DIR, NNET_STATE_DIR
 from utils.features import chain_feature_generators
 from utils.ioutil import makeSubmission as make_submission
 from utils.loading import get_training_data, get_testing_data
-from matplotlib.pyplot import show
 from utils.postprocess import scale_to_priors
 from utils.shuffling import shuffle
-from numpy import bincount, float64
 from validation.score import calc_logloss
 
 

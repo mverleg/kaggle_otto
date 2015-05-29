@@ -1,7 +1,7 @@
-
-from nnet.train_test import train_test_NN, make_pretrain
 from os.path import basename, splitext, join
 from sys import modules
+
+from nnet.oldstyle.train_test import train_test_NN, make_pretrain
 from settings import PRETRAIN_DIR
 from utils.loading import get_training_data
 from validation.crossvalidate import SampleCrossValidator

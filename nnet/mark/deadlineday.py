@@ -1,8 +1,7 @@
-
 from numpy import load, save, uint16
-from nnet.base_optimize import name_from_file
+
+from nnet.oldstyle.base_optimize import name_from_file
 from nnet.train_test import train_test_NN
-from utils.loading import get_training_data
 from utils.shuffling import shuffle
 from validation.score import calc_logloss
 
