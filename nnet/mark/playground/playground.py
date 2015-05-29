@@ -1,13 +1,18 @@
 
 from nnet.nnio import load_knowledge
-from nnet.prepare import conormalize_data
-from utils.loading import get_training_data
+from nnet.prepare import conormalize_data, nn_transform_pipe
+from utils.loading import get_training_data, get_preproc_data
 from validation.crossvalidate import SampleCrossValidator
 from validation.optimize_parallel import ParallelGridOptimizer
 from nnet.make_net import make_net
 from utils.postprocess import scale_to_priors
 from numpy import bincount, float64
 from validation.score import calc_logloss
+
+
+train, labels, test = get_preproc_data(nn_transform_pipe, expand_confidence = 0.9)
+print train.shape, labels.shape, test.shape
+exit()
 
 
 def train_test_NN(train, labels, test, use_rescale_priors = False, outlier_frac = 0, outlier_method = 'OCSVM',

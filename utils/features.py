@@ -263,6 +263,7 @@ class DistanceFeatureGenerator(BaseEstimator, TransformerMixin):
 		for cls in range(1, NCLASSES + 1):
 			f = (y == cls)
 			self.knn[cls - 1].fit(X[f], zeros((f.sum(),)))
+		return self
 
 	def transform(self, X):
 		if VERBOSITY >= 1:

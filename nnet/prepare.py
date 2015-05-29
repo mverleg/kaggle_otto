@@ -72,50 +72,16 @@ class LogTransform(BaseEstimator, TransformerMixin):
 		return log10(X.astype(float32) + 1)
 
 
-transform_pipe = Pipeline([
+nn_transform_pipe = Pipeline([
 	('row', PositiveSparseRowFeatureGenerator()),
-	('distp1', DistanceFeatureGenerator(n_neighbors = 4, distance_p = 1)),
-	('distp2', DistanceFeatureGenerator(n_neighbors = 4, distance_p = 2)),
+	('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
+	('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
 	('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
 	('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
 	('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 40)),
 	('log', LogTransform()),
-	('scale', MinMaxScaler(feature_range = (0, 3))),
+	('scale03', MinMaxScaler(feature_range = (0, 3))),
 ])
-
-
-def get_nn_train_data(train_filepath = TRAIN_DATA_PATH, test_filepath = TEST_DATA_PATH):
-	try:
-		train = load(join(gettempdir(), 'cache_nn_train_data.npy'))
-		labels = load(join(gettempdir(), 'cache_nn_train_classes.npy'))
-		if VERBOSITY >= 1:
-			print 'loaded transformed NN train data from cache in "{0:s}"'.format(gettempdir())
-	except IOError:
-		if VERBOSITY >= 1:
-			print 'transforming NN train data and saving to cache'
-		train, labels, features = get_training_data(filepath = train_filepath)
-		test, features = get_testing_data(filepath = test_filepath)
-		train, labels = expand_from_test(train, labels, test, confidence = 0.9)
-		train, labels = transform_pipe.fit_transform(train, labels)
-		save(join(gettempdir(), 'cache_nn_train_data.npy'), train)
-		save(join(gettempdir(), 'cache_nn_train_classes.npy'), labels)
-	return train, labels
-
-
-def get_nn_test_data(train_filepath = TRAIN_DATA_PATH, test_filepath = TEST_DATA_PATH):
-	try:
-		test = load(join(gettempdir(), 'cache_nn_test_data.npy'))
-		if VERBOSITY >= 1:
-			print 'loaded transformed NN test data from cache in "{0:s}"'.format(gettempdir())
-	except IOError:
-		if VERBOSITY >= 1:
-			print 'transforming NN test data and saving to cache'
-		train, labels, features = get_training_data(filepath = train_filepath)
-		test, features = get_testing_data(filepath = test_filepath)
-		transform_pipe.fit(train, labels)
-		transform_pipe.transform(test)
-		save(join(gettempdir(), 'cache_nn_test_data.npy'), test)
-	return test
 
 
 if __name__ == '__main__':

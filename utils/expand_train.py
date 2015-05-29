@@ -16,7 +16,6 @@ def expand_from_test(train_data, labels, test_data, confidence = 0.9, prediction
 	if VERBOSITY >= 1:
 		print 'adding confident test samples to train data'
 	selector = ConfidentTestSelector(test_data = test_data, confidence = confidence, predictions_path = predictions_path)
-	d, l = selector.add_to_train(train_data, labels)
 	return selector.add_to_train(train_data, labels)
 
 
