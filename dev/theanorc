@@ -5,5 +5,9 @@ fastmath = True
 [blas]
 ldflags = -lblas -lifcore
 
+[compile]
+wait = 2
+timeout = 10
+
 
 
