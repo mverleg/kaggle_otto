@@ -3,11 +3,18 @@
 	Prepare data for neural network use.
 """
 
+from os.path import join
+from tempfile import gettempdir
 from matplotlib.pyplot import subplots, show
-from numpy import log10, zeros, where, float32, float64
+from numpy import log10, zeros, where, float32, load, save
 from sklearn.base import BaseEstimator
 from sklearn.base import TransformerMixin
-from settings import NCLASSES, VERBOSITY
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import MinMaxScaler
+from settings import NCLASSES, VERBOSITY, TRAIN_DATA_PATH, TEST_DATA_PATH
+from utils.expand_train import expand_from_test
+from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator, DistanceFeatureGenerator
+from utils.loading import load_training_data, get_training_data, get_testing_data
 
 
 def normalize_data(data, norms = None, use_log = True):
@@ -63,6 +70,52 @@ class LogTransform(BaseEstimator, TransformerMixin):
 		if not copy:
 			print 'LogTransform always copies data as the input and output data type differ'
 		return log10(X.astype(float32) + 1)
+
+
+transform_pipe = Pipeline([
+	('row', PositiveSparseRowFeatureGenerator()),
+	('distp1', DistanceFeatureGenerator(n_neighbors = 4, distance_p = 1)),
+	('distp2', DistanceFeatureGenerator(n_neighbors = 4, distance_p = 2)),
+	('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
+	('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
+	('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 40)),
+	('log', LogTransform()),
+	('scale', MinMaxScaler(feature_range = (0, 3))),
+])
+
+
+def get_nn_train_data(train_filepath = TRAIN_DATA_PATH, test_filepath = TEST_DATA_PATH):
+	try:
+		train = load(join(gettempdir(), 'cache_nn_train_data.npy'))
+		labels = load(join(gettempdir(), 'cache_nn_train_classes.npy'))
+		if VERBOSITY >= 1:
+			print 'loaded transformed NN train data from cache in "{0:s}"'.format(gettempdir())
+	except IOError:
+		if VERBOSITY >= 1:
+			print 'transforming NN train data and saving to cache'
+		train, labels, features = get_training_data(filepath = train_filepath)
+		test, features = get_testing_data(filepath = test_filepath)
+		train, labels = expand_from_test(train, labels, test, confidence = 0.9)
+		train, labels = transform_pipe.fit_transform(train, labels)
+		save(join(gettempdir(), 'cache_nn_train_data.npy'), train)
+		save(join(gettempdir(), 'cache_nn_train_classes.npy'), labels)
+	return train, labels
+
+
+def get_nn_test_data(train_filepath = TRAIN_DATA_PATH, test_filepath = TEST_DATA_PATH):
+	try:
+		test = load(join(gettempdir(), 'cache_nn_test_data.npy'))
+		if VERBOSITY >= 1:
+			print 'loaded transformed NN test data from cache in "{0:s}"'.format(gettempdir())
+	except IOError:
+		if VERBOSITY >= 1:
+			print 'transforming NN test data and saving to cache'
+		train, labels, features = get_training_data(filepath = train_filepath)
+		test, features = get_testing_data(filepath = test_filepath)
+		transform_pipe.fit(train, labels)
+		transform_pipe.transform(test)
+		save(join(gettempdir(), 'cache_nn_test_data.npy'), test)
+	return test
 
 
 if __name__ == '__main__':

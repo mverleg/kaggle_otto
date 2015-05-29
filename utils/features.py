@@ -7,6 +7,7 @@ from random import Random
 from matplotlib.pyplot import subplots, show
 from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack, isnan, any, sqrt, array, hstack
 from sklearn.base import TransformerMixin, BaseEstimator
+from sklearn.neighbors import KNeighborsClassifier
 from settings import NCLASSES, SEED, VERBOSITY, RAW_NFEATS
 from utils.loading import get_training_data
 from utils.normalize import normalized_sum
@@ -209,6 +210,7 @@ class PositiveSparseRowFeatureGenerator(BaseEstimator, TransformerMixin):
 	def fit(self, X, y = None, **fit_params):
 		return self
 
+	#todo: should y = None be here?
 	def transform(self, X, y = None, copy = False):
 		if VERBOSITY >= 1:
 			if self.extra_featurs is None:
@@ -245,6 +247,35 @@ class PositiveSparseRowFeatureGenerator(BaseEstimator, TransformerMixin):
 		return hstack((X, feats[:, :self.extra_featurs]))
 
 
+class DistanceFeatureGenerator(BaseEstimator, TransformerMixin):
+	"""
+		Create extra features that are the distances to the nearest neighbors from each cluster class.
+	"""
+	def __init__(self, n_neighbors = 4, distance_p = 1):
+		self.knn = [None] * NCLASSES
+		for cls in range(1, NCLASSES + 1):
+			self.knn[cls - 1] = KNeighborsClassifier(
+				n_neighbors = n_neighbors,
+				p = distance_p,
+			)
+
+	def fit(self, X, y):
+		for cls in range(1, NCLASSES + 1):
+			f = (y == cls)
+			self.knn[cls - 1].fit(X[f], zeros((f.sum(),)))
+
+	def transform(self, X):
+		if VERBOSITY >= 1:
+			print 'creating class distance features for {0:d}x{1:d} data'.format(*X.shape)
+		feats = []
+		for cls in range(1, NCLASSES + 1):
+			if VERBOSITY >= 2:
+				print ' creating class distance features for class {0}'.format(cls)
+			dist, indx1 = self.knn[cls - 1].kneighbors(X, return_distance = True)
+			feats.append(dist.sum(1))
+		return hstack((X, array(feats).T))
+
+
 if __name__ == '__main__':
 	train_data, true_labels = get_training_data()[:2]
 	augmented_data, duplicate_data = chain_feature_generators(train_data, true_labels, train_data, extra_features = 163, multiplicity = 3, seed = 1)
@@ -255,5 +286,4 @@ if __name__ == '__main__':
 	fig.colorbar(im, ax = ax1)
 	ax2.bar(range(augmented_data.shape[1]), augmented_data.mean(0))
 	show()
-
 
