@@ -1,8 +1,8 @@
+
 from sklearn.cross_validation import ShuffleSplit, cross_val_score
 from sklearn.metrics.scorer import log_loss_scorer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
-
 from nnet.oldstyle.base_optimize import name_from_file
 from nnet.prepare import LogTransform
 from nnet.scikit import NNet

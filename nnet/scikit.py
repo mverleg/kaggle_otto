@@ -11,10 +11,8 @@
 
 from collections import OrderedDict
 from functools import partial
-from json import load
-from json import dump
+from json import load, dumps, dump
 from os.path import join
-
 from lasagne.init import Orthogonal
 from numpy import float32, mean
 from lasagne.updates import nesterov_momentum
@@ -23,7 +21,6 @@ from theano import shared
 from sklearn.base import BaseEstimator, ClassifierMixin
 from lasagne.init import Constant
 from lasagne.layers import InputLayer, DenseLayer, DropoutLayer
-
 from nnet.weight_decay import WeightDecayObjective, AdaptiveWeightDecay
 from nnet.oldstyle.make_net import nonlinearities
 from nnet.oldstyle.make_net import initializers
@@ -107,6 +104,9 @@ class NNet(BaseEstimator, ClassifierMixin):
 			print 'initializing network {0:s} {1:d}x{2:d}x{3:d}'.format(self.name, self.dense1_size or 0, self.dense2_size or 0, self.dense3_size or 0)
 			if VERBOSITY >= 2:
 				print 'parameters: ' + ', '.join('{0:s} = {1:}'.format(k, v) for k,v in self.get_params(deep = False).items())
+		self.feature_count = feature_count
+		self.class_count = class_count
+
 		"""
 			Create the layers and their settings.
 		"""
@@ -311,12 +311,13 @@ class NNet(BaseEstimator, ClassifierMixin):
 		return self.net.score(X, y)
 
 	def save(self, filepath = None):
+		assert hasattr(self, 'net'), 'Cannot save a network that is not initialized; .fit(X, y) something first [or use net.initialize(..) for random initialization].'
 		parameters = self.get_params(deep = False)
 		filepath = filepath or join(NNET_STATE_DIR, self.name)
 		if VERBOSITY >= 1:
-			print 'saving network to "{0:s}.net.npz/.net.json"'.format(filepath)
+			print 'saving network to "{0:s}.net.npz|json"'.format(filepath)
 		with open(filepath + '.net.json', 'w+') as fh:
-			dump(parameters, fp = fh)
+			dump([parameters, self.feature_count, self.class_count], fp = fh)
 		save_knowledge(self.net, filepath + '.net.npz')
 
 	@classmethod
@@ -328,11 +329,12 @@ class NNet(BaseEstimator, ClassifierMixin):
 		"""
 		filepath = filepath or join(NNET_STATE_DIR, name)
 		if VERBOSITY >= 1:
-			print 'loading network from "{0:s}.net.npz/.net.json"'.format(filepath)
-		with open(filepath + '.json', 'w+') as fh:
-			parameters = load(fp = fh)
-		net = cls(**parameters)
-		load_knowledge(net, filepath + '.net.npz')
-		return net
+			print 'loading network from "{0:s}.net.npz|json"'.format(filepath)
+		with open(filepath + '.net.json', 'r') as fh:
+			[parameters, feature_count, class_count] = load(fp = fh)
+		nnet = cls(**parameters)
+		nnet.init_net(feature_count = feature_count, class_count = class_count)
+		load_knowledge(nnet.net, filepath + '.net.npz')
+		return nnet
 
 
