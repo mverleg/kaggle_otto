@@ -70,10 +70,11 @@ class SnapshotStepSaver(object):
 				print 'saved network to "{0:s}" at iteration {1:d}'.format(filepath, epoch)
 
 
-class WriteOutputLogLoss(_ProbaScorer):
-	def __call__(self, clf, X, y, sample_weight = None):
-		y_pred = clf.predict_proba(X)
-		return log_loss(y, y_pred)
+#class WriteOutputLogLoss(_ProbaScorer):
+#	def __call__(self, clf, X, y, sample_weight = None):
+#		y_pred = clf.predict_proba(X)
+#       # plot stuff
+#		return log_loss(y, y_pred)
 
 
 class SnapshotEndSaver(object):

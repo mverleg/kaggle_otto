@@ -11,10 +11,11 @@
 
 from collections import OrderedDict
 from functools import partial
-from json import load, dumps, dump
+from json import load, dump
 from os.path import join
+from sys import stderr
 from lasagne.init import Orthogonal
-from numpy import float32, mean
+from numpy import float32, mean, isfinite
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet, BatchIterator
 from theano import shared
@@ -302,7 +303,12 @@ class NNet(BaseEstimator, ClassifierMixin):
 		return net
 
 	def predict_proba(self, X):
-		return self.net.predict_proba(X)
+		probs = self.net.predict_proba(X)
+		if not isfinite(probs).sum():
+			errmsg = 'network "{0:s}" predicted infinite/NaN probabilities'.format(self.name)
+			stderr.write(errmsg)
+			raise DivergenceError(errmsg)
+		return probs
 
 	def predict(self, X):
 		return self.net.predict(X)
@@ -336,5 +342,9 @@ class NNet(BaseEstimator, ClassifierMixin):
 		nnet.init_net(feature_count = feature_count, class_count = class_count)
 		load_knowledge(nnet.net, filepath + '.net.npz')
 		return nnet
+
+
+class DivergenceError(Exception):
+	pass
 
 

@@ -269,13 +269,11 @@ class DistanceFeatureGenerator(BaseEstimator, TransformerMixin):
 		if VERBOSITY >= 1:
 			print 'creating class distance features for {0:d}x{1:d} data'.format(*X.shape)
 		feats = []
-		print 'before', X.dtype
 		for cls in range(1, NCLASSES + 1):
 			if VERBOSITY >= 2:
 				print ' creating class distance features for class {0}'.format(cls)
 			dist, indx1 = self.knn[cls - 1].kneighbors(X, return_distance = True)
 			feats.append(dist.sum(1))
-		print 'after', hstack((X, array(feats).T)).dtype
 		return hstack((X, array(feats).T))
 
 
