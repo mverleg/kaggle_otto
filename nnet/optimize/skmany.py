@@ -19,8 +19,8 @@ from utils.loading import get_preproc_data
 
 train, labels, test = get_preproc_data(Pipeline([
 	('row', PositiveSparseRowFeatureGenerator()),
-	#('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
-	#('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)), #todo on
+	('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
+	('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)), #todo on
 ]), expand_confidence = 0.9)
 
 cpus = max(cpu_count() - 1, 1)
@@ -38,7 +38,7 @@ opt = RandomizedSearchCV(
 			dense1_nonlinearity = 'rectify',
 			dense1_init = 'glorot_normal',
 			auto_stopping = True,
-			max_epochs = 5,  # binom(n = 4000, p = 0.25)
+			max_epochs = 1500,  # binom(n = 4000, p = 0.25)
 		)),
 	]),
 	param_distributions = {
@@ -47,9 +47,9 @@ opt = RandomizedSearchCV(
 		'nn__learning_rate_scaling': [1, 10, 100, 1000],
 		'nn__momentum': [0, 0.9, 0.99, 0.999],
 		'nn__momentum_scaling': [1, 10, 100],
-		'nn__dense1_size': randint(low = 100, high = 120),
-		'nn__dense2_size': randint(low = 50, high = 90),
-		'nn__dense3_size': randint(low = 25, high = 70),
+		'nn__dense1_size': randint(low = 100, high = 1200),
+		'nn__dense2_size': randint(low = 50, high = 900),
+		'nn__dense3_size': randint(low = 25, high = 700),
 		'nn__dropout0_rate': triang(loc = 0, c = 0, scale = 1),  # beta(a = 0.5, b = 0.5),
 		'nn__dropout1_rate': triang(loc = 0, c = 0, scale = 1),
 		'nn__dropout2_rate': triang(loc = 0, c = 0, scale = 1),
@@ -58,7 +58,7 @@ opt = RandomizedSearchCV(
 	},
 	fit_params = {
 	},
-	n_iter = 6,
+	n_iter = 120,
 	n_jobs = cpus,
 	scoring = log_loss_scorer,
 	iid = False,
@@ -72,7 +72,7 @@ opt = RandomizedSearchCV(
 	),
 	random_state = random,
 	verbose = bool(VERBOSITY),
-	error_score = 1000000,
+	error_score = -1000000,
 )
 
 opt.fit(train, labels)
