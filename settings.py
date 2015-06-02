@@ -56,3 +56,6 @@ args = parser.parse_known_args(argv[1:])[0]
 VERBOSITY = args.verbosity
 
 
+
+class DivergenceError(Exception):
+	pass
