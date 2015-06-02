@@ -23,4 +23,7 @@ nn.fit(train, labels)
 nn.save(filepath = '/tmp/test')
 nn = NNet.load(filepath = '/tmp/test')
 
+w = nn.net.get_all_params_values()
+print w
+nn.net.load_params_from(w)
 
