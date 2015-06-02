@@ -14,13 +14,11 @@ from functools import partial
 from json import load, dump
 from os.path import join
 from sys import stderr
-from lasagne.init import Orthogonal
 from numpy import float32, mean, isfinite
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet, BatchIterator
 from theano import shared
 from sklearn.base import BaseEstimator, ClassifierMixin
-from lasagne.init import Constant
 from lasagne.layers import InputLayer, DenseLayer, DropoutLayer
 from nnet.weight_decay import WeightDecayObjective, AdaptiveWeightDecay
 from validation.optimize import params_name
@@ -28,7 +26,7 @@ from nnet.nnio import SnapshotStepSaver, SnapshotEndSaver, save_knowledge, load_
 	get_knowledge, set_knowledge
 from nnet.dynamic import LogarithmicVariable
 from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum, StopNaN, BreakEveryN
-from settings import NCLASSES, VERBOSITY, NNET_STATE_DIR
+from settings import NCLASSES, VERBOSITY, NNET_STATE_DIR, DivergenceError
 from lasagne.init import Orthogonal, GlorotNormal, GlorotUniform, HeNormal, HeUniform, Sparse, Constant
 from lasagne.nonlinearities import softmax, tanh, sigmoid, rectify, LeakyRectify
 
@@ -361,9 +359,5 @@ class NNet(BaseEstimator, ClassifierMixin):
 		nnet.init_net(feature_count = feature_count, class_count = class_count)
 		load_knowledge(nnet.net, filepath + '.net.npz')
 		return nnet
-
-
-class DivergenceError(Exception):
-	pass
 
 

@@ -3,8 +3,7 @@ from sys import stderr
 from numpy import inf, isnan
 from os.path import join
 from nnet.nnio import save_knowledge
-from nnet.scikit import DivergenceError
-from settings import NNET_STATE_DIR, VERBOSITY
+from settings import NNET_STATE_DIR, VERBOSITY, DivergenceError
 
 
 class StopWhenOverfitting(object):
@@ -51,7 +50,7 @@ class StopAfterMinimum(object):
 
 
 class StopNaN(object):
-	def __init__(self, raise_divergence):
+	def __init__(self, raise_divergence = True):
 		self.raise_divergence = raise_divergence
 
 	def __call__(self, nn, train_history):
