@@ -27,24 +27,6 @@ from settings import NCLASSES, VERBOSITY
 filterwarnings('ignore', '.*topo.*')
 setrecursionlimit(10000)
 
-nonlinearities = {
-	'tanh': tanh,
-	'sigmoid': sigmoid,
-	'rectify': rectify,
-	'leaky2': LeakyRectify(leakiness = 0.02),
-	'leaky20': LeakyRectify(leakiness = 0.2),
-	'softmax': softmax,
-}
-
-initializers = {
-	'orthogonal': Orthogonal(),
-	'sparse': Sparse(),
-	'glorot_normal': GlorotNormal(),
-	'glorot_uniform': GlorotUniform(),
-	'he_normal': HeNormal(),
-	'he_uniform': HeUniform(),
-}
-
 
 def make_net(
 		NFEATS,
