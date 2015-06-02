@@ -1,7 +1,9 @@
+
 from sys import stderr
 from numpy import inf, isnan
 from os.path import join
 from nnet.nnio import save_knowledge
+from nnet.scikit import DivergenceError
 from settings import NNET_STATE_DIR, VERBOSITY
 
 
@@ -41,7 +43,7 @@ class StopAfterMinimum(object):
 			print 'Best validation loss was {:.6f} at epoch {}.'.format(self.best_valid, self.best_valid_epoch)
 			filepath = '{0:s}_{1:d}.net.npz'.format(self.base_path, train_history[-1]['epoch'])
 			save_knowledge(nn, filepath)
-			nn.load_weights_from(self.best_weights)
+			nn.load_params_from(self.best_weights)
 			filepath = '{0:s}_{1:d}_best.net.npz'.format(self.base_path, self.best_valid_epoch)
 			save_knowledge(nn, filepath)
 			print 'The network has been restored to the state at this epoch and both have been saved.'
@@ -49,9 +51,14 @@ class StopAfterMinimum(object):
 
 
 class StopNaN(object):
+	def __init__(self, raise_divergence):
+		self.raise_divergence = raise_divergence
+
 	def __call__(self, nn, train_history):
 		if isnan(train_history[-1]['train_loss']) or isnan(train_history[-1]['valid_loss']):
 			stderr.write('STOPPED SINCE LOSS DIVERGED (NaN)\nnetwork will be re-initialized to not crash the cross validator\none possible reason is a zero-column in the data\n')
+			if self.raise_divergence:
+				raise DivergenceError('Stopped since loss diverged (NaN)')
 			nn.initialize()
 			raise StopIteration('diverged')
 
