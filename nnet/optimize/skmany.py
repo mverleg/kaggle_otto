@@ -34,7 +34,7 @@ opt = RandomizedSearchCV(
 		('log', LogTransform()),
 		('scale03', MinMaxScaler(feature_range = (0, 3))),
 		('nn', NNet(
-			name = name_from_file(),
+			#name = name_from_file(),
 			dense1_nonlinearity = 'rectify',
 			dense1_init = 'glorot_normal',
 			auto_stopping = True,

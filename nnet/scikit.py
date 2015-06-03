@@ -153,7 +153,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 				'dense2_b': Constant(0.),
 			})
 		else:
-			assert self.dense3_size is None, 'There cannot be a third dense layer without a second one'
+			assert not self.dense3_size, 'There cannot be a third dense layer without a second one'
 		if self.dropout2_rate:
 			assert self.dense2_size is not None, 'There cannot be a second dropout layer without a second dense layer.'
 			self.layers += [('dropout2', DropoutLayer)]
