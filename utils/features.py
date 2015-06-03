@@ -251,28 +251,30 @@ class DistanceFeatureGenerator(BaseEstimator, TransformerMixin):
 	"""
 		Create extra features that are the distances to the nearest neighbors from each cluster class.
 	"""
-	def __init__(self, n_neighbors = 4, distance_p = 1):
-		self.knn = [None] * NCLASSES
-		for cls in range(1, NCLASSES + 1):
+	def __init__(self, n_neighbors = 4, distance_p = 1, only_upto = RAW_NFEATS, nr_classes = NCLASSES):
+		self.only_upto = only_upto
+		self.nr_classes = nr_classes
+		self.knn = [None] * self.nr_classes
+		for cls in range(1, self.nr_classes + 1):
 			self.knn[cls - 1] = KNeighborsClassifier(
 				n_neighbors = n_neighbors,
 				p = distance_p,
 			)
 
 	def fit(self, X, y):
-		for cls in range(1, NCLASSES + 1):
+		for cls in range(1, self.nr_classes + 1):
 			f = (y == cls)
-			self.knn[cls - 1].fit(X[f], zeros((f.sum(),)))
+			self.knn[cls - 1].fit(X[f, :self.only_upto], zeros((f.sum(),)))
 		return self
 
 	def transform(self, X):
 		if VERBOSITY >= 1:
 			print 'creating class distance features for {0:d}x{1:d} data'.format(*X.shape)
 		feats = []
-		for cls in range(1, NCLASSES + 1):
+		for cls in range(1, self.nr_classes + 1):
 			if VERBOSITY >= 2:
 				print ' creating class distance features for class {0}'.format(cls)
-			dist, indx1 = self.knn[cls - 1].kneighbors(X, return_distance = True)
+			dist, indx1 = self.knn[cls - 1].kneighbors(X[:, :self.only_upto], return_distance = True)
 			feats.append(dist.sum(1))
 		return hstack((X, array(feats).T))
 

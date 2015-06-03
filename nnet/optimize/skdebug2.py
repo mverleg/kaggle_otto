@@ -18,22 +18,22 @@ from utils.ioutil import makeSubmission
 from utils.loading import get_preproc_data, get_training_data, get_testing_data
 
 
-#train, labels, test = get_preproc_data(Pipeline([
-#	('row', PositiveSparseRowFeatureGenerator()),
-#	('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
-#	('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
-#]), expand_confidence = 0.9)
-train, labels = get_training_data()[:2]
-test = get_testing_data()[0]
+train, labels, test = get_preproc_data(Pipeline([
+	('row', PositiveSparseRowFeatureGenerator()),
+	#('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
+	#('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
+]), expand_confidence = 0.9)
+#train, labels = get_training_data()[:2]
+#test = get_testing_data()[0]
 
 #cpus = max(cpu_count() - 1, 1)
 #random = RandomState()
 
 opt = RandomizedSearchCV(
 	estimator = Pipeline([
-		#('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
-		#('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
-		#('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
+		('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
+		('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
+		('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
 		('log', LogTransform()),
 		('scale03', MinMaxScaler(feature_range = (0, 3))),
 		('nn', NNet(**{
@@ -95,10 +95,10 @@ opt = RandomizedSearchCV(
 
 opt.fit(train, labels)
 
-with open(join(LOGS_DIR, 'debug_{0:.4f}.json'.format(-opt.best_score_)), 'w+') as fh:
+with open(join(LOGS_DIR, 'debug2_{0:.4f}.json'.format(-opt.best_score_)), 'w+') as fh:
 	print 'saving results (no scaling to priors) for top score {0:.4f}:'.format(-opt.best_score_), opt.best_params_
 	dump(opt.best_params_, fp = fh, indent = 4)
 probs = opt.best_estimator_.predict_proba(test)
-makeSubmission(probs, fname = join(SUBMISSIONS_DIR, 'debug_{0:.4f}.csv'.format(-opt.best_score_)), digits = 8)
+makeSubmission(probs, fname = join(SUBMISSIONS_DIR, 'debug2_{0:.4f}.csv'.format(-opt.best_score_)), digits = 8)
 
 

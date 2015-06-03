@@ -3,6 +3,7 @@ from argparse import ArgumentParser
 from os import makedirs
 from sys import argv
 from os.path import dirname, realpath, join
+from numpy import array, float32
 
 
 # You can add settings here rather than hard-coding them.
@@ -19,6 +20,7 @@ RAW_NFEATS = 93
 TRAINSIZE = 61878
 TESTSIZE = 144368
 NCLASSES = 9
+PRIORS = array([1929, 16122, 8004, 2691, 2739, 14135, 2839, 8464, 4955], dtype = float32) / 61878
 
 
 """
