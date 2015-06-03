@@ -11,3 +11,4 @@ scikit-learn==0.16.1
 scipy==0.15.1
 six==1.9.0
 wsgiref==0.1.2
+nolearn==0.6a0.dev0
