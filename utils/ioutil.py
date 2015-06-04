@@ -58,8 +58,8 @@ NFEATS=93
 #
 global TEST, TRAIN, LABELS
 
-TRAIN, LABELS, _features = get_training_data()
-TEST, _features = get_testing_data()
+#TRAIN, LABELS, _features = get_training_data()
+#TEST, _features = get_testing_data()
 
 
 submissionheader = 'id,Class_1,Class_2,Class_3,Class_4,Class_5,Class_6,Class_7,Class_8,Class_9'

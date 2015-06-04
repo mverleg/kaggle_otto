@@ -262,9 +262,9 @@ class NNet(BaseEstimator, ClassifierMixin):
 		"""
 			Arguments checks.
 		"""
-		assert self.dropout1_rate is None or 0 <= self.dropout1_rate < 1, 'Dropout rate 1 should be a value between 0 and 1'
-		assert self.dropout2_rate is None or 0 <= self.dropout1_rate < 1, 'Dropout rate 2 should be a value between 0 and 1, or None for inheritance'
-		assert self.dropout3_rate is None or 0 <= self.dropout1_rate < 1, 'Dropout rate 3 should be a value between 0 and 1, or None for inheritance'
+		assert self.dropout1_rate is None or 0 <= self.dropout1_rate < 1, 'Dropout rate 1 should be a value between 0 and 1 (value: {0})'.format(self.dropout1_rate)
+		assert self.dropout2_rate is None or 0 <= self.dropout2_rate < 1, 'Dropout rate 2 should be a value between 0 and 1, or None for inheritance (value: {0})'.format(self.dropout2_rate)
+		assert self.dropout3_rate is None or 0 <= self.dropout3_rate < 1, 'Dropout rate 3 should be a value between 0 and 1, or None for inheritance (value: {0})'.format(self.dropout3_rate)
 		assert self.dense1_nonlinearity in nonlinearities.keys(), 'Linearity 1 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), self.dense1_nonlinearity)
 		assert self.dense2_nonlinearity in nonlinearities.keys() + [None], 'Linearity 2 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), self.dense2_nonlinearity)
 		assert self.dense3_nonlinearity in nonlinearities.keys() + [None], 'Linearity 3 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), self.dense3_nonlinearity)
