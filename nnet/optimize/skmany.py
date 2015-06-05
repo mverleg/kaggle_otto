@@ -34,9 +34,9 @@ random = RandomState()
 
 opt = RandomizedSearchCV(
 	estimator = Pipeline([
-		('nn', NNet({
+		('nn', NNet(**{
 			#name = name_from_file(),
-			'max_epochs': 1200,
+			'max_epochs': 3,
 			'auto_stopping': True,
 			'adaptive_weight_decay': False,
 			'save_snapshots_stepsize': None,
