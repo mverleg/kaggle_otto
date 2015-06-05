@@ -10,6 +10,10 @@ from sklearn.calibration import CalibratedClassifierCV
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from math import floor
 from numpy import ones, shape, bincount
+from nnet.prepare import LogTransform
+from random_forest.randomforest import randomForest
+from utils.features import PositiveSparseRowFeatureGenerator, DistanceFeatureGenerator
+from utils.features import PositiveSparseFeatureGenerator
 from utils.preprocess import obtain_class_weights, equalize_class_sizes
 from utils.outliers import filter_data
 from utils.postprocess import rescale_prior
@@ -98,10 +102,20 @@ def svm(train,
 
 if __name__ == '__main__':
 
-    from utils.loading import get_training_data
+    from utils.loading import get_training_data, get_preproc_data
     from validation.crossvalidate import SampleCrossValidator
 
-    train_data, true_classes, _ = get_training_data()    
+    train_data, true_classes, _ = get_training_data()
+    train, labels, test = get_preproc_data(Pipeline([
+	('row', PositiveSparseRowFeatureGenerator()),
+	('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
+	('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
+	('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
+	('log', LogTransform()), # log should be after integer feats but before dist
+	('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
+	('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
+	('scale03', MinMaxScaler(feature_range = (0, 3))), # scale should apply to int and float feats
+]), expand_confidence = 0.94)
     validator = SampleCrossValidator(train_data, true_classes, rounds=1, test_frac=0.1, use_data_frac=1.0)
     for train, classes, test in validator.yield_cross_validation_sets():
         prediction = randomForest(train,
