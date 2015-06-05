@@ -13,7 +13,9 @@ from collections import OrderedDict
 from functools import partial
 from json import load, dump
 from os.path import join
+from random import random
 from sys import stderr
+from time import sleep
 from numpy import float32, mean, isfinite
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet, BatchIterator
@@ -288,7 +290,9 @@ class NNet(BaseEstimator, ClassifierMixin):
 		if self.dropout3_rate is None and self.dense3_size:
 			self.dropout3_rate = self.dropout2_rate
 
-	def fit(self, X, y):
+	def fit(self, X, y, random_sleep = None):
+		if random_sleep:
+			sleep(random_sleep * random())  # this is to prevent compiler lock problems
 		labels = y - y.min()
 		self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
 		net = self.net.fit(X, labels)
