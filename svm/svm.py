@@ -97,7 +97,7 @@ def svm(train,
 
     if rescale_pred:
         predictions = rescale_prior(predictions, bincount(labels))
-    return predictions  
+    return predictions
 
 
 if __name__ == '__main__':
@@ -105,17 +105,15 @@ if __name__ == '__main__':
     from utils.loading import get_training_data, get_preproc_data
     from validation.crossvalidate import SampleCrossValidator
 
-    train_data, true_classes, _ = get_training_data()
-    train, labels, test = get_preproc_data(Pipeline([
-	('row', PositiveSparseRowFeatureGenerator()),
-	('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
-	('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
-	('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
-	('log', LogTransform()), # log should be after integer feats but before dist
-	('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
-	('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
-	('scale03', MinMaxScaler(feature_range = (0, 3))), # scale should apply to int and float feats
-]), expand_confidence = 0.94)
+    #train_data, true_classes, _ = get_training_data()
+    train_data, true_classes, test_data = get_preproc_data(Pipeline([
+        ('row', PositiveSparseRowFeatureGenerator()),
+        ('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
+        ('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
+        ('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
+        ('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
+        ('scale03', MinMaxScaler(feature_range = (0, 3))), # scale should apply to int and float feats
+    ]), expand_confidence = None)
     validator = SampleCrossValidator(train_data, true_classes, rounds=1, test_frac=0.1, use_data_frac=1.0)
     for train, classes, test in validator.yield_cross_validation_sets():
         prediction = randomForest(train,
@@ -129,3 +127,5 @@ if __name__ == '__main__':
                                   rescale_pred=True)
         validator.add_prediction(prediction)
     validator.print_results()
+
+
