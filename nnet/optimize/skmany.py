@@ -36,7 +36,7 @@ opt = RandomizedSearchCV(
 	estimator = Pipeline([
 		('nn', NNet(**{
 			#name = name_from_file(),
-			'max_epochs': 3,
+			'max_epochs': 1200,
 			'auto_stopping': True,
 			'adaptive_weight_decay': False,
 			'save_snapshots_stepsize': None,
@@ -69,7 +69,7 @@ opt = RandomizedSearchCV(
 	n_jobs = cpus,
 	scoring = log_loss_scorer,
 	iid = False,
-	refit = False,
+	refit = True,
 	pre_dispatch = cpus + 2,
 	cv = ShuffleSplit(
 		n = train.shape[0],
