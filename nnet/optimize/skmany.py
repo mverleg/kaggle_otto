@@ -48,6 +48,8 @@ opt = RandomizedSearchCV(
 		'nn__name': ['nn{0:03d}'.format(k) for k in range(10000)],
 		'nn__dense1_nonlinearity': nonlinearities.keys(),
 		'nn__dense1_init': initializers.keys(),
+		'nn__dense2_nonlinearity': nonlinearities.keys(),
+		'nn__dense2_init': initializers.keys(),
 		'nn__batch_size': binom(n = 256, p = 0.5),
 		'nn__learning_rate': norm(0.0005, 0.0002),
 		'nn__learning_rate_scaling': [10, 100, 1000],
