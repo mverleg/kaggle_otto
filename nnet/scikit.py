@@ -108,13 +108,13 @@ class NNet(BaseEstimator, ClassifierMixin):
 		"""
 		params = locals()
 		del params['self']
-		self.__dict__.update(params)
+		#self.__dict__.update(params)
 		self.parameter_names = sorted(params.keys())
 
 		"""
 			Check the parameters and update some defaults (will be done for 'self', no need to store again).
 		"""
-		self.set_params()
+		self.set_params(params)
 
 	def init_net(self, feature_count, class_count = NCLASSES, verbosity = VERBOSITY >= 2):
 		"""
@@ -245,6 +245,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 
 			**self.params
 		)
+		self.net.parent = self
 
 		self.net.initialize()
 
@@ -344,7 +345,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 		if VERBOSITY >= 1:
 			print 'saving network to "{0:s}.net.npz|json"'.format(filepath)
 		with open(filepath + '.net.json', 'w+') as fh:
-			dump([parameters, self.feature_count, self.class_count], fp = fh)
+			dump([parameters, self.feature_count, self.class_count], fp = fh, indent = 2)
 		save_knowledge(self.net, filepath + '.net.npz')
 
 	@classmethod
