@@ -114,7 +114,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 		"""
 			Check the parameters and update some defaults (will be done for 'self', no need to store again).
 		"""
-		self.set_params(params)
+		self.set_params(**params)
 
 	def init_net(self, feature_count, class_count = NCLASSES, verbosity = VERBOSITY >= 2):
 		"""

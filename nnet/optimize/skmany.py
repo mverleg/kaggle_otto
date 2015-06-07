@@ -34,6 +34,14 @@ random = RandomState()
 
 opt = RandomizedSearchCV(
 	estimator = Pipeline([
+		('row', PositiveSparseRowFeatureGenerator()),
+		('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
+		('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
+		('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
+		('log', LogTransform()), # log should be after integer feats but before dist
+		#('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
+		#('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
+		('scale03', MinMaxScaler(feature_range = (0, 3))), # scale should apply to int and float feats
 		('nn', NNet(**{
 			#name = name_from_file(),
 			'max_epochs': 1200,
