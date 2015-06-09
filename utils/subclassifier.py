@@ -22,6 +22,8 @@ def combinePredictions(predictions, subpredictions, subclasses = [2,3], copyPred
     
     if copyPred:
         predictions = np.copy(predictions)
+        
+    subclasses = [x - 1 for x in subclasses] #fix off-by-one error
     
     subsums = np.sum(predictions[:,subclasses], 1)    
     predictions[:,subclasses] = np.vstack([subpredictions[:,i]*subsums for i in range(len(subclasses))]).T
@@ -39,7 +41,7 @@ def getSubClassifierData(subclasses = [2,3], train_data = None, true_classes = N
    assert len(true_classes) == np.shape(train_data)[0]
    
    validsample = np.array([x in subclasses for x in true_classes])
-   return train_data[validsample,:], true_classes[validsample,:]
+   return train_data[validsample,:], true_classes[validsample]
    
 if __name__ == "__main__":
     
@@ -53,15 +55,16 @@ if __name__ == "__main__":
     for train, classes, test in validator.yield_cross_validation_sets():
         prediction = randomForest(train,classes,test,n_estimators=300,verbose=1,max_depth=None,
                                   min_samples_split=2,min_samples_leaf=1,
-                                  class_weight=None,calibration=10,n_jobs = -1,rescale_pred=True)
-                                  
-        #subtrain,subclasses = getSubClassifierData(subclasses, train, classes)
-        #subprediction = randomForest(subtrain, subclasses,test,n_estimators=300,verbose=1,max_depth=None,
-        #                          min_samples_split=2,min_samples_leaf=1,
-        #                          class_weight=None,calibration=10,n_jobs = -1,rescale_pred=True)
-        #prediction = combinePredictions(prediction, subprediction, subclasses)        
+                                  class_weight=None,calibration=10,n_jobs = 3,rescale_pred=True)
+
+        subtrain,sublabels = getSubClassifierData(subclasses, train, classes)
+        subprediction = randomForest(subtrain, sublabels,test,n_estimators=300,verbose=1,max_depth=None,
+                                  min_samples_split=2,min_samples_leaf=1,
+                                  class_weight=None,calibration=10,n_jobs = 3,rescale_pred=False)
+        prediction = combinePredictions(prediction, subprediction, subclasses)        
               
         validator.add_prediction(prediction)
     validator.print_results()
 
-    
+#before: 0.5146
+#after: 0.5103
