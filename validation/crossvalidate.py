@@ -9,7 +9,7 @@ from random import Random
 from sys import stdout
 from time import clock
 from numpy import array, setdiff1d
-from subprocess import check_output
+from subprocess import check_output, CalledProcessError
 from settings import VERBOSITY, NCLASSES, SEED
 from validation.metrics import confusion_matrix, average_size_mismatch
 from validation.score import calc_logloss, calc_accuracy
@@ -157,7 +157,10 @@ class SampleCrossValidator(Validator):
 		confusion = 1000. * confusions.sum(0) / len(confusions)
 		size_mismatch = size_mismatches.mean(0)
 		output_handle.write('*cross validation results*\n')
-		output_handle.write('code version  {0:s}\n'.format(check_output(['git', 'rev-parse','HEAD']).rstrip()))
+		try:
+			output_handle.write('code version  {0:s}\n'.format(check_output(['git', 'rev-parse','HEAD']).rstrip()))
+		except CalledProcessError:
+			output_handle.write('code version  [could not be determined]\n')
 		output_handle.write('repetitions   {0:d}\n'.format(len(self.results)))
 		output_handle.write('training #    {0:d}  {1:s}\n'.format(self.use_data_count - self.test_count, 'This is very low, results may be wrong!' if self.use_data_count < 10 * NCLASSES else ''))
 		output_handle.write('testing #     {0:d}  {1:s}\n'.format(self.test_count, 'This is very low, results may be wrong!' if self.test_count < 5 * NCLASSES else ''))
