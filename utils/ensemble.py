@@ -11,6 +11,7 @@ from utils.arrayutils import stack_predictions, unstack_predictions
 from utils.normalize import normalize_probabilities
 from validation.crossvalidate import SampleCrossValidator
 from validation.optimize import GridOptimizer
+from random_forest.randomforest import randomForest
 
 def mean_ensemble(predictionmatrix, weights = None):
     """
@@ -90,50 +91,25 @@ def grid_ensemble(predictionmatrix, trueclasses, numinterval = None, printWeight
     print optimizer.print_top(printtop, True)
     #return validator.get_results()
     
-def linear_reg_ensemble(predictionmatrix, trueclasses, testmatrix):
-    """
-    Creates predicts every individual class using a seperate linear regression classifier.
-    The inputs are the predictions for every class from every model
-    """
-    unstackPrediction = unstack_predictions(predictionmatrix)
-    unstackTest = unstack_predictions(testmatrix)
-    Q, N, C = np.shape(testmatrix)
-    result = np.empty((C,N))
-    print "Now starting linear regression"
-    for i in range(C):
-        print "Now starting class " + str(i) 
-        model = skl.LinearRegression()
-        model.fit(unstackPrediction, trueclasses == (i+1))
-        print "Done fitting class " + str(i) + ", now predicting"
-        result[i,:] = model.predict(unstackTest)
-    return result.T
+def classifierEnsemble(train, trueclasses, test, model = None):
+    """Given test, a QxNxC matrix, trueclasses, a N-array, and test, a QxMxC matrix
+      Where Q is number of models, C is number of classes
+      model is an optional function that takes in a NxF trainmatrix, N-array true classes, and MxF test matrix
+        and returns a MxC prediction matrix
+      by default, random forest is used"""    
+    if model is None:
+        model = lambda tr,cl,te : randomForest(tr,cl,te,n_estimators=400,verbose=1,max_depth=None,
+                                  min_samples_split=2,min_samples_leaf=1, max_features = 'sqrt',
+                                  class_weight=None,calibration=5,n_jobs = 3,rescale_pred=True)
     
-def combineFeatures(a, b):
-    #Given NxA matrix and NxB matrix, we want NxAB matrix by pairwise multiplication of columns
-    N, A = np.shape(a)
-    M, B = np.shape(b)
-    assert N == M, (N, M)
-    return np.array([np.hstack(np.dot(a[i,:][:,None], b[i,:][None,:])) for i in range(N)])    
+    Q,N,C = np.shape(train)  
+    assert N == len(trueclasses)
+    Q2,M,C2 = np.shape(test)
+    assert (Q2 == Q) and (C2 == C)
     
-def fwls_ensemble(predictionmatrix,  trueclasses, testmatrix, predictfeatures, testfeatures):
-    """
-    Given N training samples, T testing samples, Q models, C classes, F features:
-    predictionmatrix: QxNxC matrix
-    predictfeatures: NxF matrix
-    trueclasses: N array
-    testmatrix: QxTxC matrix
-    testfeatures: TxF matrix
-    Classifies the test samples using FWLS ensemble
-    for reference, see: http://arxiv.org/pdf/0911.0460v2.pdf
-    """
-    Q, _, _ = np.shape(predictionmatrix) 
-    trainMatrixFull = combineFeatures(unstack_predictions(predictionmatrix), predictfeatures)
-    testMatrixFull = combineFeatures(unstack_predictions(testmatrix), testfeatures)
-    print "trainMatrixFull", np.shape(trainMatrixFull)
-    print "testMatrixFull", np.shape(testMatrixFull)
-    return linear_reg_ensemble(stack_predictions(trainMatrixFull, Q), 
-                              trueclasses, 
-                              stack_predictions(testMatrixFull, Q))
+    unstacktrain = unstack_predictions(train) #is now a NxQC matrix
+    unstacktest = unstack_predictions(test)   #is now a MxQC matrix    
+    return model(unstacktrain, trueclasses, unstacktest)
     
 def multiclass_grid_ensemble(predictionmatrix, trueclasses, probssofar = None, column = 0, numinterval = None, printWeights = False, printtop = 20, data_frac = 1.0, rounds = 1):
     Q, _,C = np.shape(predictionmatrix)
@@ -219,16 +195,9 @@ if __name__ == '__main__':
     from utils.loading import get_testing_data, get_training_data
     testmat, _ = get_testing_data()
     print "testmat", np.shape(testmat)
-    
-    linreg = linear_reg_ensemble(p, trueclasses, ptest)
-    fwls = fwls_ensemble(p, trueclasses, ptest, trainmat, testmat) 
     grid = multiclass_mean_ensemble(ptest, bestweights)
-    
-    print "linreg", np.shape(linreg)
-    print "fwls", np.shape(fwls)
+
     print "grid", np.shape(grid)
     
     from utils.ioutil import makeSubmission
-    makeSubmission(linreg, 'linregsub.csv')
-    makeSubmission(fwls, 'fwlssub.csv')
     makeSubmission(grid, 'gridsub.csv')
