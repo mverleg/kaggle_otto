@@ -13,7 +13,9 @@ from collections import OrderedDict
 from functools import partial
 from json import load, dump
 from os.path import join
+from random import random
 from sys import stderr
+from time import sleep
 from numpy import float32, mean, isfinite
 from lasagne.updates import nesterov_momentum
 from nolearn.lasagne import NeuralNet, BatchIterator
@@ -106,13 +108,13 @@ class NNet(BaseEstimator, ClassifierMixin):
 		"""
 		params = locals()
 		del params['self']
-		self.__dict__.update(params)
+		#self.__dict__.update(params)
 		self.parameter_names = sorted(params.keys())
 
 		"""
 			Check the parameters and update some defaults (will be done for 'self', no need to store again).
 		"""
-		self.set_params()
+		self.set_params(**params)
 
 	def init_net(self, feature_count, class_count = NCLASSES, verbosity = VERBOSITY >= 2):
 		"""
@@ -153,7 +155,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 				'dense2_b': Constant(0.),
 			})
 		else:
-			assert self.dense3_size is None, 'There cannot be a third dense layer without a second one'
+			assert not self.dense3_size, 'There cannot be a third dense layer without a second one'
 		if self.dropout2_rate:
 			assert self.dense2_size is not None, 'There cannot be a second dropout layer without a second dense layer.'
 			self.layers += [('dropout2', DropoutLayer)]
@@ -243,6 +245,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 
 			**self.params
 		)
+		self.net.parent = self
 
 		self.net.initialize()
 
@@ -262,9 +265,9 @@ class NNet(BaseEstimator, ClassifierMixin):
 		"""
 			Arguments checks.
 		"""
-		assert self.dropout1_rate is None or 0 <= self.dropout1_rate < 1, 'Dropout rate 1 should be a value between 0 and 1'
-		assert self.dropout2_rate is None or 0 <= self.dropout1_rate < 1, 'Dropout rate 2 should be a value between 0 and 1, or None for inheritance'
-		assert self.dropout3_rate is None or 0 <= self.dropout1_rate < 1, 'Dropout rate 3 should be a value between 0 and 1, or None for inheritance'
+		assert self.dropout1_rate is None or 0 <= self.dropout1_rate < 1, 'Dropout rate 1 should be a value between 0 and 1 (value: {0})'.format(self.dropout1_rate)
+		assert self.dropout2_rate is None or 0 <= self.dropout2_rate < 1, 'Dropout rate 2 should be a value between 0 and 1, or None for inheritance (value: {0})'.format(self.dropout2_rate)
+		assert self.dropout3_rate is None or 0 <= self.dropout3_rate < 1, 'Dropout rate 3 should be a value between 0 and 1, or None for inheritance (value: {0})'.format(self.dropout3_rate)
 		assert self.dense1_nonlinearity in nonlinearities.keys(), 'Linearity 1 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), self.dense1_nonlinearity)
 		assert self.dense2_nonlinearity in nonlinearities.keys() + [None], 'Linearity 2 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), self.dense2_nonlinearity)
 		assert self.dense3_nonlinearity in nonlinearities.keys() + [None], 'Linearity 3 should be one of "{0}", got "{1}" instead.'.format('", "'.join(nonlinearities.keys()), self.dense3_nonlinearity)
@@ -288,7 +291,9 @@ class NNet(BaseEstimator, ClassifierMixin):
 		if self.dropout3_rate is None and self.dense3_size:
 			self.dropout3_rate = self.dropout2_rate
 
-	def fit(self, X, y):
+	def fit(self, X, y, random_sleep = None):
+		if random_sleep:
+			sleep(random_sleep * random())  # this is to prevent compiler lock problems
 		labels = y - y.min()
 		self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
 		net = self.net.fit(X, labels)
@@ -340,7 +345,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 		if VERBOSITY >= 1:
 			print 'saving network to "{0:s}.net.npz|json"'.format(filepath)
 		with open(filepath + '.net.json', 'w+') as fh:
-			dump([parameters, self.feature_count, self.class_count], fp = fh)
+			dump([parameters, self.feature_count, self.class_count], fp = fh, indent = 2)
 		save_knowledge(self.net, filepath + '.net.npz')
 
 	@classmethod

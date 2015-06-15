@@ -5,6 +5,10 @@ read until May 9th: NN https://www.kaggle.com/c/otto-group-product-classificatio
 read until May 9th: difficult cls: https://www.kaggle.com/c/otto-group-product-classification-challenge/forums/t/13768/how-to-classify-the-class-2-3-4-better
 long tutorial: http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
 
+getting unreasonably low scores must mean overfitting, which I think cannot be caused by weight decay... somehow information is leaking?
+could it be a shared memory problem? that would really suck... but unlikely if they're different processes
+note that the error occurs in network and in cross validation, so it's not a NN bug but a data leak bug
+lasagne/nolearn is close to cross validation so that's probably okay
 
 #todo: investigate overfitting better!
 #todo: predictions from several nets into one

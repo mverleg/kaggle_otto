@@ -6,21 +6,19 @@ from scipy.stats import binom, norm, triang, randint, uniform
 from numpy.random import RandomState
 from sklearn.cross_validation import ShuffleSplit
 from sklearn.grid_search import RandomizedSearchCV
+from sklearn.metrics.scorer import log_loss_scorer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
-from nnet.oldstyle.base_optimize import name_from_file
 from nnet.prepare import LogTransform
-from nnet.score_logging import get_logloss_loggingscorer
-from settings import OPTIMIZE_RESULTS_DIR
 from nnet.scikit import NNet, nonlinearities, initializers
 from settings import LOGS_DIR, VERBOSITY, SUBMISSIONS_DIR, PRIORS
-from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator
+from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator, DistanceFeatureGenerator
 from utils.ioutil import makeSubmission
 from utils.loading import get_preproc_data
 from utils.postprocess import scale_to_priors
 
 
-train, labels, test = get_preproc_data(None, expand_confidence = None)
+train, labels, test = get_preproc_data(None, expand_confidence = 0.96)
 
 cpus = max(cpu_count() - 1, 1)
 random = RandomState()
@@ -37,7 +35,7 @@ opt = RandomizedSearchCV(
 		('scale03', MinMaxScaler(feature_range = (0, 3))), # scale should apply to int and float feats
 		('nn', NNet(**{
 			#name = name_from_file(),
-			'max_epochs': 1200,
+			'max_epochs': 700,
 			'auto_stopping': True,
 			'adaptive_weight_decay': False,
 			'save_snapshots_stepsize': None,
@@ -52,12 +50,12 @@ opt = RandomizedSearchCV(
 		'nn__dense2_nonlinearity': nonlinearities.keys(),
 		'nn__dense2_init': initializers.keys(),
 		'nn__batch_size': binom(n = 256, p = 0.5),
-		'nn__learning_rate': norm(0.0005, 0.0002),
+		'nn__learning_rate': norm(0.0003, 0.0002),
 		'nn__learning_rate_scaling': [10, 100, 1000],
 		'nn__momentum': uniform(loc = 0.9, scale = 0.1),
 		'nn__momentum_scaling': [1, 10],
-		'nn__dense1_size': randint(low = 400, high = 900),
-		'nn__dense2_size': randint(low = 300, high = 700),
+		'nn__dense1_size': randint(low = 60, high = 160),
+		'nn__dense2_size': randint(low = 50, high = 150),
 		#'nn__dense3_size': randint(low = 100, high = 400),
 		'nn__dropout0_rate': triang(loc = 0, c = 0, scale = 1),
 		'nn__dropout1_rate': triang(loc = 0, c = 0, scale = 1),
@@ -68,12 +66,9 @@ opt = RandomizedSearchCV(
 	fit_params = {
 		'nn__random_sleep': 600,
 	},
-	n_iter = 5,
+	n_iter = 300,
 	n_jobs = cpus,
-	scoring = get_logloss_loggingscorer(
-		join(OPTIMIZE_RESULTS_DIR, '{0:s}.log'.format(name_from_file())),
-		treshold = 0.7
-	),
+	scoring = log_loss_scorer,
 	iid = False,
 	refit = True,
 	pre_dispatch = cpus + 2,
