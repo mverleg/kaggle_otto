@@ -29,6 +29,6 @@ class ScoringLogging(_ProbaScorer):
 
 
 def get_logloss_loggingscorer(filename, treshold):
-	return ScoringLogging(log_loss, sign = 1, log_file = filename, log_treshold = treshold)
+	return ScoringLogging(log_loss, sign = 1, kwargs = {}, log_file = filename, log_treshold = treshold)
 
 
