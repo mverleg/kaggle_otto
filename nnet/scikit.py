@@ -26,7 +26,7 @@ from nnet.weight_decay import WeightDecayObjective, AdaptiveWeightDecay
 from validation.optimize import params_name
 from nnet.nnio import SnapshotStepSaver, SnapshotEndSaver, save_knowledge, load_knowledge, TrainProgressPlotter, \
 	get_knowledge, set_knowledge
-from nnet.dynamic import LogarithmicVariable
+from nnet.dynamic import LogarithmicVariable, LinearVariable
 from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum, StopNaN, BreakEveryN
 from settings import NCLASSES, VERBOSITY, NNET_STATE_DIR, DivergenceError
 from lasagne.init import Orthogonal, GlorotNormal, GlorotUniform, HeNormal, HeUniform, Sparse, Constant
@@ -185,8 +185,8 @@ class NNet(BaseEstimator, ClassifierMixin):
 			print 'learning rate: {0:.6f} -> {1:.6f}'.format(abs(self.learning_rate), abs(self.learning_rate) / float(self.learning_rate_scaling))
 			print 'momentum:      {0:.6f} -> {1:.6f}'.format(abs(self.momentum), 1 - ((1 - abs(self.momentum)) / float(self.momentum_scaling)))
 		self.step_handlers = [
-			LogarithmicVariable('update_learning_rate', start = abs(self.learning_rate), stop = abs(self.learning_rate) / float(self.learning_rate_scaling)),
-			LogarithmicVariable('update_momentum', start = abs(self.momentum), stop = 1 - ((1 - abs(self.momentum)) / float(self.momentum_scaling))),
+			LinearVariable('update_learning_rate', start = abs(self.learning_rate), stop = abs(self.learning_rate) / float(self.learning_rate_scaling)),
+			LinearVariable('update_momentum', start = abs(self.momentum), stop = 1 - ((1 - abs(self.momentum)) / float(self.momentum_scaling))),
 			StopNaN(),
 		]
 		self.end_handlers = [
