@@ -6,28 +6,25 @@ from scipy.stats import binom, norm, triang, randint
 from numpy.random import RandomState
 from sklearn.cross_validation import ShuffleSplit
 from sklearn.grid_search import RandomizedSearchCV
-from sklearn.metrics.scorer import log_loss_scorer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
 from nnet.oldstyle.base_optimize import name_from_file
 from nnet.prepare import LogTransform
 from nnet.scikit import NNet
-from settings import LOGS_DIR, VERBOSITY
-from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator, DistanceFeatureGenerator
+from nnet.score_logging import get_logloss_loggingscorer
+from settings import LOGS_DIR, VERBOSITY, OPTIMIZE_RESULTS_DIR
+from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator
 from utils.loading import get_preproc_data
 
 
-train, labels, test = get_preproc_data(Pipeline([
-	('row', PositiveSparseRowFeatureGenerator()),
-	#('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
-	#('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)), #todo on
-]), expand_confidence = 0.9)
+train, labels, test = get_preproc_data(None, expand_confidence = None)
 
 cpus = max(cpu_count() - 1, 1)
 random = RandomState()
 
 opt = RandomizedSearchCV(
 	estimator = Pipeline([
+		('row', PositiveSparseRowFeatureGenerator()),
 		('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
 		('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
 		('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
@@ -39,6 +36,7 @@ opt = RandomizedSearchCV(
 			dense1_init = 'glorot_normal',
 			auto_stopping = True,
 			max_epochs = 5,  # binom(n = 4000, p = 0.25)
+			# adaptive_weight_decay = True,
 		)),
 	]),
 	param_distributions = {
@@ -58,9 +56,12 @@ opt = RandomizedSearchCV(
 	},
 	fit_params = {
 	},
-	n_iter = 6,
+	n_iter = 5,
 	n_jobs = cpus,
-	scoring = log_loss_scorer,
+	scoring = get_logloss_loggingscorer(
+		join(OPTIMIZE_RESULTS_DIR, '{0:s}.log'.format(name_from_file())),
+		treshold = 0.7
+	),
 	iid = False,
 	refit = False,
 	pre_dispatch = cpus + 2,
@@ -72,7 +73,7 @@ opt = RandomizedSearchCV(
 	),
 	random_state = random,
 	verbose = bool(VERBOSITY),
-	error_score = 1000000,
+	error_score = -1000000,
 )
 
 opt.fit(train, labels)

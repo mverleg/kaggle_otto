@@ -40,6 +40,7 @@ net = NNet(
 	dropout2_rate = 0,
 	dropout3_rate = 0,
 	weight_decay = 0.001,
+	adaptive_weight_decay = True,
 )
 
 cv = ShuffleSplit(

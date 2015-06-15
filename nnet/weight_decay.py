@@ -73,7 +73,7 @@ class AdaptiveWeightDecay(object):
 				print 'decreasing weight decay by factor {0:.5f}'.format(self.decrease_factor)
 			self.weight_decay.set_value(self.weight_decay.get_value() * self.decrease_factor)
 			self.countdown = self.cooldown
-		else:
-			print '(no effect)'
+		#else:
+		#	print '(no effect)'
 
 

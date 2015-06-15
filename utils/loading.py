@@ -94,7 +94,7 @@ def get_preproc_data(pipeline, train_filepath = TRAIN_DATA_PATH, test_filepath =
 		Load pre-processed version of train and test data using caching.
 	"""
 	from utils.expand_train import expand_from_test
-	key = '_'.join([c[0] for c in pipeline.steps]) + ('' if expand_confidence is None else ('_etc' + '{0:.3f}'.format(expand_confidence)[2:]))
+	key = '_'.join([c[0] for c in (pipeline.steps if pipeline else [])]) + ('' if expand_confidence is None else ('_etc' + '{0:.3f}'.format(expand_confidence)[2:]))
 	try:
 		train = load(join(gettempdir(), 'cache_pp_train_{0:s}.npy'.format(key)))
 		labels = load(join(gettempdir(), 'cache_pp_labels_{0:s}.npy'.format(key)))
@@ -104,12 +104,13 @@ def get_preproc_data(pipeline, train_filepath = TRAIN_DATA_PATH, test_filepath =
 	except IOError:
 		if VERBOSITY >= 1:
 			print 'transforming NN train and test data and saving to cache with key "{0:s}"'.format(key)
-		train, labels, features = get_training_data(filepath = train_filepath)
-		test, features = get_testing_data(filepath = test_filepath)
-		if expand_confidence is not None:
+		train, labels = get_training_data(filepath = train_filepath)[:2]
+		test = get_testing_data(filepath = test_filepath)[0]
+		if expand_confidence:
 			train, labels = expand_from_test(train, labels, test, confidence = expand_confidence)
-		train = pipeline.fit_transform(train, labels)
-		test = pipeline.transform(test)
+		if pipeline:
+			train = pipeline.fit_transform(train, labels)
+			test = pipeline.transform(test)
 		save(join(gettempdir(), 'cache_pp_train_{0:s}.npy'.format(key)), train)
 		save(join(gettempdir(), 'cache_pp_labels_{0:s}.npy'.format(key)), labels)
 		save(join(gettempdir(), 'cache_pp_test_{0:s}.npy'.format(key)), test)
