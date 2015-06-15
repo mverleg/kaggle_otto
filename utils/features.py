@@ -5,7 +5,7 @@
 
 from random import Random
 from matplotlib.pyplot import subplots, show
-from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack, isnan, any, sqrt, array, hstack
+from numpy import zeros, sort, where, cumsum, logical_and, concatenate, vstack, sqrt, array, hstack
 from sklearn.base import TransformerMixin, BaseEstimator
 from sklearn.neighbors import KNeighborsClassifier
 from settings import NCLASSES, SEED, VERBOSITY, RAW_NFEATS

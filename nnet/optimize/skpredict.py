@@ -20,14 +20,19 @@ train, labels, test = get_preproc_data(Pipeline([
 	#('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
 	#('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
 	('scale03', MinMaxScaler(feature_range = (0, 3))), # scale should apply to int and float feats
-]), expand_confidence = 0.94)
+]), expand_confidence = None)
 
-name = 'good01'
+name = 'nn5964'
 
 net = NNet.load(name = name)
 
+for nm, val in net.get_params().iteritems():
+	print '{0:s} = {1:}'.format(nm, val)
+
 probs = net.predict_proba(test)
+
+makeSubmission(probs, fname = join(SUBMISSIONS_DIR, '{0}raw.csv'.format(name)), digits = 8)
 probs = scale_to_priors(probs, priors = PRIORS)
-makeSubmission(probs, fname = join(SUBMISSIONS_DIR, '{0}.csv'.format(name)), digits = 8)
+makeSubmission(probs, fname = join(SUBMISSIONS_DIR, '{0}rescale.csv'.format(name)), digits = 8)
 
 

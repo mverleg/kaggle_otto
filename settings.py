@@ -31,7 +31,7 @@ TRAIN_DATA_PATH = join(BASE_DIR, 'data', 'train.csv')
 TEST_DATA_PATH = join(BASE_DIR, 'data', 'test.csv')
 COLUMN_MAX_PATH = join(BASE_DIR, 'data', 'max.npy')
 OPTIMIZE_RESULTS_DIR = join(BASE_DIR, 'results', 'optimize')
-NNET_STATE_DIR = join(BASE_DIR, 'results', 'nnets')
+NNET_STATE_DIR = join('/', 'scratch', 'tmp', 'nnets')
 AUTO_IMAGES_DIR = join(BASE_DIR, 'results', 'images')
 SUBMISSIONS_DIR = join(BASE_DIR, 'results', 'submissions')
 LOGS_DIR = join(BASE_DIR, 'results', 'logs')
@@ -58,6 +58,7 @@ args = parser.parse_known_args(argv[1:])[0]
 VERBOSITY = args.verbosity
 
 
-
 class DivergenceError(Exception):
 	pass
+
+

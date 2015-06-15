@@ -15,6 +15,8 @@ class StopWhenOverfitting(object):
 		if train_history[-1]['epoch'] > 30 and train_history[-1]['train_loss'] / train_history[-1]['valid_loss'] <= self.loss_fraction:
 			print 'Terminating training since the network is starting to overfit too much.'
 			filepath = '{0:s}_{1:d}.net.npz'.format(self.base_path, train_history[-1]['epoch'])
+			if not hasattr(self, 'parent'):
+				print 'COULD NOT SAVE NETWORK SINCE {0:s} HAS NO PARENT'.format(self)
 			self.parent.save(filepath = filepath)
 			raise StopIteration('overfitting')
 

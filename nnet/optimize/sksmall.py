@@ -18,16 +18,7 @@ from utils.loading import get_preproc_data
 from utils.postprocess import scale_to_priors
 
 
-train, labels, test = get_preproc_data(Pipeline([
-	#('row', PositiveSparseRowFeatureGenerator()),
-	('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
-	('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
-	('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 63)),
-	('log', LogTransform()), # log should be after integer feats but before dist
-	#('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
-	#('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
-	('scale03', MinMaxScaler(feature_range = (0, 3))), # scale should apply to int and float feats
-]), expand_confidence = 0.94)
+train, labels, test = get_preproc_data(None, expand_confidence = 0.96)
 
 cpus = max(cpu_count() - 1, 1)
 random = RandomState()
@@ -44,7 +35,7 @@ opt = RandomizedSearchCV(
 		('scale03', MinMaxScaler(feature_range = (0, 3))), # scale should apply to int and float feats
 		('nn', NNet(**{
 			#name = name_from_file(),
-			'max_epochs': 1200,
+			'max_epochs': 700,
 			'auto_stopping': True,
 			'adaptive_weight_decay': False,
 			'save_snapshots_stepsize': None,
@@ -59,12 +50,12 @@ opt = RandomizedSearchCV(
 		'nn__dense2_nonlinearity': nonlinearities.keys(),
 		'nn__dense2_init': initializers.keys(),
 		'nn__batch_size': binom(n = 256, p = 0.5),
-		'nn__learning_rate': norm(0.0005, 0.0002),
+		'nn__learning_rate': norm(0.0003, 0.0002),
 		'nn__learning_rate_scaling': [10, 100, 1000],
 		'nn__momentum': uniform(loc = 0.9, scale = 0.1),
 		'nn__momentum_scaling': [1, 10],
-		'nn__dense1_size': randint(low = 400, high = 900),
-		'nn__dense2_size': randint(low = 300, high = 700),
+		'nn__dense1_size': randint(low = 60, high = 160),
+		'nn__dense2_size': randint(low = 50, high = 150),
 		#'nn__dense3_size': randint(low = 100, high = 400),
 		'nn__dropout0_rate': triang(loc = 0, c = 0, scale = 1),
 		'nn__dropout1_rate': triang(loc = 0, c = 0, scale = 1),
@@ -75,7 +66,7 @@ opt = RandomizedSearchCV(
 	fit_params = {
 		'nn__random_sleep': 600,
 	},
-	n_iter = 30,
+	n_iter = 300,
 	n_jobs = cpus,
 	scoring = log_loss_scorer,
 	iid = False,
