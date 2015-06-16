@@ -37,13 +37,13 @@ opt = RandomizedSearchCV(
 		('scale03', MinMaxScaler(feature_range = (0, 3))), # scale should apply to int and float feats
 		('nn', NNet(**{
 			#name = name_from_file(),
-			'max_epochs': 6,
+			'max_epochs': 1200,
 			'auto_stopping': True,
 			'adaptive_weight_decay': False,
 			'save_snapshots_stepsize': None,
 			'epoch_steps': None,
 			'dense3_size': 0,
-			'momentum_scaling': 1,
+			'momentum_scaling': 1200,
 		})),
 	]),
 	param_distributions = {
@@ -58,21 +58,21 @@ opt = RandomizedSearchCV(
 		'nn__momentum': uniform(loc = 0.9, scale = 0.1),
 		'nn__dense1_size': randint(low = 400, high = 900),
 		'nn__dense2_size': randint(low = 300, high = 700),
-		#'nn__dense3_size': randint(low = 100, high = 400),
+		'nn__dense3_size': randint(low = 200, high = 500),
 		'nn__dropout0_rate': triang(loc = 0, c = 0, scale = 0.5),
-		'nn__dropout1_rate': triang(loc = 0, c = 0, scale = 1),
-		'nn__dropout2_rate': triang(loc = 0, c = 0, scale = 1),
-		#'nn__dropout3_rate': triang(loc = 0, c = 0, scale = 1),
+		'nn__dropout1_rate': uniform(loc = 0, scale = 0.8),
+		'nn__dropout2_rate': uniform(loc = 0, scale = 0.8),
+		'nn__dropout3_rate': uniform(loc = 0, scale = 0.8),
 		#'nn__weight_decay': norm(0.00006, 0.0001),
 	},
 	fit_params = {
-		'nn__random_sleep': 6,
+		'nn__random_sleep': 600,
 	},
-	n_iter = 5,
+	n_iter = 30,
 	n_jobs = cpus,
 	scoring = get_logloss_loggingscorer(
 		join(OPTIMIZE_RESULTS_DIR, '{0:s}.log'.format(name_from_file())),
-		treshold = 3.7
+		treshold = .7
 	),
 	iid = False,
 	refit = True,

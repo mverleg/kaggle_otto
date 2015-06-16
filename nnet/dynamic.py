@@ -19,10 +19,10 @@ class LinearVariable(DynamicVariable):
 	def __call__(self, nn, train_history):
 		if self.space is None:
 			self.space = linspace(start = self.start, stop = self.stop, num = min(nn.max_epochs, self.epoch_count))
-			fig, ax = subplots()  # tmp
-			ax.plot(self.space)
-			ax.set_title(self.name)
-			show()
+			#fig, ax = subplots()  # tmp
+			#ax.plot(self.space)
+			#ax.set_title(self.name)
+			#show()
 		epoch = train_history[-1]['epoch']
 		if epoch < self.epoch_count:
 			new_value = float32(self.space[epoch - 1])

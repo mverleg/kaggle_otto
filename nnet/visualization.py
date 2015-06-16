@@ -21,6 +21,7 @@ def show_train_progress(net):
 	ax.set_xlabel('Log epoch')
 	ax.set_ylabel('Loss')
 	ax.set_xscale('log')
+	ax.set_yscale('log')
 	ax.legend()
 
 	return fig, ax

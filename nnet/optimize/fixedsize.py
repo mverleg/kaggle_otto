@@ -36,46 +36,42 @@ opt = RandomizedSearchCV(
 		#('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
 		('scale03', MinMaxScaler(feature_range = (0, 3))), # scale should apply to int and float feats
 		('nn', NNet(**{
-			#name = name_from_file(),
 			'max_epochs': 1000,
 			'auto_stopping': True,
 			'adaptive_weight_decay': False,
 			'save_snapshots_stepsize': None,
 			'epoch_steps': None,
-			'dense3_size': 0,
-			'momentum_scaling': 1200,
+			'dense1_size': 700,
+			'dense2_size': 550,
+			'dense3_size': 400,
+			'dense1_nonlinearity': 'rectify',
+			'dense1_init': 'glorot_uniform',  # uniform to reduce randomness
+			'momentum': 0.98,
+			'momentum_scaling': 1,
+			'learning_rate_scaling': 100,
+			'batch_size': 128,
 		})),
 	]),
 	param_distributions = {
 		'nn__name': ['nn{0:03d}'.format(k) for k in range(10000)],
-		'nn__dense1_nonlinearity': nonlinearities.keys(),
-		'nn__dense1_init': initializers.keys(),
-		'nn__dense2_nonlinearity': nonlinearities.keys(),
-		'nn__dense2_init': initializers.keys(),
-		'nn__batch_size': binom(n = 256, p = 0.5),
-		'nn__learning_rate': norm(0.0005, 0.0002),
-		'nn__learning_rate_scaling': [10, 100, 1000],
-		'nn__momentum': uniform(loc = 0.9, scale = 0.1),
-		'nn__dense1_size': randint(low = 100, high = 250),
-		'nn__dense2_size': randint(low = 100, high = 200),
-		#'nn__dense3_size': randint(low = 100, high = 400),
+		'nn__learning_rate': norm(0.0005, 0.0003),
 		'nn__dropout0_rate': triang(loc = 0, c = 0, scale = 0.5),
-		'nn__dropout1_rate': uniform(loc = 0.2, scale = 0.8),
-		'nn__dropout2_rate': uniform(loc = 0.2, scale = 0.8),
-		#'nn__dropout3_rate': triang(loc = 0, c = 0, scale = 1),
+		'nn__dropout1_rate': uniform(loc = 0.00, scale = 0.50),
+		'nn__dropout2_rate': uniform(loc = 0.15, scale = 0.70-0.15),
+		'nn__dropout3_rate': uniform(loc = 0.30, scale = 0.80-0.30),
 		#'nn__weight_decay': norm(0.00006, 0.0001),
 	},
 	fit_params = {
 		'nn__random_sleep': 600,
 	},
-	n_iter = 200,
+	n_iter = 40,
 	n_jobs = cpus,
 	scoring = get_logloss_loggingscorer(
 		join(OPTIMIZE_RESULTS_DIR, '{0:s}.log'.format(name_from_file())),
-		treshold = .8
+		treshold = .7
 	),
 	iid = False,
-	refit = True,
+	refit = False,
 	pre_dispatch = cpus + 2,
 	cv = ShuffleSplit(
 		n = train.shape[0],
@@ -100,6 +96,5 @@ try:
 except Exception as err:
 	print 'Something went wrong while storing results. Maybe refit isn\'t enabled?'
 	print err
-
 
 

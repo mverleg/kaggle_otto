@@ -96,8 +96,8 @@ class TrainProgressPlotter(object):
 		train = [d['train_loss'] for d in train_history]
 		valid = [d['valid_loss'] for d in train_history]
 		if len(train) >= 3:
-			import matplotlib
-			matplotlib.use('Agg')
+			#import matplotlib
+			#matplotlib.use('Agg')
 			from matplotlib.pyplot import subplots
 			fig, ax = subplots(figsize = (6, 4))
 			ax.plot(train, color = 'blue', label = 'train')
