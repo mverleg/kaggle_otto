@@ -3,19 +3,11 @@
 	Prepare data for neural network use.
 """
 
-from os.path import join
-from tempfile import gettempdir
 from matplotlib.pyplot import subplots, show
-from numpy import log10, zeros, where, float32, load, save
+from numpy import log10, zeros, where, float32
 from sklearn.base import BaseEstimator
 from sklearn.base import TransformerMixin
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import MinMaxScaler
-from settings import NCLASSES, VERBOSITY, TRAIN_DATA_PATH, TEST_DATA_PATH
-from utils.expand_train import expand_from_test
-from utils.features import PositiveSparseFeatureGenerator, PositiveSparseRowFeatureGenerator, DistanceFeatureGenerator
-from utils.loading import load_training_data, get_training_data, get_testing_data
-
+from settings import NCLASSES, VERBOSITY
 
 def normalize_data(data, norms = None, use_log = True):
 	if norms is None:
@@ -70,18 +62,6 @@ class LogTransform(BaseEstimator, TransformerMixin):
 		if not copy:
 			print 'LogTransform always copies data as the input and output data type differ'
 		return log10(X.astype(float32) + 1)
-
-
-nn_transform_pipe = Pipeline([
-	('row', PositiveSparseRowFeatureGenerator()),
-	('distp31', DistanceFeatureGenerator(n_neighbors = 3, distance_p = 1)),
-	('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
-	('gen23', PositiveSparseFeatureGenerator(difficult_classes = (2, 3), extra_features = 40)),
-	('gen234', PositiveSparseFeatureGenerator(difficult_classes = (2, 3, 4), extra_features = 40)),
-	('gen19', PositiveSparseFeatureGenerator(difficult_classes = (1, 9), extra_features = 40)),
-	('log', LogTransform()),
-	('scale03', MinMaxScaler(feature_range = (0, 3))),
-])
 
 
 if __name__ == '__main__':

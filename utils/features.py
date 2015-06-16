@@ -247,7 +247,19 @@ class PositiveSparseRowFeatureGenerator(BaseEstimator, TransformerMixin):
 		return hstack((X, feats[:, :self.extra_featurs]))
 
 
-class DistanceFeatureGenerator(BaseEstimator, TransformerMixin):
+class DistanceFeatureGenerator(KNeighborsClassifier):
+	def __init__(self, only_upto = RAW_NFEATS, *args, **kwargs):
+		super(DistanceFeatureGenerator, self).__init__(self, *args, **kwargs)
+		self.only_upto = only_upto
+
+	def fit(self, X, y):
+		super(DistanceFeatureGenerator, self).fit(X[:, :self.only_upto], y)
+
+	def transform(self, X):
+		super(DistanceFeatureGenerator, self).transform(X[:, :self.only_upto])
+
+
+class DistanceFeatureGenerator_old(BaseEstimator, TransformerMixin):
 	"""
 		Create extra features that are the distances to the nearest neighbors from each cluster class.
 	"""
