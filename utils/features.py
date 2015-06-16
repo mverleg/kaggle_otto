@@ -85,6 +85,7 @@ class PositiveSparseFeatureGenerator(BaseEstimator, TransformerMixin):
 		self.seed = SEED + seed
 
 	def fit(self, X, y, **fit_params):
+		print X.shape
 		self.sources = self.features_for_difficult_classes(X[:, :self.only_upto], y,
 			difficult_feature_count = self.source_count, difficult_classes = self.difficult_classes)
 		return self
@@ -247,6 +248,7 @@ class PositiveSparseRowFeatureGenerator(BaseEstimator, TransformerMixin):
 		return hstack((X, feats[:, :self.extra_featurs]))
 
 
+"""
 class DistanceFeatureGenerator(KNeighborsClassifier):
 	def __init__(self, only_upto = RAW_NFEATS, *args, **kwargs):
 		super(DistanceFeatureGenerator, self).__init__(self, *args, **kwargs)
@@ -257,9 +259,9 @@ class DistanceFeatureGenerator(KNeighborsClassifier):
 
 	def transform(self, X):
 		super(DistanceFeatureGenerator, self).transform(X[:, :self.only_upto])
+"""
 
-
-class DistanceFeatureGenerator_old(BaseEstimator, TransformerMixin):
+class DistanceFeatureGenerator(BaseEstimator, TransformerMixin):
 	"""
 		Create extra features that are the distances to the nearest neighbors from each cluster class.
 	"""
