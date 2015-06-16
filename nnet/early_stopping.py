@@ -17,7 +17,8 @@ class StopWhenOverfitting(object):
 			filepath = '{0:s}_{1:d}.net.npz'.format(self.base_path, train_history[-1]['epoch'])
 			if not hasattr(self, 'parent'):
 				print 'COULD NOT SAVE NETWORK SINCE {0:s} HAS NO PARENT'.format(self)
-			self.parent.save(filepath = filepath)
+			if hasattr(nn, 'parent'):
+				nn.parent.save(filepath = filepath)
 			raise StopIteration('overfitting')
 
 

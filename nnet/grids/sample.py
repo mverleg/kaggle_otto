@@ -21,7 +21,8 @@ def train_test(train, labels, test, **parameters):
 		#('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
 		('scale03', MinMaxScaler(feature_range = (0, 3))),  # scale should apply to int and float feats
 		('nn', NNet(**{
-			'max_epochs': 3,
+			'name': name_from_file(),
+			'max_epochs': 600,
 			'auto_stopping': True,
 			'adaptive_weight_decay': False,
 			'save_snapshots_stepsize': None,
@@ -40,8 +41,8 @@ def train_test(train, labels, test, **parameters):
 			'dense2_size': 150,
 			#'nn__dense3_size': randint(low = 100, high = 400),
 			'dropout0_rate': None,
-			'dropout1_rate': 0.2,
-			'dropout2_rate': 0.4,
+			#'dropout1_rate': 0.2,
+			#'dropout2_rate': 0.4,
 			#'nn__dropout3_rate': triang(loc = 0, c = 0, scale = 1),
 			#'nn__weight_decay': norm(0.00006, 0.0001),
 		})),
@@ -52,9 +53,9 @@ def train_test(train, labels, test, **parameters):
 
 
 train_data, true_labels = get_training_data()[:2]
-validator = SampleCrossValidator(train_data, true_labels, rounds = 5, test_frac = 0.1, use_data_frac = 0.5)  # 0.5!!
+validator = SampleCrossValidator(train_data, true_labels, rounds = 3, test_frac = 0.1, use_data_frac = 0.3)  # 0.3!!
 optimizer = ParallelGridOptimizer(train_test_func = train_test, validator = validator, use_caching = False, process_count = 3, **{
-	'name': ['{0:s}_{1:d}'.format(name_from_file(), k) for k in range(3)],
-}).readygo(save_fig_basename = name_from_file() + '_img', log_name = name_from_file() + '_stats.txt')
+	'dropout1_rate': [0.0, 0.1, 0.2, 0.3, 0.4, 0.5,],
+}).readygo(save_fig_basename = name_from_file(), log_name = name_from_file() + '_stats.txt')
 
 

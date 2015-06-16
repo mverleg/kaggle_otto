@@ -24,7 +24,7 @@ def extract_1D_data(results, labels, values):
 
 def compare_1D_3axis(plot_func, labels):
 
-	fig = figure(figsize = (8, 8))
+	fig = figure(figsize = (6, 4))
 	ax1 = host_subplot(111, axes_class = AA.Axes)
 	fig.subplots_adjust(right = 0.75)
 
@@ -98,7 +98,7 @@ def compare_surface(results, labels, values):
 	accuracy_mean = 100 * results[:, :, :, 1].mean(2)
 	time_mean = results[:, :, :, 2].mean(2)
 
-	fig = figure(figsize = (10, 7))
+	fig = figure(figsize = (6, 4,2))
 	gs = GridSpec(2, 3)
 	ax1 = fig.add_subplot(gs[:2, :2])
 	ax2 = fig.add_subplot(gs[0, 2])
