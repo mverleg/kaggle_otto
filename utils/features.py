@@ -85,7 +85,6 @@ class PositiveSparseFeatureGenerator(BaseEstimator, TransformerMixin):
 		self.seed = SEED + seed
 
 	def fit(self, X, y, **fit_params):
-		print X.shape
 		self.sources = self.features_for_difficult_classes(X[:, :self.only_upto], y,
 			difficult_feature_count = self.source_count, difficult_classes = self.difficult_classes)
 		return self

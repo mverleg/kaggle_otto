@@ -1,0 +1,1319 @@
+Couldn't import dot_parser, loading of dot files will not be possible.
+loaded transformed NN train and test data from cache in "/tmp" with key ""
+Fitting 1 folds for each of 200 candidates, totalling 200 fits
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+[Parallel(n_jobs=31)]: Done   1 jobs       | elapsed:   31.9s
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '1647')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '1642')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+[Parallel(n_jobs=31)]: Done  50 jobs       | elapsed:  7.5min
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '47204' (I am process '1648')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '1648')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '47204' (I am process '1648')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1652' (I am process '1648')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1652' (I am process '1625')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1652' (I am process '1639')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1645' (I am process '1639')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Deleting (broken cache directory [EOF]): /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1638' (I am process '1625')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1638' (I am process '1639')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1638' (I am process '1645')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1638' (I am process '1642')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1638' (I am process '1644')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1638' (I am process '1654')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1629' (I am process '1625')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1629' (I am process '1654')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '1645')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 464, in add_key
+    assert key not in self.keys
+AssertionError
+
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AssertionError()
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1639' (I am process '1642')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1639' (I am process '1625')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1639' (I am process '1629')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1639' (I am process '1654')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1639' (I am process '1644')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1639' (I am process '1638')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1639' (I am process '1645')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '1638')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 464, in add_key
+    assert key not in self.keys
+AssertionError
+
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AssertionError()
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1642' (I am process '1645')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1642' (I am process '1654')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1642' (I am process '1644')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1642' (I am process '1625')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1642' (I am process '1629')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1642' (I am process '1638')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '47210' (I am process '1638')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 464, in add_key
+    assert key not in self.keys
+AssertionError
+
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AssertionError()
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1625' (I am process '1644')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1625' (I am process '1654')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1625' (I am process '1645')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1625' (I am process '1638')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1625' (I am process '1629')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1625' (I am process '1626')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '1645')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 464, in add_key
+    assert key not in self.keys
+AssertionError
+
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AssertionError()
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1644' (I am process '1626')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1644' (I am process '1654')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1644' (I am process '1638')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1644' (I am process '1651')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1644' (I am process '1629')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1644' (I am process '1645')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '1626')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '47213' (I am process '1629')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '47213' (I am process '1645')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '1651')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 464, in add_key
+    assert key not in self.keys
+AssertionError
+
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AssertionError()
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1654' (I am process '1629')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1654' (I am process '1638')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1654' (I am process '1626')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1654' (I am process '1651')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1654' (I am process '1645')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0xa1261d0>, ((TensorType(float64, scalar), (('f5efce87aa12b0a04db9096157b1ebf0', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1626' (I am process '1645')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1645' (I am process '1638')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 467, in add_key
+    self.save_pkl()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 484, in save_pkl
+    with open(self.key_pkl, 'wb') as f:
+IOError: [Errno 2] No such file or directory: '/home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl'
+
+ERROR (theano.gof.opt): Optimization failure due to: constant_folding
+ERROR (theano.gof.opt): TRACEBACK:
+ERROR (theano.gof.opt): Traceback (most recent call last):
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/opt.py", line 1493, in process_node
+    replacements = lopt.transform(node)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/tensor/opt.py", line 4684, in constant_folding
+    no_recycling=[])
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.py", line 739, in make_thunk
+    output_storage=node_output_storage)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1073, in make_thunk
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1015, in __compile__
+    keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.py", line 1442, in cthunk_factory
+    key=key, lnk=self, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1054, in module_from_key
+    module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 957, in _get_from_hash
+    key_data.add_key(key, save_pkl=bool(key[0]))
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.py", line 464, in add_key
+    assert key not in self.keys
+AssertionError
+
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AssertionError()
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1645' (I am process '1651')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1645' (I am process '1641')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1645' (I am process '1630')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1645' (I am process '1632')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1645' (I am process '1633')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1633' (I am process '1651')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1632' (I am process '1630')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1630' (I am process '1632')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1651' (I am process '1638')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0xb3c7410>, ((TensorType(float64, scalar), (('8136cf4fa52bef74f2ad82ad780abff0', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0xbb0fad0>, ((TensorType(float64, scalar), (('9bfb57987d4f8fa3a83474cb44402240', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0x8b29890>, ((TensorType(float64, scalar), (('efd51f84b0a7f0bab8fbf8acab381ce6', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0xabce6d0>, ((TensorType(float64, scalar), (('1531ea53925ef8fb84258f8fff52c33c', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1635' (I am process '1650')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0x7255fd0>, ((TensorType(float64, scalar), (('fd7d24e6cf956d06871231cfce2d6370', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/326ab08c0b6ceea0ab4d9aebb227e2ad.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0x8c76410>, ((TensorType(float64, scalar), (('f18c719e6b74d8045223a6e7acb7d661', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0x8a5a3d0>, ((TensorType(float64, scalar), (('efd51f84b0a7f0bab8fbf8acab381ce6', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdZ_l99/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0x6c46f90>, ((TensorType(float64, scalar), (('5e5906af5f7fe42ef2340b4635dcd75c', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0x7481450>, ((TensorType(float64, scalar), (('efd51f84b0a7f0bab8fbf8acab381ce6', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0x8bca290>, ((TensorType(float64, scalar), (('efd51f84b0a7f0bab8fbf8acab381ce6', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+KeyError((((3,), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-maes', '-march=corei7-avx', '-mavx', '-mcx16', '-mno-abm', '-mno-bmi', '-mno-fma', '-mno-fma4', '-mno-lwp', '-mno-movbe', '-mno-tbm', '-mno-xop', '-mpclmul', '-mpopcnt', '-msahf', '-msse4.1', '-msse4.2', '-mtune=generic', 'l1-cache-line-size=64', 'l1-cache-size=32', 'l2-cache-size=20480'), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.DimShuffle object at 0x73fb2d0>, ((TensorType(float64, scalar), (('f18c719e6b74d8045223a6e7acb7d661', 0, 0), False)),), (1, (False,))))),)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+[Parallel(n_jobs=31)]: Done 200 out of 200 | elapsed: 39.5min finished
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network nn4631 186x165x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 124, dense1_init = glorot_normal, dense1_nonlinearity = leaky20, dense1_size = 186, dense2_init = he_normal, dense2_nonlinearity = softmax, dense2_size = 165, dense3_init = orthogonal, dense3_nonlinearity = tanh, dense3_size = 0, dropout0_rate = 0.177063358224, dropout1_rate = 0.274069970576, dropout2_rate = 0.286710850802, dropout3_rate = None, epoch_steps = None, learning_rate = 0.00017873312855, learning_rate_scaling = 100, max_epochs = 1000, momentum = 0.933324239471, momentum_scaling = 1200, name = nn4631, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dropout0          	(None, 253)         	produces     253 outputs
+  dense1            	(None, 186)         	produces     186 outputs
+  dropout1          	(None, 186)         	produces     186 outputs
+  dense2            	(None, 165)         	produces     165 outputs
+  dropout2          	(None, 165)         	produces     165 outputs
+  output            	(None, 9)           	produces       9 outputs
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network nn6791 105x153x0
+parameters: adaptive_weight_decay = False, auto_stopping = True,, batch_size = 125, dense1_init = sparse, dense1_nonlinearity = softmax, dense1_size = 155, dense2_init = sparse, dense2_nonlinearity = leaky2, dense2_size = 135, dense3_init = orthogonal, dense3_nonlinearity = tanh, dense3_size = 0, dropout0_rate = 0.252373245477, dropout1_rate = 0.359994964106, dropout2_rate = 0.550278069979, dropout3_rate = None, epoch_steps = None, learning_rate = 0.000392423228953, learning_rate_scaling = 10, max_epochs = 1000, momentum = 0.937767010853, momentum_scaling = 1200, name = nn393, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dropout0          	(None, 253)         	produces     253 outputs
+  dense1            	(None, 155)         	produces     155 outputs
+  dropout1          	(None, 155)         	produces     155 outputs
+  dense2            	(None, 135)         	produces     135 outputs
+  dropout2          	(None, 135)         	produces     135 outputs
+  output            	(None, 9)           	produces       9 outputs
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network nn2323 103x177x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 131, dense1_init = sparse, dense1_nonlinearity = sigmoid, dense1_size = 103, dense2_init = he_normal, dense2_nonlinearity = sigmoid, dense2_size = 177, dense3_init = orthogonal, dense3_nonlinearity = tanh, dense3_size = 0, dropout0_rate = 0.366133953403, dropout1_rate = 0.701811434259, dropout2_rate = 0.452655503872, dropout3_rate = None, epoch_steps = None, learning_rate = 0.000532723973436, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.968905748771, momentum_scaling = 1200, name = nn2323, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dropout0          	(None, 253)         	produces     253 outputs
+  dense1            	(None, 103)         	produces     103 outputs
+  dropout1          	(None, 103)         	produces     103 outputs
+  dense2            	(None, 177)         	produces     177 outputs
+  dropout2          	(None, 177)         	produces     177 outputs
+  output            	(None, 9)           	produces       9 outputs
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network nn627 103x198x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 131, dense1_init = glorot_uniform, dense1_nonlinearity = leaky2, dense1_size = 103, dense2_init = glorot_normal, dense2_nonlinearity = leaky20, dense2_size = 198, dense3_init = orthogonal, dense3_nonlinearity = tanh, dense3_size = 0, dropout0_rate = 0.257998850365, dropout1_rate = 0.501006993151, dropout2_rate = 0.671709102575, dropout3_rate = None, epoch_steps = None, learning_rate = 0.000444810688366, learning_rate_scaling = 1000, max_epochs = 1000, momentum = 0.991070290704, momentum_scaling = 1200, name = nn627, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dropout0          	(None, 253)         	produces     253 outputs
+  dense1            	(None, 103)         	produces     103 outputs
+  dropout1          	(None, 103)         	produces     103 outputs
+  dense2            	(None, 198)         	produces     198 outputs
+  dropout2          	(None, 198)         	produces     198 outputs
+  output            	(None, 9)           	produces       9 outputs
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network nn6167 126x155x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 122, dense1_init = he_normal, dense1_nonlinearity = rectify, dense1_size = 126, dense2_init = orthogonal, dense2_nonlinearity = sigmoid, dense2_size = 155, dense3_init = orthogonal, dense3_nonlinearity = tanh, dense3_size = 0, dropout0_rate = 0.323618018265, dropout1_rate = 0.645011597933, dropout2_rate = 0.526895138672, dropout3_rate = None, epoch_steps = None, learning_rate = 0.000730233133625, learning_rate_scaling = 100, max_epochs = 1000, momentum = 0.915895535799, momentum_scaling = 1200, name = nn6167, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dropout0          	(None, 253)         	produces     253 outputs
+  dense1            	(None, 126)         	produces     126 outputs
+  dropout1          	(None, 126)         	produces     126 outputs
+  dense2            	(None, 155)         	produces     155 outputs
+  dropout2          	(None, 155)         	produces     155 outputs
+  output            	(None, 9)           	produces       9 outputs
+s       9 outputs
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network nn8197 107x107x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 135, dense1_init = glorot_uniform, dense1_nonlinearity = softmax, dense1_size = 107, dense2_init = he_normal, dense2_nonlinearity = leaky2, dense2_size = 107, dense3_init = orthogonal, dense3_nonlinearity = tanh, dense3_size = 0, dropout0_rate = 0.00316634246044, dropout1_rate = 0.29392685762, dropout2_rate = 0.18331320543, dropout3_rate = None, epoch_steps = None, learning_rate = 0.000225411636221, learning_rate_scaling = 10, max_epochs = 1000, momentum = 0.977433371107, momentum_scaling = 1200, name = nn8197, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dropout0          	(None, 253)         	produces     253 outputs
+  dense1            	(None, 107)         	produces     107 outputs
+  dropout1          	(None, 107)         	produces     107 outputs
+  dense2            	(None, 107)         	produces     107 outputs
+  dropout2          	(None, 107)         	produces     107 outputs
+  output            	(None, 9)           	produces       9 outputs
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network nn1383 209x115x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 127, dense1_init = glorot_uniform, dense1_nonlinearity = leaky2, dense1_size = 209, dense2_init = he_normal, dense2_nonlinearity = sigmoid, dense2_size = 115, dense3_init = orthogonal, dense3_nonlinearity = tanh, dense3_size = 0, dropout0_rate = 0.180960257401, dropout1_rate = 0.281067218646, dropout2_rate = 0.546502663771, dropout3_rate = None, epoch_steps = None, learning_rate = 0.000398291846008, learning_rate_scaling = 10, max_epochs = 1000, momentum = 0.956996191092, momentum_scaling = 1200, name = nn1383, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dropout0          	(None, 253)         	produces     253 outputs
+  dense1            	(None, 209)         	produces     209 outputs
+  dropout1          	(None, 209)         	produces     209 outputs
+  dense2            	(None, 115)         	produces     115 outputs
+  dropout2          	(None, 115)         	produces     115 outputs
+  output            	(None, 9)           	produces       9 outputs
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network nn4491 138x196x0
+parameters: adaptive_weight_deca/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 61878x253 data
+initializing network nn6914 221x122x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 129, dense1_init = orthogonal, dense1_nonlinearity = tanh, dense1_size = 221, dense2_init = glorot_uniform, dense2_nonlinearity = tanh, dense2_size = 122, dense3_init = orthogonal, dense3_nonlinearity = tanh, dense3_size = 0, dropout0_rate = 0.0286477082752, dropout1_rate = 0.518526384998, dropout2_rate = 0.154369639405, dropout3_rate = None, epoch_steps = None, learning_rate = 0.000705727897013, learning_rate_scaling = 100, max_epochs = 1000, momentum = 0.94009028125, momentum_scaling = 1200, name = nn6914, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dropout0          	(None, 253)         	produces     253 outputs
+  dense1            	(None, 221)         	produces     221 outputs
+  dropout1          	(None, 221)         	produces     221 outputs
+  dense2            	(None, 122)         	produces     122 outputs
+  dropout2          	(None, 122)         	produces     122 outputs
+  output            	(None, 9)           	produces       9 outputs
+Traceback (most recent call last):
+  File "nnet/optimize/sksmall.py", line 91, in <module>
+    opt.fit(train, labels)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py", line 898, in fit
+    return self._fit(X, y, sampled_params)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py", line 551, in _fit
+    best_estimator.fit(X, y, **self.fit_params)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/pipeline.py", line 141, in fit
+    self.steps[-1][-1].fit(Xt, y, **fit_params)
+  File "/home/mverleg/mlip2/nnet/scikit.py", line 299, in fit
+    net = self.net.fit(X, labels)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.py", line 293, in fit
+    self.train_loop(X, y)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.py", line 370, in train_loop
+    func(self, self.train_history_)
+  File "/home/mverleg/mlip2/nnet/dynamic.py", line 22, in __call__
+    fig, ax = subplots()  # tmp
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/pyplot.py", line 1077, in subplots
+    fig = figure(**fig_kw)
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/pyplot.py", line 434, in figure
+    **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/backends/backend_tkagg.py", line 81, in new_figure_manager
+    return new_figure_manager_given_figure(num, figure)
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/backends/backend_tkagg.py", line 89, in new_figure_manager_given_figure
+    window = Tk.Tk()
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1688, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+_tkinter.TclError: no display name and no $DISPLAY environment variable

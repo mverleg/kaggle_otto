@@ -1,0 +1,26 @@
+Couldn't import dot_parser, loading of dot files will not be possible.
+grid optimize: 8 comparisons x 1 rounds = 8 iterations
+(49503, 110)
+(49503, 150)
+(49503, 190)
+Terminating training since the network is starting to overfit too much.
+COULD NOT SAVE NETWORK SINCE <nnet.early_stopping.StopWhenOverfitting object at 0x904fcd0> HAS NO PARENT
+(12375, 9) (12375,)
+dropout1_rate = 0.0	 0.566	 0.79%	4728.620s
+(49503, 110)
+(49503, 150)
+(49503, 190)
+Terminating training since the network is starting to overfit too much.
+COULD NOT SAVE NETWORK SINCE <nnet.early_stopping.StopWhenOverfitting object at 0x904ff10> HAS NO PARENT
+(12375, 9) (12375,)
+dropout1_rate = 0.3	 0.566	 0.79%	4736.970s
+Showing results for "dropout1_rate"
+pos     loss      dropout1 rate   
+ 1    0.5661       0.0             
+ 2    0.5661       0.1             
+ 3    0.5661       0.2             
+ 4    0.5661       0.3             
+ 5    0.5661       0.4             
+ 6    0.5661       0.5             
+ 7    0.5661       0.6             
+ 8    0.5661       0.7             

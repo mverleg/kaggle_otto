@@ -1,4 +1,8 @@
 
+"""
+	This doesn't work since most of these can't reapply a learned transformation to new data. Only LLE can do that.
+"""
+
 from numpy import hstack, float64
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.manifold import LocallyLinearEmbedding, TSNE, MDS, SpectralEmbedding

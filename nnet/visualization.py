@@ -41,9 +41,11 @@ class TrainProgressPlotter(object):
 		if len(train) >= 3:
 			from matplotlib.pyplot import subplots
 			fig, ax = subplots(figsize = (6, 4))
+			ax.set_yscale('log')
 			ax.plot(train, color = 'blue', label = 'train')
 			ax.plot(valid, color = 'red', label = 'test')
 			ax.legend()
+			ax.grid()
 			ax.set_xlim([0, max(10, len(train))])
 			ax.set_ylim([0, 1.05 * max(max(train), max(valid))])
 			fig.savefig(self.base_path + '.png')

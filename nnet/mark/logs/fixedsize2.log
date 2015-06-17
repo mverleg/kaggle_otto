@@ -1,0 +1,184 @@
+Couldn't import dot_parser, loading of dot files will not be possible.
+loaded transformed NN train and test data from cache in "/tmp" with key ""
+Fitting 1 folds for each of 25 candidates, totalling 25 fits
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '2584' (I am process '27415')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '27415')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '2592' (I am process '27415')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '27415')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): Deleting (broken cache directory [EOF]): /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdWUdxi
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27420' (I am process '27415')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdWUdxi/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): Deleting (broken cache directory [EOF]): /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpF2nOFO
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '27422' (I am process '27421')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'StopWhenOverfitting' object has no attribute 'parent'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'StopWhenOverfitting' object has no attribute 'parent'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'StopWhenOverfitting' object has no attribute 'parent'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'StopWhenOverfitting' object has no attribute 'parent'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'StopWhenOverfitting' object has no attribute 'parent'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'StopWhenOverfitting' object has no attribute 'parent'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+[Parallel(n_jobs=31)]: Done  20 out of  25 | elapsed: 415.3min remaining: 103.8min
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'StopWhenOverfitting' object has no attribute 'parent'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+[Parallel(n_jobs=31)]: Done   1 out of  25 | elapsed: 612.2min remaining: 14692.5min
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+[Parallel(n_jobs=31)]: Done  25 out of  25 | elapsed: 1315.1min finished
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network nn6988 700x550x400
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 128, dense1_init = glorot_uniform, dense1_nonlinearity = rectify, dense1_size = 700, dense2_init = glorot_uniform, dense2_nonlinearity = rectify, dense2_size = 550, dense3_init = glorot_uniform, dense3_nonlinearity = rectify, dense3_size = 400, dropout0_rate = 0.0553037428554, dropout1_rate = 0.329429692636, dropout2_rate = 0.543666432508, dropout3_rate = 0.658520488137, epoch_steps = None, learning_rate = -5.2854285469e-05, learning_rate_scaling = 100, max_epochs = 1000, momentum = 0.98, momentum_scaling = 1, name = nn6988, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dropout0          	(None, 253)         	produces     253 outputs
+  dense1            	(None, 700)         	produces     700 outputs
+  dropout1          	(None, 700)         	produces     700 outputs
+  dense2            	(None, 550)         	produces     550 outputs
+  dropout2          	(None, 550)         	produces     550 outputs
+  dense3            	(None, 400)         	produces     400 outputs
+  dropout3          	(None, 400)         	produces     400 outputs
+  output            	(None, 9)           	produces       9 outputs
+  epoch    train loss    valid loss    train/val    valid acc  dur
+-------  ------------  ------------  -----------  -----------  ------
+      1       [94m2.45253[0m       [32m2.33840[0m      1.04880      0.04964  85.66s
+      2       [94m2.07363[0m       [32m1.81248[0m      1.14408      0.44821  88.28s
+      3       [94m1.81428[0m       [32m1.59291[0m      1.13897      0.48819  92.73s
+      4       [94m1.63646[0m       [32m1.40249[0m      1.16682      0.53186  96.52s
+      5       [94m1.49748[0m       [32m1.28989[0m      1.16094      0.55510  95.71s
+      6       [94m1.40565[0m       [32m1.21916[0m      1.15297      0.57601  93.25s
+      7       [94m1.33954[0m       [32m1.16646[0m      1.14838      0.59570  93.13s
+      8       [94m1.28716[0m       [32m1.12247[0m      1.14672      0.61243  93.85s
+      9       [94m1.24319[0m       [32m1.08479[0m      1.14601      0.63429  94.75s
+     10       [94m1.20702[0m       [32m1.05166[0m      1.14772      0.64479  95.37s
+     11       [94m1.17471[0m       [32m1.02140[0m      1.15010      0.65575  95.60s
+     12       [94m1.14203[0m       [32m0.99252[0m      1.15064      0.66384  95.92s
+     13       [94m1.11652[0m       [32m0.96633[0m      1.15542      0.66974  96.55s
+     14       [94m1.09310[0m       [32m0.94300[0m      1.15917      0.67483  96.46s
+     15       [94m1.06616[0m       [32m0.92131[0m      1.15722      0.67832  96.07s
+     16       [94m1.04511[0m       [32m0.90227[0m      1.15831      0.68141  96.01s
+     17       [94m1.02207[0m       [32m0.88436[0m      1.15571      0.68401  95.51s
+     18       [94m1.00832[0m       [32m0.86984[0m      1.15920      0.68702  95.16s
+     19       [94m0.99432[0m       [32m0.85653[0m      1.16086      0.68902  96.84s
+     20       [94m0.97756[0m       [32m0.84361[0m      1.15878      0.69071  95.87s
+     21       [94m0.96463[0m       [32m0.83295[0m      1.15808      0.69351  96.83s
+     22       [94m0.94982[0m       [32m0.82321[0m      1.15380      0.69720  95.62s
+     23       [94m0.93901[0m       [32m0.81395[0m      1.15365      0.70261  97.29s
+     24       [94m0.93080[0m       [32m0.80604[0m > saving results for top score 0.5250 (adding rescaling to priors): {'nn__name': 'nn6988', 'nn__dropout2_rate': 0.5436664325077146, 'nn__dropout1_rate': 0.32942969263578814, 'nn__learning_rate': -5.285428546899476e-05, 'nn__dropout3_rate': 0.6585204881369516, 'nn__dropout0_rate': 0.055303742855426274}
+Something went wrong while storing results. Maybe refit isn't enabled?
+'RandomizedSearchCV' object has no attribute 'best_estimator_'

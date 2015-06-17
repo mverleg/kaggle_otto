@@ -1,0 +1,166 @@
+Couldn't import dot_parser, loading of dot files will not be possible.
+loaded train data from cache in "/tmp"
+grid optimize: 3 comparisons x 5 rounds = 15 iterations
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+calculate: name = sample_0, round #3/5
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 27846x253 data
+initializing network nameless_net 200x150x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 128, dense1_init = glorot_uniform, dense1_nonlinearity = rectify, dense1_size = 200, dense2_init = glorot_uniform, dense2_nonlinearity = rectify, dense2_size = 150, dense3_init = glorot_uniform, dense3_nonlinearity = rectify, dense3_size = 0, dropout0_rate = None, dropout1_rate = 0.2, dropout2_rate = 0.4, dropout3_rate = None, epoch_steps = None, learning_rate = 0.0005, learning_rate_scaling = 100, max_epochs = 3, momentum = 0.9, momentum_scaling = 1200, name = nameless_net, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dense1            	(None, 200)         	produces     200 outputs
+  dropout1          	(None, 200)         	produces     200 outputs
+  dense2            	(None, 150)         	produces     150 outputs
+  dropout2          	(None, 150)         	produces     150 outputs
+  output            	(None, 9)           	produces       9 outputs
+  epoch    train loss    valid loss    train/val    valid acc  dur
+-------  ------------  ------------  -----------  -----------  -----
+      1       [94m2.30134[0m       [32m2.09236[0m      1.09988      0.23982  4.57s
+      2       [94m1.85112[0m       [32m1.58123[0m      1.17069      0.52584  4.33s
+      3       [94m1.55348[0m       [32m1.33562[0m      1.16312      0.56769  3.81s
+saved network to "/scratch/tmp/nnets/nameless_net_complete.net.npz" after training ended
+saving network to "/scratch/tmp/nnets/nameless_net.net.npz|json"
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 3093x253 data
+(3093, 9) (3093,)
+  #   loss   accuracy  time
+  2   1.355  55.93%  22.930s
+name = sample_0	 1.355	 0.56%	22.930s
+calculate: name = sample_0, round #4/5
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 27846x253 data
+initializing network nameless_net 200x150x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 128, dense1_init = glorot_uniform, dense1_nonlinearity = rectify, dense1_size = 200, dense2_init = glorot_uniform, dense2_nonlinearity = rectify, dense2_size = 150, dense3_init = glorot_uniform, dense3_nonlinearity = rectify, dense3_size = 0, dropout0_rate = None, dropout1_rate = 0.2, dropout2_rate = 0.4, dropout3_rate = None, epoch_steps = None, learning_rate = 0.0005, learning_rate_scaling = 100, max_epochs = 3, momentum = 0.9, momentum_scaling = 1200, name = nameless_net, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dense1            	(None, 200)         	produces     200 outputs
+  dropout1          	(None, 200)         	produces     200 outputs
+  dense2            	(None, 150)         	produces     150 outputs
+  dropout2          	(None, 150)         	produces     150 outputs
+  output            	(None, 9)           	produces       9 outputs
+  epoch    train loss    valid loss    train/val    valid acc  dur
+-------  ------------  ------------  -----------  -----------  -----
+      1       [94m2.21389[0m       [32m2.01498[0m      1.09871      0.27438  3.71s
+      2       [94m1.88436[0m       [32m1.61858[0m      1.16420      0.46822  4.06s
+      3       [94m1.58936[0m       [32m1.38688[0m      1.14599      0.54405  3.55s
+saved network to "/scratch/tmp/nnets/nameless_net_complete.net.npz" after training ended
+saving network to "/scratch/tmp/nnets/nameless_net.net.npz|json"
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 3093x253 data
+(3093, 9) (3093,)
+  3   1.389  53.83%  18.620s
+name = sample_0	 1.389	 0.54%	18.620s
+calculate: name = sample_1, round #4/5
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 27846x253 data
+initializing network nameless_net 200x150x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 128, dense1_init = glorot_uniform, dense1_nonlinearity = rectify, dense1_size = 200, dense2_init = glorot_uniform, dense2_nonlinearity = rectify, dense2_size = 150, dense3_init = glorot_uniform, dense3_nonlinearity = rectify, dense3_size = 0, dropout0_rate = None, dropout1_rate = 0.2, dropout2_rate = 0.4, dropout3_rate = None, epoch_steps = None, learning_rate = 0.0005, learning_rate_scaling = 100, max_epochs = 3, momentum = 0.9, momentum_scaling = 1200, name = nameless_net, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dense1            	(None, 200)         	produces     200 outputs
+  dropout1          	(None, 200)         	produces     200 outputs
+  dense2            	(None, 150)         	produces     150 outputs
+  dropout2          	(None, 150)         	produces     150 outputs
+  output            	(None, 9)           	produces       9 outputs
+  epoch    train loss    valid loss    train/val    valid acc  dur
+-------  ------------  ------------  -----------  -----------  -----
+      1       [94m2.19340[0m       [32m2.01296[0m      1.08964      0.29169  4.35s
+      2       [94m1.83879[0m       [32m1.57821[0m      1.16511      0.48332  4.53s
+      3       [94m1.55119[0m       [32m1.35299[0m      1.14649      0.55231  3.82s
+saved network to "/scratch/tmp/nnets/nameless_net_complete.net.npz" after training ended
+saving network to "/scratch/tmp/nnets/nameless_net.net.npz|json"
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 3093x253 data
+(3093, 9) (3093,)
+  #   loss   accuracy  time
+  3   1.356  54.93%  20.350s
+name = sample_1	 1.356	 0.55%	20.350s
+calculate: name = sample_1, round #5/5
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 27846x253 data
+initializing network nameless_net 200x150x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 128, dense1_init = glorot_uniform, dense1_nonlinearity = rectify, dense1_size = 200, dense2_init = glorot_uniform, dense2_nonlinearity = rectify, dense2_size = 150, dense3_init = glorot_uniform, dense3_nonlinearity = rectify, dense3_size = 0, dropout0_rate = None, dropout1_rate = 0.2, dropout2_rate = 0.4, dropout3_rate = None, epoch_steps = None, learning_rate = 0.0005, learning_rate_scaling = 100, max_epochs = 3, momentum = 0.9, momentum_scaling = 1200, name = nameless_net, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dense1            	(None, 200)         	produces     200 outputs
+  dropout1          	(None, 200)         	produces     200 outputs
+  dense2            	(None, 150)         	produces     150 outputs
+  dropout2          	(None, 150)         	produces     150 outputs
+  output            	(None, 9)           	produces       9 outputs
+  epoch    train loss    valid loss    train/val    valid acc  dur
+-------  ------------  ------------  -----------  -----------  -----
+      1       [94m2.19386[0m       [32m1.98089[0m      1.10751      0.33555  4.76s
+      2       [94m1.81779[0m       [32m1.49035[0m      1.21970      0.52114  4.86s
+      3       [94m1.51177[0m       [32m1.28466[0m      1.17679      0.57592  4.28s
+saved network to "/scratch/tmp/nnets/nameless_net_complete.net.npz" after training ended
+saving network to "/scratch/tmp/nnets/nameless_net.net.npz|json"
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 3093x253 data
+(3093, 9) (3093,)
+  4   1.308  57.52%  20.680s
+name = sample_1	 1.308	 0.58%	20.680s
+calculate: name = sample_0, round #5/5
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 27846x253 data
+initializing network nameless_net 200x150x0
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 128, dense1_init = glorot_uniform, dense1_nonlinearity = rectify, dense1_size = 200, dense2_init = glorot_uniform, dense2_nonlinearity = rectify, dense2_size = 150, dense3_init = glorot_uniform, dense3_nonlinearity = rectify, dense3_size = 0, dropout0_rate = None, dropout1_rate = 0.2, dropout2_rate = 0.4, dropout3_rate = None, epoch_steps = None, learning_rate = 0.0005, learning_rate_scaling = 100, max_epochs = 3, momentum = 0.9, momentum_scaling = 1200, name = nameless_net, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dense1            	(None, 200)         	produces     200 outputs
+  dropout1          	(None, 200)         	produces     200 outputs
+  dense2            	(None, 150)         	produces     150 outputs
+  dropout2          	(None, 150)         	produces     150 outputs
+  output            	(None, 9)           	produces       9 outputs
+  epoch    train loss    valid loss    train/val    valid acc  dur
+-------  ------------  ------------  -----------  -----------  -----
+      1       [94m2.30088[0m       [32m2.09526[0m      1.09814      0.25584  4.42s
+      2       [94m1.85648[0m       [32m1.57168[0m      1.18121      0.52461  4.31s
+      3       [94m1.55439[0m       [32m1.33407[0m      1.16515      0.55985  3.80s
+saved network to "/scratch/tmp/nnets/nameless_net_complete.net.npz" after training ended
+saving network to "/scratch/tmp/nnets/nameless_net.net.npz|json"
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 3093x253 data
+(3093, 9) (3093,)
+  #   loss   accuracy  time
+  4   1.349  56.71%  22.760s
+name = sample_0	 1.349	 0.57%	22.760s
+calculate: name = sample_1, round #1/5
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features fShowing results for "name"
+pos     loss      name            
+ 1    1.3449       sample_1        
+ 2    1.3538       sample_2        
+ 3    1.3643       sample_0        

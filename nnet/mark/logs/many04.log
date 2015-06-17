@@ -1,0 +1,206 @@
+Couldn't import dot_parser, loading of dot files will not be possible.
+loaded transformed NN train and test data from cache in "/tmp" with key ""
+Fitting 1 folds for each of 30 candidates, totalling 30 fits
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '47185')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+[Parallel(n_jobs=63)]: Done   1 out of  30 | elapsed:  3.9min remaining: 112.6min
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '47194')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '47191' (I am process '47190')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '47195')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1632' (I am process '47202')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Deleting (broken cache directory [EOF]): /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2
+INFO (theano.gof.compilelock): Waiting for existing lock by process '47188' (I am process '47195')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '47195' (I am process '47188')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpk34Gc2/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+WARNING (theano.gof.cmodule): Deleting (broken cache directory [EOF]): /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpppF4ju
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1652' (I am process '47199')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1638' (I am process '47187')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1638' (I am process '47210')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '47210' (I am process '47213')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1639' (I am process '47213')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1639' (I am process '47210')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '47210' (I am process '47213')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1642' (I am process '47213')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1642' (I am process '47210')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1625' (I am process '47213')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1644' (I am process '47213')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+TclError('no display name and no $DISPLAY environment variable',)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+[Parallel(n_jobs=63)]: Done  29 out of  30 | elapsed: 12.2min remaining:   25.3s
+[Parallel(n_jobs=63)]: Done  30 out of  30 | elapsed: 12.2min finished
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1635' (I am process '47166')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 61878x253 data
+initializing network nn5763 425x642x289
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 132, dense1_init = sparse, dense1_nonlinearity = rectify, dense1_size = 425, dense2_init = glorot_normal, dense2_nonlinearity = tanh, dense2_size = 642, dense3_init = orthogonal, dense3_nonlinearity = tanh, dense3_size = 289, dropout0_rate = 0.054622401092, dropout1_rate = 0.16759839615, dropout2_rate = 0.748482745404, dropout3_rate = 0.46936496879, epoch_steps = None, learning_rate = 0.000362668541766, learning_rate_scaling = 100, max_epochs = 1200, momentum = 0.998410068555, momentum_scaling = 1200, name = nn5763, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dropout0          	(None, 253)         	produces     253 outputs
+  dense1            	(None, 425)         	produces     425 outputs
+  dropout1          	(None, 425)         	produces     425 outputs
+  dense2            	(None, 642)         	produces     642 outputs
+  dropout2          	(None, 642)         	produces     642 outputs
+  dense3            	(None, 289)         	produces     289 outputs
+  dropout3          	(None, 289)         	produces     289 outputs
+  output            	(None, 9)           	produces       9 outputs
+Traceback (most recent call last):
+  File "nnet/optimize/skmany.py", line 91, in <module>
+    opt.fit(train, labels)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py", line 898, in fit
+    return self._fit(X, y, sampled_params)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py", line 551, in _fit
+    best_estimator.fit(X, y, **self.fit_params)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/pipeline.py", line 141, in fit
+    self.steps[-1][-1].fit(Xt, y, **fit_params)
+  File "/home/mverleg/mlip2/nnet/scikit.py", line 299, in fit
+    net = self.net.fit(X, labels)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.py", line 293, in fit
+    self.train_loop(X, y)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.py", line 370, in train_loop
+    func(self, self.train_history_)
+  File "/home/mverleg/mlip2/nnet/dynamic.py", line 22, in __call__
+    fig, ax = subplots()  # tmp
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/pyplot.py", line 1077, in subplots
+    fig = figure(**fig_kw)
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/pyplot.py", line 434, in figure
+    **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/backends/backend_tkagg.py", line 81, in new_figure_manager
+    return new_figure_manager_given_figure(num, figure)
+  File "/usr/local/lib/python2.7/dist-packages/matplotlib/backends/backend_tkagg.py", line 89, in new_figure_manager_given_figure
+    window = Tk.Tk()
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1688, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+_tkinter.TclError: no display name and no $DISPLAY environment variable

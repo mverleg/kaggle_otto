@@ -1,0 +1,12 @@
+Couldn't import dot_parser, loading of dot files will not be possible.
+grid optimize: 8 comparisons x 1 rounds = 8 iterations
+Traceback (most recent call last):
+  File "nnet/grids/sample.py", line 61, in <module>
+    }).readygo(save_fig_basename = name_from_file(), log_name = name_from_file() + '_stats.txt')
+  File "/home/mverleg/mlip2/validation/optimize_parallel.py", line 96, in readygo
+    job_results = pool.map(func, todo_jobs)
+  File "/usr/lib/python2.7/multiprocessing/pool.py", line 227, in map
+    return self.map_async(func, iterable, chunksize).get()
+  File "/usr/lib/python2.7/multiprocessing/pool.py", line 528, in get
+    raise self._value
+_tkinter.TclError: no display name and no $DISPLAY environment variable

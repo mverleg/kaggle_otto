@@ -1,0 +1,345 @@
+nohup: ignoring input
+loaded transformed NN train and test data from cache in "/tmp" with key "row_gen23_gen234_gen19_log_scale03_etc940"
+Fitting 1 folds for each of 30 candidates, totalling 30 fits
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49529' (I am process '31845')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmppSlm6z/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpabO6Gs/18d5a8a6a9092d5ba63e47774ced3130.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpabO6Gs/key.pkl because the corresponding module is gone from the file system.
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49465' (I am process '31836')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49465' (I am process '31838')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31836')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpdnPl5A/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31840')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49511' (I am process '31840')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49511' (I am process '31850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49517' (I am process '31803')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49517' (I am process '31827')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49517' (I am process '31799')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49517' (I am process '31798')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49517' (I am process '31844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49517' (I am process '31827')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49517' (I am process '31798')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49517' (I am process '31803')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49517' (I am process '31799')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31827')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31844' (I am process '31803')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31827' (I am process '31798')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31827' (I am process '31803')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49448' (I am process '31803')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31799' (I am process '31798')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31798')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31799')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31803')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31798' (I am process '31803')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49463' (I am process '31799')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpUElxqL/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Deleting (broken cache directory [EOF]): /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpKjkNCF
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31797' (I am process '31799')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31797' (I am process '31849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+WARNING (theano.gof.cmodule): ModuleCache.refresh() Found key without dll in cache, deleting it. /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpKjkNCF/key.pkl
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+ImportError('The following error happened while compiling the node', Elemwise{Composite{(i0 * i1 * Cast{float64}(LT(i2, i3)))}}[(0, 2)](TensorConstant{(1, 1) of ..0895204391}, input.input, mrg_uniform{TensorType(float64, matrix),inplace}.1, TensorConstant{(1, 1) of ..1752249338}), '\n', 'No module named tmpKjkNCF.ffbc67b7421d566bc0b81bb2d5015f5e')
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31797' (I am process '31796')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49490' (I am process '31796')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31796')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31848')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49483' (I am process '31796')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31792')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31795' (I am process '31848')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49507' (I am process '31796')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49507' (I am process '31841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31848')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+IOError('The following error happened while compiling the node', Elemwise{Composite{Cast{float64}(LT(i0, i1))}}[(0, 0)](mrg_uniform{TensorType(float64, matrix),inplace}.1, TensorConstant{(1, 1) of ..6842262615}), '\n', 2, 'No such file or directory')
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31848' (I am process '31843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31848' (I am process '31791')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+ImportError('The following error happened while compiling the node', Elemwise{Composite{Cast{float64}(LT(i0, i1))}}[(0, 0)](mrg_uniform{TensorType(float64, matrix),inplace}.1, TensorConstant{(1, 1) of ..3378089531}), '\n', 'No module named tmpAd3BPc.3560da473d4e42f06d760a4ac491e7e8')
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+[Parallel(n_jobs=31)]: Done   1 out of  30 | elapsed:  8.6min remaining: 248.3min
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49456' (I am process '31843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49456' (I am process '31847')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '31847' (I am process '31843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/layers/helper.py:69: UserWarning: get_all_layers() has been changed to return layers in topological order. The former implementation is still available as get_all_layers_old(), but will be removed before the first release of Lasagne. To ignore this warning, use `warnings.filterwarnings('ignore', '.*topo.*')`.
+  warnings.warn("get_all_layers() has been changed to return layers in "
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/lasagne/regularization.py:10: UserWarning: get_all_non_bias_params(layer) is deprecated and will be removed for the first release of Lasagne. Please use get_all_params(layer, regularizable=True) instead.
+  all_params = layers.get_all_non_bias_params(layer)
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49449' (I am process '31851')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49449' (I am process '31809')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '31809')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49494' (I am process '31809')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '49471' (I am process '31809')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'StopWhenOverfitting' object has no attribute 'parent'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.py:1470: FitFailedWarning: Classifier fit failed. The score on this train-test partition for these parameters will be set to -1000000.000000. Details: 
+AttributeError("'list' object has no attribute 'items'",)
+  "Details: \n%r" % (error_score, e), FitFailedWarning)
