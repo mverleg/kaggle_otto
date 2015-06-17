@@ -27,3 +27,4 @@ w = nn.net.get_all_params_values()
 print w
 nn.net.load_params_from(w)
 
+
