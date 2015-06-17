@@ -3,7 +3,6 @@
 	http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
 """
 
-from matplotlib.pyplot import subplots, show
 from numpy import linspace, logspace, float32, log2
 
 

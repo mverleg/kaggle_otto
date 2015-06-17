@@ -22,10 +22,10 @@ from nolearn.lasagne import NeuralNet, BatchIterator
 from theano import shared
 from sklearn.base import BaseEstimator, ClassifierMixin
 from lasagne.layers import InputLayer, DenseLayer, DropoutLayer
+from nnet.visualization import TrainProgressPlotter
 from nnet.weight_decay import WeightDecayObjective, AdaptiveWeightDecay
 from validation.optimize import params_name
-from nnet.nnio import SnapshotStepSaver, SnapshotEndSaver, save_knowledge, load_knowledge, TrainProgressPlotter, \
-	get_knowledge, set_knowledge
+from nnet.nnio import SnapshotStepSaver, SnapshotEndSaver, save_knowledge, load_knowledge, get_knowledge, set_knowledge
 from nnet.dynamic import LogarithmicVariable, LinearVariable
 from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum, StopNaN, BreakEveryN
 from settings import NCLASSES, VERBOSITY, NNET_STATE_DIR, DivergenceError

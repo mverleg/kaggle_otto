@@ -1,8 +1,7 @@
 
 from cPickle import dump, load
-from numpy import savez, load as loadz
+from numpy import savez, load as loadz, savetxt, array
 from os.path import join
-from sklearn.metrics.scorer import _ProbaScorer, log_loss
 from settings import NNET_STATE_DIR, VERBOSITY, AUTO_IMAGES_DIR
 
 
@@ -85,26 +84,5 @@ class SnapshotEndSaver(object):
 		save_knowledge(nn, filepath)
 		if VERBOSITY >= 1:
 			print 'saved network to "{0:s}" after training ended'.format(filepath)
-
-
-class TrainProgressPlotter(object):
-
-	def __init__(self, base_name = 'net_hist'):
-		self.base_path = join(AUTO_IMAGES_DIR, base_name) + '.png'
-
-	def __call__(self, nn, train_history):
-		train = [d['train_loss'] for d in train_history]
-		valid = [d['valid_loss'] for d in train_history]
-		if len(train) >= 3:
-			#import matplotlib
-			#matplotlib.use('Agg')
-			from matplotlib.pyplot import subplots
-			fig, ax = subplots(figsize = (6, 4))
-			ax.plot(train, color = 'blue', label = 'train')
-			ax.plot(valid, color = 'red', label = 'test')
-			ax.legend()
-			ax.set_xlim([0, max(10, len(train))])
-			ax.set_ylim([0, 1.05 * max(max(train), max(valid))])
-			fig.savefig(self.base_path)
 
 
