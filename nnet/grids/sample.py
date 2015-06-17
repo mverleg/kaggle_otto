@@ -1,4 +1,5 @@
 
+from multiprocessing import cpu_count
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
 from nnet.oldstyle.base_optimize import name_from_file
@@ -27,7 +28,7 @@ def train_test(train, labels, test, **parameters):
 			'adaptive_weight_decay': False,
 			'save_snapshots_stepsize': None,
 			'epoch_steps': None,
-			'dense3_size': 0,
+			#'dense3_size': 0,
 			'momentum_scaling': 1200,
 			'dense1_nonlinearity': 'rectify',
 			'dense1_init': 'glorot_uniform',
@@ -37,8 +38,9 @@ def train_test(train, labels, test, **parameters):
 			'learning_rate': 0.0005,
 			'learning_rate_scaling': 100,
 			'momentum': 0.9,
-			'dense1_size': 500,
-			'dense2_size': 400,
+			'dense1_size': 700,
+			'dense2_size': 550,
+			'dense3_size': 400,
 			#'nn__dense3_size': randint(low = 100, high = 400),
 			'dropout0_rate': None,
 			#'dropout1_rate': 0.2,
@@ -53,8 +55,8 @@ def train_test(train, labels, test, **parameters):
 
 
 train_data, true_labels = get_training_data()[:2]
-validator = SampleCrossValidator(train_data, true_labels, rounds = 1, test_frac = 0.1, use_data_frac = 0.3)  # 0.3!!
-optimizer = ParallelGridOptimizer(train_test_func = train_test, validator = validator, use_caching = False, process_count = 3, **{
+validator = SampleCrossValidator(train_data, true_labels, rounds = 1, test_frac = 0.2, use_data_frac = 1)  # 0.3!!
+optimizer = ParallelGridOptimizer(train_test_func = train_test, validator = validator, use_caching = False, process_count = max(cpu_count() - 1, 1), **{
 	'dropout1_rate': [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7,],
 }).readygo(save_fig_basename = name_from_file(), log_name = name_from_file() + '_stats.txt')
 

@@ -1,5 +1,6 @@
 from matplotlib.pyplot import subplots, show, setp
 from numpy import ones
+from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.pipeline import Pipeline
 from utils.features import PositiveSparseRowFeatureGenerator, PositiveSparseFeatureGenerator, DistanceFeatureGenerator
 from utils.loading import get_training_data
@@ -8,7 +9,7 @@ from utils.shuffling import shuffle
 
 data, labels, features = get_training_data()
 data, labels = shuffle(data, labels)[:2]
-data, labels = data[:, :10], labels[:10]
+data, labels = data[:1000, :], labels[:1000]
 
 
 features = sum((
@@ -29,18 +30,18 @@ estimator = Pipeline([
 	('row', PositiveSparseRowFeatureGenerator()),
 	('dL1', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 1)),
 	('dL2', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
-	#('csf', None),  #todo
+	('csf', ExtraTreesClassifier(n_estimators = 1000)),
 ])
 
+estimator.fit(data, labels)
 print 'features', len(features)
-#features = features[:10]
-importances = ones((len(features),))
-importances[67] = 2
+
+importances = estimator.steps[-1][-1].feature_importances_
 
 Q = 47
 fig, axi = subplots(4, figsize = (8, 7))
 fig.tight_layout()
-fig.subplots_adjust(bottom = .08)
+fig.subplots_adjust(top = .95, bottom = .08, left = .02, right = .98)
 for k, ax in enumerate(axi):
 	x = range(len(importances))[k*Q:(k+1)*Q]
 	ax.bar(x, importances[k*Q:(k+1)*Q])
@@ -50,7 +51,7 @@ for k, ax in enumerate(axi):
 	ax.set_xlim([k*Q, (k+1)*Q])
 	ax.set_yticks([])
 	ax.set_ylim([0, max(importances)])
-
+axi[0].set_title('Feature importance (RF)')
 
 if __name__ == '__main__':
 	show()
