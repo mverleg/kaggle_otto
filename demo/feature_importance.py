@@ -1,5 +1,5 @@
+
 from matplotlib.pyplot import subplots, show, setp
-from numpy import ones
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.pipeline import Pipeline
 from utils.features import PositiveSparseRowFeatureGenerator, PositiveSparseFeatureGenerator, DistanceFeatureGenerator
@@ -35,10 +35,10 @@ estimator = Pipeline([
 	('row', PositiveSparseRowFeatureGenerator()),
 	('dL1', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 1)),
 	('dL2', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
-	#('LLE', LLEFeatures(extra_featurs = 10)),
+	('LLE', LLEFeatures(extra_featurs = 10)),
 	#('TSNE', TSNEFeatures(extra_featurs = 10)),
 	#('MD', MDFeatures(extra_featurs = 10)),
-	('SE', SEFeatures(extra_featurs = 10)),
+	#('SE', SEFeatures(extra_featurs = 10)),
 	('csf', ExtraTreesClassifier(n_estimators = 1000)),
 ])
 
