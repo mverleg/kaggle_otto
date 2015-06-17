@@ -9,6 +9,7 @@ from sklearn.base import BaseEstimator
 from sklearn.base import TransformerMixin
 from settings import NCLASSES, VERBOSITY
 
+
 def normalize_data(data, norms = None, use_log = True):
 	if norms is None:
 		norms = data.max(0).astype(float32)

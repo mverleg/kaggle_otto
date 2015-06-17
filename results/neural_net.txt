@@ -53,7 +53,7 @@ pos     loss      learning rate
  2    0.5508       0.003
  3    0.5855       0.001
  4    0.6329       0.0003
- 5    0.6836       0.0001
+ 5    0.6836       0.0001\
 
 with scaling over time and initial learning rate adapted accordingly
 pos     loss      momentum

@@ -1,6 +1,6 @@
 
 from sys import stderr
-from numpy import inf, isnan
+from numpy import inf, isnan, copy
 from os.path import join
 from nnet.nnio import save_knowledge
 from settings import NNET_STATE_DIR, VERBOSITY, DivergenceError
@@ -39,7 +39,7 @@ class StopAfterMinimum(object):
 		if current_valid < self.best_valid:
 			self.best_valid = current_valid
 			self.best_valid_epoch = current_epoch
-			self.best_weights = [w.get_value() for w in nn.get_all_params()]
+			self.best_weights = copy(nn.get_all_params_values())
 		elif self.best_valid_epoch + self.patience < current_epoch:
 			print 'Stopping early since test error has been increasing.'
 			print 'Best validation loss was {:.6f} at epoch {}.'.format(self.best_valid, self.best_valid_epoch)

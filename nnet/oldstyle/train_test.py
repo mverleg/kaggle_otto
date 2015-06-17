@@ -1,9 +1,8 @@
-from os.path import isfile
 
+from os.path import isfile
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.cross_validation import ShuffleSplit
 from numpy import bincount, float64
-
 from nnet.nnio import save_knowledge
 from nnet.oldstyle import make_net
 from nnet.prepare import conormalize_data
