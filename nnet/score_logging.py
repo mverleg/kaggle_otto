@@ -15,7 +15,10 @@ class ScoringLogging(_ProbaScorer):
 		if log_file:
 			self.log_file = '{0:s}_{1:s}{2:s}'.format(bef, strftime("%Y%m%d%H%M%S"), aft)
 			with open(self.log_file, 'w+') as fh:
-				fh.write('# treshold is {0:.4f}\n'.format(log_treshold))
+				if log_treshold:
+					fh.write('# treshold is {0:.4f}\n'.format(log_treshold))
+				else:
+					fh.write('# no treshold')
 		self.log_treshold = log_treshold
 		super(ScoringLogging, self).__init__(score_func, sign, kwargs)
 

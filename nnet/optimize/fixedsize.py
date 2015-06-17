@@ -41,9 +41,9 @@ opt = RandomizedSearchCV(
 			'adaptive_weight_decay': False,
 			'save_snapshots_stepsize': None,
 			'epoch_steps': None,
-			'dense1_size': 700,
-			'dense2_size': 550,
-			'dense3_size': 400,
+			'dense1_size': 70,
+			'dense2_size': 55,
+			'dense3_size': 0, #todo
 			'dense1_nonlinearity': 'rectify',
 			'dense1_init': 'glorot_uniform',  # uniform to reduce randomness
 			'momentum': 0.98,
@@ -53,22 +53,22 @@ opt = RandomizedSearchCV(
 		})),
 	]),
 	param_distributions = {
-		'nn__name': ['nn{0:03d}'.format(k) for k in range(10000)],
+		'nn__name': ['nn_{0:s}_{1:03d}'.format(name_from_file(), k) for k in range(10000)],
 		'nn__learning_rate': norm(0.0005, 0.0003),
 		'nn__dropout0_rate': triang(loc = 0, c = 0, scale = 0.5),
 		'nn__dropout1_rate': uniform(loc = 0.00, scale = 0.50),
 		'nn__dropout2_rate': uniform(loc = 0.15, scale = 0.70-0.15),
-		'nn__dropout3_rate': uniform(loc = 0.30, scale = 0.80-0.30),
+		#'nn__dropout3_rate': uniform(loc = 0.30, scale = 0.80-0.30),  #todo
 		#'nn__weight_decay': norm(0.00006, 0.0001),
 	},
 	fit_params = {
-		'nn__random_sleep': 600,
+		'nn__random_sleep': 80,
 	},
 	n_iter = 40,
 	n_jobs = cpus,
 	scoring = get_logloss_loggingscorer(
-		join(OPTIMIZE_RESULTS_DIR, '{0:s}.log'.format(name_from_file())),
-		treshold = .7
+		filename = join(OPTIMIZE_RESULTS_DIR, '{0:s}2.log'.format(name_from_file())),
+		treshold = None,
 	),
 	iid = False,
 	refit = False,
@@ -81,7 +81,7 @@ opt = RandomizedSearchCV(
 	),
 	random_state = random,
 	verbose = bool(VERBOSITY),
-	error_score = -1000000,
+	error_score = 'raise',
 )
 
 opt.fit(train, labels)

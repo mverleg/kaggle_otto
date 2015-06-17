@@ -9,7 +9,7 @@ from utils.shuffling import shuffle
 
 data, labels, features = get_training_data()
 data, labels = shuffle(data, labels)[:2]
-data, labels = data[:1000, :], labels[:1000]
+data, labels = data[:3000, :], labels[:3000]
 
 
 features = sum((
