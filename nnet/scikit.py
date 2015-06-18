@@ -13,7 +13,7 @@ from collections import OrderedDict
 from functools import partial
 from json import load, dump
 from os.path import join
-from random import random
+from random import random, seed
 from sys import stderr
 from time import sleep
 from numpy import float32, mean, isfinite
@@ -28,9 +28,13 @@ from validation.optimize import params_name
 from nnet.nnio import SnapshotStepSaver, SnapshotEndSaver, save_knowledge, load_knowledge, get_knowledge, set_knowledge
 from nnet.dynamic import LogarithmicVariable, LinearVariable
 from nnet.early_stopping import StopWhenOverfitting, StopAfterMinimum, StopNaN, BreakEveryN
-from settings import NCLASSES, VERBOSITY, NNET_STATE_DIR, DivergenceError
+from settings import NCLASSES, VERBOSITY, NNET_STATE_DIR, DivergenceError, SEED
 from lasagne.init import Orthogonal, GlorotNormal, GlorotUniform, HeNormal, HeUniform, Sparse, Constant
 from lasagne.nonlinearities import softmax, tanh, sigmoid, rectify, LeakyRectify
+
+
+seed(SEED)
+print 'set random seed to {0} while loading NNet'.format(SEED)
 
 
 nonlinearities = {
@@ -225,7 +229,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 			input_shape = (None, feature_count),
 			output_num_units = class_count,
 
-			update = nesterov_momentum,
+			update = nesterov_momentum,  # todo: make parameter
 			update_learning_rate = shared(float32(self.learning_rate)),
 			update_momentum = shared(float(self.weight_decay)),
 

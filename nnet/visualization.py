@@ -31,8 +31,9 @@ def show_train_progress(net):
 
 class TrainProgressPlotter(object):
 
-	def __init__(self, base_name = 'net_hist'):
+	def __init__(self, base_name = 'net_hist', ylims = (0.35, 1.2)):
 		self.base_path = join(AUTO_IMAGES_DIR, base_name)
+		self.ylims = ylims
 
 	def __call__(self, nn, train_history):
 		train = [d['train_loss'] for d in train_history]
@@ -47,7 +48,8 @@ class TrainProgressPlotter(object):
 			ax.legend()
 			ax.grid()
 			ax.set_xlim([0, max(10, len(train))])
-			ax.set_ylim([0, 1.05 * max(max(train), max(valid))])
+			#ax.set_ylim([0, 1.05 * max(max(train), max(valid))])
+			ax.set_ylim(self.ylims)
 			fig.savefig(self.base_path + '.png')
 
 
