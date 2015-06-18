@@ -10,6 +10,7 @@ from multiprocessing import cpu_count, Pool
 from os.path import join, basename, splitext
 from sys import stderr, modules
 from datetime import datetime
+import traceback
 from numpy import prod, unravel_index
 from settings import OPTIMIZE_RESULTS_DIR, VERBOSITY, LOGS_DIR
 from validation.optimize import GridOptimizer, load_results, params_name, store_results
@@ -117,16 +118,21 @@ def log_result(filename, param_name, *results):
 
 
 def job_handler(tup, train_test_func, validator, prefix, log_name):
-	index, params, round = tup
-	filename, dispname = params_name(params, prefix)
-	if VERBOSITY >= 2:
-		print 'calculate: %s, round #%d/%d' % (dispname, round + 1, validator.rounds)
-	train, classes, test = validator.start_round(round)
-	prediction = train_test_func(train, classes, test, **params)
-	results = validator.add_prediction(prediction, _force_round = round)
-	store_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)), *results)
-	print '{0:s}\t{1:6.3f}\t{2:5.2f}%\t{3:6.3f}s'.format(dispname, *results)
-	log_result(log_name, dispname, *results)
-	return results
+	try:
+		index, params, round = tup
+		filename, dispname = params_name(params, prefix)
+		if VERBOSITY >= 2:
+			print 'calculate: %s, round #%d/%d' % (dispname, round + 1, validator.rounds)
+		train, classes, test = validator.start_round(round)
+		prediction = train_test_func(train, classes, test, **params)
+		results = validator.add_prediction(prediction, _force_round = round)
+		store_results(join(OPTIMIZE_RESULTS_DIR, filename + 'r{0:d}.result'.format(round)), *results)
+		print '{0:s}\t{1:6.3f}\t{2:5.2f}%\t{3:6.3f}s'.format(dispname, *results)
+		log_result(log_name, dispname, *results)
+		return results
+	except Exception as err:
+		print(traceback.format_exc())
+		print err
+		raise err
 
 

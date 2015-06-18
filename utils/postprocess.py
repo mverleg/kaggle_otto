@@ -5,11 +5,9 @@
 
 import numpy as np
 from numpy import log, sqrt
-from sklearn.base import BaseEstimator
-from sklearn.base import ClassifierMixin
 from sklearn.metrics import mean_squared_error
 from scipy.optimize import minimize
-from settings import VERBOSITY
+from settings import VERBOSITY, PRIORS
 from utils.normalize import normalize_probabilities
 
 
@@ -31,7 +29,7 @@ def rescale_prior(predictionmatrix, priorprobs):
 	return normalize_probabilities(result)
 
 
-def scale_to_priors(probabilities, priors):
+def scale_to_priors(probabilities, priors = PRIORS):
 	"""
 		Uses iterative minimization to find the best scale factors to approach priors as close as possible.
 
