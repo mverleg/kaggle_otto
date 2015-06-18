@@ -44,7 +44,7 @@ The general steps are now:
     
     train_data, true_labels = get_training_data()[:2]
     validator = SampleCrossValidator(train_data, true_labels, rounds = 6, test_frac = 0.1, use_data_frac = 1)
-    optimizer = ParallelGridOptimizer(train_test_func = train_test, validator = validator,  use_caching = True, process_count = 3,
+    optimizer = ParallelGridOptimizer(train_test_func = train_test, validator = validator, use_caching = True, process_count = max(cpu_count() - 1, 1),
         learning_rate = [10, 1, 0.1, 0.01, 0.001],
         hidden_layer_size = [60, 30, 50, 40, 20],
         weight_decay = 0.1,

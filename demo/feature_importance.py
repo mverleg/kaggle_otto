@@ -1,12 +1,11 @@
-
 from matplotlib.pyplot import subplots, show, setp
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.pipeline import Pipeline
-from utils.features import PositiveSparseRowFeatureGenerator, PositiveSparseFeatureGenerator, DistanceFeatureGenerator
-from utils.loading import get_training_data
-from utils.manifold import LLEFeatures, TSNEFeatures, MDFeatures, SEFeatures
-from utils.shuffling import shuffle
 
+from utils.features import PositiveSparseRowFeatureGenerator, PositiveSparseFeatureGenerator
+from nndist.distance import DistanceFeatureGenerator
+from utils.loading import get_training_data
+from utils.shuffling import shuffle
 
 data, labels, features = get_training_data()
 data, labels = shuffle(data, labels)[:2]

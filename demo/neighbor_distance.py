@@ -2,8 +2,9 @@
 from numpy import zeros
 from sklearn.neighbors import KNeighborsClassifier
 from settings import NCLASSES
-from utils.features import DistanceFeatureGenerator
+from nndist.distance import DistanceFeatureGenerator
 from utils.loading import get_training_data
+
 
 # recommended to run with -vv
 

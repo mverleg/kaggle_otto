@@ -1,13 +1,11 @@
-
 from numpy.ma import logical_and
 from matplotlib.pyplot import subplots, show
-from numpy import array, bincount
-from sklearn.preprocessing import MinMaxScaler
+from numpy import array
+
 from nnet.prepare import LogTransform
-from utils.features import DistanceFeatureGenerator
 from utils.loading import get_training_data
 from utils.shuffling import shuffle
-
+from nndist.distance import DistanceFeatureGenerator
 
 N = 500
 
