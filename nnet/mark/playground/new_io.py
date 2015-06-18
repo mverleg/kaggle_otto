@@ -13,13 +13,15 @@ from utils.loading import get_preproc_data
 
 warnings.filterwarnings("ignore")
 
+
 train, labels, test = get_preproc_data(Pipeline([
 	('log', LogTransform()),
 	('scale03', MinMaxScaler(feature_range = (0, 3))),
 ]), expand_confidence = 0.9)
 
-nn = NNet(max_epochs = 3)
+nn = NNet(max_epochs = 1)
 nn.fit(train, labels)
+
 nn.save(filepath = '/tmp/test')
 nn = NNet.load(filepath = '/tmp/test')
 

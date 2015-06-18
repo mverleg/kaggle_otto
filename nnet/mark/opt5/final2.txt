@@ -1,0 +1,488 @@
+nohup: ignoring input
+Couldn't import dot_parser, loading of dot files will not be possible.
+loaded transformed NN train and test data from cache in "/tmp" with key ""
+Fitting 1 folds for each of 62 candidates, totalling 62 fits
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+[Parallel(n_jobs=31)]: Done   1 jobs       | elapsed: 89.9min
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network final_final2_6957 400x300x300
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 128, dense1_init = glorot_uniform, dense1_nonlinearity = rectify, dense1_size = 400, dense2_init = glorot_uniform, dense2_nonlinearity = rectify, dense2_size = 300, dense3_init = glorot_uniform, dense3_nonlinearity = rectify, dense3_size = 300, dropout0_rate = 0, dropout1_rate = 0.0182648791136, dropout2_rate = 0.303492347715, dropout3_rate = 0.717813753229, epoch_steps = None, learning_rate = 0.000320093426349, learning_rate_scaling = 300, max_epochs = 700, momentum = 0.98, momentum_scaling = 10, name = final_final2_6957, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0
+  input             	(None, 253)         	produces     253 outputs
+  dense1            	(None, 400)         	produces     400 outputs
+  dropout1          	(None, 400)         	produces     400 outputs
+  dense2            	(None, 300)         	produces     300 outputs
+  dropout2          	(None, 300)         	produces     300 outputs
+  dense3            	(None, 300)         	produces     300 outputs
+  dropout3          	(None, 300)         	produces     300 outputs
+  output            	(None, 9)           	produces       9 outputs
+  epoch    train loss    valid loss    train/val    valid acc  dur
+-------  ------------  ------------  -----------  -----------  ------
+      1       [94m2.12271[0m       [32m2.02197[0m      1.04982      0.26952  50.35s
+      2       [94m1.53265[0m       [32m1.09213[0m      1.40337      0.61957  51.06s
+      3       [94m1.02352[0m       [32m0.85524[0m      1.19676      0.69540  51.32s
+      4       [94m0.86590[0m       [32m0.76332[0m      1.13439      0.71487  51.27s
+      5       [94m0.79515[0m       [32m0.72088[0m      1.10303      0.72801  52.89s
+      6       [94m0.75064[0m       [32m0.69106[0m      1.08622      0.73678  53.97s
+      7       [94m0.72555[0m       [32m0.66991[0m      1.08306      0.74335  51.64s
+      8       [94m0.70396[0m       [32m0.65285[0m      1.07829      0.75176  50.83s
+      9       [94m0.68657[0m       [32m0.64088[0m      1.07129      0.75680  51.74s
+     10       [94m0.67414[0m       [32m0.63087[0m      1.06859      0.75953  51.72s
+     11       [94m0.66063[0m       [32m0.62351[0m      1.05953      0.76341  51.99s
+     12       [94m0.65126[0m       [32m0.61597[0m      1.05730      0.76381  51.37s
+     13       [94m0.64595[0m       [32m0.61009[0m      1.05877      0.76522  51.65s
+     14       [94m0.63591[0m       [32m0.60469[0m      1.05164      0.76582  51.28s
+     15       [94m0.62845[0m       [32m0.59999[0m      1.04744      0.76642  51.89s
+     16       [94m0.62125[0m       [32m0.59313[0m      1.04741      0.77223  52.08s
+     17       [94m0.61646[0m       [32m0.59009[0m      1.04470      0.77383  51.36s
+     18       [94m0.61201[0m       [32m0.58698[0m      1.04264      0.77523  51.40s
+     19       [94m0.60584[0m       [32m0.58269[0m      1.03973      0.77631  52.10s
+     20       [94m0.60114[0m       [32m0.57978[0m      1.03684      0.77744  52.09s
+     21       [94m0.59446[0m       [32m0.57629[0m      1.03152      0.77804  51.99s
+     22       [94m0.59319[0m       [32m0.57425[0m      1.03299      0.77912  50.01s
+     23       [94m0.58542[0m       [32m0.57025[0m      1.02661      0.78152  51.73s
+     24       [94m0.58495[0m       [32m0.56834[0m      1.02923      0.78240  49.61s
+     25       [94m0.57878[0m       [32m0.56574[0m      1.02304      0.78240  51.54s
+     26       [94m0.57876[0m       [32m0.56317[0m      1.02768      0.78581  51.80s
+     27       [94m0.57178[0m       [32m0.56202[0m      1.01736      0.78260  52.11s
+     28       [94m0.57030[0m       [32m0.55858[0m      1.02098      0.78581  50.37s
+     29       [94m0.56519[0m       [32m0.55593[0m      1.01666      0.78701  49.02s
+     30       [94m0.56303[0m       [32m0.55525[0m      1.01401      0.78721  49.37s
+     31       [94m0.55804[0m       [32m0.55208[0m      1.01080      0.78801  49.62s
+     32       [94m0.55421[0m       [32m0.55084[0m      1.00611      0.78801  50.02s
+     33       [94m0.55403[0m       [32m0.54851[0m      1.01008      0.78881  50.39s
+     34       [94m0.55055[0m       [32m0.54811[0m      1.00445      0.78801  50.64s
+     35       [94m0.54597[0m       [32m0.54533[0m      1.00116      0.78781  51.24s
+     36       [94m0.54252[0m       [32m0.54297[0m      0.99917      0.78961  51.59s
+     37       [94m0.53998[0m       [32m0.54274[0m      0.99491      0.79141  51.96s
+     38       [94m0.53869[0m       [32m0.54171[0m      0.99443      0.78981  51.73s
+     39       [94m0.53519[0m       [32m0.53952[0m      0.99198      0.79222  50.97s
+     40       [94m0.53371[0m       [32m0.53793[0m      0.99215      0.79161  52.60s
+     41       [94m0.52825[0m       [32m0.53605[0m      0.98546      0.79242  51.65s
+     42       [94m0.52758[0m       0.53743      0.98168      0.79410  52.25s
+     43       [94m0.52656[0m       [32m0.53377[0m      0.98648      0.79209  52.29s
+     44       [94m0.52342[0m       [32m0.53350[0m      0.98110      0.79562  52.02s
+     45       [94m0.52139[0m       [32m0.53182[0m      0.98038      0.79494  51.87s
+     46       [94m0.51682[0m       [32m0.53148[0m      0.97242      0.79550  51.98s
+     47       [94m0.51290[0m       [32m0.53009[0m      0.96757      0.79482  51.69s
+     48       [94m0.50944[0m       [32m0.52972[0m      0.96172      0.79602  52.02s
+     49       0.50975       [32m0.52883[0m      0.96393      0.79490  51.69s
+     50       [94m0.50616[0m       [32m0.52850[0m      0.95772      0.79502  51.65s
+     51       [94m0.50256[0m       0.52899      0.95004      0.79510  52.03s
+     52       [94m0.50176[0m       [32m0.52324[0m      0.95896      0.79422  51.75s
+     53       [94m0.49736[0m       0.52447      0.94830      0.79482  51.99s
+     54       [94m0.49718[0m       [32m0.52315[0m      0.95037      0.79602  50.85s
+     55       [94m0.49053[0m       [32m0.52295[0m      0.93801      0.79522  50.09s
+     56       0.49223       0.52327      0.94069      0.79642  50.13s
+     57       [94m0.48891[0m       0.52375      0.93348      0.79670  48.84s
+     58       0.48921       [32m0.52231[0m      0.93664      0.79590  48.94s
+     59       [94m0.48359[0m       [32m0.52075[0m      0.92864      0.79610  46.24s
+     60       [94m0.48306[0m       0.52080      0.92754      0.79630  46.76s
+     61       [94m0.47908[0m       [32m0.52064[0m      0.92017      0.79590  46.69s
+     62       [94m0.47500[0m       [32m0.51878[0m      0.91561      0.79690  47.37s
+     63       [94m0.47395[0m       [32m0.51646[0m      0.91769      0.79883  48.25s
+     64       [94m0.47022[0m       0.51685      0.90978      0.80051  48.42s
+     65       [94m0.46710[0m       0.51650      0.90436      0.79930  49.31s
+     66       [94m0.46591[0m       0.51725      0.90075      0.79890  50.48s
+     67       [94m0.46385[0m       [32m0.51349[0m      0.90333      0.80119  49.88s
+     68       [94m0.46029[0m       0.51453      0.89457      0.80063  50.61s
+     69       0.46115       0.51552      0.89454      0.79642  50.67s
+     70       [94m0.45715[0m       0.51428      0.88893      0.79983  49.91s
+     71       [94m0.45624[0m       [32m0.51328[0m      0.88887      0.79863  51.27s
+     72       [94m0.45311[0m       0.51373      0.88201      0.79938  51.60s
+     7316[0m       [32m0.58207[0m      1.01562      0.76984  50.48s
+     73       [94m0.58864[0m       [32m0.58183[0m      1.01171      0.77024  49.86s
+     74       [94m0.58600[0m       [32m0.58144[0m      1.00785      0.77185  49.60s
+     75       [94m0.58330[0m       [32m0.58071[0m      1.00446      0.77064  48.35s
+     76       0.58409       [32m0.57962[0m      1.00772      0.77044  48.33s
+     77       [94m0.58147[0m       [32m0.57960[0m      1.00322      0.77185  45.80s
+     78       0.58247       [32m0.57939[0m      1.00531      0.77124  46.62s
+     79       [94m0.58037[0m       [32m0.57768[0m      1.00466      0.77104  46.81s
+     80       [94m0.57893[0m       [32m0.57729[0m      1.00284      0.77225  47.41s
+     81       [94m0.57779[0m       [32m0.57697[0m      1.00143      0.77345  48.76s
+     82       [94m0.57389[0m       [32m0.57620[0m      0.99600      0.77245  48.69s
+     83       [94m0.57333[0m       0.57642      0.99464      0.77325  49.74s
+     84       [94m0.57117[0m       [32m0.57510[0m      0.99317      0.77285  50.17s
+     85       0.57309       0.57526      0.99622      0.77265  50.32s
+     86       [94m0.56855[0m       [32m0.57393[0m      0.99064      0.77385  50.41s
+     87       0.57058       [32m0.57361[0m      0.99472      0.77345  50.32s
+     88       [94m0.56810[0m       [32m0.57273[0m      0.99192      0.77365  50.25s
+     89       [94m0.56684[0m       [32m0.57267[0m      0.98982      0.77305  51.42s
+     90       [94m0.56525[0m       [32m0.57251[0m      0.98733      0.77465  51.10s
+     91       [94m0.56405[0m       [32m0.57033[0m      0.98899      0.77405  50.00s
+     92       [94m0.56179[0m       0.57079      0.98423      0.77425  51.36s
+     93       0.56394       0.57231      0.98538      0.77485  50.96s
+     94       [94m0.56061[0m       [32m0.56910[0m      0.98509      0.77465  53.76s
+     95       [94m0.55995[0m       [32m0.56894[0m      0.98421      0.77525  51.64s
+     96       [94m0.55640[0m       0.56914      0.97761      0.77585  49.02s
+     97       [94m0.55600[0m       [32m0.56816[0m      0.97860      0.77605  48.83s
+     98       [94m0.55549[0m       [32m0.56810[0m      0.97780      0.77685  49.15s
+     99       0.55553       [32m0.56775[0m      0.97847      0.77685  50.28s
+    100       [94m0.55089[0m       [32m0.56739[0m      0.97092      0.77665  49.93s
+    101       0.55350       [32m0.56626[0m      0.97747      0.77625  50.46s
+    102       [94m0.54883[0m       0.56633      0.96911      0.77946  50.07s
+    103       0.54966       [32m0.56544[0m      0.97210      0.77725  50.17s
+    104       [94m0.54711[0m       0.56645      0.96586      0.77794  49.52s
+    105       0.54853       0.56555      0.96990      0.77886  50.25s
+    106       [94m0.54602[0m       [32m0.56448[0m      0.96729      0.77766  50.42s
+    107       [94m0.54449[0m       0.56516      0.96343      0.78006  49.32s
+    108       0.54688       [32m0.56296[0m      0.97143      0.77942  47.62s
+    109       [94m0.54336[0m       0.56323      0.96473      0.77854  44.28s
+    110       [94m0.54124[0m       [32m0.56274[0m      0.96179      0.77786  44.08s
+    111       [94m0.54000[0m       [32m0.56219[0m      0.96053      0.77842  44.09s
+    112       0.54038       [32m0.56204[0m      0.96147      0.77754  46.56s
+    113       [94m0.53723[0m       [32m0.56177[0m      0.95632      0.77742  43.75s
+    114       0.53887       0.56222      0.95846      0.77814  42.31s
+    115       [94m0.53358[0m       0.56231      0.94891      0.77982  42.71s
+    116       0.53541       [32m0.56056[0m      0.95513      0.77842  43.82s
+    117       [94m0.53341[0m       0.56095      0.95090      0.77974  43.78s
+    118       [94m0.53171[0m       0.56091      0.94794      0.77882  44.00s
+    119       [94m0.52963[0m       0.56101      0.94406      0.77854  44.77s
+    120       0.53127       [32m0.55819[0m      0.95176      0.78090  45.25s
+    121       [94m0.52574[0m       0.55995      0.93889      0.78102  45.41s
+    122       0.52788       0.56037      0.94201      0.78122  46.63s
+    123       [94m0.52258[0m       [32m0.55738[0m      0.93757      0.77922  46.80s
+    124       0.52851       0.55904      0.94538      0.78171  46.79s
+    125       0.52671       [32m0.55726[0m      0.94518      0.78131  45.00s
+    126       0.52304       [32m0.55701[0m      0.93902      0.78062  45.46s
+    127       0.52509       [32m0.55675[0m      0.94313      0.77982  45.82s
+    128       [94m0.52179[0m       0.55723      0.93640      0.78159  45.17s
+    129       [94m0.52043[0m       [32m0.55641[0m      0.93534      0.78251  45.44s
+    130       [94m0.51783[0m       0.55772      0.92847      0.78110  44.78s
+    131       [94m0.51579[0m       0.55696      0.92608      0.78110  46.21s
+    132       [94m0.51531[0m       [32m0.55599[0m      0.92683      0.78227  50.08s
+    133       [94m0.51328[0m       [32m0.55530[0m      0.92433      0.78110  48.50s
+    134       0.51622       0.55538      0.92949      0.78090  47.12s
+    135       0.51368       [32m0.55376[0m      0.92762      0.78139  46.99s
+    136       [94m0.51255[0m       0.55443      0.92446      0.78202  46.37s
+    137       [94m0.50978[0m       0.55406      0.92008      0.78062  47.05s
+    138       0.50989       0.55457      0.91942      0.78062  48.98s
+    139       [94m0.50728[0m       0.55454      0.91477      0.78259  49.09s
+    140       0.51002       0.55512      0.91875      0.78299  45.69s
+    141       [94m0.50577[0m       [32m0.55321[0m      0.91425      0.78179  46.17s
+    142       [94m0.50563[0m       0.55388      0.91288      0.78090  48.37s
+    143       [94m0.50457[0m       0.55428      0.91033      0.78427  47.83s
+    144       [94m0.50330[0m       0.55333      0.90958      0.78307  46.80s
+    145       [94m0.50119[0m       [32m0.55231[0m      0.90745      0.78387  49.00s
+    146       [94m0.50000[0m       0.55298      0.90419      0.78299  49.44s
+    147       [94m0.49893[0m       0.55383      0.90087      0.78259  49.80s
+    148       0.50008       0.55287      0.90451      0.78319  49.94s
+    149       [94m0.49591[0m       [32m0.55206[0m      0.89830      0.78267  49.85s
+    150       [94m0.49327[0m       0.55400      0.89038      0.78379  50.35s
+    151       0.49481       [32m0.55205[0m      0.89631      0.78307  51.26s
+    152       [94m0.49175[0m       0.55257      0.88992      0.78247  50.23s
+    153       [94m0.49095[0m       [32m0.55126[0m      0.89060      0.78379  49.66s
+    154       [94m0.49002[0m       0.55367      0.88505      0.78307  50.76s
+    155       0.49049       [32m0.55064[0m      0.89076      0.78187  51.87s
+    156       [94m0.48870[0m       0.55457      0.88121      0.78379  50.01s
+    157       [94m0.48814[0m       0.55247      0.88357      0.78379  49.09s
+    158       [94m0.48650[0m       0.55292      0.87987      0.78287  49.50s
+    159       0.48861       [32m0.54990[0m      0.88855      0.78367  49.66s
+    160       [94m0.48556[0m       0.55095      0.88133      0.78087  50.08s
+    161       [94m0.48425[0m       0.55102      0.87883      0.78507  49.79s
+    162       [94m0.48393[0m       0.55014      0.87964      0.78467  50.30s
+    163       [94m0.48358[0m       [32m0.54949[0m      0.88006      0.78547  49.64s
+    164       [94m0.48209[0m       [32m0.54835[0m      0.87917      0.78427  48.61s
+    165       [94m0.48081[0m       0.55228      0.87059      0.78447  46.81s
+    166       [94m0.47960[0m       0.55060      0.87105      0.78407  47.15s
+    167       [94m0.47884[0m       0.55089      0.86921      0.78507  45.47s
+    168       [94m0.47628[0m       0.55027      0.86554      0.78516  46.34s
+    169       0.47742       0.55195      0.86497      0.78596  49.27s
+    170       [94m0.47345[0m       0.54912      0.86219      0.78644  47.41s
+    171       0.47599       0.55021      0.86511      0.78495  45.65s
+    172       0.47423       0.55026      0.86182      0.78536  48.56s
+    173       [94m0.46997[0m       0.54927      0.85562      0.78576  48.28s
+    174       [94m0.46967[0m       0.54990      0.85411      0.78696  47.94s
+    175       0.47082       0.55016      0.85579      0.78776  48.84s
+    176       [94m0.46678[0m       0.54970      0.84916      0.78736  49.88s
+    177       0.46754       0.55046      0.84936      0.78824  51.18s
+    178       [94m0.46542[0m       0.55122      0.84434      0.78536  52.00s
+    179       [94m0.46449[0m       0.55061      0.84360      0.78567  51.47s
+    180       [94m0.46368[0m       0.54986      0.84327      0.78816  51.82s
+    181       [94m0.46263[0m       0.54944      0.84200      0.78596  51.84s
+    182       [94m0.46171[0m       0.54927      0.84060      0.78816  51.60s
+    183       [94m0.46013[0m       0.55041      0.83597      0.78816  50.39s
+    184       [94m0.45792[0m       [32m0.54772[0m      0.83605      0.78824  49.44s
+    185       0.45820       0.54960      0.83369      0.78864  48.63s
+    186       [94m0.45693[0m       0.54998      0.83082      0.78784  45.65s
+    187       0.45764       0.54986      0.83229      0.78696  49.40s
+    188       [94m0.45334[0m       0.55012      0.82408      0.78696  45.46s
+    189       0.45344       0.55022      0.82410      0.78596  44.53s
+    190       0.45460       0.55037      0.82599      0.78656  44.44s
+    191       [94m0.45304[0m       0.54833      0.82622      0.78696  44.66s
+    192       [94m0.45006[0m       0.54880      0.82009      0.78676  45.41s
+    193       [94m0.44870[0m       0.54990      0.81596      0.79024  45.21s
+    194       0.45123       0.54927      0.82151      0.78904  47.38s
+    195       0.44981       0.54985      0.81806      0.78784  47.53s
+    196       [94m0.44650[0m       0.55187      0.80906      0.78944  47.11s
+    197       [94m0.44433[0m       0.55186      0.80516      0.78936  48.07s
+    198       0.44489       0.55033      0.80840      0.78904  47.02s
+    199       [94m0.44185[0m       0.55190      0.80059      0.78896  46.92s
+    200       0.44296       0.54981      0.80566      0.78724  45.96s
+Terminating training since the network is starting to overfit too much.
+COULD NOT SAVE NETWORK SINCE <nnet.early_stopping.StopWhenOverfitting object at 0x50cb2d0> HAS NO PARENT
+saving network to "/scratch/tmp/nnets/nn_12a536e9330635c28f19f9b1a2c2de8f1ab44a6f_201.net.npz.net.npz|json"
+saved network to "/scratch/tmp/nnets/final_final2_9492_complete.net.npz" after training ended
+saving network to "/scratch/tmp/nnets/final_final2_9492.net.npz|json"
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 12376x253 data
+RESULT: -0.538187	{"save_snapshots_stepsize": null, "output_nonlinearity": "softmax", "dropout3_rate": 0.5291810634516098, "dropout0_rate": 0, "learning_rate": 0.00015536928940416983, "batch_size": 128, "learning_rate_scaling": 300, "dropout1_rate": 0.016089943457597705, "dense1_size": 400, "max_epochs": 700, "weight_decay": 0, "dense1_init": "glorot_uniform", "momentum_scaling": 10, "name": "final_final2_9492", "dense3_size": 300, "epoch_steps": null, "dense1_nonlinearity": "rectify", "dense3_nonlinearity": "rectify", "dense2_nonlinearity": "rectify", "dense3_init": "glorot_uniform", "dense2_size": 300, "auto_stopping": true, "dense2_init": "glorot_uniform", "dropout2_rate": 0.5593252411804888, "momentum": 0.98, "adaptive_weight_decay": false}
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network final_final2_4820 400x300x300
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 128, dense1_init = glorot_uniform, dense1_nonlinearity = rectify, dense1_size = 400, dense2_init = glorot_uniform, dense2_nonlinearity = rectify, dense2_size = 300, dense3_init = glorot_uniform, dense3_nonlinearity = rectify, dense3_size = 300, dropout0_rate = 0, dropout1_rate = 0.246439150814, dropout2Traceback (most recent call last):
+  File "nnet/optimize/final2.py", line 86, in <module>
+    opt.fit(train, labels)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py", line 898, in fit
+    return self._fit(X, y, sampled_params)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py", line 505, in _fit
+    for parameters in parameter_iterable
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py", line 666, in __call__
+    self.retrieve()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py", line 549, in retrieve
+    raise exception_type(report)
+sklearn.externals.joblib.my_exceptions.JoblibAttributeError: JoblibAttributeError
+___________________________________________________________________________
+Multiprocessing exception:
+    ...........................................................................
+/home/mverleg/mlip2/nnet/optimize/final2.py in <module>()
+     81 	random_state = random,
+     82 	verbose = bool(VERBOSITY),
+     83 	error_score = 'raise',
+     84 )
+     85 
+---> 86 opt.fit(train, labels)
+     87 
+     88 print '> saving results for top score {0:.4f} (adding rescaling to priors):'.format(-opt.best_score_), opt.best_params_
+     89 try:
+     90 	with open(join(LOGS_DIR, 'random_search_{0:.4f}.json'.format(-opt.best_score_)), 'w+') as fh:
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py in fit(self=RandomizedSearchCV(cv=ShuffleSplit(61878, n_iter...False, needs_proba=True),
+          verbose=True), X=array([[ 1,  0,  0, ...,  0,  0,  0],
+       [ 0...    [ 0,  0,  0, ...,  0,  2,  0]], dtype=uint16), y=array([1, 1, 1, ..., 9, 9, 9], dtype=uint16))
+    893 
+    894         """
+    895         sampled_params = ParameterSampler(self.param_distributions,
+    896                                           self.n_iter,
+    897                                           random_state=self.random_state)
+--> 898         return self._fit(X, y, sampled_params)
+        self._fit = <bound method RandomizedSearchCV._fit of Randomi...alse, needs_proba=True),
+          verbose=True)>
+        X = array([[ 1,  0,  0, ...,  0,  0,  0],
+       [ 0...    [ 0,  0,  0, ...,  0,  2,  0]], dtype=uint16)
+        y = array([1, 1, 1, ..., 9, 9, 9], dtype=uint16)
+        sampled_params = <sklearn.grid_search.ParameterSampler object>
+    899 
+    900 
+    901 
+    902 
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py in _fit(self=RandomizedSearchCV(cv=ShuffleSplit(61878, n_iter...False, needs_proba=True),
+          verbose=True), X=array([[ 1,  0,  0, ...,  0,  0,  0],
+       [ 0...    [ 0,  0,  0, ...,  0,  2,  0]], dtype=uint16), y=array([1, 1, 1, ..., 9, 9, 9], dtype=uint16), parameter_iterable=<sklearn.grid_search.ParameterSampler object>)
+    500         )(
+    501             delayed(_fit_and_score)(clone(base_estimator), X, y, self.scorer_,
+    502                                     train, test, self.verbose, parameters,
+    503                                     self.fit_params, return_parameters=True,
+    504                                     error_score=self.error_score)
+--> 505                 for parameters in parameter_iterable
+        parameters = undefined
+        parameter_iterable = <sklearn.grid_search.ParameterSampler object>
+    506                 for train, test in cv)
+    507 
+    508         # Out is a list of triplet: score, estimator, n_test_samples
+    509         n_fits = len(out)
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py in __call__(self=Parallel(n_jobs=31), iterable=<itertools.islice object>)
+    661             if pre_dispatch == "all" or n_jobs == 1:
+    662                 # The iterable was consumed all at once by the above for loop.
+    663                 # No need to wait for async callbacks to trigger to
+    664                 # consumption.
+    665                 self._iterating = False
+--> 666             self.retrieve()
+        self.retrieve = <bound method Parallel.retrieve of Parallel(n_jobs=31)>
+    667             # Make sure that we get a last message telling us we are done
+    668             elapsed_time = time.time() - self._start_time
+    669             self._print('Done %3i out of %3i | elapsed: %s finished',
+    670                         (len(self._output),
+
+    ---------------------------------------------------------------------------
+    Sub-process traceback:
+    ---------------------------------------------------------------------------
+    AttributeError                                     Thu Jun 18 05:19:13 2015
+PID: 2281                  Python 2.7.3: /home/mverleg/mlip2/env/bin/python
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.pyc in _fit_and_score(estimator=Pipeline(steps=[('row', PositiveSparseRowFeature...ve_snapshots_stepsize=None,
+   weight_decay=0))]), X=array([[ 1,  0,  0, ...,  0,  0,  0],
+       [ 0...    [ 0,  0,  0, ...,  0,  2,  0]], dtype=uint16), y=array([1, 1, 1, ..., 9, 9, 9], dtype=uint16), scorer=make_scorer(log_loss, greater_is_better=False, needs_proba=True), train=array([60240, 59838, 52849, ..., 58350, 12131, 57566]), test=array([  525, 21654, 46914, ..., 61695, 54378, 50492]), verbose=True, parameters={'nn__dropout1_rate': 0.2010255528148829, 'nn__dropout2_rate': 0.4745959334999622, 'nn__dropout3_rate': 0.4130200130040145, 'nn__learning_rate': 0.00021005839373166175, 'nn__name': 'final_final2_219'}, fit_params={'nn__random_sleep': 600}, return_train_score=False, return_parameters=True, error_score='raise')
+   1454 
+   1455     try:
+   1456         if y_train is None:
+   1457             estimator.fit(X_train, **fit_params)
+   1458         else:
+-> 1459             estimator.fit(X_train, y_train, **fit_params)
+   1460 
+   1461     except Exception as e:
+   1462         if error_score == 'raise':
+   1463             raise
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/pipeline.pyc in fit(self=Pipeline(steps=[('row', PositiveSparseRowFeature...ve_snapshots_stepsize=None,
+   weight_decay=0))]), X=array([[ 0,  0,  0, ...,  0,  0,  0],
+       [ 4...    [ 1,  0,  0, ...,  1,  1,  0]], dtype=uint16), y=array([9, 9, 8, ..., 9, 2, 9], dtype=uint16), **fit_params={'random_sleep': 600})
+    136         y : iterable, default=None
+    137             Training targets. Must fulfill label requirements for all steps of
+    138             the pipeline.
+    139         """
+    140         Xt, fit_params = self._pre_transform(X, y, **fit_params)
+--> 141         self.steps[-1][-1].fit(Xt, y, **fit_params)
+    142         return self
+    143 
+    144     def fit_transform(self, X, y=None, **fit_params):
+    145         """Fit all the transforms one after the other and transform the
+
+...........................................................................
+/home/mverleg/mlip2/nnet/scikit.pyc in fit(self=NNet(adaptive_weight_decay=False, auto_stopping=... save_snapshots_stepsize=None,
+   weight_decay=0), X=array([[ 0.        ,  0.        ,  0.        , ....        2.83724952,  1.26838505]], dtype=float32), y=array([9, 9, 8, ..., 9, 2, 9], dtype=uint16), random_sleep=600)
+    294 	def fit(self, X, y, random_sleep = None):
+    295 		if random_sleep:
+    296 			sleep(random_sleep * random())  # this is to prevent compiler lock problems
+    297 		labels = y - y.min()
+    298 		self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
+--> 299 		net = self.net.fit(X, labels)
+    300 		self.save()
+    301 		return net
+    302 
+    303 	def interrupted_fit(self, X, y):
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.pyc in fit(self=NeuralNet(X_tensor_type=<function matrix at 0x31...ue,
+     y_tensor_type=TensorType(int32, vector)), X=array([[ 0.        ,  0.        ,  0.        , ....        2.83724952,  1.26838505]], dtype=float32), y=array([8, 8, 7, ..., 8, 1, 8], dtype=uint16))
+    288             y = self.enc_.fit_transform(y).astype(np.int32)
+    289             self.classes_ = self.enc_.classes_
+    290         self.initialize()
+    291 
+    292         try:
+--> 293             self.train_loop(X, y)
+    294         except KeyboardInterrupt:
+    295             pass
+    296         return self
+    297 
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.pyc in train_loop(self=NeuralNet(X_tensor_type=<function matrix at 0x31...ue,
+     y_tensor_type=TensorType(int32, vector)), X=array([[ 0.        ,  0.        ,  0.        , ....        2.83724952,  1.26838505]], dtype=float32), y=array([8, 8, 7, ..., 8, 1, 8], dtype=uint16))
+    365                 info[self.custom_score[0]] = avg_custom_score
+    366             self.train_history_.append(info)
+    367 
+    368             try:
+    369                 for func in on_epoch_finished:
+--> 370                     func(self, self.train_history_)
+    371             except StopIteration:
+    372                 break
+    373 
+    374         for func in on_training_finished:
+
+...........................................................................
+/home/mverleg/mlip2/nnet/early_stopping.pyc in __call__(self=<nnet.early_stopping.StopAfterMinimum object>, nn=NeuralNet(X_tensor_type=<function matrix at 0x31...ue,
+     y_tensor_type=TensorType(int32, vector)), train_history=[{'dur': 44.027026891708374, 'epoch': 1, 'train_loss': 2.2110197868951764, 'train_loss_best': True, 'valid_accuracy': 0.22603276353276355, 'valid_loss': 2.0739922599188714, 'valid_loss_best': True}, {'dur': 42.91564893722534, 'epoch': 2, 'train_loss': 1.783433670179523, 'train_loss_best': True, 'valid_accuracy': 0.54856659544159547, 'valid_loss': 1.3295931371053789, 'valid_loss_best': True}, {'dur': 27.792938947677612, 'epoch': 3, 'train_loss': 1.3209402890465292, 'train_loss_best': True, 'valid_accuracy': 0.61448539886039888, 'valid_loss': 1.0651598784460674, 'valid_loss_best': True}, {'dur': 27.102195978164673, 'epoch': 4, 'train_loss': 1.1429638586473112, 'train_loss_best': True, 'valid_accuracy': 0.67166132478632479, 'valid_loss': 0.93454244034342937, 'valid_loss_best': True}, {'dur': 26.93212890625, 'epoch': 5, 'train_loss': 1.0283734876994883, 'train_loss_best': True, 'valid_accuracy': 0.69761841168091165, 'valid_loss': 0.84358613128415272, 'valid_loss_best': True}, {'dur': 27.92244005203247, 'epoch': 6, 'train_loss': 0.95530442902880952, 'train_loss_best': True, 'valid_accuracy': 0.7067485754985755, 'valid_loss': 0.78872111688436475, 'valid_loss_best': True}, {'dur': 27.822057008743286, 'epoch': 7, 'train_loss': 0.90257520172178995, 'train_loss_best': True, 'valid_accuracy': 0.7120726495726496, 'valid_loss': 0.75567898634010533, 'valid_loss_best': True}, {'dur': 27.845531940460205, 'epoch': 8, 'train_loss': 0.8644526846659949, 'train_loss_best': True, 'valid_accuracy': 0.71679576210826212, 'valid_loss': 0.73105427663503075, 'valid_loss_best': True}, {'dur': 28.430953979492188, 'epoch': 9, 'train_loss': 0.83261423915854293, 'train_loss_best': True, 'valid_accuracy': 0.72120281339031345, 'valid_loss': 0.71284303242206171, 'valid_loss_best': True}, {'dur': 31.534215927124023, 'epoch': 10, 'train_loss': 0.81467644892573643, 'train_loss_best': True, 'valid_accuracy': 0.72744391025641031, 'valid_loss': 0.6969885644846785, 'valid_loss_best': True}, {'dur': 34.099186182022095, 'epoch': 11, 'train_loss': 0.79384245469277026, 'train_loss_best': True, 'valid_accuracy': 0.73073361823361815, 'valid_loss': 0.68520269258812294, 'valid_loss_best': True}, {'dur': 35.061241149902344, 'epoch': 12, 'train_loss': 0.77897980622428231, 'train_loss_best': True, 'valid_accuracy': 0.73514066951566948, 'valid_loss': 0.67486764048827763, 'valid_loss_best': True}, {'dur': 35.538392066955566, 'epoch': 13, 'train_loss': 0.76408804676819608, 'train_loss_best': True, 'valid_accuracy': 0.73814547720797719, 'valid_loss': 0.66369549945951667, 'valid_loss_best': True}, {'dur': 38.386274099349976, 'epoch': 14, 'train_loss': 0.75284179867222545, 'train_loss_best': True, 'valid_accuracy': 0.7416666666666667, 'valid_loss': 0.65606650506407271, 'valid_loss_best': True}, {'dur': 46.378228187561035, 'epoch': 15, 'train_loss': 0.74565236410897173, 'train_loss_best': True, 'valid_accuracy': 0.7462740384615385, 'valid_loss': 0.64793525652631412, 'valid_loss_best': True}, {'dur': 50.61098098754883, 'epoch': 16, 'train_loss': 0.73330000723716504, 'train_loss_best': True, 'valid_accuracy': 0.74987980769230766, 'valid_loss': 0.64130879498817239, 'valid_loss_best': True}, {'dur': 51.36176800727844, 'epoch': 17, 'train_loss': 0.72589827508826332, 'train_loss_best': True, 'valid_accuracy': 0.75131321225071224, 'valid_loss': 0.63612149081036617, 'valid_loss_best': True}, {'dur': 51.55311894416809, 'epoch': 18, 'train_loss': 0.71545389697935369, 'train_loss_best': True, 'valid_accuracy': 0.75280003561253561, 'valid_loss': 0.63049059689871279, 'valid_loss_best': True}, {'dur': 51.397286891937256, 'epoch': 19, 'train_loss': 0.70760586051868479, 'train_loss_best': True, 'valid_accuracy': 0.75608974358974357, 'valid_loss': 0.62529191795773809, 'valid_loss_best': True}, {'dur': 53.2401659488678, 'epoch': 20, 'train_loss': 0.70355395806381416, 'train_loss_best': True, 'valid_accuracy': 0.75809294871794874, 'valid_loss': 0.62089640894519682, 'valid_loss_best': True}, ...])
+     43 		elif self.best_valid_epoch + self.patience < current_epoch:
+     44 			print 'Stopping early since test error has been increasing.'
+     45 			print 'Best validation loss was {:.6f} at epoch {}.'.format(self.best_valid, self.best_valid_epoch)
+     46 			filepath = '{0:s}_{1:d}.net.npz'.format(self.base_path, train_history[-1]['epoch'])
+     47 			save_knowledge(nn, filepath)
+---> 48 			nn.load_params_from(self.best_weights)
+     49 			filepath = '{0:s}_{1:d}_best.net.npz'.format(self.base_path, self.best_valid_epoch)
+     50 			self.parent.save(filepath = filepath)
+     51 			print 'The network has been restored to the state at this epoch and both have been saved.'
+     52 			raise StopIteration('loss increasing')
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.pyc in load_params_from(self=NeuralNet(X_tensor_type=<function matrix at 0x31...ue,
+     y_tensor_type=TensorType(int32, vector)), source=array(OrderedDict([('input', []), ('dense1', [ar...62, -0.00646997, -0.08031175])])]), dtype=object))
+    431                 source = pickle.load(f)
+    432 
+    433         if isinstance(source, NeuralNet):
+    434             source = source.get_all_params_values()
+    435 
+--> 436         for key, values in source.items():
+    437             layer = self.layers_.get(key)
+    438             if layer is not None:
+    439                 for p1, p2v in zip(layer.get_params(), values):
+    440                     if p1.get_value().shape == p2v.shape:
+
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+___________________________________________________________________________

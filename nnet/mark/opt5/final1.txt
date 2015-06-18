@@ -1,0 +1,1448 @@
+nohup: ignoring input
+Couldn't import dot_parser, loading of dot files will not be possible.
+loaded transformed NN train and test data from cache in "/tmp" with key ""
+Fitting 1 folds for each of 42 candidates, totalling 42 fits
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19863' (I am process '19847')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19861' (I am process '19873')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26488' (I am process '19873')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19854' (I am process '19846')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Deleting (broken cache directory [EOF]): /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpnOengX
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19871' (I am process '19854')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19871' (I am process '19846')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): A module that was loaded by this ModuleCache can no longer be read from file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpnOengX/3560da473d4e42f06d760a4ac491e7e8.so... this could lead to problems.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpnOengX/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19870')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26472' (I am process '19866')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26472' (I am process '19842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26472' (I am process '19846')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19864' (I am process '19870')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19864' (I am process '19866')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1466' (I am process '19842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1467' (I am process '19842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19851' (I am process '19842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): Deleting (broken cache directory [EOF]): /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpy_oJHF
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19838' (I am process '19853')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19838' (I am process '19842')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+WARNING (theano.gof.cmodule): ModuleCache.refresh() Found key without dll in cache, deleting it. /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpy_oJHF/key.pkl
+WARNING (theano.gof.cmodule): ModuleCache.refresh() Found key without dll in cache, deleting it. /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpy_oJHF/key.pkl
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1463' (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26474' (I am process '19853')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26474' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19838' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19875' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19875' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19875' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26481' (I am process '19844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26481' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26481' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26481' (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26481' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4481' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4481' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4481' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4481' (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4481' (I am process '19844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4481' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4481' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4481' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19874')
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26479' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26479' (I am process '19844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26479' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26479' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26479' (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26479' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26479' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19844')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19857' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmptSJ9IQ/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26482' (I am process '19855')
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26482' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compilediINFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26482' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26482' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26482' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26482' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1465' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1465' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26483' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19875')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1468' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19852' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19852' (I am process '19855')
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19852' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compilediINFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19875' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19875' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4486' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmptSJ9IQ/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26489' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26489' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26489' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compilediINFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19862' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1464' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26486' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26490' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4482' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledINFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4482' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4482' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4482' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4482' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4482' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4482' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26475' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19862')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1472' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19878' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19862' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19862' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26486' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19843')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1469' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19857' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19876' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1477' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1477' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledINFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.cINFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1477' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1477' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1477' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1477' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1477' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19857')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledINFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19877')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4488' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19837')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19858')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26482' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26482' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26482' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19837' (I am process '19874')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmptSJ9IQ/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledINFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledINFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4487' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19876')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1471' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26489' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26486' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26486' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19878' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26486' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26486' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compilediINFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1479' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4486' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '4486' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19878')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19860')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19855')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19860' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19860' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19860' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19855' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmptSJ9IQ/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1481' (I am process '19852')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '1481' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26471' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19878' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '19872' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19849')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19868')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19841')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19850')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by process '26484' (I am process '19867')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '19872')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+WARNING (theano.gof.cmodule): Removing key file /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/tmpRgvYK5/key.pkl because the corresponding module is gone from the file system.
+[Parallel(n_jobs=63)]: Done   1 out of  42 | elapsed: 122.0min remaining: 5002.4min
+Traceback (most recent call last):
+  File "nnet/optimize/final1.py", line 86, in <module>
+    opt.fit(train, labels)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py", line 898, in fit
+    return self._fit(X, y, sampled_params)
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py", line 505, in _fit
+    for parameters in parameter_iterable
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py", line 666, in __call__
+    self.retrieve()
+  File "/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py", line 549, in retrieve
+    raise exception_type(report)
+sklearn.externals.joblib.my_exceptions.JoblibImportError: JoblibImportError
+___________________________________________________________________________
+Multiprocessing exception:
+    ...........................................................................
+/home/mverleg/mlip2/nnet/optimize/final1.py in <module>()
+     81 	random_state = random,
+     82 	verbose = bool(VERBOSITY),
+     83 	error_score = 'raise',
+     84 )
+     85 
+---> 86 opt.fit(train, labels)
+     87 
+     88 print '> saving results for top score {0:.4f} (adding rescaling to priors):'.format(-opt.best_score_), opt.best_params_
+     89 try:
+     90 	with open(join(LOGS_DIR, 'random_search_{0:.4f}.json'.format(-opt.best_score_)), 'w+') as fh:
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py in fit(self=RandomizedSearchCV(cv=ShuffleSplit(61878, n_iter...False, needs_proba=True),
+          verbose=True), X=array([[ 1,  0,  0, ...,  0,  0,  0],
+       [ 0...    [ 0,  0,  0, ...,  0,  2,  0]], dtype=uint16), y=array([1, 1, 1, ..., 9, 9, 9], dtype=uint16))
+    893 
+    894         """
+    895         sampled_params = ParameterSampler(self.param_distributions,
+    896                                           self.n_iter,
+    897                                           random_state=self.random_state)
+--> 898         return self._fit(X, y, sampled_params)
+        self._fit = <bound method RandomizedSearchCV._fit of Randomi...alse, needs_proba=True),
+          verbose=True)>
+        X = array([[ 1,  0,  0, ...,  0,  0,  0],
+       [ 0...    [ 0,  0,  0, ...,  0,  2,  0]], dtype=uint16)
+        y = array([1, 1, 1, ..., 9, 9, 9], dtype=uint16)
+        sampled_params = <sklearn.grid_search.ParameterSampler object>
+    899 
+    900 
+    901 
+    902 
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/grid_search.py in _fit(self=RandomizedSearchCV(cv=ShuffleSplit(61878, n_iter...False, needs_proba=True),
+          verbose=True), X=array([[ 1,  0,  0, ...,  0,  0,  0],
+       [ 0...    [ 0,  0,  0, ...,  0,  2,  0]], dtype=uint16), y=array([1, 1, 1, ..., 9, 9, 9], dtype=uint16), parameter_iterable=<sklearn.grid_search.ParameterSampler object>)
+    500         )(
+    501             delayed(_fit_and_score)(clone(base_estimator), X, y, self.scorer_,
+    502                                     train, test, self.verbose, parameters,
+    503                                     self.fit_params, return_parameters=True,
+    504                                     error_score=self.error_score)
+--> 505                 for parameters in parameter_iterable
+        parameters = undefined
+        parameter_iterable = <sklearn.grid_search.ParameterSampler object>
+    506                 for train, test in cv)
+    507 
+    508         # Out is a list of triplet: score, estimator, n_test_samples
+    509         n_fits = len(out)
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/externals/joblib/parallel.py in __call__(self=Parallel(n_jobs=63), iterable=<itertools.islice object>)
+    661             if pre_dispatch == "all" or n_jobs == 1:
+    662                 # The iterable was consumed all at once by the above for loop.
+    663                 # No need to wait for async callbacks to trigger to
+    664                 # consumption.
+    665                 self._iterating = False
+--> 666             self.retrieve()
+        self.retrieve = <bound method Parallel.retrieve of Parallel(n_jobs=63)>
+    667             # Make sure that we get a last message telling us we are done
+    668             elapsed_time = time.time() - self._start_time
+    669             self._print('Done %3i out of %3i | elapsed: %s finished',
+    670                         (len(self._output),
+
+    ---------------------------------------------------------------------------
+    Sub-process traceback:
+    ---------------------------------------------------------------------------
+    ImportError                                        Thu Jun 18 01:58:11 2015
+PID: 19853                 Python 2.7.3: /home/mverleg/mlip2/env/bin/python
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/cross_validation.pyc in _fit_and_score(estimator=Pipeline(steps=[('row', PositiveSparseRowFeature...ve_snapshots_stepsize=None,
+   weight_decay=0))]), X=array([[ 1,  0,  0, ...,  0,  0,  0],
+       [ 0...    [ 0,  0,  0, ...,  0,  2,  0]], dtype=uint16), y=array([1, 1, 1, ..., 9, 9, 9], dtype=uint16), scorer=make_scorer(log_loss, greater_is_better=False, needs_proba=True), train=array([31092, 59103, 50414, ..., 59091, 56008, 61872]), test=array([14498, 33905, 42137, ...,  2972, 17185, 47479]), verbose=True, parameters={'nn__dropout1_rate': 0.23722162340448452, 'nn__dropout2_rate': 0.3377032704766572, 'nn__dropout3_rate': 0.5645173874732293, 'nn__learning_rate': 0.0001194613105459329, 'nn__name': 'final_final1_824'}, fit_params={'nn__random_sleep': 300}, return_train_score=False, return_parameters=True, error_score='raise')
+   1454 
+   1455     try:
+   1456         if y_train is None:
+   1457             estimator.fit(X_train, **fit_params)
+   1458         else:
+-> 1459             estimator.fit(X_train, y_train, **fit_params)
+   1460 
+   1461     except Exception as e:
+   1462         if error_score == 'raise':
+   1463             raise
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/sklearn/pipeline.pyc in fit(self=Pipeline(steps=[('row', PositiveSparseRowFeature...ve_snapshots_stepsize=None,
+   weight_decay=0))]), X=array([[0, 0, 0, ..., 0, 1, 0],
+       [0, 0, 0,...],
+       [0, 0, 0, ..., 0, 0, 0]], dtype=uint16), y=array([5, 9, 8, ..., 9, 8, 9], dtype=uint16), **fit_params={'random_sleep': 300})
+    136         y : iterable, default=None
+    137             Training targets. Must fulfill label requirements for all steps of
+    138             the pipeline.
+    139         """
+    140         Xt, fit_params = self._pre_transform(X, y, **fit_params)
+--> 141         self.steps[-1][-1].fit(Xt, y, **fit_params)
+    142         return self
+    143 
+    144     def fit_transform(self, X, y=None, **fit_params):
+    145         """Fit all the transforms one after the other and transform the
+
+...........................................................................
+/home/mverleg/mlip2/nnet/scikit.pyc in fit(self=NNet(adaptive_weight_decay=False, auto_stopping=... save_snapshots_stepsize=None,
+   weight_decay=0), X=array([[ 0.        ,  0.        ,  0.        , ....        0.        ,  0.        ]], dtype=float32), y=array([5, 9, 8, ..., 9, 8, 9], dtype=uint16), random_sleep=300)
+    293 
+    294 	def fit(self, X, y, random_sleep = None):
+    295 		if random_sleep:
+    296 			sleep(random_sleep * random())  # this is to prevent compiler lock problems
+    297 		labels = y - y.min()
+--> 298 		self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
+    299 		net = self.net.fit(X, labels)
+    300 		self.save()
+    301 		return net
+    302 
+
+...........................................................................
+/home/mverleg/mlip2/nnet/scikit.pyc in init_net(self=NNet(adaptive_weight_decay=False, auto_stopping=... save_snapshots_stepsize=None,
+   weight_decay=0), feature_count=253, class_count=9, verbosity=True)
+    245 
+    246 			**self.params
+    247 		)
+    248 		self.net.parent = self
+    249 
+--> 250 		self.net.initialize()
+    251 
+    252 		return self.net
+    253 
+    254 	def get_params(self, deep = True):
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.pyc in initialize(self=NeuralNet(X_tensor_type=<function matrix at 0x29...ue,
+     y_tensor_type=TensorType(int32, vector)))
+    161             self.X_tensor_type = types[len(first_layer.shape)]
+    162 
+    163         iter_funcs = self._create_iter_funcs(
+    164             self.layers_, self.objective, self.update,
+    165             self.X_tensor_type,
+--> 166             self.y_tensor_type,
+    167             )
+    168         self.train_iter_, self.eval_iter_, self.predict_iter_ = iter_funcs
+    169         self._initialized = True
+    170 
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.pyc in _create_iter_funcs(self=NeuralNet(X_tensor_type=<function matrix at 0x29...ue,
+     y_tensor_type=TensorType(int32, vector)), layers=OrderedDict([('input', <lasagne.layers.input.Inp...e.layers.dense.DenseLayer object at 0x60e0550>)]), objective=<functools.partial object>, update=<function nesterov_momentum>, input_type=<function matrix>, output_type=TensorType(int32, vector))
+    259             inputs=[theano.Param(X_batch), theano.Param(y_batch)],
+    260             outputs=[loss_train],
+    261             updates=updates,
+    262             givens={
+    263                 X: X_batch,
+--> 264                 y: y_batch,
+    265                 },
+    266             )
+    267         eval_iter = theano.function(
+    268             inputs=[theano.Param(X_batch), theano.Param(y_batch)],
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/compile/function.pyc in function(inputs=[<theano.compile.pfunc.Param object>, <theano.compile.pfunc.Param object>], outputs=[Elemwise{add,no_inplace}.0], mode=None, updates=OrderedDict([(dense1.W, Elemwise{add,no_inplace}...(float64, vector)>, Elemwise{sub,no_inplace}.0)]), givens={y: y_batch, x: x_batch}, no_default_updates=False, accept_inplace=False, name='/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.py:264', rebuild_strict=True, allow_input_downcast=None, profile=None, on_unused_input=None)
+    261                 no_default_updates=no_default_updates,
+    262                 accept_inplace=accept_inplace, name=name,
+    263                 rebuild_strict=rebuild_strict,
+    264                 allow_input_downcast=allow_input_downcast,
+    265                 on_unused_input=on_unused_input,
+--> 266                 profile=profile)
+    267     # We need to add the flag check_aliased inputs if we have any mutable or
+    268     # borrowed used defined inputs
+    269     fn._check_for_aliased_inputs = check_for_aliased_inputs
+    270     return fn
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/compile/pfunc.pyc in pfunc(params=[<theano.compile.pfunc.Param object>, <theano.compile.pfunc.Param object>], outputs=[Elemwise{add,no_inplace}.0], mode=None, updates=OrderedDict([(dense1.W, Elemwise{add,no_inplace}...(float64, vector)>, Elemwise{sub,no_inplace}.0)]), givens={y: y_batch, x: x_batch}, no_default_updates=False, accept_inplace=False, name='/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.py:264', rebuild_strict=True, allow_input_downcast=None, profile=False, on_unused_input=None)
+    506                     mutable=False, borrow=True, shared=True)
+    507         inputs.append(si)
+    508 
+    509     return orig_function(inputs, cloned_outputs, mode,
+    510             accept_inplace=accept_inplace, name=name, profile=profile,
+--> 511             on_unused_input=on_unused_input)
+    512 
+    513 
+    514 def _pfunc_param_to_in(param, strict=False, allow_downcast=None):
+    515     if isinstance(param, Constant):
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/compile/function_module.pyc in orig_function(inputs=[In(x_batch), In(y_batch), In(dense1.W -> Elemwise{add,no_inplace}.0), In(dense1.b -> Elemwise{add,no_inplace}.0), In(<TensorType(int32, matrix)> -> mrg_uniform{TensorType(float64, matrix),no_inplace}.0), In(dense2.W -> Elemwise{add,no_inplace}.0), In(dense2.b -> Elemwise{add,no_inplace}.0), In(<TensorType(int32, matrix)> -> mrg_uniform{TensorType(float64, matrix),no_inplace}.0), In(dense3.W -> Elemwise{add,no_inplace}.0), In(dense3.b -> Elemwise{add,no_inplace}.0), In(<TensorType(int32, matrix)> -> mrg_uniform{TensorType(float64, matrix),no_inplace}.0), In(output.W -> Elemwise{add,no_inplace}.0), In(output.b -> Elemwise{add,no_inplace}.0), In(weight_decay), In(<TensorType(float64, scalar)>), In(<TensorType(float64, matrix)> -> Elemwise{sub,no_inplace}.0), In(<TensorType(float32, scalar)>), In(<TensorType(float64, vector)> -> Elemwise{sub,no_inplace}.0), In(<TensorType(float64, matrix)> -> Elemwise{sub,no_inplace}.0), In(<TensorType(float64, vector)> -> Elemwise{sub,no_inplace}.0), ...], outputs=[Out(Elemwise{add,no_inplace}.0,False)], mode=<theano.compile.mode.Mode object>, accept_inplace=False, name='/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/nolearn/lasagne/base.py:264', profile=False, on_unused_input=None)
+   1461                    outputs,
+   1462                    mode,
+   1463                    accept_inplace=accept_inplace,
+   1464                    profile=profile,
+   1465                    on_unused_input=on_unused_input).create(
+-> 1466                        defaults)
+   1467 
+   1468     t2 = time.time()
+   1469     if profile:
+   1470         profile.compile_time += t2 - t1
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/compile/function_module.pyc in create(self=<theano.compile.function_module.FunctionMaker object>, input_storage=[None, None, <array([[ 0.05499175, -0.02813197,  0.06767757, ... 0.06745293,
+        -0.01162923, -0.06214259]])>, <array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0., ....,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])>, <array([[     12345,      12345,      12345,    ...,  184506923,
+        2110382001]], dtype=int32)>, <array([[ 0.03244543, -0.01377725,  0.08314668, ... 0.00588448,
+         0.0737679 , -0.05182763]])>, <array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0., ....,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])>, <array([[ 336690377,  597094797, 1245771585,   8...,  744179834,
+         110486429]], dtype=int32)>, <array([[ 0.08160515,  0.08508057, -0.03841828, ...-0.03871954,
+        -0.00897708, -0.05639062]])>, <array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0., ....,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])>, <array([[ 502033783, 1322587635, 1964121530, 194..., 1874665993,
+        1874760456]], dtype=int32)>, <array([[ 0.05864093, -0.05080854, -0.15368428, ... 0.03716094,
+         0.07926795,  0.0631088 ]])>, <array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])>, <array(0.0, dtype=float32)>, <array(0.0)>, <array([[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+   ....],
+       [ 0.,  0.,  0., ...,  0.,  0.,  0.]])>, <array(0.00011946131417062134, dtype=float32)>, <array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0., ....,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])>, <array([[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+   ....],
+       [ 0.,  0.,  0., ...,  0.,  0.,  0.]])>, <array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0., ....,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])>, ...], trustme=False)
+   1319         start_import_time = theano.gof.cmodule.import_time
+   1320         limit_orig = theano.config.traceback.limit
+   1321         try:
+   1322             theano.config.traceback.limit = 0
+   1323             _fn, _i, _o = self.linker.make_thunk(
+-> 1324                 input_storage=input_storage_lists)
+   1325         finally:
+   1326             theano.config.traceback.limit = limit_orig
+   1327 
+   1328         end_linker = time.time()
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/link.pyc in make_thunk(self=<theano.gof.vm.VM_Linker object>, input_storage=[[None], [None], [array([[ 0.05499175, -0.02813197,  0.06767757, ....  0.06745293,
+        -0.01162923, -0.06214259]])], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  ...0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], [array([[     12345,      12345,      12345,     ...0,  184506923,
+        2110382001]], dtype=int32)], [array([[ 0.03244543, -0.01377725,  0.08314668, ....  0.00588448,
+         0.0737679 , -0.05182763]])], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  ...0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], [array([[ 336690377,  597094797, 1245771585,   85...4,  744179834,
+         110486429]], dtype=int32)], [array([[ 0.08160515,  0.08508057, -0.03841828, .... -0.03871954,
+        -0.00897708, -0.05639062]])], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  ...0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], [array([[ 502033783, 1322587635, 1964121530, 1949...3, 1874665993,
+        1874760456]], dtype=int32)], [array([[ 0.05864093, -0.05080854, -0.15368428, ....  0.03716094,
+         0.07926795,  0.0631088 ]])], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], [array(0.0, dtype=float32)], [array(0.0)], [array([[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+    ...0.],
+       [ 0.,  0.,  0., ...,  0.,  0.,  0.]])], [array(0.00011946131417062134, dtype=float32)], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  ...0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], [array([[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+    ...0.],
+       [ 0.,  0.,  0., ...,  0.,  0.,  0.]])], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  ...0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], ...], output_storage=None)
+    514     thunk associated with each node.
+    515     """
+    516 
+    517     def make_thunk(self, input_storage=None, output_storage=None):
+    518         return self.make_all(input_storage=input_storage,
+--> 519                              output_storage=output_storage)[:3]
+    520 
+    521     def make_all(self, input_storage, output_storage):
+    522         # By convention, subclasses of LocalLinker should implement this function!
+    523         #
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/vm.pyc in make_all(self=<theano.gof.vm.VM_Linker object>, profiler=None, input_storage=[[None], [None], [array([[ 0.05499175, -0.02813197,  0.06767757, ....  0.06745293,
+        -0.01162923, -0.06214259]])], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  ...0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], [array([[     12345,      12345,      12345,     ...0,  184506923,
+        2110382001]], dtype=int32)], [array([[ 0.03244543, -0.01377725,  0.08314668, ....  0.00588448,
+         0.0737679 , -0.05182763]])], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  ...0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], [array([[ 336690377,  597094797, 1245771585,   85...4,  744179834,
+         110486429]], dtype=int32)], [array([[ 0.08160515,  0.08508057, -0.03841828, .... -0.03871954,
+        -0.00897708, -0.05639062]])], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  ...0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], [array([[ 502033783, 1322587635, 1964121530, 1949...3, 1874665993,
+        1874760456]], dtype=int32)], [array([[ 0.05864093, -0.05080854, -0.15368428, ....  0.03716094,
+         0.07926795,  0.0631088 ]])], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], [array(0.0, dtype=float32)], [array(0.0)], [array([[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+    ...0.],
+       [ 0.,  0.,  0., ...,  0.,  0.,  0.]])], [array(0.00011946131417062134, dtype=float32)], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  ...0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], [array([[ 0.,  0.,  0., ...,  0.,  0.,  0.],
+    ...0.],
+       [ 0.,  0.,  0., ...,  0.,  0.,  0.]])], [array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  ...0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])], ...], output_storage=[[None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None], [None]])
+    892         for node in order:
+    893             try:
+    894                 thunks.append(node.op.make_thunk(node,
+    895                                                  storage_map,
+    896                                                  compute_map,
+--> 897                                                  no_recycling))
+    898                 if not hasattr(thunks[-1], 'lazy'):
+    899                     # We don't want all ops maker to think about lazy Ops.
+    900                     # So if they didn't specify that its lazy or not, it isn't.
+    901                     # If this member isn't present, it will crash later.
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.pyc in make_thunk(self=<theano.tensor.elemwise.Elemwise object>, node=Elemwise{Composite{(i0 * (Abs(i1) + i2 + i3) * i...{Composite{Cast{float64}(LT(i0, i1))}}[(0, 0)].0), storage_map={Elemwise{Cast{float64}}.0: [None], mrg_uniform{TensorType(float64, matrix),inplace}.1: [None], TensorConstant{(1, 1) of ..5498392904}: [array([[ 0.65549839]])], Elemwise{mul,no_inplace}.0: [None], mrg_uniform{TensorType(float64, matrix),inplace}.0: [None], Sum{acc_dtype=float64}.0: [None], Elemwise{Composite{Cast{float64}(LT(i0, i1))}}[(0, 0)].0: [None], TensorConstant{(1, 1) of ..2296729523}: [array([[ 0.66229673]])], Elemwise{Composite{((i0 * i1) - i2)}}[(0, 1)].0: [None], Sum{acc_dtype=float64}.0: [None], ...}, compute_map={InplaceDimShuffle{x}.0: [False], Elemwise{Cast{float64}}.0: [False], MakeVector.0: [False], mrg_uniform{TensorType(float64, matrix),inplace}.0: [False], mrg_uniform{TensorType(float64, matrix),inplace}.1: [False], TensorConstant{(1, 1) of ..5498392904}: [True], Elemwise{mul,no_inplace}.0: [False], mrg_uniform{TensorType(float64, matrix),inplace}.0: [False], TensorConstant{(1, 1) of ..2296729523}: [True], Elemwise{Composite{((i0 * i1) - i2)}}[(0, 1)].0: [False], ...}, no_recycling=set([Elemwise{Composite{((i0 * i1) + (i2 - i3))}}[(0, 2)].0, InplaceDimShuffle{x,0}.0, Elemwise{Composite{((i0 * i1) + (i2 - i3))}}[(0, 2)].0, Elemwise{Composite{((i0 * i1) + (i2 - i3))}}[(0, 2)].0, Elemwise{Composite{((i0 * i1) - i2)}}[(0, 1)].0, Elemwise{Composite{((i0 * i1) + (i2 - i3))}}[(0, 3)].0, ...]))
+    997                 theano.config.openmp = False
+    998 
+    999     def make_thunk(self, node, storage_map, compute_map, no_recycling):
+   1000         self.update_self_openmp()
+   1001         return super(OpenMPOp, self).make_thunk(node, storage_map,
+-> 1002                                                 compute_map, no_recycling)
+   1003 
+   1004 
+   1005 def simple_meth(tag):
+   1006     def f(self):
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/op.pyc in make_thunk(self=<theano.tensor.elemwise.Elemwise object>, node=Elemwise{Composite{(i0 * (Abs(i1) + i2 + i3) * i...{Composite{Cast{float64}(LT(i0, i1))}}[(0, 0)].0), storage_map={Elemwise{Cast{float64}}.0: [None], mrg_uniform{TensorType(float64, matrix),inplace}.1: [None], TensorConstant{(1, 1) of ..5498392904}: [array([[ 0.65549839]])], Elemwise{mul,no_inplace}.0: [None], mrg_uniform{TensorType(float64, matrix),inplace}.0: [None], Sum{acc_dtype=float64}.0: [None], Elemwise{Composite{Cast{float64}(LT(i0, i1))}}[(0, 0)].0: [None], TensorConstant{(1, 1) of ..2296729523}: [array([[ 0.66229673]])], Elemwise{Composite{((i0 * i1) - i2)}}[(0, 1)].0: [None], Sum{acc_dtype=float64}.0: [None], ...}, compute_map={InplaceDimShuffle{x}.0: [False], Elemwise{Cast{float64}}.0: [False], MakeVector.0: [False], mrg_uniform{TensorType(float64, matrix),inplace}.0: [False], mrg_uniform{TensorType(float64, matrix),inplace}.1: [False], TensorConstant{(1, 1) of ..5498392904}: [True], Elemwise{mul,no_inplace}.0: [False], mrg_uniform{TensorType(float64, matrix),inplace}.0: [False], TensorConstant{(1, 1) of ..2296729523}: [True], Elemwise{Composite{((i0 * i1) - i2)}}[(0, 1)].0: [False], ...}, no_recycling=set([Elemwise{Composite{((i0 * i1) + (i2 - i3))}}[(0, 2)].0, InplaceDimShuffle{x,0}.0, Elemwise{Composite{((i0 * i1) + (i2 - i3))}}[(0, 2)].0, Elemwise{Composite{((i0 * i1) + (i2 - i3))}}[(0, 2)].0, Elemwise{Composite{((i0 * i1) - i2)}}[(0, 1)].0, Elemwise{Composite{((i0 * i1) + (i2 - i3))}}[(0, 3)].0, ...]))
+    734                 cl = theano.gof.cc.CLinker().accept(e,
+    735                         no_recycling=e_no_recycling)
+    736 
+    737                 logger.debug('Trying CLinker.make_thunk')
+    738                 outputs = cl.make_thunk(input_storage=node_input_storage,
+--> 739                                         output_storage=node_output_storage)
+    740                 fill_storage, node_input_filters, node_output_filters = outputs
+    741 
+    742                 def rval():
+    743                     fill_storage()
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.pyc in make_thunk(self=<theano.gof.cc.CLinker object>, input_storage=[[array([[ 0.65549839]])], [None], [None], [None], [None]], output_storage=[[None]], keep_lock=False)
+   1068           first_output = ostor[0].data
+   1069         """
+   1070         init_tasks, tasks = self.get_init_tasks()
+   1071         cthunk, in_storage, out_storage, error_storage = self.__compile__(
+   1072             input_storage, output_storage,
+-> 1073             keep_lock=keep_lock)
+   1074 
+   1075         res = _CThunk(cthunk, init_tasks, tasks, error_storage)
+   1076         res.nodes = self.node_order
+   1077         return res, in_storage, out_storage
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.pyc in __compile__(self=<theano.gof.cc.CLinker object>, input_storage=([array([[ 0.65549839]])], [None], [None], [None], [None]), output_storage=([None],), keep_lock=False)
+   1010         input_storage = tuple(input_storage)
+   1011         output_storage = tuple(output_storage)
+   1012         thunk = self.cthunk_factory(error_storage,
+   1013                                     input_storage,
+   1014                                     output_storage,
+-> 1015                                     keep_lock=keep_lock)
+   1016         return (thunk,
+   1017                 [link.Container(input, storage) for input, storage in
+   1018                  izip(self.fgraph.inputs, input_storage)],
+   1019                 [link.Container(output, storage, True) for output, storage in
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cc.pyc in cthunk_factory(self=<theano.gof.cc.CLinker object>, error_storage=[None, None, None], in_storage=([array([[ 0.65549839]])], [None], [None], [None], [None]), out_storage=([None],), keep_lock=False)
+   1437         if key is None:
+   1438             # If we can't get a key, then forget the cache mechanism.
+   1439             module = self.compile_cmodule()
+   1440         else:
+   1441             module = get_module_cache().module_from_key(
+-> 1442                 key=key, lnk=self, keep_lock=keep_lock)
+   1443 
+   1444         vars = self.inputs + self.outputs + self.orphans
+   1445         # List of indices that should be ignored when passing the arguments
+   1446         # (basically, everything that the previous call to uniq eliminated)
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.pyc in module_from_key(self=<theano.gof.cmodule.ModuleCache object>, key=(((11, (3, (4,), (4,), (4,)), (13, '1.9.2'), (13, '1.9.2'), (13, '1.9.2'), (13, '1.9.2'), (13, '1.9.2'), (13, '1.9.2'), ('openmp', False)), (11, 13, '1.9.2'), (11, 13, '1.9.2'), (11, 13, '1.9.2'), (11, 13, '1.9.2'), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-mabm', '-maes', '-march=bdver1', '-mavx', '-mcx16', '-mfma4', '-mlwp', '-mno-bmi', '-mno-fma', ...), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.Elemwise object>, ((TensorType(float64, (True, True)), ((...), False)), (TensorType(float64, matrix), ((...), False)), (TensorType(float64, matrix), ((...), False)), (TensorType(float64, row), ((...), False)), (TensorType(float64, matrix), ((...), False))), (1, (False,))))), lnk=<theano.gof.cc.CLinker object>, keep_lock=False)
+   1049         lock_taken = False
+   1050 
+   1051         src_code = lnk.get_src_code()
+   1052         # Is the source code already in the cache?
+   1053         module_hash = get_module_hash(src_code, key)
+-> 1054         module = self._get_from_hash(module_hash, key, keep_lock=keep_lock)
+   1055         if module is not None:
+   1056             return module
+   1057 
+   1058         with compilelock.lock_ctx(keep_lock=keep_lock):
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.pyc in _get_from_hash(self=<theano.gof.cmodule.ModuleCache object>, module_hash='92494f6b4f7282386584e3bb28fa28b5', key=(((11, (3, (4,), (4,), (4,)), (13, '1.9.2'), (13, '1.9.2'), (13, '1.9.2'), (13, '1.9.2'), (13, '1.9.2'), (13, '1.9.2'), ('openmp', False)), (11, 13, '1.9.2'), (11, 13, '1.9.2'), (11, 13, '1.9.2'), (11, 13, '1.9.2'), (11, 13, '1.9.2'), (11, 13, '1.9.2')), ('CLinker.cmodule_key', ('--param', '--param', '--param', '-D NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-O3', '-Wno-unused-label', '-Wno-unused-variable', '-Wno-write-strings', '-fPIC', '-fno-math-errno', '-m64', '-mabm', '-maes', '-march=bdver1', '-mavx', '-mcx16', '-mfma4', '-mlwp', '-mno-bmi', '-mno-fma', ...), (), (), 'NPY_ABI_VERSION=0x1000009', u'c_compiler_str=/usr/bin/g++ 4.6', 'md5:8e4d09db1d568f01d6e4a755d07f3653', (<theano.tensor.elemwise.Elemwise object>, ((TensorType(float64, (True, True)), ((...), False)), (TensorType(float64, matrix), ((...), False)), (TensorType(float64, matrix), ((...), False)), (TensorType(float64, row), ((...), False)), (TensorType(float64, matrix), ((...), False))), (1, (False,))))), keep_lock=False)
+    949         return self._get_module(name)
+    950 
+    951     def _get_from_hash(self, module_hash, key, keep_lock=False):
+    952         if module_hash in self.module_hash_to_key_data:
+    953             key_data = self.module_hash_to_key_data[module_hash]
+--> 954             module = self._get_from_key(None, key_data)
+    955             with compilelock.lock_ctx(keep_lock=keep_lock):
+    956                 try:
+    957                     key_data.add_key(key, save_pkl=bool(key[0]))
+    958                     key_broken = False
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.pyc in _get_from_key(self=<theano.gof.cmodule.ModuleCache object>, key=None, key_data=<theano.gof.cmodule.KeyData object>)
+    944         else:
+    945             assert key_data is not None
+    946             name = key_data.get_entry()
+    947         if name is None:
+    948             return None
+--> 949         return self._get_module(name)
+    950 
+    951     def _get_from_hash(self, module_hash, key, keep_lock=False):
+    952         if module_hash in self.module_hash_to_key_data:
+    953             key_data = self.module_hash_to_key_data[module_hash]
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.pyc in _get_module(self=<theano.gof.cmodule.ModuleCache object>, name='/home/mverleg/.theano/compiledir_Linux-3.2--gene...-64/tmpy_oJHF/c2225d9cc296a695b97a2d3a0b918e60.so')
+    627         """
+    628         Fetch a compiled module from the loaded cache or the disk.
+    629         """
+    630         if name not in self.module_from_name:
+    631             _logger.debug('loading name %s', name)
+--> 632             self.module_from_name[name] = dlimport(name)
+    633             self.stats[1] += 1
+    634         else:
+    635             _logger.debug('returning compiled module from cache %s', name)
+    636             self.stats[0] += 1
+
+...........................................................................
+/home/mverleg/mlip2/env/local/lib/python2.7/site-packages/theano/gof/cmodule.pyc in dlimport(fullpath='/home/mverleg/.theano/compiledir_Linux-3.2--gene...-64/tmpy_oJHF/c2225d9cc296a695b97a2d3a0b918e60.so', suffix='.so')
+    288     try:
+    289         if importlib is not None:
+    290             if hasattr(importlib, "invalidate_caches"):
+    291                 importlib.invalidate_caches()
+    292         t0 = time.time()
+--> 293         rval = __import__(module_name, {}, {}, [module_name])
+    294         t1 = time.time()
+    295         import_time += t1 - t0
+    296         if not rval:
+    297             raise Exception('__import__ failed', fullpath)
+
+ImportError: ('The following error happened while compiling the node', Elemwise{Composite{(i0 * (Abs(i1) + i2 + i3) * i4)}}[(0, 2)](TensorConstant{(1, 1) of ..5498392904}, Elemwise{add,no_inplace}.0, Dot22.0, InplaceDimShuffle{x,0}.0, Elemwise{Composite{Cast{float64}(LT(i0, i1))}}[(0, 0)].0), '\n', 'No module named tmpy_oJHF.c2225d9cc296a695b97a2d3a0b918e60')
+___________________________________________________________________________

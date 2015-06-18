@@ -1,0 +1,275 @@
+nohup: ignoring input
+Couldn't import dot_parser, loading of dot files will not be possible.
+loaded transformed NN train and test data from cache in "/tmp" with key ""
+Fitting 1 folds for each of 30 candidates, totalling 30 fits
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '17253')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '2282' (I am process '17247')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '17247')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '17251')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+[Parallel(n_jobs=15)]: Done   1 out of  30 | elapsed: 66.5min remaining: 1928.4min
+[Parallel(n_jobs=15)]: Done  30 out of  30 | elapsed: 176.5min finished
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network final_final4_5128 400x300x300
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 128, dense1_init = glorot_uniform, dense1_nonlinearity = rectify, dense1_size = 400, dense2_init = glorot_uniform, dense2_nonlinearity = rectify, dense2_size = 300, dense3_init = glorot_uniform, dense3_nonlinearity = rectify, dense3_size = 300, dropout0_rate = 0, dropout1_rate = 0.132630359234, dropout2_rate = 0.302355796723, dropout3_rate = 0.498180131789, epoch_steps = None, lear> saving results for top score 0.5190 (adding rescaling to priors): {'nn__learning_rate': 0.0003686925030009209, 'nn__dropout2_rate': 0.468206366366825, 'nn__dropout3_rate': 0.6106477335123335, 'nn__name': 'final_final4_8596', 'nn__dropout1_rate': 0.053336969626737535}
+Something went wrong while storing results. Maybe refit isn't enabled?
+'RandomizedSearchCV' object has no attribute 'best_estimator_'
+duces     400 outputs
+  dense2            	(None, 300)         	produces     300 outputs
+  dropout2          	(None, 300)         	produces     300 outputs
+  dense3            	(None, 300)         	produces     300 outputs
+  dropout3          	(None, 300)         	produces     300 outputs
+  output            	(None, 9)           	produces       9 outputs
+  epoch    train loss    valid loss    train/val    valid acc  dur
+-------  ------------  ------------  -----------  -----------  ------
+      1       [94m2.11546[0m       [32m1.93398[0m      1.09384      0.35124  30.43s
+      2       [94m1.46983[0m       [32m1.06066[0m      1.38576      0.63805  30.57s
+      3       [94m1.02415[0m       [32m0.83154[0m      1.23163      0.69351  30.41s
+      4       [94m0.86905[0m       [32m0.75245[0m      1.15496      0.71339  31.00s
+      5       [94m0.80097[0m       [32m0.70897[0m      1.12977      0.73122  30.95s
+      6       [94m0.76095[0m       [32m0.68197[0m      1.11581      0.73987  30.95s
+      7       [94m0.73169[0m       [32m0.66341[0m      1.10294      0.75134  31.12s
+      8       [94m0.71225[0m       [32m0.65019[0m      1.09545      0.75342  31.22s
+      9       [94m0.69676[0m       [32m0.63878[0m      1.09076      0.75931  21.40s
+     10       [94m0.68301[0m       [32m0.63093[0m      1.08254      0.76123  15.72s
+     11       [94m0.67430[0m       [32m0.62561[0m      1.07781      0.76336  15.76s
+     12       [94m0.66262[0m       [32m0.61798[0m      1.07224      0.76684  15.76s
+     13       [94m0.65198[0m       [32m0.61217[0m      1.06503      0.76776  15.74s
+     14       [94m0.64623[0m       [32m0.60486[0m      1.06839      0.77181  15.74s
+     15       [94m0.64009[0m       [32m0.60180[0m      1.06362      0.76761  15.75s
+     16       [94m0.63423[0m       [32m0.59858[0m      1.05956      0.77089  16.18s
+     17       [94m0.62772[0m       [32m0.59328[0m      1.05804      0.77230  17.54s
+     18       [94m0.61943[0m       [32m0.58884[0m      1.05196      0.77606  17.57s
+     19       [94m0.61438[0m       [32m0.58667[0m      1.04723      0.77542  17.98s
+     20       [94m0.60777[0m       [32m0.58179[0m      1.04466      0.77927  18.96s
+     21       [94m0.60502[0m       [32m0.58115[0m      1.04107      0.78087  18.95s
+     22       [94m0.59825[0m       [32m0.57621[0m      1.03825      0.78212  20.99s
+     23       [94m0.59316[0m       [32m0.57565[0m      1.03042      0.78155  21.36s
+     24       [94m0.58857[0m       [32m0.57147[0m      1.02993      0.78472  21.38s
+     25       [94m0.58473[0m       [32m0.57098[0m      1.02408      0.78364  22.48s
+     26       [94m0.58042[0m       [32m0.56883[0m      1.02038      0.78549  21.21s
+     27       [94m0.57827[0m       [32m0.56422[0m      1.02490      0.78921  21.21s
+     28       [94m0.57285[0m       0.56506      1.01379      0.78781  21.29s
+     29       [94m0.56917[0m       [32m0.56143[0m      1.01378      0.78893  21.17s
+     30       [94m0.56700[0m       [32m0.55926[0m      1.01385      0.78737  21.25s
+     31       [94m0.56268[0m       [32m0.55746[0m      1.00936      0.79046  21.26s
+     32       [94m0.55748[0m       [32m0.55592[0m      1.00280      0.78965  21.29s
+     33       [94m0.55733[0m       [32m0.55288[0m      1.00805      0.79121  21.26s
+     34       [94m0.55218[0m       0.55391      0.99687      0.79121  21.18s
+     35       [94m0.54656[0m       [32m0.55087[0m      0.99218      0.79278  21.30s
+     36       [94m0.54359[0m       [32m0.55010[0m      0.98818      0.79078  21.16s
+     37       [94m0.54211[0m       [32m0.54887[0m      0.98768      0.79037  21.34s
+     38       [94m0.53854[0m       [32m0.54572[0m      0.98684      0.79278  21.14s
+     39       [94m0.53758[0m       0.54952      0.97828      0.78897  21.03s
+     40       [94m0.53387[0m       [32m0.54418[0m      0.98106      0.79330  21.25s
+     41       [94m0.52766[0m       [32m0.54350[0m      0.97087      0.79181  21.15s
+     42       [94m0.52758[0m       [32m0.54293[0m      0.97173      0.79149  21.15s
+     43       [94m0.52400[0m       0.54371      0.96374      0.79362  21.28s
+     44       [94m0.51983[0m       [32m0.54102[0m      0.96083      0.79121  21.06s
+     45       [94m0.51638[0m       [32m0.53855[0m      0.95884      0.79242  21.36s
+     46       [94m0.51101[0m       [32m0.53812[0m      0.94964      0.79149  21.14s
+     47       [94m0.50876[0m       0.54123      0.94001      0.78913  21.15s
+     48       [94m0.50649[0m       [32m0.53663[0m      0.94383      0.79069  21.22s
+     49       [94m0.50234[0m       0.53773      0.93418      0.79138  21.33s
+     50       [94m0.50049[0m       [32m0.53577[0m      0.93416      0.79161  21.19s
+     51       [94m0.49658[0m       [32m0.53560[0m      0.92714      0.79282  21.14s
+     52       0.49741       [32m0.53427[0m      0.93101      0.79053  21.22s
+     53       [94m0.49247[0m       [32m0.53255[0m      0.92475      0.79210  21.28s
+     54       [94m0.48925[0m       0.53322      0.91754      0.79053  21.33s
+     55       [94m0.48670[0m       0.53276      0.91353      0.79033  21.32s
+     56       [94m0.48370[0m       [32m0.53193[0m      0.90933      0.79542  21.17s
+     57       [94m0.48270[0m       [32m0.53106[0m      0.90893      0.79394  21.15s
+     58       [94m0.47875[0m       [32m0.53070[0m      0.90211      0.79410  21.31s
+     59       [94m0.47507[0m       [32m0.52858[0m      0.89876      0.79093  21.16s
+     60       [94m0.47160[0m       [32m0.52846[0m      0.89242      0.79382  21.32s
+     61       0.47167       [32m0.52587[0m      0.89692      0.79402  21.26s
+     62       [94m0.46910[0m       0.53042      0.88441      0.79450  21.25s
+     63       [94m0.46391[0m       0.52970      0.87580      0.79462  21.20s
+     64       [94m0.46257[0m       0.52884      0.87469      0.79594  21.35s
+     65       [94m0.46096[0m       0.52793      0.87315      0.79502  21.20s
+     66       [94m0.45710[0m       [32m0.52554[0m      0.86977      0.79582  21.16s
+     67       [94m0.45518[0m       0.52814      0.86186      0.79506  22.45s
+     68       [94m0.45123[0m       0.52867      0.85353      0.79670  21.30s
+     69       [94m0.44898[0m       0.52763      0.85094      0.79618  21.24s
+     70       [94m0.44783[0m       0.52584      0.85165      0.80155  21.13s
+     71       [94m0.44117[0m       0.52671      0.83760      0.79742  21.11s
+     72       [94m0.44011[0m       0.52940      0.83133      0.79470  21.24s
+     73       [94m0.43870[0m       0.52745      0.83175      0.79670  21.12s
+     74       [94m0.43486[0m       0.52629      0.82627      0.79674  21.18s
+     75       [94m0.43219[0m       0.52648      0.82091      0.79454  21.26s
+     76       [94m0.42956[0m       0.52892      0.81215      0.79558  21.19s
+     77       [94m0.42851[0m       0.52673      0.81353      0.79213  21.30s
+     78       [94m0.42349[0m       0.52613      0.80492      0.79682  21.18s
+     79       [94m0.42281[0m       0.52627      0.80341      0.79766  21.17s
+Terminating training since the network is starting to overfit too much.
+COULD NOT SAVE NETWORK SINCE <nnet.early_stopping.StopWhenOverfitting object at 0x5ce04d0> HAS NO PARENT
+saving network to "/scratch/tmp/nnets/nn_1a91f632966c8cbad1ebfe951eea2512bcabf422_80.net.npz.net.npz|json"
+saved network to "/scratch/tmp/nnets/final_final4_1742_complete.net.npz" after training ended
+saving network to "/scratch/tmp/nnets/final_final4_1742.net.npz|json"
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for class[0m      0.99016      0.78920  19.89s
+     86       [94m0.55508[0m       0.56404      0.98411      0.79040  19.87s
+     87       [94m0.55110[0m       [32m0.56193[0m      0.98072      0.78871  19.96s
+     88       [94m0.55108[0m       [32m0.56153[0m      0.98138      0.78971  19.99s
+     89       [94m0.55062[0m       0.56178      0.98013      0.78951  20.02s
+     90       [94m0.54408[0m       [32m0.56077[0m      0.97024      0.78991  20.03s
+     91       0.55067       0.56129      0.98108      0.78911  19.89s
+     92       0.54530       [32m0.56074[0m      0.97248      0.78871  19.19s
+     93       0.54595       [32m0.55935[0m      0.97603      0.79011  18.79s
+     94       [94m0.54330[0m       0.55971      0.97069      0.78871  17.62s
+     95       0.54356       [32m0.55847[0m      0.97330      0.78931  17.55s
+     96       [94m0.54065[0m       [32m0.55672[0m      0.97112      0.79040  17.68s
+     97       [94m0.53988[0m       0.55707      0.96915      0.79100  17.65s
+     98       [94m0.53857[0m       0.55700      0.96691      0.78771  17.57s
+     99       [94m0.53550[0m       0.55710      0.96123      0.79040  17.54s
+    100       [94m0.53518[0m       [32m0.55563[0m      0.96319      0.78880  17.70s
+    101       [94m0.53398[0m       0.55565      0.96102      0.78908  17.54s
+    102       [94m0.53298[0m       0.55570      0.95912      0.78779  17.59s
+    103       [94m0.53150[0m       [32m0.55526[0m      0.95721      0.78819  17.52s
+    104       0.53181       [32m0.55496[0m      0.95828      0.78668  16.64s
+    105       [94m0.52987[0m       [32m0.55367[0m      0.95700      0.78839  16.48s
+    106       0.53150       [32m0.55325[0m      0.96068      0.79088  16.55s
+    107       [94m0.52967[0m       [32m0.55309[0m      0.95766      0.78988  16.62s
+    108       [94m0.52439[0m       [32m0.55252[0m      0.94910      0.79048  16.43s
+    109       [94m0.52322[0m       0.55273      0.94662      0.79108  15.92s
+    110       0.52516       0.55305      0.94956      0.79120  16.66s
+    111       [94m0.52196[0m       [32m0.55156[0m      0.94634      0.79240  17.60s
+    112       [94m0.52043[0m       [32m0.55084[0m      0.94480      0.79140  17.62s
+    113       0.52209       [32m0.55008[0m      0.94912      0.79031  19.01s
+    114       [94m0.51887[0m       [32m0.54998[0m      0.94345      0.79020  17.88s
+    115       [94m0.51881[0m       0.55042      0.94259      0.79188  17.59s
+    116       [94m0.51848[0m       0.55007      0.94256      0.78968  17.48s
+    117       [94m0.51742[0m       0.55021      0.94041      0.79100  17.54s
+    118       [94m0.51683[0m       0.55055      0.93876      0.79220  17.50s
+    119       [94m0.51308[0m       [32m0.54760[0m      0.93696      0.79088  18.41s
+    120       0.51619       0.54900      0.94025      0.78951  18.72s
+    121       [94m0.51281[0m       0.54938      0.93343      0.79128  18.64s
+    122       [94m0.51039[0m       0.54790      0.93155      0.78991  18.72s
+    123       0.51115       [32m0.54758[0m      0.93348      0.79309  18.21s
+    124       [94m0.50896[0m       0.54839      0.92810      0.79168  17.61s
+    125       [94m0.50784[0m       0.54853      0.92582      0.79080  17.26s
+    126       [94m0.50508[0m       [32m0.54701[0m      0.92334      0.79080  16.50s
+    127       0.50575       [32m0.54577[0m      0.92667      0.79200  16.08s
+    128       [94m0.50326[0m       0.54668      0.92058      0.79160  15.73s
+    129       0.50409       [32m0.54512[0m      0.92472      0.79309  15.93s
+    130       [94m0.49885[0m       0.54577      0.91404      0.79360  16.50s
+    131       0.49936       0.54641      0.91389      0.78839  16.90s
+    132       [94m0.49861[0m       0.54650      0.91236      0.79131  17.68s
+    133       0.50041       0.54567      0.91704      0.79229  17.62s
+    134       0.49922       [32m0.54505[0m      0.91592      0.79300  17.54s
+    135       [94m0.49534[0m       0.54573      0.90767      0.79120  17.48s
+    136       [94m0.49427[0m       [32m0.54317[0m      0.90999      0.79380  17.58s
+    137       [94m0.49331[0m       0.54327      0.90802      0.79051  17.55s
+    138       [94m0.49197[0m       0.54490      0.90285      0.79280  18.45s
+    139       [94m0.49046[0m       0.54545      0.89919      0.79220  19.50s
+    140       [94m0.48921[0m       0.54448      0.89849      0.79100  19.78s
+    141       [94m0.48877[0m       [32m0.54263[0m      0.90074      0.79152  20.43s
+    142       0.48925       0.54364      0.89995      0.79252  21.05s
+    143       [94m0.48732[0m       0.54305      0.89739      0.79289  21.22s
+    144       [94m0.48574[0m       0.54293      0.89467      0.79320  20.58s
+    145       0.49182       [32m0.54228[0m      0.90694      0.79332  19.83s
+    146       [94m0.48259[0m       0.54257      0.88946      0.79561  19.86s
+    147       0.48516       0.54257      0.89418      0.79320  19.88s
+    148       [94m0.48231[0m       0.54340      0.88759      0.79260  19.97s
+    149       [94m0.48072[0m       0.54235      0.88636      0.79312  20.09s
+    150       0.48171       [32m0.54183[0m      0.88904      0.79380  19.95s
+    151       0.48079       [32m0.53994[0m      0.89045      0.79340  19.93s
+    152       [94m0.47502[0m       0.54223      0.87605      0.79200  19.90s
+    153       0.47703       0.54161      0.88078      0.79180  19.69s
+    154       0.47566       0.54244      0.87689      0.79240  18.65s
+    155       [94m0.47384[0m       0.54313      0.87243      0.79292  17.52s
+    156       [94m0.47333[0m       0.54041      0.87587      0.79252  17.66s
+    157       0.47402       0.54086      0.87643      0.79452  17.61s
+    158       [94m0.47193[0m       0.54132      0.87180      0.79240  17.52s
+    159       [94m0.47131[0m       0.54054      0.87191      0.79460  17.50s
+    160       [94m0.46786[0m       [32m0.53950[0m      0.86721      0.79292  17.51s
+    161       0.46848       0.53974      0.86797      0.79332  18.42s
+    162       0.46929       0.53958      0.86973      0.79352  20.24s
+    163       [94m0.46420[0m       0.54011      0.85945      0.79432  18.98s
+    164       0.46610       0.54114      0.86134      0.79131  18.84s
+    165       0.46618       0.54006      0.86321      0.79352  18.76s
+    166       [94m0.46286[0m       0.54106      0.85545      0.79272  18.24s
+    167       0.46483       [32m0.53890[0m      0.86255      0.79212  17.54s
+    168       [94m0.46172[0m       0.53987      0.85524      0.79332  18.46s
+    169       0.46330       0.54111      0.85619      0.79420  18.68s
+    170       0.46325       0.54023      0.85750      0.79312  18.79s
+    171       [94m0.45962[0m       [32m0.53831[0m      0.85383      0.79232  18.76s
+    172       0.45997       0.53919      0.85307      0.79332  18.68s
+    173       [94m0.45797[0m       0.53926      0.84925      0.79372  18.78s
+    174       [94m0.45716[0m       0.53880      0.84847      0.79432  18.70s
+    175       0.45868       0.53849      0.85178      0.79272  19.67s
+    176       [94m0.45239[0m       0.53904      0.83926      0.79472  20.32s
+    177       0.45249       [32m0.53767[0m      0.84158      0.79532  21.15s
+    178       0.45320       0.53975      0.83965      0.79532  21.18s
+    179       0.45285       0.53795      0.84181      0.79352  21.11s
+    180       [94m0.45173[0m       0.53968      0.83703      0.79392  21.23s
+    181       [94m0.45023[0m       0.53938      0.83472      0.79232  21.12s
+    182       [94m0.44819[0m       0.53962      0.83055      0.79432  21.28s
+    183       [94m0.44797[0m       0.53904      0.83105      0.79272  21.16s
+    184       [94m0.44777[0m       0.53817      0.83203      0.79372  21.11s
+    185       [94m0.44558[0m       0.53846      0.82751      0.79332  21.23s
+    186       [94m0.44043[0m       [32m0.53733[0m      0.81967      0.79392  21.13s
+    187       0.44321       0.53895      0.82236      0.79492  21.15s
+    188       0.44205       0.53917      0.81987      0.79532  21.19s
+    189       [94m0.43803[0m       0.54037      0.81061      0.79512  21.17s
+    190       0.44087       0.53898      0.81797      0.79312  21.11s
+    191       0.43991       0.54018      0.81437      0.79632  21.33s
+    192       [94m0.43527[0m       [32m0.53684[0m      0.81081      0.79272  21.30s
+    193       0.43721       0.53933      0.81064      0.79572  21.20s
+    194       0.43852       0.54029      0.81163      0.79352  21.08s
+    195       [94m0.43451[0m       0.53784      0.80788      0.79492  21.13s
+    196       0.43522       0.53895      0.80753      0.79512  20.62s
+    197       0.43658       0.54014      0.80827      0.79320  19.36s
+    198       0.43455       0.54099      0.80326      0.79512  17.68s
+    199       [94m0.43373[0m       0.53966      0.80371      0.79472  17.52s
+    200       0.43401       0.53763      0.80727      0.79452  17.57s
+Terminating training since the network is starting to overfit too much.
+COULD NOT SAVE NETWORK SINCE <nnet.early_stopping.StopWhenOverfitting object at 0x5cdf7d0> HAS NO PARENT
+saving network to "/scratch/tmp/nnets/nn_c0ba0bb58c56c8c66484f550947dc77f54cb1e55_201.net.npz.net.npz|json"
+saved network to "/scratch/tmp/nnets/final_final4_7275_complete.net.npz" after training ended
+saving network to "/scratch/tmp/nnets/final_final4_7275.net.npz|json"
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 12376x253 data
+RESULT: -0.537834	{"save_snapshots_stepsize": null, "output_nonlinearity": "softmax", "dropout3_rate": 0.7918577832804871, "dropout0_rate": 0, "learning_rate": 0.00016338431528960297, "batch_size": 128, "learning_rate_scaling": 300, "dropout1_rate": 0.2492398968059589, "dense1_size": 400, "max_epochs": 700, "weight_decay": 0, "dense1_init": "glorot_uniform", "momentum_scaling": 10, "name": "final_final4_7275", "dense3_size": 300, "epoch_steps": null, "dense1_nonlinearity": "rectify", "dense3_nonlinearity": "rectify", "dense2_nonlinearity": "rectify", "dense3_init": "glorot_uniform", "dense2_size": 300, "auto_stopping": true, "dense2_init": "glorot_uniform", "dropout2_rate": 0.3963854503993467, "momentum": 0.98, "adaptive_weight_decay": false}

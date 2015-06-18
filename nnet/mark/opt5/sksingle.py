@@ -1,14 +1,14 @@
-
 from sklearn.cross_validation import ShuffleSplit, cross_val_score
 from sklearn.metrics.scorer import log_loss_scorer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
+
 from nnet.oldstyle.base_optimize import name_from_file
 from nnet.prepare import LogTransform
 from nnet.scikit import NNet
-from utils.features import PositiveSparseRowFeatureGenerator, DistanceFeatureGenerator, PositiveSparseFeatureGenerator
+from utils.features import PositiveSparseRowFeatureGenerator, PositiveSparseFeatureGenerator
+from nndist.distance import DistanceFeatureGenerator
 from utils.loading import get_preproc_data
-
 
 train, labels, test = get_preproc_data(Pipeline([
 	('row', PositiveSparseRowFeatureGenerator()),
