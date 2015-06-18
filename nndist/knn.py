@@ -24,7 +24,7 @@ def knn(train,
         metric='minkowski',
         metric_params=None):
 
-    # Define the parameters of knn model
+    # Define the parameters of nndist model
     model = KNeighborsClassifier(n_neighbors=n_neighbors,
                                  weights=weights,
                                  algorithm=algorithm,
