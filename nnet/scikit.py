@@ -306,7 +306,6 @@ class NNet(BaseEstimator, ClassifierMixin):
 		self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
 		knowledge = get_knowledge(self.net)
 		for epoch in range(0, self.max_epochs, self.epoch_steps):
-			#todo: so now dynamic variables don't work
 			set_knowledge(self.net, knowledge)
 			self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
 			print 'epoch {0:d}: learning {1:d} epochs'.format(epoch, self.epoch_steps)

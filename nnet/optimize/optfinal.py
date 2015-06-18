@@ -36,7 +36,7 @@ opt = RandomizedSearchCV(
 		#('distp52', DistanceFeatureGenerator(n_neighbors = 5, distance_p = 2)),
 		('scale03', MinMaxScaler(feature_range = (0, 3))), # scale should apply to int and float feats
 		('nn', NNet(**{
-			'max_epochs': 700,
+			'max_epochs': 800,
 			'auto_stopping': True,
 			'adaptive_weight_decay': False,
 			'save_snapshots_stepsize': None,
@@ -48,22 +48,23 @@ opt = RandomizedSearchCV(
 			'dense1_init': 'glorot_uniform',  # uniform to reduce randomness
 			'momentum': 0.98,
 			'momentum_scaling': 10,
-			'learning_rate_scaling': 300,
+			'learning_rate_scaling': 500,
 			'batch_size': 128,
 			'dropout0_rate': 0,
 		})),
 	]),
 	param_distributions = {
 		'nn__name': ['final_{0:s}_{1:03d}'.format(name_from_file(), k) for k in range(10000)],
-		'nn__learning_rate': norm(0.0003, 0.0001),
+		'nn__learning_rate': norm(0.0001, 0.00003),
 		'nn__dropout1_rate': uniform(loc = 0.00, scale = 0.25),
 		'nn__dropout2_rate': uniform(loc = 0.30, scale = 0.60-0.30),
-		'nn__dropout3_rate': uniform(loc = 0.40, scale = 0.80-0.40),  #todo
+		'nn__dropout3_rate': uniform(loc = 0.40, scale = 0.80-0.40),
+		'nn__weight_decay': [0.001, 0.0001, 0.00001, 0],
 	},
 	fit_params = {
-		'nn__random_sleep': 80,
+		'nn__random_sleep': 600,
 	},
-	n_iter = cpus,
+	n_iter = 2 * cpus // 3,
 	n_jobs = cpus,
 	scoring = get_logloss_loggingscorer(
 		filename = join(OPTIMIZE_RESULTS_DIR, '{0:s}2.log'.format(name_from_file())),

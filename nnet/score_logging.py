@@ -18,7 +18,7 @@ class ScoringLogging(_ProbaScorer):
 				if log_treshold:
 					fh.write('# treshold is {0:.4f}\n'.format(log_treshold))
 				else:
-					fh.write('# no treshold')
+					fh.write('# no treshold\n')
 		self.log_treshold = log_treshold
 		super(ScoringLogging, self).__init__(score_func, sign, kwargs)
 
