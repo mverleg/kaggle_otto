@@ -17,6 +17,9 @@ from numpy import sqrt
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.grid_search import GridSearchCV
 from sklearn.cross_validation import StratifiedShuffleSplit
+from sklearn.calibration import CalibratedClassifierCV
+from math import floor
+from numpy import ones
 
 def svm(train,
          labels,
@@ -25,6 +28,8 @@ def svm(train,
          kernel = 'rbf',
          degree = 3,
          gamma = 0.5,
+         calibration=0.0,
+         calibrationmethod='sigmoid',
          coef0 = 0.0,
          probability = True,
          shrinking = True,
@@ -77,6 +82,20 @@ def svm(train,
                tol = tol,
                verbose = verbose,
                class_weight = class_weight)
+               
+    if calibration == 0.0:
+        model.fit(train, labels, sample_weight)
+    elif calibration > 1:
+        model = CalibratedClassifierCV(model, calibrationmethod, calibration)
+        model.fit(train, labels, sample_weight)
+    else:
+        N = len(labels)
+        if sample_weight is None:
+            sample_weight = ones(N)
+        train_rows = floor((1.0 - calibration) * N)
+        model.fit(train[:train_rows, :], labels[:train_rows], sample_weight[:train_rows])
+        model = CalibratedClassifierCV(model, calibrationmethod, "prefit")
+        model.fit(train[train_rows:, :], labels[train_rows:], sample_weight=sample_weight[train_rows:])
    
     model.fit(train, labels, sample_weight)
       
