@@ -2,7 +2,6 @@
 from json import dump
 from multiprocessing import cpu_count
 from os.path import join
-from scipy.stats import norm, uniform
 from numpy.random import RandomState
 from sklearn.cross_validation import ShuffleSplit
 from sklearn.grid_search import RandomizedSearchCV
@@ -41,25 +40,29 @@ opt = RandomizedSearchCV(
 			'adaptive_weight_decay': False,
 			'save_snapshots_stepsize': None,
 			'epoch_steps': None,
-			'dense1_size': 400,
-			'dense2_size': 300,
-			'dense3_size': 300,
+			'dense1_size': 1000,
+			'dense2_size': 1500,
+			'dense3_size': 1000,
 			'dense1_nonlinearity': 'rectify',
 			'dense1_init': 'glorot_uniform',  # uniform to reduce randomness
-			'momentum': 0.98,
+			'momentum': 0.9,
 			'momentum_scaling': 10,
+			'learning_rate': 0.02,
 			'learning_rate_scaling': 500,
-			'batch_size': 128,
-			'dropout0_rate': 0,
+			'batch_size': 64,
+			'dropout0_rate': 0.1,
+			'dropout1_rate': 0.6,
+			'dropout2_rate': 0.6,
+			'dropout3_rate': 0.6,
 		})),
 	]),
 	param_distributions = {
 		'nn__name': ['final_{0:s}_{1:03d}'.format(name_from_file(), k) for k in range(10000)],
-		'nn__learning_rate': norm(0.0001, 0.00003),
-		'nn__dropout1_rate': uniform(loc = 0.00, scale = 0.25),
-		'nn__dropout2_rate': uniform(loc = 0.30, scale = 0.60-0.30),
-		'nn__dropout3_rate': uniform(loc = 0.40, scale = 0.80-0.40),
-		'nn__weight_decay': [0.001, 0.0001, 0.00001, 0],
+		#'nn__learning_rate': norm(0.0001, 0.00003),
+		#'nn__dropout1_rate': uniform(loc = 0.00, scale = 0.25),
+		#'nn__dropout2_rate': uniform(loc = 0.30, scale = 0.60-0.30),
+		#'nn__dropout3_rate': uniform(loc = 0.40, scale = 0.80-0.40),
+		'nn__weight_decay': [0.01, 0.007, 0.0025, 0.001, 0.0007, 0.00025, 0.0001, 0.00007],
 	},
 	fit_params = {
 		'nn__random_sleep': 600,
@@ -81,7 +84,7 @@ opt = RandomizedSearchCV(
 	),
 	random_state = random,
 	verbose = bool(VERBOSITY),
-	error_score = 'raise',
+	error_score = -1000000,# 'raise',
 )
 
 opt.fit(train, labels)

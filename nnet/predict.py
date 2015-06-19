@@ -32,19 +32,35 @@ train = pipe.fit_transform(train, labels)
 valid = pipe.transform(valid)
 test = pipe.transform(test)
 
-name = 'good'
 
-net = NNet.load(name = name)
+names = ['final_final1_351', 'final_final2_5019', 'final_final1_4969', 'final_final2_5530', 'final_final2_2247', 'final_final1_8594', 'final_final1_1717', 'final_final4_3641', 'final_final2_9535', 'final_final2_2066', 'final_final2_5878', 'final_final4_7076', 'final_final3_6441', 'final_final3_5475']
+totalvalid = totaltest = 0
 
-for nm, val in net.get_params().iteritems():
-	print '{0:s} = {1:}'.format(nm, val)
+for name in names:
 
-for nm, data in [('val', valid), ('tst', test)]:
-	probs = net.predict_proba(data)
-	save(join(SUBMISSIONS_DIR, '{0}_{1}_raw.npy'.format(name, nm)), probs)
-	makeSubmission(probs, fname = join(SUBMISSIONS_DIR, '{0}_{1}_rescale.csv'.format(name, nm)), digits = 8)
+	net = NNet.load(filepath = join(BASE_DIR, 'results', 'nets', name))
+
+	for nm, val in net.get_params().iteritems():
+		print '{0:s} = {1:}'.format(nm, val)
+
+	#for nm, data in [('val', valid), ('tst', test)]:
+		#probs = net.predict_proba(data)
+		#save(join(SUBMISSIONS_DIR, '{0}_{1}_raw.npy'.format(name, nm)), probs)
+		#makeSubmission(probs, fname = join(SUBMISSIONS_DIR, '{0}_{1}_rescale.csv'.format(name, nm)), digits = 8)
+	probs = net.predict_proba(valid)
 	probs = scale_to_priors(probs, priors = PRIORS)
-	save(join(SUBMISSIONS_DIR, '{0}_{1}_rescale.npy'.format(name, nm)), probs)
-	makeSubmission(probs, fname = join(SUBMISSIONS_DIR, '{0}_{1}_rescale.csv'.format(name, nm)), digits = 8)
+	save(join(SUBMISSIONS_DIR, '{0}_valid.npy'.format(name)), probs)
+	totalvalid += probs
 
+	probs = net.predict_proba(test)
+	probs = scale_to_priors(probs, priors = PRIORS)
+	save(join(SUBMISSIONS_DIR, '{0}_test.npy'.format(name)), probs)
+	makeSubmission(probs, fname = join(SUBMISSIONS_DIR, '{0}_test.csv'.format(name)), digits = 8)
+	totaltest += probs
+
+
+save(join(SUBMISSIONS_DIR, 'total_valid.npy'), totalvalid)
+save(join(SUBMISSIONS_DIR, 'total_valid.npy'), totaltest)
+makeSubmission(totaltest, fname = join(SUBMISSIONS_DIR, 'total_test.csv'), digits = 8)
+print 'saved predictions'
 

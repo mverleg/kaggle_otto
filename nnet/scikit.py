@@ -179,7 +179,8 @@ class NNet(BaseEstimator, ClassifierMixin):
 		self.layers += [('output', DenseLayer)]
 		self.params.update({
 			'output_nonlinearity': nonlinearities[self.output_nonlinearity],
-			'output_W': Orthogonal(),
+			'output_W': GlorotUniform(),
+			'output_b': Constant(0.),
 		})
 
 		"""
@@ -204,7 +205,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 			]
 		if self.auto_stopping:
 			self.step_handlers += [
-				StopWhenOverfitting(loss_fraction = 0.8, base_name = snapshot_name),
+				StopWhenOverfitting(loss_fraction = 0.9, base_name = snapshot_name),
 				StopAfterMinimum(patience = 40, base_name = self.name),
 			]
 		weight_decay = shared(float32(abs(self.weight_decay)), 'weight_decay')
@@ -299,6 +300,7 @@ class NNet(BaseEstimator, ClassifierMixin):
 		if random_sleep:
 			sleep(random_sleep * random())  # this is to prevent compiler lock problems
 		labels = y - y.min()
+		#todo: don't use labels.max(), occasionally (rarely) it will not have the highest class
 		self.init_net(feature_count = X.shape[1], class_count = labels.max() + 1)
 		net = self.net.fit(X, labels)
 		self.save()

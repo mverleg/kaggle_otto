@@ -1,0 +1,66 @@
+nohup: ignoring input
+Couldn't import dot_parser, loading of dot files will not be possible.
+loaded transformed NN train and test data from cache in "/tmp" with key ""
+Fitting 1 folds for each of 10 candidates, totalling 10 fits
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '43599' (I am process '542')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '542')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by process '6147' (I am process '548')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+/home/mverleg/mlip2/env/src/lasagne/lasagne/init.py:86: UserWarning: The uniform initializer no longer uses Glorot et al.'s approach to determine the bounds, but defaults to the range (-0.01, 0.01) instead. Please use the new GlorotUniform initializer to get the old behavior. GlorotUniform is now the default for all layers.
+  warnings.warn("The uniform initializer no longer uses Glorot et al.'s "
+INFO (theano.gof.compilelock): Waiting for existing lock by unknown process (I am process '546')
+INFO (theano.gof.compilelock): To manually release the lock, delete /home/mverleg/.theano/compiledir_Linux-3.2--generic-x86_64-with-Ubuntu-12.04-precise-x86_64-2.7.3-64/lock_dir
+!! Could not restore the network to the state of minimum; only the final network has been saved.
+!! Could not restore the network to the state of minimum; only the final network has been saved.
+[Parallel(n_jobs=15)]: Done   6 out of  10 | elapsed: 90.1min remaining: 60.1min
+!! Could not restore the network to the state of minimum; only the final network has been saved.
+!! Could not restore the network to the state of minimum; only the final network has been saved.
+!! Could not restore the network to the state of minimum; only the final network has been saved.
+!! Could not restore the network to the state of minimum; only the final network has been saved.
+[Parallel(n_jobs=15)]: Done   1 out of  10 | elapsed: 209.9min remaining: 1889.3min
+[Parallel(n_jobs=15)]: Done  10 out of  10 | elapsed: 336.9min finished
+adding all extra row features
+adding 40 features for classes (2, 3)
+adding 40 features for classes (2, 3, 4)
+adding 63 features for classes (1, 9)
+applying log transform to 49502x253 data
+initializing network final_final4_5238 400x300x300
+parameters: adaptive_weight_decay = False, auto_stopping = True, batch_size = 128, dense1_init = glorot_uniform, dense1_nonlinearity = rectify, dense1_size = 400, dense2_init = glorot_uniform, dense2_nonlinearity = rectify, dense2_size = 300, dense3_init = glorot_uniform, dense3_nonlinearity = rectify, dense3_size = 300, dropout0_rate = 0, dropout1_rate = 0.02115760775, dropout2_rate = 0.544234186446, dropout3_rate = 0.699858303902, epoch_steps = None, learning_rate = 4.31724652353e-05, learning_rate_scaling = 500, max_epochs = 800, momentum = 0.98, momentum_scaling = 10, name = final_final4_5238, output_nonlinearity = softmax, save_snapshots_stepsize = None, weight_decay = 0.0003
+  input             	(None, 253)         	produces     253 outputs
+  dense1            	(None, 400)         	produces     400 outputs
+  dropout1          	(None, 400)         	produces     400 outputs
+  dense2            	(None, 300)         	produces     300 outputs
+  dropout2          	(None, 300)         	produces     300 outputs
+  dense3            	(None, 300)         	produces     300 outputs
+  dropout3          	(None, 300)         	produces     300 outputs
+  output            	(None, 9)           	produces       9 outputs
+  epoch    train loss    valid loss    train/val    valid acc  dur
+-------  ------------  ------------  -----------  -----------  ------
+      1       [94m2.63078[0m       [32m2.18538[0m      1.20381      0.10803  30.64s
+      2       [94m2.32301[0m       [32m1.79749[0m      1.29236      0.43646  30.76s
+      3       [94m2.07975[0m       [32m1.59314[0m      1.30544      0.47734  30.53s
+      4       [94m1.90960[0m       [32m1.42377[0m      1.34124      0.52434  30.74s
+      5       [94m1.78026[0m       [32m1.31199[0m      1.35691      0.55395  30.53s
+   > saving results for top score 0.5168 (adding rescaling to priors): {'nn__dropout2_rate': 0.3450756035493422, 'nn__dropout1_rate': 0.21094410856689896, 'nn__weight_decay': 0.0001, 'nn__learning_rate': 6.42584027021247e-05, 'nn__dropout3_rate': 0.4565450107507871, 'nn__name': 'final_final4_5379'}
+Something went wrong while storing results. Maybe refit isn't enabled?
+'RandomizedSearchCV' object has no attribute 'best_estimator_'

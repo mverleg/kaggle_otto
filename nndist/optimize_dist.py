@@ -34,11 +34,11 @@ def train_test(train, labels, test, n_neighbors, distance_p, use_log = False, us
 
 validator = SampleCrossValidator(train_data, true_labels, rounds = 5, test_frac = 0.1, use_data_frac = 0.4)
 optimizer = ParallelGridOptimizer(train_test_func = train_test, validator = validator, use_caching = False, process_count = max(cpu_count() - 1, 1),
-    n_neighbors = [4, 8, 12, 20, 32],
+	n_neighbors = [4, 8, 12, 20, 32],
 	distance_p = 2,
 	use_log = True,
-    use_autoscale = False,
-    use_calibration = [True, False],
+	use_autoscale = False,
+	use_calibration = [True, False],
 ).readygo()
 
 
