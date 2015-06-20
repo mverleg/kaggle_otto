@@ -58,3 +58,4 @@ pos     loss      n neighbors       use autoscale     use log           distance
 12    0.7363       20                False             False             1
 13    0.7368       8                 False             False             1
 """
+

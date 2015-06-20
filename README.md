@@ -1,4 +1,19 @@
 
+Code description
+-------------------------------
+
+Altogether we wrote a lot of code at a 5100+ lines and around 400 commits, so it can be daunting to try and understand. Here is a very brief explanation:
+
+* **utils** - code for loading input, saving output, feature generation and other general functionality.
+* **validation** - code for cross validation; optimize does a grid search described below, using crossvalidate for scoring
+* **demo** - code to demonstrate functionality, like non-automatic tests
+* **nnet** - Lasagne/nolearn neural network code; 'grids' and 'optimize' contain the parameter searches, 'scikit' is the extended network object compatible with scikit (non-compatible version in oldstyle) and most other files handle enhancements such as scoring, dynamic parameters, optimizations, combining nets and visualization. There is some code duplication due to job files being kept after running (for future reference of settings). 
+* **data** and **results** - in- and output respectively (most not part of repo due to size)
+
+Other directories contain code for other methods used.
+
+Settings are handles in settings.py and other development-related meta files are keps in **dev**. This file contains some instructions on how to use common features, for use by our team.
+
 Installation
 -------------------------------
 
