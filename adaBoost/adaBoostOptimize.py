@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jun 19 17:02:36 2015
-
-@author: andruta
 """
 
 from utils.loading import get_training_data

@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jun 19 16:56:14 2015
-
-@author: andruta
 """
 
 from sklearn.ensemble import AdaBoostClassifier
