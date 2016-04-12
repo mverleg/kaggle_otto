@@ -70,7 +70,7 @@ def filter_data_cache(data, classes, hash, method, cut_outlier_frac, use_caching
 		data = load(join(gettempdir(), 'cache_data_nooutliers_{0:s}.npy'.format(hash)))
 		classes = load(join(gettempdir(), 'cache_classes_nooutliers_{0:s}.npy'.format(hash)))
 		if VERBOSITY >= 1:
-			print 'loaded filtered train data from cache in "{0:s}" with outlying {1:.1f}% of data removed.'.format(gettempdir(), 100 * cut_outlier_frac)
+			print 'loaded filtered train data from cache in "{0:s}" with outlying {1:.1%} of data removed.'.format(gettempdir(), cut_outlier_frac)
 	except IOError:
 		if method == 'EE':
 			detector = EllipticEnvelope(contamination = cut_outlier_frac, random_state = SEED)
@@ -82,7 +82,7 @@ def filter_data_cache(data, classes, hash, method, cut_outlier_frac, use_caching
 		save(join(gettempdir(), 'cache_data_nooutliers_{0:s}.npy'.format(hash)), data)
 		save(join(gettempdir(), 'cache_classes_nooutliers_{0:s}.npy'.format(hash)), classes)
 		if VERBOSITY >= 1:
-			print 'loaded filtered train data directly with outlying {0:.1f}% of data removed.'.format(100 * cut_outlier_frac)
+			print 'loaded filtered train data directly with outlying {0:.1%} of data removed.'.format(cut_outlier_frac)
 	return data, classes
 
 
